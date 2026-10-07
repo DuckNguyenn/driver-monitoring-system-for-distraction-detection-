@@ -1,0 +1,44 @@
+{
+  "manifest": "models\\eye_refined_v4\\manifest.json",
+  "manifest_sha256": "2f2040049ffbe43c962c9f5542285b7983427d3836a47312d9fa49d3b1342847",
+  "software_tests": {
+    "driver_monitor": 64,
+    "pc_compatibility": 2,
+    "failed": 0
+  },
+  "pixels": {
+    "maximum_probability_error": 3.2350767200650665e-06,
+    "label_agreement": 1.0
+  },
+  "replay": {
+    "baseline_p_closed": [
+      0.9276392710343275,
+      0.9144625067710876
+    ],
+    "candidate_p_closed": [
+      0.04613630542362191,
+      0.049870277385816196
+    ]
+  },
+  "camera": {
+    "source": "0",
+    "live": true,
+    "backend": "onnx",
+    "frames": 152,
+    "wall_seconds": 10.04700000000048,
+    "media_seconds": 9.84400000000096,
+    "fps": 15.128894197272095,
+    "states": {
+      "NORMAL": 109,
+      "UNKNOWN": 43
+    },
+    "latency_p95_ms": 32,
+    "processing_p95_ms": 32,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "user_wink_video_accuracy": null
+}

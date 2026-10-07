@@ -1,0 +1,29 @@
+{
+  "scope": "Publication verification on Windows using the installed PC environment, not Radxa hardware or a fresh dependency install",
+  "local_full_tests": {
+    "total": 69,
+    "skipped": 0,
+    "passed": true
+  },
+  "git_index_export_tests": {
+    "total": 69,
+    "passed_tests": 56,
+    "skipped_for_local_images": 13,
+    "suite_passed": true,
+    "technical_video_evidence_in_repository": false
+  },
+  "firmware_host_simulator_passed": true,
+  "active_config": "configs/camera_pc.yaml",
+  "active_onnx_inference_smoke_passed": true,
+  "physical_board_tested": false,
+  "esp32_flashing_tested": false,
+  "excluded_local_data": [
+    "datasets",
+    "face regression images",
+    "camera videos",
+    "frame logs",
+    "Python environments",
+    "cache",
+    "reference documents"
+  ]
+}

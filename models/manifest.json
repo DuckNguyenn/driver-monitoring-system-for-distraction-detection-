@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "target_platform": "rk3576",
+  "detector": {
+    "file": "face_detection_yunet_2023mar.onnx",
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+    "commit": "47534e27c9851bb1128ccc0102f1145e27f23f98",
+    "license": "MIT",
+    "input_size": 320
+  },
+  "classifiers": {
+    "eye": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "../camera_classical/best_eye.pt",
+          "sha256": "3c124c05d9d01849c70823eeab8f25c48e740aa836be319ef881588e188d308f"
+        },
+        "onnx": {
+          "file": "best_eye.onnx",
+          "sha256": "b5732f3c8b029bcc76015ae3e9cc168243a4f7e1dd72a94bce2074ab5f532c67"
+        },
+        "rknn": {
+          "file": "best_eye.rknn",
+          "sha256": "4242d1bd649c35a16e6197d069ade0c7f9c8be417b5d596ded6d10987661d3c3",
+          "target_platform": "rk3576",
+          "quantization": "none",
+          "toolkit_version": "2.3.2"
+        }
+      }
+    },
+    "yawn": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "../camera_classical/best_yawn.pt",
+          "sha256": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1"
+        },
+        "onnx": {
+          "file": "best_yawn.onnx",
+          "sha256": "fdf971a428c4b24de47fb1126bf179db7e3282e9f7d9baf2b32e3bdba04d8844"
+        },
+        "rknn": {
+          "file": "best_yawn.rknn",
+          "sha256": "95a006917c498fa5ee577ad0a1a8821c285781b87e545f2d07f8f33f4a309367",
+          "target_platform": "rk3576",
+          "quantization": "none",
+          "toolkit_version": "2.3.2"
+        }
+      }
+    }
+  },
+  "export_versions": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "ultralytics": "8.4.163",
+    "onnx": "1.17.0"
+  },
+  "deployment_validation": "pending Radxa hardware and annotated cabin videos",
+  "conversion_host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.10",
+    "versions": {
+      "torch": "2.4.0+cpu",
+      "onnx": "1.17.0",
+      "rknn-toolkit2": "2.3.2"
+    }
+  }
+}

@@ -1,0 +1,2110 @@
+{
+  "baseline": {
+    "legacy_face": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          59,
+          0
+        ],
+        [
+          4,
+          55
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 0.9365079365079365,
+          "recall": 0.9672131147540983,
+          "f1": 0.9516129032258065,
+          "support": 61
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 0.9016393442622951,
+          "f1": 0.9482758620689655,
+          "support": 61
+        }
+      },
+      "macro_f1": 0.949944382647386,
+      "accuracy": 0.9344262295081968,
+      "samples": 122,
+      "unknown_samples": 4,
+      "coverage": 0.9672131147540983,
+      "yawn_recall_at_070": 0.8524590163934426
+    },
+    "legacy_full": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          0,
+          61
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 122,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "yawn_recall_at_070": 1.0
+    },
+    "smiles": {
+      "samples": 563,
+      "false_yawn_at_050": 562,
+      "false_yawn_at_070": 562,
+      "false_positive_rate_at_070": 0.9982238010657194,
+      "runtime_usable_faces": 0,
+      "runtime_usable_false_yawn_at_070": 0
+    },
+    "genki": {
+      "samples": 322,
+      "false_yawn_at_050": 56,
+      "false_yawn_at_070": 45,
+      "false_positive_rate_at_070": 0.13975155279503104,
+      "runtime_usable_faces": 183,
+      "runtime_usable_false_yawn_at_070": 42
+    }
+  },
+  "trials": [
+    {
+      "regularization": 0.0,
+      "epoch": 25,
+      "score": 0.9885604978606607,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              1,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9672131147540983,
+              "f1": 0.9752066115702479,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "f1": 0.9747899159663865,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9749982637683172,
+          "accuracy": 0.9590163934426229,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9016393442622951
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 50,
+      "score": 0.9923740510697033,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 100,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 1,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 150,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 200,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 25,
+      "score": 0.9885604978606607,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              1,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9672131147540983,
+              "f1": 0.9752066115702479,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "f1": 0.9747899159663865,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9749982637683172,
+          "accuracy": 0.9590163934426229,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9016393442622951
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 50,
+      "score": 0.9923740510697033,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 100,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 150,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 200,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 25,
+      "score": 0.9885604978606607,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              1,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9672131147540983,
+              "f1": 0.9752066115702479,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "f1": 0.9747899159663865,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9749982637683172,
+          "accuracy": 0.9590163934426229,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9016393442622951
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 50,
+      "score": 0.9923740510697033,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 5,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 100,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 150,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 200,
+      "score": 0.9944444444444445,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 25,
+      "score": 0.9812444008410542,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              4,
+              55
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9365079365079365,
+              "recall": 0.9672131147540983,
+              "f1": 0.9516129032258065,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9016393442622951,
+              "f1": 0.9482758620689655,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.949944382647386,
+          "accuracy": 0.9344262295081968,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9016393442622951
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 8,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 50,
+      "score": 0.9829968350647036,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              3,
+              56
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9516129032258065,
+              "recall": 0.9672131147540983,
+              "f1": 0.959349593495935,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9180327868852459,
+              "f1": 0.9572649572649573,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9583072753804461,
+          "accuracy": 0.9426229508196722,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9180327868852459
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 3
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 100,
+      "score": 0.9829968350647036,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              3,
+              56
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9516129032258065,
+              "recall": 0.9672131147540983,
+              "f1": 0.959349593495935,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9180327868852459,
+              "f1": 0.9572649572649573,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9583072753804461,
+          "accuracy": 0.9426229508196722,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9180327868852459
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 3
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 150,
+      "score": 0.9829968350647036,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              3,
+              56
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9516129032258065,
+              "recall": 0.9672131147540983,
+              "f1": 0.959349593495935,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9180327868852459,
+              "f1": 0.9572649572649573,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9583072753804461,
+          "accuracy": 0.9426229508196722,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9180327868852459
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 3
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 200,
+      "score": 0.9840320317520742,
+      "preserves_validation_yawns": true,
+      "metrics": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              3,
+              56
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9516129032258065,
+              "recall": 0.9672131147540983,
+              "f1": 0.959349593495935,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9180327868852459,
+              "f1": 0.9572649572649573,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9583072753804461,
+          "accuracy": 0.9426229508196722,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9180327868852459
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      }
+    }
+  ],
+  "selected": {
+    "regularization": 0.0,
+    "epoch": 100,
+    "score": 0.9944444444444445,
+    "preserves_validation_yawns": true,
+    "metrics": {
+      "legacy_face": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            59,
+            0
+          ],
+          [
+            0,
+            59
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.9672131147540983,
+            "f1": 0.9833333333333333,
+            "support": 61
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.9672131147540983,
+            "f1": 0.9833333333333333,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.9833333333333333,
+        "accuracy": 0.9672131147540983,
+        "samples": 122,
+        "unknown_samples": 4,
+        "coverage": 0.9672131147540983,
+        "yawn_recall_at_070": 0.9672131147540983
+      },
+      "legacy_full": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "yawn_recall_at_070": 1.0
+      },
+      "smiles": {
+        "samples": 563,
+        "false_yawn_at_050": 0,
+        "false_yawn_at_070": 0,
+        "false_positive_rate_at_070": 0.0,
+        "runtime_usable_faces": 0,
+        "runtime_usable_false_yawn_at_070": 0
+      },
+      "genki": {
+        "samples": 322,
+        "false_yawn_at_050": 1,
+        "false_yawn_at_070": 0,
+        "false_positive_rate_at_070": 0.0,
+        "runtime_usable_faces": 183,
+        "runtime_usable_false_yawn_at_070": 0
+      }
+    }
+  }
+}

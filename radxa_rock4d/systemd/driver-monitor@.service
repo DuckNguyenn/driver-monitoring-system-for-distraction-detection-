@@ -1,0 +1,26 @@
+[Unit]
+Description=Driver monitor on Radxa ROCK 4D
+After=multi-user.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=%i
+SupplementaryGroups=video dialout
+WorkingDirectory=/opt/driver-monitor
+ExecStart=/opt/driver-monitor/.venv/bin/python -m driver_monitor run --config /opt/driver-monitor/configs/driver_monitor.yaml --backend rknn --headless
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=5
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/driver-monitor/logs
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

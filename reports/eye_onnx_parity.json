@@ -1,0 +1,2018 @@
+{
+  "type": "static_image_classification",
+  "classifier": "eye",
+  "backend": "onnx",
+  "split": "test",
+  "crop": "original",
+  "config_sha256": "151eb31cb456538b2e06ac4a4b50f52ea6677a4e20757abadbfe2bc3daa90903",
+  "metrics": {
+    "classes": [
+      "Closed",
+      "Open"
+    ],
+    "confusion_matrix": [
+      [
+        109,
+        0
+      ],
+      [
+        0,
+        109
+      ]
+    ],
+    "per_class": {
+      "Closed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 109
+      },
+      "Open": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 109
+      }
+    },
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "samples": 218,
+    "unknown_samples": 0,
+    "coverage": 1.0
+  },
+  "inference_p95_ms": 13.468394999927108,
+  "cabin_event_validation": "not measured by static images",
+  "subject_independence": "not established for legacy datasets",
+  "predictions": [
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___107__7f092716.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999997930968979,
+        "Open": 2.0690310206603676e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___115__960431fd.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999950266262461,
+        "Open": 4.9733737538981195e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___116__4569a5be.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999759339412,
+        "Open": 2.4066058788380482e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___120__16335859.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999989291062527,
+        "Open": 1.0708937473673193e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___129__cea1c296.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999993360906615,
+        "Open": 6.639093385107714e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___130__52cbfbec.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999464311558,
+        "Open": 5.356884426629957e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___132__f49216d6.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999969546125,
+        "Open": 3.045387493809408e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___137__42fdbb47.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9575221742214861,
+        "Open": 0.042477825778513834
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___148__81d61af9.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999892718114937,
+        "Open": 1.0728188506289798e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___14__4c833a7e.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9998824082278891,
+        "Open": 0.00011759177211088335
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___152__51bd67e8.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999078038882,
+        "Open": 9.219611180450737e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___159__c144fd8d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999572388649,
+        "Open": 4.2761135025127055e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___161__83c1efcc.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9989880016944386,
+        "Open": 0.0010119983055614375
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___163__565437f6.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9958648129502983,
+        "Open": 0.004135187049701723
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___164__9274cf35.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9998761250046787,
+        "Open": 0.0001238749953212992
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___167__e09526d8.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999162993276056,
+        "Open": 8.370067239439263e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___168__57ea0313.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999797232815111,
+        "Open": 2.02767184888678e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___169__161afc13.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998833013489,
+        "Open": 1.1669865103580732e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___172__5d6992a9.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9992279356973981,
+        "Open": 0.0007720643026018512
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___181__9253a096.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999995005163268,
+        "Open": 4.994836731973136e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___195__3a925897.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999968624467,
+        "Open": 3.13755331841425e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___197__4b8a73f5.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999990883636841,
+        "Open": 9.11636315901912e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___20__b720d377.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9997258045062025,
+        "Open": 0.0002741954937975259
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___211__a192b222.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999975471481445,
+        "Open": 2.452851855480127e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___214__ecd67ca4.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999994220402082,
+        "Open": 5.779597918204649e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___216__91953860.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9770524338009359,
+        "Open": 0.022947566199064077
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___219__3b6b7605.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999997901235603,
+        "Open": 2.0987643970008035e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___221__8e9dd35d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9998943917295983,
+        "Open": 0.00010560827040173962
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___226__3ccf6c3d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999986741719532,
+        "Open": 1.325828046742302e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___231__05952562.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999994151398189,
+        "Open": 5.848601810552748e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___240__c23e1bfc.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999994523745459,
+        "Open": 5.4762545409114475e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___242__12c099a0.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999599543246,
+        "Open": 4.0045675393013314e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___243__cc431d05.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999903183864,
+        "Open": 9.681613639203323e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___253__f2c0fd3c.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999866419139813,
+        "Open": 1.335808601869982e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___257__806a2124.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999983362322297,
+        "Open": 1.6637677703725294e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___260__92432535.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999586415081,
+        "Open": 4.135849180830334e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___26__27574e0b.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999996881815746,
+        "Open": 3.118184253759684e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___279__39e84976.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999997305864466,
+        "Open": 2.694135533316175e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___284__cf0615eb.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999986798247,
+        "Open": 1.3201753006677128e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___287__6110cf48.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999964869382132,
+        "Open": 3.5130617868345396e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___28__e28a720e.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999755594072415,
+        "Open": 2.4440592758540887e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___298__b46f9765.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999621310838719,
+        "Open": 0.0003786891612810421
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___302__dfd96d5e.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999860039522421,
+        "Open": 1.3996047757877955e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___31__3b0d20b3.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999279462973062,
+        "Open": 7.205370269382108e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___326__d7f635ea.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999234920087016,
+        "Open": 7.650799129843486e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___32__a84f3296.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999605286776,
+        "Open": 3.9471322429087184e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___330__d8ad687c.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9987489466418121,
+        "Open": 0.0012510533581879095
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___332__5302d2ec.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999218924497,
+        "Open": 7.810755030716265e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___340__8d39967f.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998220754909,
+        "Open": 1.7792450911523305e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___347__566ffb9a.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999997118616905,
+        "Open": 2.88138309541152e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___348__4aba303d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999997644512597,
+        "Open": 2.3554874030037869e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___359__62436354.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999553589612208,
+        "Open": 4.464103877915925e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___363__685480f0.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999884250849,
+        "Open": 1.1574915114523631e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___373__a66559d5.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999613107221,
+        "Open": 3.868927783895262e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___383__b693632d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9843009793005373,
+        "Open": 0.015699020699462704
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___3__0d0c027f.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999990159965663,
+        "Open": 9.840034337559624e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___413__c8f74745.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999340867609,
+        "Open": 6.591323910233291e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___416__0dee0325.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999978057181734,
+        "Open": 2.194281826588414e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___434__f55aa938.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999685357582,
+        "Open": 3.146424177678918e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___439__955010f1.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999897613564,
+        "Open": 1.0238643605806274e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___441__9c3325aa.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999752691084,
+        "Open": 2.4730891603444215e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___442__ae0be42f.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999983992069836,
+        "Open": 1.6007930163214664e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___447__3dc37ad0.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998706589692,
+        "Open": 1.2934103079637222e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___451__ee1980dc.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999947458173227,
+        "Open": 5.254182677305816e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___45__cdfc05d2.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998650006908,
+        "Open": 1.3499930915371333e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___46__e560a651.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999990793287148,
+        "Open": 9.206712851743115e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___495__552daf9a.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999998532389154,
+        "Open": 1.4676108459155503e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___497__715ddb44.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998622693934,
+        "Open": 1.3773060658895517e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___498__33b0687b.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9998745797508177,
+        "Open": 0.00012542024918222442
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___506__d1bc9961.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999997101791827,
+        "Open": 2.8982081732473325e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___514__489525d2.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998725047885,
+        "Open": 1.2749521155315856e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___515__e727a89a.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999965974256,
+        "Open": 3.4025744328446446e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___529__f4ca401c.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999857610897,
+        "Open": 1.4238910292376922e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___534__4afb3a03.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999927363691632,
+        "Open": 7.2636308368390105e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___538__a5a9a12d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999970313485502,
+        "Open": 2.9686514497376094e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___541__cbfcad50.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998688972498,
+        "Open": 1.3110275020660023e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___542__9a6d566e.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999821432352441,
+        "Open": 1.7856764755889515e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___559__dc96fa45.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999950541421794,
+        "Open": 4.945857820609255e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___568__e2026d6a.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999750094473779,
+        "Open": 2.4990552622056558e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___584__6efbd065.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9992064814447766,
+        "Open": 0.0007935185552233532
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___585__9687118b.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999992156881665,
+        "Open": 7.843118335132574e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___586__a0a4a0cc.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999924299213,
+        "Open": 7.57007872873945e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___58__cf82d4a4.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999996879111421,
+        "Open": 3.1208885786918807e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___597__64020154.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999959331499316,
+        "Open": 4.06685006836278e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___59__f458a7ac.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999913753027,
+        "Open": 8.624697326319968e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___605__e9fcf55d.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.99999823373749,
+        "Open": 1.766262510032409e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___608__f58f2c32.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999976970876524,
+        "Open": 2.3029123476073646e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___609__a9a129b4.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999994440325172,
+        "Open": 5.55967482796398e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___618__f5af6ac8.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999981120580148,
+        "Open": 1.887941985191601e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___61__96ace1e1.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999965027944,
+        "Open": 3.49720560270708e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___624__4beaa5d5.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9996357880691331,
+        "Open": 0.00036421193086691494
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___634__84f77413.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999987347919713,
+        "Open": 1.2652080287099727e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___639__6437fe69.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999292725817445,
+        "Open": 0.0007072741825550461
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___64__5376a6b2.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999951325934417,
+        "Open": 4.8674065583043665e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___650__4fc58037.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999996755092758,
+        "Open": 3.244907241630409e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___656__3c58ed78.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999963514158589,
+        "Open": 3.6485841411949485e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___666__a1c18cd4.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999989422294515,
+        "Open": 1.0577705484838345e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___667__841fcdfa.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999920049350027,
+        "Open": 7.995064997248519e-06
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___679__f6e13efe.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9989506193472829,
+        "Open": 0.001049380652717115
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___687__7ffde771.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9998070756524878,
+        "Open": 0.00019292434751221136
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___710__24d9760b.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999783743854,
+        "Open": 2.1625614608792107e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___718__62ab4515.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998823894314,
+        "Open": 1.1761056858334753e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___719__f79e1ea0.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999351218314,
+        "Open": 6.48781685874135e-08
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___72__a3a01e12.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999976855557592,
+        "Open": 2.314444240800969e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___76__cd9db7c7.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.99999989288944,
+        "Open": 1.0711055994066478e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___77__4d45eee7.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999863521351203,
+        "Open": 1.3647864879706345e-05
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___7__fcd21dcc.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.999999725807224,
+        "Open": 2.7419277600061696e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___95__f0a8061b.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999999975077349,
+        "Open": 2.492265054782374e-09
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Closed___96__55f3e24c.jpg",
+      "truth": "Closed",
+      "prediction": "Closed",
+      "probabilities": {
+        "Closed": 0.9999998960477738,
+        "Open": 1.0395222619202458e-07
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___107__b6d18e14.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.227752231118148e-10,
+        "Open": 0.9999999996772249
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___115__93a5d43b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 6.769683466624209e-06,
+        "Open": 0.9999932303165334
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___116__758d4ff1.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 0.0003031967645678811,
+        "Open": 0.9996968032354321
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___120__82a7a51d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 6.914650601224585e-13,
+        "Open": 0.9999999999993086
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___129__5a83c0be.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.553637139650334e-05,
+        "Open": 0.9999744636286035
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___130__634f3ec6.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 0.0007449551808092891,
+        "Open": 0.9992550448191907
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___132__1244172e.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.314120423725671e-08,
+        "Open": 0.9999999668587958
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___137__9c45cc70.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.5042714294157624e-10,
+        "Open": 0.9999999998495728
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___148__da5e8b8f.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.0348990680740126e-11,
+        "Open": 0.9999999999696509
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___14__d0af0ee8.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.843397347505992e-10,
+        "Open": 0.9999999995156603
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___152__fe72de7f.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.765757908864549e-07,
+        "Open": 0.9999992234242091
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___159__b879f705.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.3608342751084909e-11,
+        "Open": 0.9999999999863916
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___161__2d38864d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.2549399413628547e-12,
+        "Open": 0.9999999999977451
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___163__de4f2b1e.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.08813938319092e-10,
+        "Open": 0.9999999997911861
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___164__58aee368.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.974740146717467e-11,
+        "Open": 0.9999999999402527
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___167__32e40591.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.6898772962527815e-12,
+        "Open": 0.99999999999831
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___168__43c5caf3.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.014867175264035e-11,
+        "Open": 0.9999999999698512
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___169__27c506a6.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.9123215507461756e-10,
+        "Open": 0.9999999998087679
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___172__a8ba283d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.031175230989214e-08,
+        "Open": 0.9999999596882477
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___181__ee80cf14.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.828781385780862e-06,
+        "Open": 0.9999901712186142
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___195__bc958d0b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.279959815632458e-05,
+        "Open": 0.9999572004018437
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___197__a3659d8a.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 0.042269773466365235,
+        "Open": 0.9577302265336347
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___20__63ac7df9.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.5211285275153216e-11,
+        "Open": 0.9999999999647886
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___211__ae31c987.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.6171000277132706e-08,
+        "Open": 0.9999999838289997
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___214__046c0f14.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.5812932340494794e-10,
+        "Open": 0.9999999997418707
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___216__5b739d50.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.347657096471742e-14,
+        "Open": 0.9999999999999265
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___219__7d0e47d6.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.267869101881446e-15,
+        "Open": 0.9999999999999958
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___221__28986617.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.73121172708271e-10,
+        "Open": 0.9999999996268789
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___226__41e94085.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.4062111596300556e-11,
+        "Open": 0.9999999999559379
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___231__a6a5e8a1.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.2081871357283952e-08,
+        "Open": 0.9999999879181286
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___240__67630873.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.686997036911541e-11,
+        "Open": 0.9999999999031299
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___242__ce01265e.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.249460245868036e-09,
+        "Open": 0.9999999967505397
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___243__7e1acb68.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.6050177059997127e-06,
+        "Open": 0.999996394982294
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___253__349cf878.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.1282164438669974e-11,
+        "Open": 0.9999999999887179
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___257__87cc8b40.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.6252247730202134e-11,
+        "Open": 0.9999999999637477
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___260__13669b4d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.7892454152917248e-09,
+        "Open": 0.9999999982107546
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___26__9e3400b1.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.306489886732827e-11,
+        "Open": 0.9999999999569351
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___279__dd7ad0f5.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.535095152673268e-13,
+        "Open": 0.9999999999990465
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___284__f56f0c6a.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.399050204626718e-11,
+        "Open": 0.9999999999160094
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___287__9712daba.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.646972332425731e-07,
+        "Open": 0.9999998353027667
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___28__9815f767.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.211744171420456e-09,
+        "Open": 0.9999999907882559
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___298__02479ce0.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.581680384548066e-08,
+        "Open": 0.9999999041831962
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___302__90df5b60.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.259073897009496e-11,
+        "Open": 0.9999999999274092
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___31__94d41141.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.0430754956215258e-05,
+        "Open": 0.9999695692450438
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___326__5c7ecdb0.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.759786320189452e-09,
+        "Open": 0.9999999952402137
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___32__e057c425.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.3006130600027836e-09,
+        "Open": 0.999999998699387
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___330__c9aeeb82.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.293907090443343e-10,
+        "Open": 0.9999999996706093
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___332__7c65f71c.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.350753562379696e-10,
+        "Open": 0.9999999996649247
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___340__20e22588.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.230904564685168e-13,
+        "Open": 0.9999999999991769
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___347__e270dfe1.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.7956632274824753e-12,
+        "Open": 0.9999999999982043
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___348__07342bae.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.562437729548351e-10,
+        "Open": 0.9999999994437563
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___359__9ab6a06d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.50788960880901e-13,
+        "Open": 0.9999999999994491
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___363__0cae0120.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.19631239461248e-11,
+        "Open": 0.9999999999580369
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___373__28a9aa0f.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.5736646081340816e-09,
+        "Open": 0.9999999974263354
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___383__17edebce.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.6873684387015327e-08,
+        "Open": 0.9999999831263157
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___3__8a88233d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.0523675226240596e-05,
+        "Open": 0.9999794763247738
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___413__c741a801.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.0234243128938525e-09,
+        "Open": 0.9999999979765757
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___416__5bd3ec48.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.7384957171372834e-08,
+        "Open": 0.9999999826150429
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___434__24e4928b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.187130660852331e-12,
+        "Open": 0.9999999999918128
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___439__aa332680.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.254394919694936e-09,
+        "Open": 0.9999999987456052
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___441__121004c9.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.655125224984325e-09,
+        "Open": 0.9999999943448747
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___442__2f2b0cb0.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.1195467598770819e-10,
+        "Open": 0.9999999997880453
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___447__589b47e3.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.792882650531821e-12,
+        "Open": 0.9999999999902072
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___451__d224d75d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.4355651175828823e-11,
+        "Open": 0.9999999999756444
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___45__45e67f12.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.9291896050019488e-08,
+        "Open": 0.999999970708104
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___46__962c3688.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.0976685916489634e-10,
+        "Open": 0.9999999995902331
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___495__0020423d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.844375512226251e-11,
+        "Open": 0.9999999999615563
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___497__f767e98c.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 4.0135046236355954e-09,
+        "Open": 0.9999999959864954
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___498__d07a3029.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.497819560415782e-11,
+        "Open": 0.9999999999450218
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___506__d5ab093c.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.3722244071433795e-07,
+        "Open": 0.9999998627775593
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___514__6e156bdb.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 0.00018110871854748483,
+        "Open": 0.9998188912814525
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___515__08574d88.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.0271266278842837e-07,
+        "Open": 0.9999997972873372
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___529__6b3e03f5.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.7270422589047922e-10,
+        "Open": 0.9999999998272957
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___534__bfea8679.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.524081505748676e-14,
+        "Open": 0.9999999999999147
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___538__bbe73977.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.804932869505299e-10,
+        "Open": 0.9999999998195066
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___541__0fc0bd99.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.787058431349962e-08,
+        "Open": 0.9999999221294157
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___542__74342837.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.1671869159886016e-11,
+        "Open": 0.9999999999783282
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___559__73eb5238.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.8280344724680704e-10,
+        "Open": 0.9999999997171964
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___568__8efea3d0.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.387912024579778e-10,
+        "Open": 0.9999999991612087
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___584__61e5f311.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.6384500998423275e-08,
+        "Open": 0.999999973615499
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___585__bd4f8232.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 6.645294998302701e-07,
+        "Open": 0.9999993354705001
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___586__4194d714.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 3.2689338870754473e-06,
+        "Open": 0.999996731066113
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___58__8a324afe.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.4417721919420491e-08,
+        "Open": 0.9999999855822781
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___597__dfa601ec.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.4776654897500668e-10,
+        "Open": 0.9999999998522335
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___59__0f435880.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.447589412092233e-12,
+        "Open": 0.9999999999905524
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___605__bc342bb5.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.851563130527402e-14,
+        "Open": 0.9999999999999414
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___608__162fcbf8.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.4596424836329374e-09,
+        "Open": 0.9999999975403575
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___609__37418f62.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.660247488712527e-09,
+        "Open": 0.9999999923397526
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___618__327ff9cd.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.1959443208921174e-07,
+        "Open": 0.9999998804055679
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___61__35cb226d.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.5195615290279716e-07,
+        "Open": 0.9999998480438471
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___624__af0d9ca2.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.7896857297417152e-09,
+        "Open": 0.9999999982103143
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___634__6640fc27.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.876594431879951e-09,
+        "Open": 0.9999999981234056
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___639__c5e81eaa.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 2.593248725943086e-07,
+        "Open": 0.9999997406751274
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___64__9a174406.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.335828745735155e-07,
+        "Open": 0.9999991664171254
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___650__15f05f57.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.856755027162508e-10,
+        "Open": 0.9999999998143245
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___656__e3d2008b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.6791358275596554e-09,
+        "Open": 0.9999999983208641
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___666__4b6b8c78.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.58641239848161e-08,
+        "Open": 0.999999984135876
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___667__71bba300.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.182691797164782e-08,
+        "Open": 0.999999988173082
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___679__c32a7563.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.602289655621671e-07,
+        "Open": 0.9999992397710344
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___687__a9650aa3.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.1044302970943201e-10,
+        "Open": 0.999999999889557
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___710__0fefaed8.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 7.539066587548027e-10,
+        "Open": 0.9999999992460933
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___718__501ca9d4.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 5.749090948003313e-09,
+        "Open": 0.999999994250909
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___719__45f69aa3.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.0768514552168043e-11,
+        "Open": 0.9999999999892315
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___72__2244af57.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.6268162346302536e-09,
+        "Open": 0.9999999983731838
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___76__8863cd4b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.523095749999513e-13,
+        "Open": 0.9999999999998477
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___77__1b54fba7.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 9.185179743525951e-13,
+        "Open": 0.9999999999990814
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___7__6b9c963e.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.5526283343222525e-07,
+        "Open": 0.9999998447371665
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___95__4e8e81b0.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 8.664818123144804e-08,
+        "Open": 0.9999999133518188
+      }
+    },
+    {
+      "file": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\kaggle_output\\data\\eye_dataset\\images\\test\\Open___96__26e5cb7b.jpg",
+      "truth": "Open",
+      "prediction": "Open",
+      "probabilities": {
+        "Closed": 1.246135486450154e-11,
+        "Open": 0.9999999999875386
+      }
+    }
+  ],
+  "parity": {
+    "reference": "torch",
+    "maximum_probability_error": 1.3922820610301478e-07,
+    "label_agreement": 1.0,
+    "reference_macro_f1": 1.0,
+    "f1_drop_points": 0.0,
+    "passed": true
+  }
+}

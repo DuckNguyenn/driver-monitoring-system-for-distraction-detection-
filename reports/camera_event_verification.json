@@ -1,0 +1,71 @@
+{
+  "issue": "Eye side mapping, unilateral eye events, and yawn evidence hidden by uncertain eyes",
+  "eye_order": "driver_anatomical_left_right",
+  "passed_tests": {
+    "shared_runtime": 48,
+    "pc_compatibility": 2
+  },
+  "failed_before_fix": [
+    "anatomical_crop_order",
+    "blink_with_brief_ambiguous_frames",
+    "yawn_with_uncertain_eyes"
+  ],
+  "pc_parameters": {
+    "min_sharpness": 20.0,
+    "min_eye_sharpness": 6.0,
+    "eye_transition_grace_seconds": 0.15,
+    "yawn_smoothing_seconds": 0.2
+  },
+  "camera": {
+    "source": "0",
+    "live": true,
+    "backend": "onnx",
+    "frames": 147,
+    "wall_seconds": 10.016000000000076,
+    "media_seconds": 9.75,
+    "fps": 14.676517571884872,
+    "states": {
+      "NORMAL": 113,
+      "UNKNOWN": 34
+    },
+    "latency_p95_ms": 33,
+    "processing_p95_ms": 33,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "video_fixture": {
+    "source": "reports/video_fixture.avi",
+    "live": false,
+    "backend": "onnx",
+    "frames": 135,
+    "wall_seconds": 3.125,
+    "media_seconds": 8.933333333333334,
+    "fps": 43.2,
+    "states": {
+      "NORMAL": 135
+    },
+    "latency_p95_ms": 33,
+    "processing_p95_ms": 33,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "accuracy_measured": false,
+  "checkpoint_training_performed": false,
+  "files": {
+    "driver_monitor/core.py": "5d309f9075675b8d48e27193ac978c31c3ef1489610265502fc63e2ffbffcb46",
+    "driver_monitor/eye_events.py": "eede515aea6300570695f43eb02023d6eae1b8f8babdda139a2928e323cd8748",
+    "driver_monitor/vision.py": "252c6fc88c4eb26a7a9fcb74c1d5e8bc4bd90c55b531dcd1f928efaced63dfaa",
+    "driver_monitor/overlay.py": "5045021d38402ddff778532c26a227b7191f99b6b88e940c93ca2772f3066a8a",
+    "driver_monitor/runtime.py": "eac91094ca0af2e07b3f17ea974457d0988c1a0a397ea933474b86745b223b93",
+    "driver_monitor/journal.py": "1b8dfcd265f6afcf07bc3290586eeabd47955bccbe6f963e5b5a8ea4a5bb3d63",
+    "configs/camera_pc.yaml": "f060c7d861bcefc430b542814459a51187af5a86104ba1d823990dddcefeb4b3",
+    "tests/test_camera_events.py": "15929ef21960c75f6d0d42a3b8ed7d2d323d1def328988b05595a8ec8bcd1011",
+    "tests/test_models_vision.py": "b7dfbe908ca7db6efecf5b57f88d148979e0d537d89beae03f1d5c96ee9b7554"
+  }
+}

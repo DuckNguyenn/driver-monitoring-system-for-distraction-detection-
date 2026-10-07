@@ -1,0 +1,18 @@
+# Frozen PC profile before the 2026-10-07 camera-yawn repair.
+# Baseline for reproducible refinement, replay comparison and rollback.
+manifest: ../models/eye_refined_v4/manifest.json
+log_dir: ../logs
+backend: onnx
+width: 640
+height: 480
+min_sharpness: 20.0
+min_eye_sharpness: 6.0
+serial_port: null
+headless: false
+eye_motion_window_seconds: 0.30
+eye_motion_settle_seconds: 0.35
+eye_motion_max_shift_ratio: 0.08
+eye_motion_max_roll_degrees: 3.0
+monitor:
+  eye_event_open_seconds: 0.10
+  yawn_smoothing_seconds: 0.20

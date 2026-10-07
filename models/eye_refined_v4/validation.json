@@ -1,0 +1,2307 @@
+{
+  "baseline": {
+    "legacy": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          0,
+          61
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 122,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 1.0,
+      "Open_recall_ge_080": 1.0,
+      "false_closed_ge_080": 0,
+      "confident_coverage_ge_080": 1.0
+    },
+    "roi": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          100,
+          9
+        ],
+        [
+          5,
+          50
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9174311926605505,
+          "f1": 0.9345794392523364,
+          "support": 109
+        },
+        "Open": {
+          "precision": 0.847457627118644,
+          "recall": 0.9090909090909091,
+          "f1": 0.8771929824561403,
+          "support": 55
+        }
+      },
+      "macro_f1": 0.9058862108542384,
+      "accuracy": 0.9146341463414634,
+      "samples": 164,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 0.8715596330275229,
+      "Open_recall_ge_080": 0.8545454545454545,
+      "false_closed_ge_080": 1,
+      "confident_coverage_ge_080": 0.9085365853658537
+    },
+    "manual_roi": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          50
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.5,
+          "recall": 0.5555555555555556,
+          "f1": 0.5263157894736842,
+          "support": 9
+        },
+        "Open": {
+          "precision": 0.9259259259259259,
+          "recall": 0.9090909090909091,
+          "f1": 0.9174311926605505,
+          "support": 55
+        }
+      },
+      "macro_f1": 0.7218734910671174,
+      "accuracy": 0.859375,
+      "samples": 64,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 0.5555555555555556,
+      "Open_recall_ge_080": 0.8545454545454545,
+      "false_closed_ge_080": 1,
+      "confident_coverage_ge_080": 0.890625
+    },
+    "cew_roi": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          95,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1": 0.9743589743589743,
+          "support": 100
+        },
+        "Open": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "macro_f1": 0.48717948717948717,
+      "accuracy": 0.95,
+      "samples": 100,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 0.9,
+      "Open_recall_ge_080": 0.0,
+      "false_closed_ge_080": 0,
+      "confident_coverage_ge_080": 0.92
+    }
+  },
+  "trials": [
+    {
+      "epoch": 1,
+      "loss": 0.03103895166347389,
+      "score": 0.9543508479288296,
+      "diagnostic_open_min_probability": 0.9519608020782471,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              105,
+              4
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9813084112149533,
+              "recall": 0.963302752293578,
+              "f1": 0.9722222222222222,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9298245614035088,
+              "recall": 0.9636363636363636,
+              "f1": 0.9464285714285714,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9593253968253967,
+          "accuracy": 0.9634146341463414,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9357798165137615,
+          "Open_recall_ge_080": 0.9272727272727272,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9390243902439024
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9272727272727272,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9375
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              96,
+              4
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.96,
+              "f1": 0.9795918367346939,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.4897959183673469,
+          "accuracy": 0.96,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.94,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.94
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 0.015832891092452523,
+      "score": 0.9756463719766472,
+      "diagnostic_open_min_probability": 0.9500650763511658,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              106,
+              3
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9814814814814815,
+              "recall": 0.9724770642201835,
+              "f1": 0.9769585253456221,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9464285714285714,
+              "recall": 0.9636363636363636,
+              "f1": 0.954954954954955,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9659567401502885,
+          "accuracy": 0.9695121951219512,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.963302752293578,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.975609756097561
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.984375
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              97,
+              3
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.97,
+              "f1": 0.9847715736040609,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.49238578680203043,
+          "accuracy": 0.97,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.96,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.97
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 0.006917163268279238,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9509047865867615,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.975609756097561
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.98
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 0.004593091766631174,
+      "score": 0.9756463719766472,
+      "diagnostic_open_min_probability": 0.9884400367736816,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              105,
+              4
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9813084112149533,
+              "recall": 0.963302752293578,
+              "f1": 0.9722222222222222,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9298245614035088,
+              "recall": 0.9636363636363636,
+              "f1": 0.9464285714285714,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9593253968253967,
+          "accuracy": 0.9634146341463414,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.963302752293578,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.984375
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              96,
+              4
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.96,
+              "f1": 0.9795918367346939,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.4897959183673469,
+          "accuracy": 0.96,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.96,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.98
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 0.0029099998515811324,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9953172206878662,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              106,
+              3
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9814814814814815,
+              "recall": 0.9724770642201835,
+              "f1": 0.9769585253456221,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9464285714285714,
+              "recall": 0.9636363636363636,
+              "f1": 0.954954954954955,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9659567401502885,
+          "accuracy": 0.9695121951219512,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              97,
+              3
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.97,
+              "f1": 0.9847715736040609,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.49238578680203043,
+          "accuracy": 0.97,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 0.0021160525097924485,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9953071475028992,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 0.0014105709359937262,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9948145747184753,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 0.0010481774491096967,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9971000552177429,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 0.0008366295868379948,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9974804520606995,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 10,
+      "loss": 0.0006863851797730866,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9992664456367493,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 11,
+      "loss": 0.0006178258522205066,
+      "score": 0.9726438698915763,
+      "diagnostic_open_min_probability": 0.9971737861633301,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9724770642201835,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9454545454545454,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.96875
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.97,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.99
+        }
+      }
+    },
+    {
+      "epoch": 12,
+      "loss": 0.0005065667796707883,
+      "score": 0.9756463719766472,
+      "diagnostic_open_min_probability": 0.9994192123413086,
+      "qualified": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              107,
+              2
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.981651376146789,
+              "recall": 0.981651376146789,
+              "f1": 0.981651376146789,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9636363636363636,
+              "recall": 0.9636363636363636,
+              "f1": 0.9636363636363636,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9726438698915763,
+          "accuracy": 0.975609756097561,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.963302752293578,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.9817073170731707
+        },
+        "manual_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              2,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8181818181818182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9636363636363636,
+              "f1": 0.9814814814814815,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9407407407407408,
+          "accuracy": 0.96875,
+          "samples": 64,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 1.0,
+          "Open_recall_ge_080": 0.9636363636363636,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.984375
+        },
+        "cew_roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "Open": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "macro_f1": 0.494949494949495,
+          "accuracy": 0.98,
+          "samples": 100,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.96,
+          "Open_recall_ge_080": 0.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.98
+        }
+      }
+    }
+  ],
+  "selected": {
+    "epoch": 2,
+    "loss": 0.015832891092452523,
+    "score": 0.9756463719766472,
+    "diagnostic_open_min_probability": 0.9500650763511658,
+    "qualified": true,
+    "metrics": {
+      "legacy": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 1.0,
+        "Open_recall_ge_080": 1.0,
+        "false_closed_ge_080": 0,
+        "confident_coverage_ge_080": 1.0
+      },
+      "roi": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            106,
+            3
+          ],
+          [
+            2,
+            53
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.9814814814814815,
+            "recall": 0.9724770642201835,
+            "f1": 0.9769585253456221,
+            "support": 109
+          },
+          "Open": {
+            "precision": 0.9464285714285714,
+            "recall": 0.9636363636363636,
+            "f1": 0.954954954954955,
+            "support": 55
+          }
+        },
+        "macro_f1": 0.9659567401502885,
+        "accuracy": 0.9695121951219512,
+        "samples": 164,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 0.963302752293578,
+        "Open_recall_ge_080": 0.9636363636363636,
+        "false_closed_ge_080": 1,
+        "confident_coverage_ge_080": 0.975609756097561
+      },
+      "manual_roi": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            9,
+            0
+          ],
+          [
+            2,
+            53
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.8181818181818182,
+            "recall": 1.0,
+            "f1": 0.9,
+            "support": 9
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 0.9636363636363636,
+            "f1": 0.9814814814814815,
+            "support": 55
+          }
+        },
+        "macro_f1": 0.9407407407407408,
+        "accuracy": 0.96875,
+        "samples": 64,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 1.0,
+        "Open_recall_ge_080": 0.9636363636363636,
+        "false_closed_ge_080": 1,
+        "confident_coverage_ge_080": 0.984375
+      },
+      "cew_roi": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            97,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 0.97,
+            "f1": 0.9847715736040609,
+            "support": 100
+          },
+          "Open": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "macro_f1": 0.49238578680203043,
+        "accuracy": 0.97,
+        "samples": 100,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 0.96,
+        "Open_recall_ge_080": 0.0,
+        "false_closed_ge_080": 0,
+        "confident_coverage_ge_080": 0.97
+      }
+    }
+  }
+}

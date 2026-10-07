@@ -1,0 +1,505 @@
+{
+  "verification": "Toolkit2 graph simulator using same ONNX/config as conversion",
+  "exported_rknn_blob_inference_tested": false,
+  "npu_inference_tested": false,
+  "physical_board_tested": false,
+  "classifiers": {
+    "eye": {
+      "samples": 20,
+      "label_agreement": 1.0,
+      "maximum_probability_error": 0.00040329737118859066,
+      "passed": true,
+      "predictions": [
+        {
+          "file": "Closed___107__7f092716.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999997930968979,
+            "Open": 2.0690310206603676e-07
+          },
+          "simulator": {
+            "Closed": 0.9999998211860976,
+            "Open": 1.7881390235175448e-07
+          }
+        },
+        {
+          "file": "Closed___115__960431fd.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.999950266262461,
+            "Open": 4.9733737538981195e-05
+          },
+          "simulator": {
+            "Closed": 0.9999503517959687,
+            "Open": 4.964820403135072e-05
+          }
+        },
+        {
+          "file": "Closed___116__4569a5be.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999999759339412,
+            "Open": 2.4066058788380482e-08
+          },
+          "simulator": {
+            "Closed": 1.0,
+            "Open": 0.0
+          }
+        },
+        {
+          "file": "Closed___120__16335859.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999989291062527,
+            "Open": 1.0708937473673193e-06
+          },
+          "simulator": {
+            "Closed": 0.9999989271175451,
+            "Open": 1.0728824548790343e-06
+          }
+        },
+        {
+          "file": "Closed___129__cea1c296.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999993360906615,
+            "Open": 6.639093385107714e-07
+          },
+          "simulator": {
+            "Closed": 0.9999993443493373,
+            "Open": 6.556506626512236e-07
+          }
+        },
+        {
+          "file": "Closed___130__52cbfbec.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999999464311558,
+            "Open": 5.356884426629957e-08
+          },
+          "simulator": {
+            "Closed": 0.9999999403953588,
+            "Open": 5.960464122267716e-08
+          }
+        },
+        {
+          "file": "Closed___132__f49216d6.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.999999969546125,
+            "Open": 3.045387493809408e-08
+          },
+          "simulator": {
+            "Closed": 0.9999999403953588,
+            "Open": 5.960464122267716e-08
+          }
+        },
+        {
+          "file": "Closed___137__42fdbb47.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9575221742214861,
+            "Open": 0.042477825778513834
+          },
+          "simulator": {
+            "Closed": 0.9571188768502976,
+            "Open": 0.042881123149702424
+          }
+        },
+        {
+          "file": "Closed___148__81d61af9.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9999892718114937,
+            "Open": 1.0728188506289798e-05
+          },
+          "simulator": {
+            "Closed": 0.9999891520723297,
+            "Open": 1.0847927670309783e-05
+          }
+        },
+        {
+          "file": "Closed___14__4c833a7e.jpg",
+          "truth": "Closed",
+          "onnx": {
+            "Closed": 0.9998824082278891,
+            "Open": 0.00011759177211088335
+          },
+          "simulator": {
+            "Closed": 0.9998813412338259,
+            "Open": 0.00011865876617411061
+          }
+        },
+        {
+          "file": "Open___107__b6d18e14.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 3.227752231118148e-10,
+            "Open": 0.9999999996772249
+          },
+          "simulator": {
+            "Closed": 0.0,
+            "Open": 1.0
+          }
+        },
+        {
+          "file": "Open___115__93a5d43b.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 6.769683466624209e-06,
+            "Open": 0.9999932303165334
+          },
+          "simulator": {
+            "Closed": 6.556467937739304e-06,
+            "Open": 0.9999934435320622
+          }
+        },
+        {
+          "file": "Open___116__758d4ff1.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 0.0003031967645678811,
+            "Open": 0.9996968032354321
+          },
+          "simulator": {
+            "Closed": 0.00030356294185636965,
+            "Open": 0.9996964370581436
+          }
+        },
+        {
+          "file": "Open___120__82a7a51d.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 6.914650601224585e-13,
+            "Open": 0.9999999999993086
+          },
+          "simulator": {
+            "Closed": 0.0,
+            "Open": 1.0
+          }
+        },
+        {
+          "file": "Open___129__5a83c0be.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 2.553637139650334e-05,
+            "Open": 0.9999744636286035
+          },
+          "simulator": {
+            "Closed": 2.4854519108863567e-05,
+            "Open": 0.9999751454808912
+          }
+        },
+        {
+          "file": "Open___130__634f3ec6.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 0.0007449551808092891,
+            "Open": 0.9992550448191907
+          },
+          "simulator": {
+            "Closed": 0.0007440391021165051,
+            "Open": 0.9992559608978835
+          }
+        },
+        {
+          "file": "Open___132__1244172e.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 3.314120423725671e-08,
+            "Open": 0.9999999668587958
+          },
+          "simulator": {
+            "Closed": 5.960464122267716e-08,
+            "Open": 0.9999999403953588
+          }
+        },
+        {
+          "file": "Open___137__9c45cc70.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 1.5042714294157624e-10,
+            "Open": 0.9999999998495728
+          },
+          "simulator": {
+            "Closed": 0.0,
+            "Open": 1.0
+          }
+        },
+        {
+          "file": "Open___148__da5e8b8f.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 3.0348990680740126e-11,
+            "Open": 0.9999999999696509
+          },
+          "simulator": {
+            "Closed": 0.0,
+            "Open": 1.0
+          }
+        },
+        {
+          "file": "Open___14__d0af0ee8.jpg",
+          "truth": "Open",
+          "onnx": {
+            "Closed": 4.843397347505992e-10,
+            "Open": 0.9999999995156603
+          },
+          "simulator": {
+            "Closed": 0.0,
+            "Open": 1.0
+          }
+        }
+      ]
+    },
+    "yawn": {
+      "samples": 20,
+      "label_agreement": 1.0,
+      "maximum_probability_error": 1.193040439850801e-05,
+      "passed": true,
+      "predictions": [
+        {
+          "file": "no_yawn__1004__55cf0b3e.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999611503694377,
+            "yawn": 3.884963056238583e-05
+          },
+          "simulator": {
+            "no_yawn": 0.9999599472829953,
+            "yawn": 4.0052717004667094e-05
+          }
+        },
+        {
+          "file": "no_yawn__1007__d2fc1806.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.999999583219729,
+            "yawn": 4.167802709554227e-07
+          },
+          "simulator": {
+            "no_yawn": 0.9999995827676607,
+            "yawn": 4.1723233934483675e-07
+          }
+        },
+        {
+          "file": "no_yawn__1010__dce9fe19.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999999999357112,
+            "yawn": 6.428876874884058e-11
+          },
+          "simulator": {
+            "no_yawn": 1.0,
+            "yawn": 0.0
+          }
+        },
+        {
+          "file": "no_yawn__1033__962ed151.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999999872966524,
+            "yawn": 1.27033475457131e-08
+          },
+          "simulator": {
+            "no_yawn": 1.0,
+            "yawn": 0.0
+          }
+        },
+        {
+          "file": "no_yawn__1044__9d107c4b.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999998490956065,
+            "yawn": 1.509043935276273e-07
+          },
+          "simulator": {
+            "no_yawn": 0.9999998211860976,
+            "yawn": 1.7881390235175448e-07
+          }
+        },
+        {
+          "file": "no_yawn__1050__9f05b884.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999998373898862,
+            "yawn": 1.6261011386658637e-07
+          },
+          "simulator": {
+            "no_yawn": 0.9999998211860976,
+            "yawn": 1.7881390235175448e-07
+          }
+        },
+        {
+          "file": "no_yawn__1063__60009510.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9994283373785259,
+            "yawn": 0.0005716626214741234
+          },
+          "simulator": {
+            "no_yawn": 0.9994164069741274,
+            "yawn": 0.0005835930258726241
+          }
+        },
+        {
+          "file": "no_yawn__1067__ce1b182b.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999955696108334,
+            "yawn": 4.4303891666471635e-06
+          },
+          "simulator": {
+            "no_yawn": 0.9999953508593221,
+            "yawn": 4.649140677870936e-06
+          }
+        },
+        {
+          "file": "no_yawn__1096__841bd6cb.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.9999955183877881,
+            "yawn": 4.481612211934054e-06
+          },
+          "simulator": {
+            "no_yawn": 0.9999953508593221,
+            "yawn": 4.649140677870936e-06
+          }
+        },
+        {
+          "file": "no_yawn__1114__2e22ef44.jpg",
+          "truth": "no_yawn",
+          "onnx": {
+            "no_yawn": 0.999999957159675,
+            "yawn": 4.284032500624874e-08
+          },
+          "simulator": {
+            "no_yawn": 0.9999999403953588,
+            "yawn": 5.960464122267716e-08
+          }
+        },
+        {
+          "file": "yawn__100__749ff8f0.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 5.97153586361926e-07,
+            "yawn": 0.9999994028464136
+          },
+          "simulator": {
+            "no_yawn": 5.960460924827501e-07,
+            "yawn": 0.9999994039539075
+          }
+        },
+        {
+          "file": "yawn__102__2d47b6bb.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 1.1617446841822922e-06,
+            "yawn": 0.9999988382553158
+          },
+          "simulator": {
+            "no_yawn": 1.1324869682042363e-06,
+            "yawn": 0.9999988675130318
+          }
+        },
+        {
+          "file": "yawn__105__ee8f952d.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 0.00013354984802823412,
+            "yawn": 0.9998664501519717
+          },
+          "simulator": {
+            "no_yawn": 0.00012801438719608205,
+            "yawn": 0.9998719856128039
+          }
+        },
+        {
+          "file": "yawn__111__cf657839.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 9.023842924732027e-09,
+            "yawn": 0.9999999909761571
+          },
+          "simulator": {
+            "no_yawn": 0.0,
+            "yawn": 1.0
+          }
+        },
+        {
+          "file": "yawn__116__f2fff114.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 6.909285984459081e-09,
+            "yawn": 0.999999993090714
+          },
+          "simulator": {
+            "no_yawn": 0.0,
+            "yawn": 1.0
+          }
+        },
+        {
+          "file": "yawn__119__b7c02819.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 8.460897688600645e-09,
+            "yawn": 0.9999999915391024
+          },
+          "simulator": {
+            "no_yawn": 0.0,
+            "yawn": 1.0
+          }
+        },
+        {
+          "file": "yawn__121__3129da92.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 3.817344203931987e-09,
+            "yawn": 0.9999999961826558
+          },
+          "simulator": {
+            "no_yawn": 0.0,
+            "yawn": 1.0
+          }
+        },
+        {
+          "file": "yawn__122__25979a83.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 3.492724193233456e-06,
+            "yawn": 0.9999965072758068
+          },
+          "simulator": {
+            "no_yawn": 3.5166616747952215e-06,
+            "yawn": 0.9999964833383252
+          }
+        },
+        {
+          "file": "yawn__127__d539e92a.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 1.6344344539824696e-06,
+            "yawn": 0.999998365565546
+          },
+          "simulator": {
+            "no_yawn": 1.6689272683880618e-06,
+            "yawn": 0.9999983310727316
+          }
+        },
+        {
+          "file": "yawn__131__e470212c.jpg",
+          "truth": "yawn",
+          "onnx": {
+            "no_yawn": 6.01224694993176e-11,
+            "yawn": 0.9999999999398774
+          },
+          "simulator": {
+            "no_yawn": 0.0,
+            "yawn": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "passed": true
+}

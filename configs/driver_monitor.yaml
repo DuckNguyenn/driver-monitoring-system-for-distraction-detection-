@@ -1,0 +1,41 @@
+# Paths are relative to this file. Freeze this config before held-out testing.
+manifest: ../models/manifest.json
+log_dir: ../logs
+backend: onnx
+width: 640
+height: 480
+detector_size: 320
+detector_confidence: 0.8
+# Adjust to the driver seat during camera installation.
+driver_roi: [0.0, 0.0, 1.0, 1.0]
+eye_width_ratio: 0.8
+eye_height_ratio: 0.6
+face_margin: 0.10
+min_face_size: 80
+min_eye_width: 12
+min_brightness: 25.0
+min_sharpness: 20.0
+# Omit min_eye_sharpness to use min_sharpness for eyes as well.
+max_overexposed_ratio: 0.60
+serial_port: null
+serial_baud: 115200
+headless: true
+realtime: false
+cpu_threads: 2
+rotation_degrees: 0
+monitor:
+  eye_confidence: 0.8
+  eye_closed_seconds: 1.5
+  max_frame_gap_seconds: 0.25
+  recovery_seconds: 1.0
+  yawn_enter_probability: 0.70
+  yawn_exit_probability: 0.35
+  yawn_enter_seconds: 1.0
+  yawn_exit_seconds: 0.5
+  yawn_window_seconds: 60.0
+  yawn_min_count: 2
+  blink_window_seconds: 5.0
+  blink_min_count: 4
+  blink_increase_margin: 1
+  min_blink_duration_seconds: 0.05
+  max_blink_duration_seconds: 0.5

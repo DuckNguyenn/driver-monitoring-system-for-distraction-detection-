@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+rknn_conversion/onnx/
+rknn_conversion/rknn/

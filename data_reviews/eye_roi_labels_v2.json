@@ -1,0 +1,5607 @@
+{
+  "schema_version": 1,
+  "annotation_method": "manual visual inspection of original face and YuNet eye crops",
+  "label_rule": "Open: visible iris/aperture; Closed: eyelid shut; Unknown: uncertain, occluded or too blurred. Source smile/yawn labels do not determine eye labels.",
+  "crop_config": {
+    "detector_size": 320,
+    "detector_confidence": 0.8,
+    "eye_width_ratio": 0.8,
+    "eye_height_ratio": 0.6
+  },
+  "subject_independence": "NOT established; adjacent frames can share subjects/clips across legacy splits",
+  "diagnostic_validation_case": null,
+  "records": [
+    {
+      "id": 0,
+      "path": ".cache/genki/positive/file0001.jpg",
+      "sha256": "e88ef5bc1af90cd63849112e0f1ddc941d3c9fdbe51ec2115ebf929c9b343ed7",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          94,
+          73,
+          125,
+          97
+        ],
+        [
+          56,
+          75,
+          87,
+          98
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 1,
+      "path": ".cache/genki/positive/file0007.jpg",
+      "sha256": "3e3c2c6b5ab0d009b717b39e77f2ff8ab0e1a345cb5d3eefa8c2f410060629ac",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          100,
+          62,
+          153,
+          102
+        ],
+        [
+          36,
+          56,
+          88,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 2,
+      "path": ".cache/genki/positive/file0010.jpg",
+      "sha256": "94f3276d8e7e40387726eae1bfc07839b34c8c4739a4c6fc80677f4fe105bb9c",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          94,
+          73,
+          127,
+          98
+        ],
+        [
+          55,
+          66,
+          88,
+          91
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 3,
+      "path": ".cache/genki/positive/file0013.jpg",
+      "sha256": "1e223520db0dd038a88fcee2e533a9f0213cb56048030b7cc601818fa9f2435f",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          92,
+          68,
+          127,
+          94
+        ],
+        [
+          51,
+          64,
+          85,
+          90
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 4,
+      "path": ".cache/genki/positive/file0020.jpg",
+      "sha256": "abc03e786494500e143cd64761e6687aac371ff862f33694cc174bd9080da4b1",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          99,
+          65,
+          140,
+          96
+        ],
+        [
+          49,
+          65,
+          90,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 5,
+      "path": ".cache/genki/positive/file0024.jpg",
+      "sha256": "f76b76c7a2f38b1014bd26b1aea4378c2fe8c1b7d28c991a8b530b734e326750",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          102,
+          85,
+          142,
+          115
+        ],
+        [
+          52,
+          86,
+          93,
+          117
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 6,
+      "path": ".cache/genki/positive/file0028.jpg",
+      "sha256": "cd3b511860e36ed1ef7f0816386e051cea1de27f2d40fb9c810bda6dd2748b05",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          98,
+          71,
+          132,
+          97
+        ],
+        [
+          57,
+          67,
+          91,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 7,
+      "path": ".cache/genki/positive/file0035.jpg",
+      "sha256": "dabe71f5fd28b0c41d44e30695f2c516ac84b443cdaf9a373131ba7a8259312c",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          94,
+          65,
+          127,
+          90
+        ],
+        [
+          53,
+          67,
+          87,
+          92
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 8,
+      "path": ".cache/genki/positive/file0036.jpg",
+      "sha256": "fb89c26d2eb000dc176fc5be5d0e7b219729edbe8aeee7cd7cdea4eee8edd0b2",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          57,
+          71,
+          92,
+          98
+        ],
+        [
+          14,
+          74,
+          49,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 9,
+      "path": ".cache/genki/positive/file0039.jpg",
+      "sha256": "f925c5b5c2dde7a520b5a3fe6be1af1cb17f238eb121ac0819e65eac1da286e9",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          123,
+          83,
+          162,
+          113
+        ],
+        [
+          75,
+          85,
+          114,
+          114
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 10,
+      "path": ".cache/genki/positive/file0040.jpg",
+      "sha256": "1884cb9ad0bb62a637cb956ce7fbddccd8aaf59b6372d46dcc5fbe351c463286",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          72,
+          107,
+          91,
+          121
+        ],
+        [
+          49,
+          105,
+          68,
+          120
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 11,
+      "path": ".cache/genki/positive/file0042.jpg",
+      "sha256": "92395a6f503c46a731ec6701be8160938363a2515d0069c6b5d10c1e5bf95fd7",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          71,
+          125,
+          95
+        ],
+        [
+          55,
+          71,
+          87,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 12,
+      "path": ".cache/genki/positive/file0046.jpg",
+      "sha256": "de2b9c74a696beb8637fbf113d52eac61f5ae0cfc8cbb2a254e81c6231172383",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          59,
+          136,
+          92
+        ],
+        [
+          40,
+          65,
+          84,
+          98
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 13,
+      "path": ".cache/genki/positive/file0054.jpg",
+      "sha256": "db8ea2f52be6606beea0ac13da1c0fbc7e1efaff6207ac5b27f184a714175090",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          90,
+          73,
+          122,
+          97
+        ],
+        [
+          51,
+          73,
+          83,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 14,
+      "path": ".cache/genki/positive/file0056.jpg",
+      "sha256": "3ca50be0bf9dded5561552695848f2b928351e48483678597828cf9a315e91cc",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          63,
+          49,
+          97,
+          75
+        ],
+        [
+          22,
+          54,
+          56,
+          80
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 15,
+      "path": ".cache/genki/positive/file0057.jpg",
+      "sha256": "49ff37d2540deeeb5daa08ff3c3a13c558493c2cc09e4dc04d87367d99211b35",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          92,
+          67,
+          131,
+          96
+        ],
+        [
+          44,
+          63,
+          83,
+          92
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 16,
+      "path": ".cache/genki/positive/file0060.jpg",
+      "sha256": "dce1780a20a8ed94b8740cdba5280286a73c4f24845c60c58556714ff68ed0c4",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          95,
+          72,
+          126,
+          95
+        ],
+        [
+          59,
+          75,
+          89,
+          98
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 17,
+      "path": ".cache/genki/positive/file0062.jpg",
+      "sha256": "55657746cba3b8c089cffad5ff018392fb51daf4f70020193fb3d484290fdc53",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          101,
+          81,
+          141,
+          111
+        ],
+        [
+          53,
+          74,
+          93,
+          104
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 18,
+      "path": ".cache/genki/positive/file0065.jpg",
+      "sha256": "aeac6c25aec467a529908660ee5ef9e3e76f1fb8a1776461e97fe459680828e7",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          89,
+          57,
+          120,
+          81
+        ],
+        [
+          52,
+          64,
+          83,
+          87
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 19,
+      "path": ".cache/genki/positive/file0067.jpg",
+      "sha256": "4b774929a326bd79d8acf4cfbc26f924715e0cd9d8a959f46758aca9386ea9ac",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          121,
+          66,
+          152,
+          89
+        ],
+        [
+          83,
+          69,
+          114,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 20,
+      "path": ".cache/genki/positive/file0070.jpg",
+      "sha256": "e563288ef5bd39c3da0f45ecc632ab60a4f0e23407206c77dc88767bb1dc831a",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          193,
+          146,
+          244,
+          185
+        ],
+        [
+          131,
+          143,
+          182,
+          181
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 21,
+      "path": ".cache/genki/positive/file0073.jpg",
+      "sha256": "55584cebbc8b02b27f1731517cb9175a631d674945caa5858fb937012b9a329c",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          76,
+          125,
+          100
+        ],
+        [
+          55,
+          68,
+          87,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 22,
+      "path": ".cache/genki/positive/file0074.jpg",
+      "sha256": "e0ac2a7bb540952378c8d0c0ed86ac9f661752918f093a579543d61220ec2f3b",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          108,
+          90,
+          139,
+          113
+        ],
+        [
+          71,
+          90,
+          102,
+          114
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 23,
+      "path": ".cache/genki/positive/file0076.jpg",
+      "sha256": "8cf8d5d3a19866e458400c9a38b4c8d0fa0ac3309028d1184eddd253642e6adb",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          113,
+          78,
+          148,
+          104
+        ],
+        [
+          72,
+          77,
+          106,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 24,
+      "path": ".cache/genki/positive/file0077.jpg",
+      "sha256": "0a3b7960255b7038e0082e00547ba3a15bb807a08015533212bbab30abb98756",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          88,
+          82,
+          124,
+          109
+        ],
+        [
+          44,
+          76,
+          80,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 25,
+      "path": ".cache/genki/positive/file0078.jpg",
+      "sha256": "83e8a4b0121799f942c9892bbb025511e5606a00007eaf6e4044e791e6cb462b",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          98,
+          73,
+          128,
+          96
+        ],
+        [
+          62,
+          71,
+          92,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 26,
+      "path": ".cache/genki/positive/file0079.jpg",
+      "sha256": "751e3949e68f8d127ba2e908a90392e5b193100742b33d32f5ffda56395263ed",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          94,
+          73,
+          128,
+          99
+        ],
+        [
+          54,
+          78,
+          87,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 27,
+      "path": ".cache/genki/positive/file0080.jpg",
+      "sha256": "eb91775b6844b1b479acd7e9adb9d23cdd7ffd5738948da4976b07aafc99fb18",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          130,
+          76,
+          169,
+          105
+        ],
+        [
+          83,
+          72,
+          122,
+          102
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 28,
+      "path": ".cache/genki/positive/file0081.jpg",
+      "sha256": "b52e4d4cb0e151fe38e57185d8d4fa83d65bbda8cb8364bacc5e71822d7309a6",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          100,
+          51,
+          155,
+          92
+        ],
+        [
+          32,
+          54,
+          87,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 29,
+      "path": ".cache/genki/positive/file0082.jpg",
+      "sha256": "426a296341db8e3bad01059929b9c8a1746296503f8f68bb517ba31507f8666d",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          58,
+          72,
+          93,
+          98
+        ],
+        [
+          16,
+          81,
+          51,
+          108
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 30,
+      "path": ".cache/genki/positive/file0084.jpg",
+      "sha256": "df4a4ef36e0652b70e81ab8588519315a6b348d81030cacc95f75c722a4f4fa7",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          81,
+          69,
+          122,
+          100
+        ],
+        [
+          32,
+          70,
+          72,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 31,
+      "path": ".cache/genki/positive/file0085.jpg",
+      "sha256": "b49f24860b0dbd038d2849b0620ef6aea7a2b60e6f70c2b6cb3178bb50cccb05",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          55,
+          45,
+          95,
+          75
+        ],
+        [
+          6,
+          53,
+          46,
+          83
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 32,
+      "path": ".cache/genki/positive/file0090.jpg",
+      "sha256": "d29f9715ba6ce38f7baa91b8cd60a66a65d7dfd9d91c63f85c72ce74d1086102",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          92,
+          76,
+          123,
+          100
+        ],
+        [
+          53,
+          75,
+          85,
+          99
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 33,
+      "path": ".cache/genki/positive/file0094.jpg",
+      "sha256": "e54a27615203527065e202a32def26d9315779c50dd76ad301b43f1a5b06564f",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          89,
+          83,
+          121,
+          108
+        ],
+        [
+          50,
+          81,
+          82,
+          105
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 34,
+      "path": ".cache/genki/positive/file0099.jpg",
+      "sha256": "c6d848e54ddab2ba07f282dfcc6c00aba0aed6a62c7e07dc5ad87f0e35a482ec",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          101,
+          77,
+          144,
+          110
+        ],
+        [
+          49,
+          71,
+          92,
+          104
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 35,
+      "path": ".cache/genki/positive/file0100.jpg",
+      "sha256": "e313c0f6f4dbaad4cf0c76ee9b7120797e897c124fbb4097492aa504148e167a",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          97,
+          62,
+          139,
+          94
+        ],
+        [
+          46,
+          63,
+          87,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 36,
+      "path": ".cache/genki/positive/file0101.jpg",
+      "sha256": "d4354e659d997d2cd28f257cec262dfaaef15c54d1c8040ff78b1b3b1b0bd63e",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          88,
+          71,
+          117,
+          94
+        ],
+        [
+          52,
+          69,
+          81,
+          92
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 37,
+      "path": ".cache/genki/positive/file0103.jpg",
+      "sha256": "6ac314b228983c2fa8d49ee68d30aa00c604cf0e13cbdacb6bde0ac635b1deb2",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          100,
+          86,
+          138,
+          115
+        ],
+        [
+          54,
+          88,
+          92,
+          117
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 38,
+      "path": ".cache/genki/positive/file0104.jpg",
+      "sha256": "9903914e270892256e4f15a57253bb90d381dadaa480a6afeddbd590994d3db2",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          89,
+          64,
+          129,
+          94
+        ],
+        [
+          41,
+          66,
+          81,
+          95
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 39,
+      "path": ".cache/genki/positive/file0105.jpg",
+      "sha256": "b8c857020fb52e40e40c711039282cd72985c8e53957008997cc4f44c7fed664",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          109,
+          87,
+          145,
+          114
+        ],
+        [
+          66,
+          86,
+          102,
+          113
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 40,
+      "path": ".cache/genki/positive/file0108.jpg",
+      "sha256": "e1c3c6657132b1ec343365897ccce1a90d022c82760fce1682883ecfeae5e55d",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          104,
+          63,
+          161,
+          106
+        ],
+        [
+          34,
+          53,
+          92,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 41,
+      "path": ".cache/genki/positive/file0109.jpg",
+      "sha256": "9c9b8dbacd87df5a140c1a2110d5c903f8a0fb8f8928b66a86758599e0aee41f",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          89,
+          82,
+          121,
+          107
+        ],
+        [
+          49,
+          78,
+          82,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 42,
+      "path": ".cache/genki/positive/file0112.jpg",
+      "sha256": "0aa21e8ad97437d345b9c3a013a43585b711259d71326626fe2b729f227b872b",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          92,
+          34,
+          146,
+          74
+        ],
+        [
+          26,
+          30,
+          80,
+          71
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 43,
+      "path": ".cache/genki/positive/file0113.jpg",
+      "sha256": "f2ae5385d9d22b5c245e595e4aad68c6cc8ec4f9676dcc72442800948fa29d36",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          98,
+          76,
+          128,
+          99
+        ],
+        [
+          61,
+          71,
+          92,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 44,
+      "path": ".cache/genki/positive/file0114.jpg",
+      "sha256": "cfa0829c340ab577f27b00bc55d574e62e06676be4c0fd9533e6c4804ae4fe66",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          85,
+          76,
+          122,
+          104
+        ],
+        [
+          40,
+          77,
+          77,
+          104
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 45,
+      "path": ".cache/genki/positive/file0115.jpg",
+      "sha256": "79af8cef933294730a5cf1e88f25a460a51e367e75c56bd73e0969b7b3887408",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          106,
+          108,
+          131,
+          127
+        ],
+        [
+          77,
+          105,
+          102,
+          124
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 46,
+      "path": ".cache/genki/positive/file0116.jpg",
+      "sha256": "17053386e68599453e0072a7cae6ff795a5fa3a539488a2ed8f1cbe41fbff446",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          91,
+          72,
+          124,
+          98
+        ],
+        [
+          51,
+          71,
+          84,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 47,
+      "path": ".cache/genki/positive/file0118.jpg",
+      "sha256": "c38f32430d3c4c7f3f7983a4b9144e75f989e5fe81a79b56ab266462b46f6c65",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          91,
+          83,
+          123,
+          107
+        ],
+        [
+          52,
+          80,
+          84,
+          105
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 48,
+      "path": ".cache/genki/positive/file0121.jpg",
+      "sha256": "5d263450b77e440aa80da866d85bce413c8a59ae927f130530d3abc079de951c",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          97,
+          77,
+          131,
+          103
+        ],
+        [
+          57,
+          67,
+          91,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 49,
+      "path": ".cache/genki/positive/file0123.jpg",
+      "sha256": "54b23822e1e809789e8cb860b45ac1abc549e8b1c37e30beb71757888e9ace8b",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          76,
+          75,
+          110,
+          102
+        ],
+        [
+          34,
+          76,
+          68,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 50,
+      "path": ".cache/genki/positive/file0127.jpg",
+      "sha256": "9dfa0dc358b1548421ffb322c985b3132e0aec62bc6ca4861afc069419d0adea",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          71,
+          125,
+          95
+        ],
+        [
+          55,
+          72,
+          87,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended; known bug input added as an Open hard negative; NOT held-out evidence"
+    },
+    {
+      "id": 51,
+      "path": ".cache/genki/positive/file0132.jpg",
+      "sha256": "430995c2424ec1f78592afafa8b1f6a58f81559217077f9a6369df88bfad2043",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          85,
+          68,
+          120,
+          95
+        ],
+        [
+          43,
+          68,
+          78,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 52,
+      "path": ".cache/genki/positive/file0133.jpg",
+      "sha256": "3c33a3f4b3f8c410c25aa99661db6555499b0401f9e3b7f61ead87fac55979f3",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          59,
+          125,
+          83
+        ],
+        [
+          55,
+          58,
+          87,
+          82
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 53,
+      "path": ".cache/genki/positive/file0134.jpg",
+      "sha256": "9cb90ff41406734aa4e861b5f31536c038a589f1506128082b34ca00cbca0ef1",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          63,
+          73,
+          100,
+          101
+        ],
+        [
+          17,
+          77,
+          55,
+          105
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 54,
+      "path": ".cache/genki/positive/file0136.jpg",
+      "sha256": "2bf568df7a1ad923a22d590fcba16e4abb42cccf4ed5c11f4b3b3338ea66216a",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          95,
+          74,
+          125,
+          97
+        ],
+        [
+          59,
+          74,
+          89,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 55,
+      "path": ".cache/genki/positive/file0137.jpg",
+      "sha256": "750658e781e4a5238e1c3abf1f3fc844d733260a03ffd970f50600352ae80f09",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          70,
+          64,
+          103,
+          89
+        ],
+        [
+          30,
+          69,
+          63,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 56,
+      "path": ".cache/genki/positive/file0140.jpg",
+      "sha256": "a9593b0618ee4c05fd2f939ca7b6f573628b7b7de330fc5331391eab5f3d011f",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          69,
+          127,
+          95
+        ],
+        [
+          52,
+          74,
+          86,
+          100
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 57,
+      "path": ".cache/genki/positive/file0142.jpg",
+      "sha256": "1b06e8139affd784c34bf3fc3b2cdb23d01337cdffe82afc291e7e20e93cdc26",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          97,
+          64,
+          138,
+          95
+        ],
+        [
+          46,
+          64,
+          88,
+          95
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 58,
+      "path": ".cache/genki/positive/file0143.jpg",
+      "sha256": "ef0a57fc631bae5fbaf7db0019f9b2053636c8c0abddd91db88aa2cc3d58816b",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          87,
+          72,
+          125,
+          101
+        ],
+        [
+          42,
+          77,
+          79,
+          105
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 59,
+      "path": ".cache/genki/positive/file0145.jpg",
+      "sha256": "a4be7820fdad365c3a235ac3162dc1a0fc0b01023cbd0c72ed941c129d2c1a84",
+      "source": "genki",
+      "split": "train",
+      "eye_boxes": [
+        [
+          93,
+          68,
+          125,
+          92
+        ],
+        [
+          56,
+          71,
+          87,
+          95
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 60,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__101__56822e2e.jpg",
+      "sha256": "5eb7a5b46963bab56fb7f502bd98a6584cafc2dc2ad18af6eddebe3a7f3eba08",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          238,
+          144,
+          308,
+          197
+        ],
+        [
+          152,
+          148,
+          222,
+          200
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 61,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__103__74c1fd29.jpg",
+      "sha256": "b70a1ff4d88d53553c53133c5b5bbd5206dd1bcc387ba42317e630d1ea4dbf6c",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          235,
+          149,
+          309,
+          205
+        ],
+        [
+          144,
+          151,
+          218,
+          207
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 62,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__104__c5a0b2dd.jpg",
+      "sha256": "ac5373e8931afa0097419a0e3185dc646fa265f19cb3a7d1fe3b3ab2cb05113b",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          236,
+          149,
+          308,
+          204
+        ],
+        [
+          146,
+          151,
+          219,
+          206
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 63,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__106__edda9565.jpg",
+      "sha256": "34a1f9f5ade1cffe40e5424978c18bb33c97ee1a26b8cddc16137da7ef6124dd",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          245,
+          147,
+          319,
+          202
+        ],
+        [
+          155,
+          152,
+          229,
+          207
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 64,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__107__1a7de06b.jpg",
+      "sha256": "f1f19e25bf8472991df5ad948c580594ad69e219f19d56ae026fca0c91dfcc5a",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          247,
+          145,
+          320,
+          201
+        ],
+        [
+          156,
+          150,
+          230,
+          205
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 65,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__108__47ec7563.jpg",
+      "sha256": "9abfdd77b729ee9f71ad42c2ffe260affc9890d1a8ebfef5661a60fe0436ef81",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          248,
+          143,
+          323,
+          199
+        ],
+        [
+          156,
+          147,
+          231,
+          203
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 66,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__10__5d375b0c.jpg",
+      "sha256": "bbb8e1b4645eb1f663d61521c69025d76d1c19efe19d51aee9578e92ddbb7907",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          321,
+          190,
+          373,
+          229
+        ],
+        [
+          258,
+          190,
+          310,
+          229
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 67,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__110__341bd900.jpg",
+      "sha256": "7edd3021b29af2eb653e3e4e1d957fab80b16d12e5ad0fa444097bf86332750a",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          356,
+          109,
+          417,
+          155
+        ],
+        [
+          281,
+          110,
+          342,
+          156
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 68,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__112__13e1739a.jpg",
+      "sha256": "887b8a20099f4cf28669c8c17aea15ac9ccbe4078c7b11f963b978fef342be8b",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          371,
+          122,
+          421,
+          160
+        ],
+        [
+          309,
+          123,
+          360,
+          161
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 69,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__113__6833161b.jpg",
+      "sha256": "d8b07b705f2d43fe2d6537e6dfd2635186c38cfebc0383bb21d9a0c54d505d0a",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          370,
+          118,
+          421,
+          156
+        ],
+        [
+          307,
+          120,
+          358,
+          158
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 70,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__114__3e7b9bbd.jpg",
+      "sha256": "329f4547fb4a123244a71227e5d127238dd9cb16ec90add74c208e0eefe7d646",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          368,
+          115,
+          422,
+          156
+        ],
+        [
+          302,
+          116,
+          356,
+          157
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 71,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__115__c5800484.jpg",
+      "sha256": "adf838af88b074dc8f34c287f3c178f01e00218b5f27f1b06c0ab7e0356372f0",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          363,
+          104,
+          420,
+          147
+        ],
+        [
+          293,
+          107,
+          350,
+          150
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 72,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__117__16194bd6.jpg",
+      "sha256": "21e9b04f9a856df4568148fc639191c9ccf311ab5245928a70eece06310dcfdb",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          371,
+          115,
+          423,
+          154
+        ],
+        [
+          308,
+          117,
+          360,
+          156
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 73,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__118__1db426d4.jpg",
+      "sha256": "e1a16dc353d8b7db84925ae7d36b986598d47cc387d00684b9e4820e5e017ba3",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          372,
+          115,
+          420,
+          151
+        ],
+        [
+          314,
+          119,
+          362,
+          155
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 74,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__11__a95bc1e5.jpg",
+      "sha256": "ad4dc6a994a7b8c4416db2b9683408e6e490d535db23cc2ea4651e43a59eb69c",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          320,
+          175,
+          372,
+          215
+        ],
+        [
+          255,
+          172,
+          308,
+          212
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 75,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__120__08ca4f1c.jpg",
+      "sha256": "373c9bbf45ed4c793fc7bc56cfab371fa7b715fc5188fb8adc0fb313822be10f",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          380,
+          121,
+          434,
+          162
+        ],
+        [
+          314,
+          125,
+          368,
+          165
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 76,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__123__bbdde17b.jpg",
+      "sha256": "83ea6d640a6b4ed8c22fce47ea926fb491d205f12938c2dbc8fde4cdd1792bcc",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          302,
+          158,
+          347,
+          192
+        ],
+        [
+          248,
+          158,
+          292,
+          191
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 77,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__124__7049dfa4.jpg",
+      "sha256": "da1830ee38ce0016010f4d190dac18af8d7c1f5df23148cfffe05aef60180349",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          294,
+          151,
+          340,
+          186
+        ],
+        [
+          238,
+          151,
+          284,
+          186
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 78,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__125__1b929557.jpg",
+      "sha256": "919e8c37bc94eb3d50137f12ca7f891181a8bfc1560f172e2930b249e840d6aa",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          292,
+          155,
+          340,
+          191
+        ],
+        [
+          233,
+          155,
+          281,
+          192
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 79,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__12__21553622.jpg",
+      "sha256": "ad4b52c20da0e3852ae2f0349e91e614ad08070ab1427c24ee765352d813f1ca",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          320,
+          177,
+          373,
+          217
+        ],
+        [
+          255,
+          174,
+          308,
+          214
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 80,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__132__05aa66a7.jpg",
+      "sha256": "95aad15d1e5c17ba1c6a1aa89cff39f4157717727ceebd152c54c57e7e9ca6e8",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          248,
+          181,
+          288,
+          212
+        ],
+        [
+          200,
+          183,
+          240,
+          214
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 81,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__133__0d28209a.jpg",
+      "sha256": "7fa4c3eaa123bc29168e75fc88b3e511cd449972933098e8f86d0c167f0e4998",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          321,
+          191,
+          371,
+          229
+        ],
+        [
+          260,
+          192,
+          310,
+          230
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 82,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__135__24f817d4.jpg",
+      "sha256": "567f73b18ab90482c7f98636ec0581a6088a9271f8456ecd0f577614dd34b449",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          319,
+          184,
+          368,
+          220
+        ],
+        [
+          261,
+          185,
+          309,
+          221
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 83,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__136__4ac92362.jpg",
+      "sha256": "7542e66d88debd56360cbfacb0ee8d4272352b9db3ef241d57a812ee373f45d9",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          208,
+          105,
+          288,
+          165
+        ],
+        [
+          110,
+          107,
+          190,
+          167
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 84,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__137__51747084.jpg",
+      "sha256": "af404f04c3a8b10f07d4bffc90bb0da468afc1ee612eaa38306eb07d20cde087",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          202,
+          101,
+          277,
+          157
+        ],
+        [
+          110,
+          107,
+          185,
+          164
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 85,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__138__4f93e658.jpg",
+      "sha256": "c0d623d51654a21b787894c887bfddc542a0c9db1c809abc4191740a794c4e5c",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          197,
+          93,
+          270,
+          148
+        ],
+        [
+          107,
+          100,
+          180,
+          155
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 86,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__139__3afadf56.jpg",
+      "sha256": "7bc640dcb20a99350574f480cc8028509c076b6feeb1fb0beb8a14fbc4259a2f",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          258,
+          154,
+          310,
+          193
+        ],
+        [
+          194,
+          155,
+          246,
+          194
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 87,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__141__5a0de2e6.jpg",
+      "sha256": "523aad2ad0245a1ebcb02a4c061598f87eef962dae91e96c68012316efcc4bcd",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          252,
+          149,
+          303,
+          188
+        ],
+        [
+          188,
+          150,
+          240,
+          189
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 88,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__142__d0e46773.jpg",
+      "sha256": "0e291b99cc4d519908468db37bac68e197c5ceefa5b3e88e3e59f906f7fd46fc",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          250,
+          155,
+          304,
+          196
+        ],
+        [
+          183,
+          155,
+          237,
+          196
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 89,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__143__12e23e6c.jpg",
+      "sha256": "19ca65c2abcdca6f28058937c52016bf8017db5fb5353134b40087c47ae23657",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          251,
+          156,
+          305,
+          197
+        ],
+        [
+          184,
+          156,
+          238,
+          197
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 90,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__144__9cc68760.jpg",
+      "sha256": "8b33059b09ae350cb5e36625e249693292628044ad3312ea4e24bbc5611b4059",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          224,
+          179,
+          286,
+          226
+        ],
+        [
+          148,
+          179,
+          210,
+          225
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 91,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__146__cb3ff75b.jpg",
+      "sha256": "deeab1a4873f14d6267cc726a6c68b3279fc8a2feafabc1c2995ae80201405bb",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          308,
+          193,
+          369,
+          238
+        ],
+        [
+          234,
+          191,
+          295,
+          237
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 92,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__147__a3a903d6.jpg",
+      "sha256": "23f95fc47858d37e55e557d471287229801d2429a4bcc877afe136ebee42ad84",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          312,
+          183,
+          375,
+          231
+        ],
+        [
+          235,
+          183,
+          298,
+          230
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 93,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__149__e17ae723.jpg",
+      "sha256": "53f82fcff3e80baf0f5de73f69f61e50672e5afb5e83ca2e83858ae5b87a8508",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          342,
+          170,
+          398,
+          212
+        ],
+        [
+          273,
+          171,
+          329,
+          213
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 94,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__150__0fc98975.jpg",
+      "sha256": "05411d8a0837a9f24e153dc978e1909b5ae5e4ef7f73592946be98cc1817686c",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          334,
+          187,
+          395,
+          232
+        ],
+        [
+          260,
+          186,
+          320,
+          231
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 95,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__151__697fd894.jpg",
+      "sha256": "1780e1549ec53407ac834f38ee13e09440c4f316da39d7530de42afb6265c4cd",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          338,
+          183,
+          399,
+          229
+        ],
+        [
+          264,
+          183,
+          324,
+          229
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 96,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__152__caa8608f.jpg",
+      "sha256": "1d73443f23cd3f6bee2588d5fce6918bd9d2679bb45be7596b69c1ad158d0151",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          338,
+          186,
+          401,
+          234
+        ],
+        [
+          260,
+          185,
+          323,
+          233
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 97,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__153__46f8c02d.jpg",
+      "sha256": "b1f8e08c418728b681201fd06871092be574093d1e60c94e93530233c6d9cb32",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          327,
+          156,
+          371,
+          190
+        ],
+        [
+          272,
+          156,
+          317,
+          190
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 98,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__155__442d87d4.jpg",
+      "sha256": "1ad0987a378d09add9d22eea64c015c154bf63454b9a3329e31cc76431d5a457",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          347,
+          139,
+          391,
+          173
+        ],
+        [
+          293,
+          138,
+          337,
+          171
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 99,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__156__9f7118bc.jpg",
+      "sha256": "eca3edb0c08a9c888864f6d3bb97fda539a0e0eb157f42dc29ce3b65766dca36",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          363,
+          139,
+          407,
+          173
+        ],
+        [
+          308,
+          139,
+          353,
+          173
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 100,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__157__e0ef9291.jpg",
+      "sha256": "601b1bd61bcada7726e085c98e29ea54f2586eaa70e391ef19c7f2c8ef5fcc85",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          375,
+          137,
+          422,
+          173
+        ],
+        [
+          317,
+          136,
+          364,
+          171
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 101,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__158__6c342c2e.jpg",
+      "sha256": "cd008dd39ff240a60121a1971c8eea28734081e551760e30ce717a2cd857cb1f",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          378,
+          133,
+          425,
+          168
+        ],
+        [
+          320,
+          130,
+          367,
+          166
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 102,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__15__ec1c13a8.jpg",
+      "sha256": "b62ece9b4803c88c4d3f23ba88616e612d26e8566af0954086344e85d9a6002b",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          317,
+          182,
+          373,
+          224
+        ],
+        [
+          250,
+          183,
+          305,
+          224
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 103,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__161__2cf25d38.jpg",
+      "sha256": "fe38377a8cf5b37600d97c94ae71ac08b42e6c385e208b29932728bf0e5c167c",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          365,
+          135,
+          412,
+          171
+        ],
+        [
+          307,
+          133,
+          354,
+          169
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 104,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__163__4e8c5dfb.jpg",
+      "sha256": "25ebdec36b9a93c4f3428e0c48117046a9e2690b4601e7b762fac9d56c118a64",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          376,
+          138,
+          426,
+          175
+        ],
+        [
+          315,
+          136,
+          365,
+          174
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 105,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__164__c1831e89.jpg",
+      "sha256": "ae517ac7fb93f4fe36991fae141f99a59c32d9c46ffc621a154ad5d0e5d21376",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          341,
+          142,
+          384,
+          175
+        ],
+        [
+          288,
+          143,
+          332,
+          175
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 106,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__166__d5a9dd0a.jpg",
+      "sha256": "8f67fa7cfac970185dd8bd00e50a6c7ef66807d868edc9e817d9cbe1918ee2ea",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          361,
+          166,
+          429,
+          217
+        ],
+        [
+          278,
+          158,
+          346,
+          209
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 107,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__16__70eabaf8.jpg",
+      "sha256": "685901dba0dac4c8c2663c36ac05809169032fdc1fd34e5554378ab5f23998cd",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          319,
+          183,
+          375,
+          225
+        ],
+        [
+          250,
+          184,
+          306,
+          226
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 108,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__170__e86b3734.jpg",
+      "sha256": "1a77562bff589d5fe3af79f9bac19499dd874cc62c0c2dfd32a67bd55d60b293",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          351,
+          180,
+          420,
+          232
+        ],
+        [
+          266,
+          173,
+          335,
+          225
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 109,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__171__2e663dfa.jpg",
+      "sha256": "ae7e3970bd4f9627b3af1f11099218e03a12703f3bfa7cc78a4b484f8721a5b6",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          279,
+          106,
+          333,
+          146
+        ],
+        [
+          213,
+          103,
+          267,
+          144
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 110,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__172__74d77ad1.jpg",
+      "sha256": "7119cb3a5ecc218f2825209bfbfc20090c9a5c91972ee9369759a47aa70ab9ab",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          288,
+          94,
+          336,
+          130
+        ],
+        [
+          229,
+          94,
+          277,
+          130
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 111,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__173__2f35a47b.jpg",
+      "sha256": "08170f3a3c986a60f46f175a61b763ac18a58f14dffd08b54b81afc0a636ae87",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          294,
+          103,
+          344,
+          141
+        ],
+        [
+          233,
+          102,
+          283,
+          140
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 112,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__175__a1ea7fb5.jpg",
+      "sha256": "f0a3eeaa6e6c7251a28fa4799e251d7278e3d350e967c983c2fde985e7aaee81",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          287,
+          106,
+          334,
+          142
+        ],
+        [
+          229,
+          106,
+          276,
+          142
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 113,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__176__c35a4860.jpg",
+      "sha256": "c3b0a63ffc34ca213b2c6848553cbc5a24713f60feab14d007089858f03a7131",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          283,
+          106,
+          329,
+          141
+        ],
+        [
+          226,
+          105,
+          272,
+          140
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 114,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__17__a40f6d29.jpg",
+      "sha256": "aa79d2e8bc7f7aee930db2e4328d8c5a571a08778017bd781486a1aef0c8bbc3",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          318,
+          188,
+          373,
+          229
+        ],
+        [
+          251,
+          189,
+          306,
+          231
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 115,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__185__9b76631f.jpg",
+      "sha256": "d52a956a1ce7afebead99291e55e74a5ac493885dff8e3daae8a62b3103e0ee2",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          314,
+          183,
+          377,
+          231
+        ],
+        [
+          235,
+          183,
+          299,
+          231
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 116,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__187__3e144982.jpg",
+      "sha256": "d230bb1a587a5e941a3d00a79517f468156d9e2fb1a87035fb45a9c0929c966a",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          327,
+          172,
+          393,
+          222
+        ],
+        [
+          245,
+          173,
+          311,
+          223
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 117,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__18__4ac7bda8.jpg",
+      "sha256": "d70d90d690f7f89f27579fa24c84821d8bd9eca5d685b757b6a8a966a47ac923",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          324,
+          186,
+          380,
+          228
+        ],
+        [
+          256,
+          186,
+          311,
+          228
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 118,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__190__e72a3058.jpg",
+      "sha256": "b82563c5c7754c4a70b8f60947c1d317e241502217cc26529451f402e1d0e019",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          338,
+          179,
+          401,
+          227
+        ],
+        [
+          262,
+          181,
+          324,
+          228
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 119,
+      "path": "kaggle_output/data/yawn_dataset/images/train/yawn__191__3d2fbf4b.jpg",
+      "sha256": "5d5cdf89544e1e293a27aba97c105fa9212d613a040570595fa401eb0863cd01",
+      "source": "yawn_faces",
+      "split": "train",
+      "eye_boxes": [
+        [
+          336,
+          182,
+          398,
+          228
+        ],
+        [
+          260,
+          183,
+          322,
+          229
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 120,
+      "path": ".cache/genki/positive/file0012.jpg",
+      "sha256": "eceed75abdf28c610c38c37e9d8bec53948f9e721c4a288c0cfd9219e8c30f14",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          100,
+          79,
+          132,
+          103
+        ],
+        [
+          61,
+          76,
+          93,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 121,
+      "path": ".cache/genki/positive/file0021.jpg",
+      "sha256": "b61c7b430ebbac5660a6ab47579b873c75e7098bb58faed0faee79634ef027a3",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          98,
+          79,
+          130,
+          103
+        ],
+        [
+          61,
+          73,
+          92,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 122,
+      "path": ".cache/genki/positive/file0044.jpg",
+      "sha256": "4819779b8d2e2f1ed92a446cb9aadf46a8220dc25dd14d8357e0d257feab8897",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          96,
+          62,
+          136,
+          93
+        ],
+        [
+          47,
+          66,
+          87,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 123,
+      "path": ".cache/genki/positive/file0045.jpg",
+      "sha256": "566c89ed2fc5fb8430948b811141c93a579d25d67663d1e55e739772bff2423b",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          65,
+          76,
+          111,
+          111
+        ],
+        [
+          10,
+          70,
+          55,
+          104
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 124,
+      "path": ".cache/genki/positive/file0049.jpg",
+      "sha256": "570f474295ca42584317baa2a39346851fec6adea88ee52481bdfbc94df8fecc",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          91,
+          64,
+          127,
+          91
+        ],
+        [
+          47,
+          67,
+          83,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 125,
+      "path": ".cache/genki/positive/file0050.jpg",
+      "sha256": "cd07c37bbe151a5b7988ac3ad372bf6c28dffec292f2cbdf1753bcb102d7402e",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          76,
+          82,
+          111,
+          109
+        ],
+        [
+          32,
+          83,
+          68,
+          110
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 126,
+      "path": ".cache/genki/positive/file0051.jpg",
+      "sha256": "43d220368888ae398787c4eda15c45847332b2705200abbf72e55023caeb07b0",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          78,
+          69,
+          109,
+          93
+        ],
+        [
+          42,
+          65,
+          72,
+          88
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 127,
+      "path": ".cache/genki/positive/file0052.jpg",
+      "sha256": "3c79c00fdd49d4fb550e37b1a37f3f48c31d4762872b5147a624da0e48e90501",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          123,
+          76,
+          154,
+          100
+        ],
+        [
+          84,
+          73,
+          116,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 128,
+      "path": ".cache/genki/positive/file0055.jpg",
+      "sha256": "b5a83ea746f0b97f5c69cea319131f30a7a4fc998f94276d2c59586d0b127bb6",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          74,
+          80,
+          114,
+          111
+        ],
+        [
+          25,
+          73,
+          66,
+          103
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 129,
+      "path": ".cache/genki/positive/file0083.jpg",
+      "sha256": "5880970b3d7fa8f1987d26de56eb02346514ec77efa1f2ef30d36f3b3dc2a9ab",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          82,
+          77,
+          123,
+          108
+        ],
+        [
+          35,
+          89,
+          75,
+          120
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 130,
+      "path": ".cache/genki/positive/file0092.jpg",
+      "sha256": "c2960881bf775478a8d36609d4f85c32ee7229cd4796866a622632c1e8c824dd",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          113,
+          71,
+          156,
+          103
+        ],
+        [
+          61,
+          70,
+          104,
+          102
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 131,
+      "path": ".cache/genki/positive/file0095.jpg",
+      "sha256": "d9c18a7d9a8ca04d1778d34cab6d155da1c45e2c7f3a1d44022794472b1c36e4",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          90,
+          73,
+          121,
+          96
+        ],
+        [
+          53,
+          74,
+          84,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 132,
+      "path": ".cache/genki/positive/file0098.jpg",
+      "sha256": "7ba61020069765024cc7d6a2e05cdba7bb0095b2c039e258cb9023ed750921ca",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          105,
+          79,
+          138,
+          103
+        ],
+        [
+          65,
+          73,
+          98,
+          98
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 133,
+      "path": ".cache/genki/positive/file0102.jpg",
+      "sha256": "88047d36e43a65c9268a21716ef4b2524bb76a50b90f8c6504067bada98ee20b",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          133,
+          93,
+          165,
+          117
+        ],
+        [
+          95,
+          87,
+          127,
+          111
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 134,
+      "path": ".cache/genki/positive/file0111.jpg",
+      "sha256": "79045e8675700d0d30671a2068f4c0d58adacaa41cf2b394262499017bb021a8",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          110,
+          62,
+          152,
+          93
+        ],
+        [
+          59,
+          57,
+          101,
+          89
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 135,
+      "path": ".cache/genki/positive/file0125.jpg",
+      "sha256": "a05877b79e35de1b3c8b81351272bf897806ccdd44679fc82542ff4305c4cd9a",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          94,
+          72,
+          126,
+          96
+        ],
+        [
+          56,
+          73,
+          87,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 136,
+      "path": ".cache/genki/positive/file0131.jpg",
+      "sha256": "3702af7a47b0773470af89b03a00aeb6c5303190f184e3d1a2bd0a8d2de9f950",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          119,
+          92,
+          156,
+          120
+        ],
+        [
+          74,
+          96,
+          111,
+          124
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 137,
+      "path": ".cache/genki/positive/file0170.jpg",
+      "sha256": "c13cef969d96937feebac91a310bde2d2e2b79bd7f6b1ac5658e8b2c1919a319",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          117,
+          62,
+          158,
+          94
+        ],
+        [
+          66,
+          70,
+          108,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 138,
+      "path": ".cache/genki/positive/file0185.jpg",
+      "sha256": "2f2a04c3d5ebfe70a41e85a12ebeeddf110e77e753aa37942fb6b5a3822a23aa",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          208,
+          96,
+          234,
+          116
+        ],
+        [
+          175,
+          97,
+          202,
+          118
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 139,
+      "path": ".cache/genki/positive/file0194.jpg",
+      "sha256": "254e51eead82ed8b40b6d45ddcdfd612bda4a3124eb683eaff89082ec239a1e4",
+      "source": "genki",
+      "split": "val",
+      "eye_boxes": [
+        [
+          129,
+          84,
+          164,
+          110
+        ],
+        [
+          87,
+          91,
+          122,
+          117
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 140,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__109__d151f398.jpg",
+      "sha256": "de882a069e67b4cb7fe9c2430a3739be80dfbda091f08bca0d0e27f29333570f",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          248,
+          140,
+          322,
+          196
+        ],
+        [
+          157,
+          143,
+          231,
+          199
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 141,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__13__1e909f4d.jpg",
+      "sha256": "eb1b5ce943b540fb9a377e08d85b7253b37a82ac29a38cd7c933fec3802056fc",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          317,
+          181,
+          376,
+          226
+        ],
+        [
+          244,
+          181,
+          303,
+          226
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 142,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__154__b4c7d4d7.jpg",
+      "sha256": "2ff7125c87c2849618a82a17c30f041b6331e3140a57c4ead1f03e956a47003f",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          336,
+          147,
+          377,
+          178
+        ],
+        [
+          287,
+          148,
+          327,
+          178
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 143,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__159__63689dc7.jpg",
+      "sha256": "4cefdedcdcc7d9281ad24c1e8edf5f385129ab5125ec63415fe61f97439ea944",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          322,
+          156,
+          367,
+          190
+        ],
+        [
+          268,
+          156,
+          312,
+          190
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 144,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__165__8062ed32.jpg",
+      "sha256": "e49a507a39381c40df634c4af104be83c5e248e42448c73fe471724f6e5332b1",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          358,
+          165,
+          427,
+          218
+        ],
+        [
+          272,
+          162,
+          342,
+          215
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 145,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__167__a1caf125.jpg",
+      "sha256": "7df342aaddb9b1fa7908ff6319b4b79a2658aa17fa7addeba35a6fa5a8f98f9d",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          360,
+          164,
+          429,
+          216
+        ],
+        [
+          276,
+          161,
+          344,
+          213
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 146,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__186__7f0566e3.jpg",
+      "sha256": "03956446f92b44fb83b7d88eb2a5e79d772ef670df95b61d0dedc167eb01dc09",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          322,
+          165,
+          396,
+          221
+        ],
+        [
+          232,
+          168,
+          305,
+          223
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 147,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__1__e80f373c.jpg",
+      "sha256": "1d37e8aee74f87d9c2c3ab132abfd01b5d3689fbc88bbfe3c671cc2780aae0c5",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          484,
+          151,
+          546,
+          197
+        ],
+        [
+          408,
+          154,
+          470,
+          201
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 148,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__204__3a68c245.jpg",
+      "sha256": "f246c1aa391a4f16bf0af133d4b76a4fb1552daba1669179b2f02986384f92c5",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          311,
+          218,
+          382,
+          271
+        ],
+        [
+          225,
+          221,
+          295,
+          274
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 149,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__20__b32593ac.jpg",
+      "sha256": "0ec6049cf13b2179342725f4595d24389b97d87d3ecc3bf372d36617fc36c3da",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          321,
+          175,
+          375,
+          216
+        ],
+        [
+          254,
+          172,
+          309,
+          213
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 150,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__231__269c731f.jpg",
+      "sha256": "0cb084612fc63ad3fa6e2d58909a5a183d4d5e68eacaa6c59ed2d8437da1464f",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          369,
+          194,
+          428,
+          239
+        ],
+        [
+          296,
+          196,
+          355,
+          241
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 151,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__232__d3aa08dc.jpg",
+      "sha256": "ad0546e27842fcdd79d3d3cd2079197a111d10f3a8666370c5b27a24e5486dc4",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          368,
+          193,
+          429,
+          239
+        ],
+        [
+          294,
+          195,
+          354,
+          241
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 152,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__281__c61be06e.jpg",
+      "sha256": "946ee896b6b6c2fb352326a4888ce3cdc8d0799019c271d1e76996b3268079b3",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          401,
+          171,
+          461,
+          217
+        ],
+        [
+          328,
+          175,
+          388,
+          221
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 153,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__283__64be4908.jpg",
+      "sha256": "8f3e6747632343caedaf91bcba630448527de41d87a123fa3e0e95426ef594e9",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          419,
+          188,
+          476,
+          231
+        ],
+        [
+          349,
+          190,
+          406,
+          233
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 154,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__284__a7e74040.jpg",
+      "sha256": "c9680a69f9470ba9faa1368f3eda32cec1deffdba2b4805bc088585ec2bf6635",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          362,
+          124,
+          441,
+          183
+        ],
+        [
+          265,
+          130,
+          344,
+          190
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 155,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__294__b56decb8.jpg",
+      "sha256": "c6ef3025b157b78e7e82cbd99a86aaabc65e3d6b4db02b35ee9a35e8bca6088c",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          384,
+          148,
+          461,
+          206
+        ],
+        [
+          289,
+          151,
+          366,
+          209
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 156,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__296__a1aa7956.jpg",
+      "sha256": "ccf6aecbff1b0f59461058e38006632faaa84a0fc1fc01316c81914e61f53ad7",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          371,
+          123,
+          448,
+          182
+        ],
+        [
+          276,
+          133,
+          353,
+          191
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 157,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__303__5c80db92.jpg",
+      "sha256": "9c304d1d83743b5c42810a90f725cf46aba844acc9171bec2e1c9ca96afe1367",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          355,
+          123,
+          432,
+          181
+        ],
+        [
+          261,
+          132,
+          338,
+          190
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 158,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__314__2e7ff8a7.jpg",
+      "sha256": "e98bdade1bc95bd2604b9dcd8c8b4d8f1348c132972b0081c073e80ca7958ba7",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          341,
+          198,
+          404,
+          245
+        ],
+        [
+          264,
+          196,
+          327,
+          243
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 159,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__328__63a31821.jpg",
+      "sha256": "bcc9846e9562dea3f10bc39b8088e72aa262171a11bfe464d789596a8ab4d0f2",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          381,
+          177,
+          430,
+          214
+        ],
+        [
+          321,
+          180,
+          370,
+          218
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 160,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__342__194d273a.jpg",
+      "sha256": "eefb68475f17719d354bd78af6d45659411d9a0c5ee83624942101aeeaae7d41",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          358,
+          164,
+          423,
+          214
+        ],
+        [
+          278,
+          173,
+          343,
+          222
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 161,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__35__ae0f3fcc.jpg",
+      "sha256": "530fad3dd634dfe72507b17e65c206bb0e50931680da66dc8ad7006b04439043",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          307,
+          121,
+          366,
+          165
+        ],
+        [
+          235,
+          120,
+          294,
+          164
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 162,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__388__2ddae357.jpg",
+      "sha256": "703b1e1f63b4d3aab9408933aace7d97af829ce24c6748940a729be566c3429c",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          295,
+          133,
+          363,
+          185
+        ],
+        [
+          212,
+          141,
+          280,
+          193
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 163,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__406__bc89a4f2.jpg",
+      "sha256": "da232a458397e9bb36558328d1a0d2b24cbb10cfb55aee86aa81b1e82a837aea",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          344,
+          177,
+          397,
+          217
+        ],
+        [
+          280,
+          176,
+          332,
+          216
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 164,
+      "path": "kaggle_output/data/yawn_dataset/images/val/yawn__407__d522ca90.jpg",
+      "sha256": "61d1ecb124ce211574492a64a362ef49439f30b666a6b716fb1759ab9bf7f2f6",
+      "source": "yawn_faces",
+      "split": "val",
+      "eye_boxes": [
+        [
+          345,
+          191,
+          400,
+          233
+        ],
+        [
+          278,
+          191,
+          333,
+          232
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 165,
+      "path": ".cache/genki/positive/file0006.jpg",
+      "sha256": "eb07b140c75980b68604bc378acbf457603ee938932605724d15072106202387",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          118,
+          71,
+          156,
+          100
+        ],
+        [
+          72,
+          72,
+          110,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 166,
+      "path": ".cache/genki/positive/file0014.jpg",
+      "sha256": "3ec7a81a2ddcd5d0d5f2395dcee9d132321566b0be7d50cf23b061e2b3619b74",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          88,
+          80,
+          126,
+          109
+        ],
+        [
+          41,
+          83,
+          79,
+          112
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 167,
+      "path": ".cache/genki/positive/file0017.jpg",
+      "sha256": "cbc12e756481b5f769f2670798d765a1b144da92cac74748d4d63970239e3e27",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          91,
+          70,
+          122,
+          94
+        ],
+        [
+          53,
+          71,
+          84,
+          95
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 168,
+      "path": ".cache/genki/positive/file0019.jpg",
+      "sha256": "834d5d7b7ff19bcbe839ed6965d48b066f65ff54d2f109cd31cbddfad1c6b89a",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          89,
+          14,
+          129,
+          44
+        ],
+        [
+          41,
+          24,
+          81,
+          55
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 169,
+      "path": ".cache/genki/positive/file0027.jpg",
+      "sha256": "f1492f53f0607b2366ee02fca2932311df4680ae224125ad996c675748e8fe92",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          93,
+          66,
+          133,
+          96
+        ],
+        [
+          44,
+          64,
+          84,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 170,
+      "path": ".cache/genki/positive/file0031.jpg",
+      "sha256": "e66879bc38dff90ad08b6c1d9b4c6117d2f575c604ae0beff0c17c193d0dea0b",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          88,
+          74,
+          116,
+          95
+        ],
+        [
+          55,
+          80,
+          83,
+          101
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 171,
+      "path": ".cache/genki/positive/file0071.jpg",
+      "sha256": "6c3efc7c88b507e31fdfb769e745ef2ce4712afd28528270f4dd67a9c5f350d5",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          92,
+          72,
+          122,
+          94
+        ],
+        [
+          58,
+          78,
+          87,
+          100
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 172,
+      "path": ".cache/genki/positive/file0075.jpg",
+      "sha256": "5ffbc059721406c20f3ff40da5a027e8ddcd0d14136dad372805ac2b1649e51f",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          95,
+          72,
+          130,
+          98
+        ],
+        [
+          53,
+          68,
+          88,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 173,
+      "path": ".cache/genki/positive/file0091.jpg",
+      "sha256": "fe70972c6af22b3a4355b4c8603f27aec615ddb9dc13c94b905871dd974daea9",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          93,
+          76,
+          137,
+          109
+        ],
+        [
+          40,
+          76,
+          84,
+          109
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 174,
+      "path": ".cache/genki/positive/file0107.jpg",
+      "sha256": "717416a923937c7ea897633dab3a1a85d3794d66d618bdc6ac1d14358d51343b",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          97,
+          45,
+          128,
+          68
+        ],
+        [
+          60,
+          40,
+          91,
+          63
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 175,
+      "path": ".cache/genki/positive/file0120.jpg",
+      "sha256": "a8538d1af604962da5f30a83b9772e3e5d5100b50472f24ccaadcca40833cdef",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          95,
+          72,
+          128,
+          97
+        ],
+        [
+          55,
+          70,
+          88,
+          95
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 176,
+      "path": ".cache/genki/positive/file0126.jpg",
+      "sha256": "93ef4031623ed0fb2c1ea6dccc1800f0f4348fab0f1214ca9c17fe2b78155686",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          90,
+          63,
+          123,
+          88
+        ],
+        [
+          49,
+          70,
+          83,
+          96
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 177,
+      "path": ".cache/genki/positive/file0128.jpg",
+      "sha256": "fcb25d2d6c28b4d6fd4fd8acdcb225bc7769d192b651cd2c30d077ff8407703b",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          94,
+          85,
+          131,
+          113
+        ],
+        [
+          49,
+          79,
+          86,
+          107
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 178,
+      "path": ".cache/genki/positive/file0150.jpg",
+      "sha256": "9af958841efcdc96425e32bcf46e72252026c453d7be6da53e1c274a2282874c",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          69,
+          79,
+          107,
+          108
+        ],
+        [
+          22,
+          83,
+          61,
+          113
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 179,
+      "path": ".cache/genki/positive/file0152.jpg",
+      "sha256": "3fed72ae91be0f28a89ac3b176cd92792ec3916421c4b82daeeb448ecaef619f",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          69,
+          91,
+          104,
+          117
+        ],
+        [
+          27,
+          94,
+          62,
+          120
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 180,
+      "path": ".cache/genki/positive/file0164.jpg",
+      "sha256": "1613e0079c54d535dc6328000c2d36701ad317471f070d86b33d3aec23208936",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          101,
+          68,
+          144,
+          101
+        ],
+        [
+          48,
+          64,
+          91,
+          97
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 181,
+      "path": ".cache/genki/positive/file0214.jpg",
+      "sha256": "d96a7276c762a302d78203d5e5abb260a922943c1fd7ab824d4366ee497bf32c",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          123,
+          67,
+          164,
+          98
+        ],
+        [
+          73,
+          57,
+          115,
+          88
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 182,
+      "path": ".cache/genki/positive/file0220.jpg",
+      "sha256": "85b96aa52cf2f803f724fff42a18dd7ec3bef71286e09573941118fb5891a32d",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          82,
+          82,
+          122,
+          113
+        ],
+        [
+          33,
+          90,
+          74,
+          121
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 183,
+      "path": ".cache/genki/positive/file0225.jpg",
+      "sha256": "cbc4865b356aa30548bbe8f3543875374010c2044e3badcaa71590f8f99b2042",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          71,
+          80,
+          112,
+          111
+        ],
+        [
+          21,
+          85,
+          62,
+          116
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 184,
+      "path": ".cache/genki/positive/file0231.jpg",
+      "sha256": "ae5b1e392fb22aa6a0c728a6d9b4840feacd5a91f08c994dfc03c1d2f9135403",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          93,
+          78,
+          124,
+          101
+        ],
+        [
+          57,
+          71,
+          87,
+          94
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 185,
+      "path": ".cache/genki/positive/file0234.jpg",
+      "sha256": "23fb86bac3ceca9354477fdb7cc78c7bcd8ee3acd1f74569da0e6f9a0e2c2092",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          101,
+          37,
+          146,
+          71
+        ],
+        [
+          46,
+          38,
+          91,
+          72
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 186,
+      "path": ".cache/genki/positive/file0242.jpg",
+      "sha256": "e21da9aec3c48ca092a2256055e9d6e96a3c6cb3832a25ba45acf0ff0d902846",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          126,
+          52,
+          179,
+          92
+        ],
+        [
+          62,
+          53,
+          114,
+          93
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 187,
+      "path": ".cache/genki/positive/file0313.jpg",
+      "sha256": "583d4a8b4688f9eb643e4e609eb29eccced2bdbbaa5d6b1f7aeab49f55bbbfa3",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          88,
+          89,
+          123,
+          115
+        ],
+        [
+          45,
+          84,
+          80,
+          111
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 188,
+      "path": ".cache/genki/positive/file0329.jpg",
+      "sha256": "88767ffced5953a081bc3ee8500fbc7f636ca5bb5eaa677537380411103476b5",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          92,
+          72,
+          124,
+          96
+        ],
+        [
+          53,
+          74,
+          85,
+          99
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 189,
+      "path": ".cache/genki/positive/file0337.jpg",
+      "sha256": "160d4bae874da3f5920822a6de31361f058ee7173cecc19ac792a5f11634bea1",
+      "source": "genki",
+      "split": "test",
+      "eye_boxes": [
+        [
+          52,
+          85,
+          88,
+          112
+        ],
+        [
+          8,
+          81,
+          44,
+          108
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 190,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__100__749ff8f0.jpg",
+      "sha256": "e0fb3074d49adb9b96ad62778ce3eb901387dac3c55e598095ba912dfc76fd2c",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          240,
+          143,
+          312,
+          197
+        ],
+        [
+          152,
+          145,
+          223,
+          199
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 191,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__102__2d47b6bb.jpg",
+      "sha256": "477cbe0c1757e99174e84b2b1e49f00af4503bb3eb527bfc3266f3f0b9c53c1e",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          237,
+          147,
+          311,
+          203
+        ],
+        [
+          146,
+          149,
+          220,
+          205
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 192,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__105__ee8f952d.jpg",
+      "sha256": "9daede943f06a06b921b8b96cfedac02cea5b1b984b9ebaedc3be0903a763af7",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          244,
+          155,
+          316,
+          209
+        ],
+        [
+          156,
+          158,
+          228,
+          212
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 193,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__111__cf657839.jpg",
+      "sha256": "9a8138699d89ba3fbd64087f662f42584b219295fcd0da1b56d72d1eaef766ac",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          371,
+          125,
+          417,
+          160
+        ],
+        [
+          314,
+          127,
+          360,
+          162
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 194,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__116__f2fff114.jpg",
+      "sha256": "ccb769157b8b5966f6c801496b01450962a913866dee634838b05b84a8979a38",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          371,
+          117,
+          420,
+          153
+        ],
+        [
+          312,
+          121,
+          361,
+          157
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 195,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__119__b7c02819.jpg",
+      "sha256": "f8417ea091b627c09c29b3aa016bc6cff2ba722375191ee5a34e112b7dbb2de9",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          364,
+          109,
+          419,
+          151
+        ],
+        [
+          296,
+          110,
+          351,
+          152
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 196,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__121__3129da92.jpg",
+      "sha256": "938dd15bab063195a6d33948cbaa89672ebc3ec0794c488f54757ae2a651778e",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          359,
+          110,
+          417,
+          154
+        ],
+        [
+          287,
+          112,
+          346,
+          156
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 197,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__122__25979a83.jpg",
+      "sha256": "bb19568c9302d8c4ef8dc78c308f78bb1080aa892b6dddd7b7f2139011e95968",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          309,
+          156,
+          354,
+          190
+        ],
+        [
+          254,
+          156,
+          299,
+          190
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 198,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__131__e470212c.jpg",
+      "sha256": "d4e56617f035de65fe2fcb7cecc6cf25d6445ec61d302ab62f5a24c0402fd8d8",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          253,
+          182,
+          301,
+          218
+        ],
+        [
+          195,
+          182,
+          243,
+          218
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 199,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__134__d3a2f340.jpg",
+      "sha256": "996c648a22da8ed3a1ac3bfdc81556f2cfda58dadf4175b5ac4dc53becf16ed8",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          320,
+          183,
+          372,
+          222
+        ],
+        [
+          257,
+          183,
+          309,
+          222
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 200,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__140__fbd5ef57.jpg",
+      "sha256": "ff6e788f3cbc17cabd5feb75d551a273c2a7ea51cd4197dc78db90cf7cbc5e54",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          261,
+          154,
+          312,
+          193
+        ],
+        [
+          197,
+          155,
+          249,
+          194
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 201,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__145__59e5e168.jpg",
+      "sha256": "17c65f6ea981c5eaff2e7b28cd2f63b4d8d61526cef615f9bed67bde457d57eb",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          224,
+          178,
+          288,
+          226
+        ],
+        [
+          145,
+          178,
+          209,
+          226
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 202,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__148__7e9b366c.jpg",
+      "sha256": "74c540eeadd75a449d283b72a9e633a7422f64659ff925b78e06c59f3bf34191",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          325,
+          171,
+          387,
+          218
+        ],
+        [
+          247,
+          170,
+          310,
+          217
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 203,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__14__f8375fd6.jpg",
+      "sha256": "ae4e54820dbc8c2caf87ed65d67a44ee9261db847dc90b1c331bd33526c62775",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          317,
+          181,
+          373,
+          224
+        ],
+        [
+          248,
+          181,
+          304,
+          223
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 204,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__160__f5d3510b.jpg",
+      "sha256": "7d62885b62d7f19d9afb05f91d716aa92f18559978a471afa030a85c647bff00",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          348,
+          143,
+          394,
+          177
+        ],
+        [
+          292,
+          141,
+          338,
+          175
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 205,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__168__e532ec87.jpg",
+      "sha256": "646bd2412a91ef262eb3fa54ee80f899cd47ffef4531cf1ac1b67791799459f9",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          346,
+          183,
+          409,
+          230
+        ],
+        [
+          268,
+          184,
+          331,
+          231
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 206,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__169__bd625ded.jpg",
+      "sha256": "2dc832b93b8bb24e3a1e7fb2fd017b88a98cc23461e238a2f1988d76b0ef07fc",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          349,
+          171,
+          418,
+          223
+        ],
+        [
+          264,
+          171,
+          333,
+          223
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 207,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__188__4ed51c8a.jpg",
+      "sha256": "6e76e48485668a2a2c2dc2b15df93d44ffd54e1fb66bd870bb96909b4558cda7",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          321,
+          181,
+          385,
+          229
+        ],
+        [
+          243,
+          182,
+          307,
+          230
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 208,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__189__0a3c283e.jpg",
+      "sha256": "d2971b0547cd6a2f800e690abaa842eaf0846553dcfde4cfaa556e9420424d22",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          330,
+          177,
+          393,
+          225
+        ],
+        [
+          252,
+          178,
+          316,
+          226
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 209,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__205__7b5c54ce.jpg",
+      "sha256": "d43787d66f075e86737ee40ee8737b6f0dde99a26955755c0bbe88eb21203933",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          301,
+          203,
+          373,
+          258
+        ],
+        [
+          213,
+          210,
+          285,
+          264
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 210,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__206__521b8c06.jpg",
+      "sha256": "008a034d3e9361b8cc47a6be985b010f6d90f054e18eb215b1f85e6d68f584ea",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          305,
+          198,
+          378,
+          254
+        ],
+        [
+          214,
+          205,
+          288,
+          260
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 211,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__214__8c8d0ea3.jpg",
+      "sha256": "4e79b434c9f42239ad107627fcf4702d6868bd7106e4d460fd25799749a49e17",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          295,
+          219,
+          359,
+          267
+        ],
+        [
+          218,
+          219,
+          281,
+          267
+        ]
+      ],
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 212,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__229__d4615d28.jpg",
+      "sha256": "869857014bc3a25c10c254b20a32268cb58ad77f97f1c2d74c14647ff13e521c",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          367,
+          199,
+          425,
+          243
+        ],
+        [
+          295,
+          202,
+          353,
+          245
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 213,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__233__80862695.jpg",
+      "sha256": "eb16bfe049cac8889a9569b1f933b6c71542702da96c823d802b0a84fad0cabd",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          368,
+          197,
+          426,
+          242
+        ],
+        [
+          296,
+          199,
+          354,
+          244
+        ]
+      ],
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    },
+    {
+      "id": 214,
+      "path": "kaggle_output/data/yawn_dataset/images/test/yawn__234__9482f0b4.jpg",
+      "sha256": "62a9f1620e2748078719737c8840da5f0067e2c1246a85f8dc3d5d09d9f59211",
+      "source": "yawn_faces",
+      "split": "test",
+      "eye_boxes": [
+        [
+          343,
+          139,
+          410,
+          190
+        ],
+        [
+          260,
+          138,
+          327,
+          189
+        ]
+      ],
+      "eye_labels": [
+        "Unknown",
+        "Unknown"
+      ],
+      "review": "visual per-eye review by coding agent; human audit recommended"
+    }
+  ],
+  "diagnostic_training_case": ".cache/genki/positive/file0127.jpg",
+  "revision_reason": "Correct known narrow-open-eye failure by adding its reviewed pixels to training. Independent validation/test labels and splits unchanged."
+}

@@ -1,0 +1,34 @@
+{
+  "python_tests": 69,
+  "runtime_tests": 67,
+  "legacy_wrapper_tests": 2,
+  "pip_check": {
+    "passed": true,
+    "output": "No broken requirements found."
+  },
+  "firmware_host_simulator": {
+    "passed": true,
+    "output": "Firmware: startup, ACK, heartbeat, TTL, malformed command, overflow and millis rollover PASS",
+    "sketch_sha256": "327a67611cc3e32e4e0fb123431a86a00d04c2dc7d6407b52234aade6574572d"
+  },
+  "active_model_checks": {
+    "eye": "checksum_ok",
+    "yawn": "checksum_ok",
+    "yunet": "checksum_ok"
+  },
+  "rknn_environment": {
+    "import_check_passed": true,
+    "toolkit2": "2.3.2",
+    "torch": "2.4.0+cpu",
+    "verification": "Observed WSL import command after removal of the package cache; exit code 0",
+    "npu_hardware_tested": false
+  },
+  "report_check": {
+    "pages": 66,
+    "figures": 14,
+    "visual_inspection": "passed",
+    "pdf_sha256": "83e728e4461b4bf88ccc087823e1f94ad0104dc255ef9e5178ccf1dfb1f567d5",
+    "docx_sha256": "618f1b063e0814ef28451c8ca59cec1eb825ef8ef088c9c9e1bf8d2afa07565b"
+  },
+  "physical_board_tested": false
+}

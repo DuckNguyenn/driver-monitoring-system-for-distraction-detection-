@@ -1,0 +1,114 @@
+{
+  "generated_at_utc": "2026-10-06T15:25:12.573237+00:00",
+  "tests_passed": {
+    "driver_monitor": 59,
+    "pc_compatibility": 2
+  },
+  "config_sha256": "1cefcc641bf9ea4749f4a428f59e923efaa5e2bd85c9436f72e6c3d2782ac53f",
+  "eye_model_onnx_sha256": "b5732f3c8b029bcc76015ae3e9cc168243a4f7e1dd72a94bce2074ab5f532c67",
+  "yawn_model_onnx_sha256": "2dcd9571bd937d4caca2548e0db06cc770f57f10459bf01cd77788493597658b",
+  "model_weights_changed": false,
+  "original_repro_failed": true,
+  "fixed_repro_passed": true,
+  "camera_summary": {
+    "source": "0",
+    "live": true,
+    "backend": "onnx",
+    "frames": 281,
+    "wall_seconds": 10.0,
+    "media_seconds": 9.73399999999856,
+    "fps": 28.1,
+    "states": {
+      "NORMAL": 12,
+      "UNKNOWN": 269
+    },
+    "latency_p95_ms": 32,
+    "processing_p95_ms": 32,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "replay": {
+    "type": "derived_open_face_pose_replay",
+    "video_sha256": "b40f9157e89b816e4d44957c5be80359c6fa6b7a413a66324beabc9f1334b414",
+    "note": "Still-image pose transforms, not natural blinking/video accuracy evidence",
+    "results": {
+      "previous_policy": {
+        "summary": {
+          "source": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\reports\\head_motion_fixture.avi",
+          "live": false,
+          "backend": "onnx",
+          "frames": 45,
+          "wall_seconds": 1.0619999999998981,
+          "media_seconds": 2.933333333333333,
+          "fps": 42.372881355936265,
+          "states": {
+            "NORMAL": 39,
+            "UNKNOWN": 6
+          },
+          "latency_p95_ms": 32,
+          "processing_p95_ms": 32,
+          "percentile_resolution_ms": 1,
+          "percentile_overflow_ms": 5000,
+          "fault": null,
+          "accuracy": null,
+          "accuracy_note": "Ground truth required; throughput is not accuracy."
+        },
+        "frame_log": "reports/eye_motion_replay/previous_policy/20261006T151158_104883Z.csv",
+        "frame_log_sha256": "56d3aea218c7650b4afd276549b96aeaac614fe761c968807d245035a4d13a21",
+        "config_sha256": "c9f58fb1e00a4f5ac3c13fbb8f745e2139bfb7118ba72c5f38ad650bf81fc9f0",
+        "eye_cycles_max": 1,
+        "blink_total_max": 0,
+        "motion_frames": 0
+      },
+      "motion_gate": {
+        "summary": {
+          "source": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\reports\\head_motion_fixture.avi",
+          "live": false,
+          "backend": "onnx",
+          "frames": 45,
+          "wall_seconds": 0.9530000000013388,
+          "media_seconds": 2.933333333333333,
+          "fps": 47.219307450091065,
+          "states": {
+            "NORMAL": 33,
+            "UNKNOWN": 12
+          },
+          "latency_p95_ms": 32,
+          "processing_p95_ms": 32,
+          "percentile_resolution_ms": 1,
+          "percentile_overflow_ms": 5000,
+          "fault": null,
+          "accuracy": null,
+          "accuracy_note": "Ground truth required; throughput is not accuracy."
+        },
+        "frame_log": "reports/eye_motion_replay/motion_gate/20261006T151159_359988Z.csv",
+        "frame_log_sha256": "6e136f371144b4636f523a481ddb35156e7baf33024652137770fbec8ccabfe7",
+        "config_sha256": "1cefcc641bf9ea4749f4a428f59e923efaa5e2bd85c9436f72e6c3d2782ac53f",
+        "eye_cycles_max": 0,
+        "blink_total_max": 0,
+        "motion_frames": 12
+      }
+    }
+  },
+  "cabin_accuracy_or_acceptance_measured": false,
+  "artifacts": {
+    "driver_monitor/core.py": "af66e7512fa37490c72ae4eb0983c7f6574e6df85770d06b16a966e142ae978d",
+    "driver_monitor/config.py": "7bbde938df96ef589586f3bbf7a670fe5931f038d4d71cc74e7f1f00e5f6d8c0",
+    "driver_monitor/eye_motion.py": "81f76feb6b85035201d92219dfc69ae57d4b198f2dbe23688cda3891d9d0b04b",
+    "driver_monitor/eye_events.py": "e6beae2eb47698665a02b6bc72e624c80135ca5a4f3173008bb63a4c51b221d5",
+    "driver_monitor/vision.py": "34bfee4b7976b835e2a4c7c5b186454ac83db50e92918df16013f8abdb7c7ee9",
+    "driver_monitor/runtime.py": "bd40cc23581af7f930b6395a4414558dbefa7ca9ef0186d0cac80c168d589557",
+    "driver_monitor/journal.py": "6e56c101cc2d807d9a77241910bfc28abfad1d630aa1699cfd7c8ff32cf895ce",
+    "driver_monitor/overlay.py": "d850d379004b738d8147b03452af5f5a6b297c5c589f3ef5d67a39fc66f281c9",
+    "configs/camera_pc.yaml": "de0a1a98299630094afea703775eefdbb4f390d4530ff6eef1bcef8a28d71c43",
+    "tests/test_head_motion.py": "3d8982289d5709b13af241808eed612e5659d3824019b406b29489f10a2b3c14",
+    "tests/test_camera_quality.py": "af9533f039b3a3e1bf5c65082cdcb75508158d5eac2ebd5fb779d68433810f0c",
+    "tests/test_runtime.py": "9d8125c875634ab052ad5eea2baba33040e4b6d144190aa3dbf6eb92b6b83087",
+    "tools/check_eye_motion.py": "a570e5362cb9b0ec64653c559f40ac4c69bc09ad311bcca7add8ed5c3c94c2c1",
+    "reports/EYE_MOTION_FIX.md": "7a0de4ae86d074d8f05d8d7e8e435ee1ac18dbd43d0d4c884a7d0832c40caf37",
+    "reports/eye_motion_replay.json": "9421101b0418cdd4dcadc538cb2640f7ee581c1c90ef1534cca6bb8ce65fb653"
+  }
+}

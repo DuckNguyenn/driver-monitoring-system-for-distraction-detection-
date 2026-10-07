@@ -1,0 +1,1890 @@
+{
+  "baseline": {
+    "legacy": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          0,
+          61
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 122,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 1.0,
+      "Open_recall_ge_080": 1.0,
+      "false_closed_ge_080": 0,
+      "confident_coverage_ge_080": 1.0
+    },
+    "roi": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          50
+        ]
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.4166666666666667,
+          "recall": 0.5555555555555556,
+          "f1": 0.47619047619047616,
+          "support": 9
+        },
+        "Open": {
+          "precision": 0.9259259259259259,
+          "recall": 0.8771929824561403,
+          "f1": 0.9009009009009009,
+          "support": 57
+        }
+      },
+      "macro_f1": 0.6885456885456885,
+      "accuracy": 0.8333333333333334,
+      "samples": 66,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "Closed_recall_ge_080": 0.5555555555555556,
+      "Open_recall_ge_080": 0.8245614035087719,
+      "false_closed_ge_080": 3,
+      "confident_coverage_ge_080": 0.8939393939393939
+    }
+  },
+  "trials": [
+    {
+      "regularization": 0.0,
+      "epoch": 25,
+      "score": 0.9485346325117593,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9649122807017544,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 50,
+      "score": 0.9543825857281337,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9848484848484849
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 100,
+      "score": 0.9543825857281337,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9848484848484849
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 150,
+      "score": 0.9602305389445078,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        }
+      }
+    },
+    {
+      "regularization": 0.0,
+      "epoch": 200,
+      "score": 0.9602305389445078,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 1.0
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 25,
+      "score": 0.9485346325117593,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9649122807017544,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 50,
+      "score": 0.9543825857281337,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9848484848484849
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 100,
+      "score": 0.9571150097465887,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 150,
+      "score": 0.9571150097465887,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "regularization": 0.001,
+      "epoch": 200,
+      "score": 0.9571150097465887,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              0,
+              57
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.8888888888888888,
+              "f1": 0.9411764705882353,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9827586206896551,
+              "recall": 1.0,
+              "f1": 0.991304347826087,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.9662404092071611,
+          "accuracy": 0.9848484848484849,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9824561403508771,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 25,
+      "score": 0.9368387260790109,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              60,
+              1
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9836065573770492,
+              "f1": 0.9917355371900827,
+              "support": 61
+            },
+            "Open": {
+              "precision": 0.9838709677419355,
+              "recall": 1.0,
+              "f1": 0.991869918699187,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9918027279446349,
+          "accuracy": 0.9918032786885246,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              56
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9824561403508771,
+              "recall": 0.9824561403508771,
+              "f1": 0.9824561403508771,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.935672514619883,
+          "accuracy": 0.9696969696969697,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9298245614035088,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9393939393939394
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 50,
+      "score": 0.9337231968810915,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              56
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9824561403508771,
+              "recall": 0.9824561403508771,
+              "f1": 0.9824561403508771,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.935672514619883,
+          "accuracy": 0.9696969696969697,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9122807017543859,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9090909090909091
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 100,
+      "score": 0.9337231968810915,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              56
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9824561403508771,
+              "recall": 0.9824561403508771,
+              "f1": 0.9824561403508771,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.935672514619883,
+          "accuracy": 0.9696969696969697,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9122807017543859,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9090909090909091
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 150,
+      "score": 0.9337231968810915,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              56
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9824561403508771,
+              "recall": 0.9824561403508771,
+              "f1": 0.9824561403508771,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.935672514619883,
+          "accuracy": 0.9696969696969697,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9122807017543859,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9090909090909091
+        }
+      }
+    },
+    {
+      "regularization": 0.01,
+      "epoch": 200,
+      "score": 0.9337231968810915,
+      "preserves_validation_closed": true,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              56
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "Open": {
+              "precision": 0.9824561403508771,
+              "recall": 0.9824561403508771,
+              "f1": 0.9824561403508771,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.935672514619883,
+          "accuracy": 0.9696969696969697,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.8888888888888888,
+          "Open_recall_ge_080": 0.9122807017543859,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9090909090909091
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 25,
+      "score": 0.8732943469785575,
+      "preserves_validation_closed": false,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              53
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.6923076923076923,
+              "recall": 1.0,
+              "f1": 0.8181818181818182,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9298245614035088,
+              "f1": 0.9636363636363636,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.8909090909090909,
+          "accuracy": 0.9393939393939394,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.7777777777777778,
+          "Open_recall_ge_080": 0.8421052631578947,
+          "false_closed_ge_080": 1,
+          "confident_coverage_ge_080": 0.8484848484848485
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 50,
+      "score": 0.8732943469785575,
+      "preserves_validation_closed": false,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              3,
+              54
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9473684210526315,
+              "f1": 0.972972972972973,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.915057915057915,
+          "accuracy": 0.9545454545454546,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.7777777777777778,
+          "Open_recall_ge_080": 0.8421052631578947,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 100,
+      "score": 0.8732943469785575,
+      "preserves_validation_closed": false,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              3,
+              54
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9473684210526315,
+              "f1": 0.972972972972973,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.915057915057915,
+          "accuracy": 0.9545454545454546,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.7777777777777778,
+          "Open_recall_ge_080": 0.8421052631578947,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 150,
+      "score": 0.8732943469785575,
+      "preserves_validation_closed": false,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              3,
+              54
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9473684210526315,
+              "f1": 0.972972972972973,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.915057915057915,
+          "accuracy": 0.9545454545454546,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.7777777777777778,
+          "Open_recall_ge_080": 0.8421052631578947,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.8333333333333334
+        }
+      }
+    },
+    {
+      "regularization": 0.1,
+      "epoch": 200,
+      "score": 0.8732943469785575,
+      "preserves_validation_closed": false,
+      "metrics": {
+        "legacy": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.9836065573770492,
+          "Open_recall_ge_080": 1.0,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.9918032786885246
+        },
+        "roi": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0
+            ],
+            [
+              3,
+              54
+            ]
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 9
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9473684210526315,
+              "f1": 0.972972972972973,
+              "support": 57
+            }
+          },
+          "macro_f1": 0.915057915057915,
+          "accuracy": 0.9545454545454546,
+          "samples": 66,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "Closed_recall_ge_080": 0.7777777777777778,
+          "Open_recall_ge_080": 0.8421052631578947,
+          "false_closed_ge_080": 0,
+          "confident_coverage_ge_080": 0.8333333333333334
+        }
+      }
+    }
+  ],
+  "selected": {
+    "regularization": 0.0,
+    "epoch": 150,
+    "score": 0.9602305389445078,
+    "preserves_validation_closed": true,
+    "metrics": {
+      "legacy": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            60,
+            1
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 0.9836065573770492,
+            "f1": 0.9917355371900827,
+            "support": 61
+          },
+          "Open": {
+            "precision": 0.9838709677419355,
+            "recall": 1.0,
+            "f1": 0.991869918699187,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.9918027279446349,
+        "accuracy": 0.9918032786885246,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 0.9836065573770492,
+        "Open_recall_ge_080": 1.0,
+        "false_closed_ge_080": 0,
+        "confident_coverage_ge_080": 0.9918032786885246
+      },
+      "roi": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            8,
+            1
+          ],
+          [
+            0,
+            57
+          ]
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353,
+            "support": 9
+          },
+          "Open": {
+            "precision": 0.9827586206896551,
+            "recall": 1.0,
+            "f1": 0.991304347826087,
+            "support": 57
+          }
+        },
+        "macro_f1": 0.9662404092071611,
+        "accuracy": 0.9848484848484849,
+        "samples": 66,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "Closed_recall_ge_080": 0.8888888888888888,
+        "Open_recall_ge_080": 1.0,
+        "false_closed_ge_080": 0,
+        "confident_coverage_ge_080": 1.0
+      }
+    }
+  }
+}

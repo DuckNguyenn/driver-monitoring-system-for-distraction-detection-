@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-10-06T14:44:10.020547+00:00",
+  "shared_tests_passed": 50,
+  "compatibility_tests_passed": 2,
+  "baseline_smile_regression_failed": true,
+  "candidate_smile_regression_passed": true,
+  "camera_summary": {
+    "source": "0",
+    "live": true,
+    "backend": "onnx",
+    "frames": 147,
+    "wall_seconds": 10.015999999999622,
+    "media_seconds": 9.75,
+    "fps": 14.676517571885539,
+    "states": {
+      "NORMAL": 116,
+      "UNKNOWN": 31
+    },
+    "latency_p95_ms": 32,
+    "processing_p95_ms": 32,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "video_fixture_summary": {
+    "source": "reports/video_fixture.avi",
+    "live": false,
+    "backend": "onnx",
+    "frames": 135,
+    "wall_seconds": 4.156000000000859,
+    "media_seconds": 8.933333333333334,
+    "fps": 32.48315688161023,
+    "states": {
+      "NORMAL": 135
+    },
+    "latency_p95_ms": 48,
+    "processing_p95_ms": 48,
+    "percentile_resolution_ms": 1,
+    "percentile_overflow_ms": 5000,
+    "fault": null,
+    "accuracy": null,
+    "accuracy_note": "Ground truth required; throughput is not accuracy."
+  },
+  "artifacts": {
+    "driver_monitor/overlay.py": "a07cefa4671a0f52cfcc94674aba471e2866a3f087d8df368e20c626977e5f8d",
+    "driver_monitor/vision.py": "fb108a8ef87a195607311642e4aa3380942d90ff403790efdd7f4beb8e986f23",
+    "configs/camera_pc.yaml": "627b604c747b2d348c7d7a34724dc849c804a911b96b118680d8d8c8c7e00c48",
+    "scripts/start_camera.cmd": "7c013b7f43fbcf269501c7aafddcd30a85c515289c4e5bec2ac5a728b78e5389",
+    "tools/refine_yawn_head.py": "e3bdd69caca35ae637af68af0cb67f8a5d1ddfa2528bdcb52f53a9aaf8c76dd6",
+    "tools/evaluate_smile_refinement.py": "0251b5bf3035627b9f468e81989116bb8fed11bb85d5ea185d9037b95b566c43",
+    "tests/test_smile_classifier.py": "2c408256537662eba83574cab8866df81a26428162135ba7f345cf074ec39b99",
+    "models/smile_refined/manifest.json": "d383384d46209cdf74388d2f551edee4c9aaf7e7469565afec8e995e5b0490a3",
+    "models/smile_refined/best_yawn.pt": "e6f2b598fd1ba96c3ecf5abef53da9fa968734064cae7264466ec50637c2a1be",
+    "models/smile_refined/best_yawn.onnx": "2dcd9571bd937d4caca2548e0db06cc770f57f10459bf01cd77788493597658b",
+    "reports/yawn_smile_refined_parity.json": "61afc7cce4ef9bbbeb97ca6472b12492344be30dbe6f5b16f736c9e5fa6b6b8a",
+    "reports/smile_refinement_pixels.json": "dccbe59f037248095ab29520f621e2e68a41da6f83153e312684c854a9866b24",
+    "reports/SMILE_YAWN_FIX.md": "f05c28c2e9f3fa9897184c4685511c304fb69568af201a492534eae182156729"
+  },
+  "cabin_event_acceptance": false,
+  "new_rknn_available": false
+}

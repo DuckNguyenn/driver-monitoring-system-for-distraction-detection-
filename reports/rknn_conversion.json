@@ -1,0 +1,33 @@
+{
+  "target_platform": "rk3576",
+  "host": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.10",
+    "versions": {
+      "torch": "2.4.0+cpu",
+      "onnx": "1.17.0",
+      "rknn-toolkit2": "2.3.2"
+    }
+  },
+  "models": {
+    "eye": {
+      "file": "best_eye.rknn",
+      "sha256": "4242d1bd649c35a16e6197d069ade0c7f9c8be417b5d596ded6d10987661d3c3",
+      "target_platform": "rk3576",
+      "quantization": "none",
+      "toolkit_version": "2.3.2"
+    },
+    "yawn": {
+      "file": "best_yawn.rknn",
+      "sha256": "95a006917c498fa5ee577ad0a1a8821c285781b87e545f2d07f8f33f4a309367",
+      "target_platform": "rk3576",
+      "quantization": "none",
+      "toolkit_version": "2.3.2"
+    }
+  },
+  "conversion_passed": true,
+  "npu_inference_tested": false,
+  "accuracy_tested": false,
+  "physical_board_tested": false
+}

@@ -1,0 +1,5963 @@
+{
+  "generated_at_utc": "2026-10-06T08:53:23.452610+00:00",
+  "versions": {
+    "torch": "2.6.0+cpu",
+    "ultralytics": "8.4.163",
+    "onnx": "1.17.0"
+  },
+  "manifest": {
+    "file": "models/manifest.json",
+    "bytes": 3532,
+    "sha256": "83d85c5a154f49fce366b6dbfa6328c6e42bea6b59f0faa3b99dd1d589ba5e9a"
+  },
+  "classifiers": {
+    "eye": {
+      "torch": {
+        "file": "camera_classical/best_eye.pt",
+        "bytes": 2963592,
+        "sha256": "3c124c05d9d01849c70823eeab8f25c48e740aa836be319ef881588e188d308f",
+        "task": "classify",
+        "labels": {
+          "0": "Closed",
+          "1": "Open"
+        },
+        "checkpoint_ultralytics": "8.4.163",
+        "checkpoint_epoch": -1,
+        "checkpoint_date": "2026-09-27T05:15:09.679229+00:00",
+        "checkpoint_train_args": {
+          "task": "classify",
+          "model": "yolov8n-cls.pt",
+          "imgsz": 224,
+          "epochs": 40,
+          "batch": 32,
+          "optimizer": "auto",
+          "lr0": 0.01,
+          "dropout": 0.0,
+          "pretrained": true,
+          "seed": 42
+        },
+        "yaml": {
+          "nc": 2,
+          "scales": {
+            "n": [
+              0.33,
+              0.25,
+              1024
+            ],
+            "s": [
+              0.33,
+              0.5,
+              1024
+            ],
+            "m": [
+              0.67,
+              0.75,
+              1024
+            ],
+            "l": [
+              1.0,
+              1.0,
+              1024
+            ],
+            "x": [
+              1.0,
+              1.25,
+              1024
+            ]
+          },
+          "backbone": [
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                64,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                128,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              3,
+              "C2f",
+              [
+                128,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                256,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              6,
+              "C2f",
+              [
+                256,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                512,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              6,
+              "C2f",
+              [
+                512,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                1024,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              3,
+              "C2f",
+              [
+                1024,
+                true
+              ]
+            ]
+          ],
+          "head": [
+            [
+              -1,
+              1,
+              "Classify",
+              [
+                "nc"
+              ]
+            ]
+          ],
+          "scale": "n",
+          "yaml_file": "yolov8n-cls.yaml",
+          "ch": 3,
+          "channels": 3
+        },
+        "stages": [
+          {
+            "index": 0,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              3,
+              224,
+              224
+            ],
+            "output_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "parameters": 464,
+            "conv": {
+              "in_channels": 3,
+              "out_channels": 16,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 1,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "parameters": 4672,
+            "conv": {
+              "in_channels": 16,
+              "out_channels": 32,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 2,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "parameters": 7360,
+            "c2f": {
+              "hidden_channels": 16,
+              "bottlenecks": 1,
+              "shortcut": [
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "parameters": 18560,
+            "conv": {
+              "in_channels": 32,
+              "out_channels": 64,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 4,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "output_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "parameters": 49664,
+            "c2f": {
+              "hidden_channels": 32,
+              "bottlenecks": 2,
+              "shortcut": [
+                true,
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "output_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "parameters": 73984,
+            "conv": {
+              "in_channels": 64,
+              "out_channels": 128,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 6,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "output_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "parameters": 197632,
+            "c2f": {
+              "hidden_channels": 64,
+              "bottlenecks": 2,
+              "shortcut": [
+                true,
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 7,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "output_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "parameters": 295424,
+            "conv": {
+              "in_channels": 128,
+              "out_channels": 256,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 8,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "output_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "parameters": 460288,
+            "c2f": {
+              "hidden_channels": 128,
+              "bottlenecks": 1,
+              "shortcut": [
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 9,
+            "type": "Classify",
+            "input_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "output_shape": [
+              1,
+              2
+            ],
+            "parameters": 332802,
+            "head": {
+              "conv_out_channels": 1280,
+              "pool": "AdaptiveAvgPool2d",
+              "pool_output_size": 1,
+              "dropout_probability": 0.0,
+              "linear_in_features": 1280,
+              "linear_out_features": 2
+            }
+          }
+        ],
+        "total_parameters": 1440850,
+        "parameter_dtype": "torch.float32",
+        "conv_linear_macs_at_batch1": 201308672,
+        "macs_definition": "Conv2d and Linear multiply-accumulates only; excludes activation, BN, pooling and Softmax",
+        "output_shape": [
+          1,
+          2
+        ],
+        "source_files": {
+          "Conv": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\conv.py",
+          "C2f": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\block.py",
+          "Classify": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\head.py"
+        }
+      },
+      "onnx": {
+        "file": "models/best_eye.onnx",
+        "bytes": 5771257,
+        "sha256": "b5732f3c8b029bcc76015ae3e9cc168243a4f7e1dd72a94bce2074ab5f532c67",
+        "opsets": {
+          "ai.onnx": 12
+        },
+        "inputs": [
+          {
+            "name": "images",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              3,
+              224,
+              224
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              2
+            ]
+          }
+        ],
+        "node_count": 148,
+        "operator_counts": {
+          "Add": 10,
+          "Concat": 4,
+          "Constant": 24,
+          "Conv": 26,
+          "Div": 4,
+          "Flatten": 1,
+          "Gather": 4,
+          "Gemm": 1,
+          "GlobalAveragePool": 1,
+          "Mul": 34,
+          "Shape": 4,
+          "Sigmoid": 26,
+          "Slice": 8,
+          "Softmax": 1
+        },
+        "initializer_elements": 1437442,
+        "conv_gemm_weight_bias_elements": 1437442,
+        "initializer_count": 54,
+        "initializer_types": {
+          "FLOAT": 54
+        },
+        "convolutions": [
+          {
+            "name": "/model.0/conv/Conv",
+            "input": [
+              "images",
+              "onnx::Conv_334",
+              "onnx::Conv_335"
+            ],
+            "output": [
+              "/model.0/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              3,
+              224,
+              224
+            ],
+            "output_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "weight_shape": [
+              16,
+              3,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.1/conv/Conv",
+            "input": [
+              "/model.0/act/Mul_output_0",
+              "onnx::Conv_337",
+              "onnx::Conv_338"
+            ],
+            "output": [
+              "/model.1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "weight_shape": [
+              32,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/cv1/conv/Conv",
+            "input": [
+              "/model.1/act/Mul_output_0",
+              "onnx::Conv_340",
+              "onnx::Conv_341"
+            ],
+            "output": [
+              "/model.2/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "weight_shape": [
+              32,
+              32,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.2/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.2/Slice_1_output_0",
+              "onnx::Conv_343",
+              "onnx::Conv_344"
+            ],
+            "output": [
+              "/model.2/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__4",
+              "unk__5",
+              "unk__6",
+              "unk__7"
+            ],
+            "output_shape": [
+              "unk__4",
+              16,
+              "unk__8",
+              "unk__9"
+            ],
+            "weight_shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.2/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_346",
+              "onnx::Conv_347"
+            ],
+            "output": [
+              "/model.2/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__4",
+              16,
+              "unk__8",
+              "unk__9"
+            ],
+            "output_shape": [
+              "unk__4",
+              16,
+              "unk__10",
+              "unk__11"
+            ],
+            "weight_shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/cv2/conv/Conv",
+            "input": [
+              "/model.2/Concat_output_0",
+              "onnx::Conv_349",
+              "onnx::Conv_350"
+            ],
+            "output": [
+              "/model.2/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              "unk__14",
+              "unk__2",
+              "unk__3"
+            ],
+            "output_shape": [
+              "unk__0",
+              32,
+              "unk__15",
+              "unk__16"
+            ],
+            "weight_shape": [
+              32,
+              48,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.3/conv/Conv",
+            "input": [
+              "/model.2/cv2/act/Mul_output_0",
+              "onnx::Conv_352",
+              "onnx::Conv_353"
+            ],
+            "output": [
+              "/model.3/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              32,
+              "unk__15",
+              "unk__16"
+            ],
+            "output_shape": [
+              "unk__0",
+              64,
+              "unk__17",
+              "unk__18"
+            ],
+            "weight_shape": [
+              64,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/cv1/conv/Conv",
+            "input": [
+              "/model.3/act/Mul_output_0",
+              "onnx::Conv_355",
+              "onnx::Conv_356"
+            ],
+            "output": [
+              "/model.4/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              64,
+              "unk__17",
+              "unk__18"
+            ],
+            "output_shape": [
+              "unk__0",
+              64,
+              "unk__19",
+              "unk__20"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.4/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.4/Slice_1_output_0",
+              "onnx::Conv_358",
+              "onnx::Conv_359"
+            ],
+            "output": [
+              "/model.4/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              "unk__26",
+              "unk__27",
+              "unk__28"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__29",
+              "unk__30"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.4/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_361",
+              "onnx::Conv_362"
+            ],
+            "output": [
+              "/model.4/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__29",
+              "unk__30"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__31",
+              "unk__32"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.1/cv1/conv/Conv",
+            "input": [
+              "/model.4/m.0/Add_output_0",
+              "onnx::Conv_364",
+              "onnx::Conv_365"
+            ],
+            "output": [
+              "/model.4/m.1/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__33",
+              "unk__34"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__35",
+              "unk__36"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.1/cv2/conv/Conv",
+            "input": [
+              "/model.4/m.1/cv1/act/Mul_output_0",
+              "onnx::Conv_367",
+              "onnx::Conv_368"
+            ],
+            "output": [
+              "/model.4/m.1/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__35",
+              "unk__36"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__37",
+              "unk__38"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/cv2/conv/Conv",
+            "input": [
+              "/model.4/Concat_output_0",
+              "onnx::Conv_370",
+              "onnx::Conv_371"
+            ],
+            "output": [
+              "/model.4/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              "unk__41",
+              "unk__23",
+              "unk__24"
+            ],
+            "output_shape": [
+              "unk__21",
+              64,
+              "unk__42",
+              "unk__43"
+            ],
+            "weight_shape": [
+              64,
+              128,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.5/conv/Conv",
+            "input": [
+              "/model.4/cv2/act/Mul_output_0",
+              "onnx::Conv_373",
+              "onnx::Conv_374"
+            ],
+            "output": [
+              "/model.5/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              64,
+              "unk__42",
+              "unk__43"
+            ],
+            "output_shape": [
+              "unk__21",
+              128,
+              "unk__44",
+              "unk__45"
+            ],
+            "weight_shape": [
+              128,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/cv1/conv/Conv",
+            "input": [
+              "/model.5/act/Mul_output_0",
+              "onnx::Conv_376",
+              "onnx::Conv_377"
+            ],
+            "output": [
+              "/model.6/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              128,
+              "unk__44",
+              "unk__45"
+            ],
+            "output_shape": [
+              "unk__21",
+              128,
+              "unk__46",
+              "unk__47"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.6/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.6/Slice_1_output_0",
+              "onnx::Conv_379",
+              "onnx::Conv_380"
+            ],
+            "output": [
+              "/model.6/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              "unk__53",
+              "unk__54",
+              "unk__55"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__56",
+              "unk__57"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.6/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_382",
+              "onnx::Conv_383"
+            ],
+            "output": [
+              "/model.6/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__56",
+              "unk__57"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__58",
+              "unk__59"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.1/cv1/conv/Conv",
+            "input": [
+              "/model.6/m.0/Add_output_0",
+              "onnx::Conv_385",
+              "onnx::Conv_386"
+            ],
+            "output": [
+              "/model.6/m.1/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__60",
+              "unk__61"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__62",
+              "unk__63"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.1/cv2/conv/Conv",
+            "input": [
+              "/model.6/m.1/cv1/act/Mul_output_0",
+              "onnx::Conv_388",
+              "onnx::Conv_389"
+            ],
+            "output": [
+              "/model.6/m.1/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__62",
+              "unk__63"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__64",
+              "unk__65"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/cv2/conv/Conv",
+            "input": [
+              "/model.6/Concat_output_0",
+              "onnx::Conv_391",
+              "onnx::Conv_392"
+            ],
+            "output": [
+              "/model.6/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              "unk__68",
+              "unk__50",
+              "unk__51"
+            ],
+            "output_shape": [
+              "unk__48",
+              128,
+              "unk__69",
+              "unk__70"
+            ],
+            "weight_shape": [
+              128,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.7/conv/Conv",
+            "input": [
+              "/model.6/cv2/act/Mul_output_0",
+              "onnx::Conv_394",
+              "onnx::Conv_395"
+            ],
+            "output": [
+              "/model.7/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              128,
+              "unk__69",
+              "unk__70"
+            ],
+            "output_shape": [
+              "unk__48",
+              256,
+              "unk__71",
+              "unk__72"
+            ],
+            "weight_shape": [
+              256,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/cv1/conv/Conv",
+            "input": [
+              "/model.7/act/Mul_output_0",
+              "onnx::Conv_397",
+              "onnx::Conv_398"
+            ],
+            "output": [
+              "/model.8/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              256,
+              "unk__71",
+              "unk__72"
+            ],
+            "output_shape": [
+              "unk__48",
+              256,
+              "unk__73",
+              "unk__74"
+            ],
+            "weight_shape": [
+              256,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.8/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.8/Slice_1_output_0",
+              "onnx::Conv_400",
+              "onnx::Conv_401"
+            ],
+            "output": [
+              "/model.8/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__79",
+              "unk__80",
+              "unk__81",
+              "unk__82"
+            ],
+            "output_shape": [
+              "unk__79",
+              128,
+              "unk__83",
+              "unk__84"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.8/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_403",
+              "onnx::Conv_404"
+            ],
+            "output": [
+              "/model.8/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__79",
+              128,
+              "unk__83",
+              "unk__84"
+            ],
+            "output_shape": [
+              "unk__79",
+              128,
+              "unk__85",
+              "unk__86"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/cv2/conv/Conv",
+            "input": [
+              "/model.8/Concat_output_0",
+              "onnx::Conv_406",
+              "onnx::Conv_407"
+            ],
+            "output": [
+              "/model.8/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__75",
+              "unk__89",
+              "unk__77",
+              "unk__78"
+            ],
+            "output_shape": [
+              "unk__75",
+              256,
+              "unk__90",
+              "unk__91"
+            ],
+            "weight_shape": [
+              256,
+              384,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.9/conv/conv/Conv",
+            "input": [
+              "/model.8/cv2/act/Mul_output_0",
+              "onnx::Conv_409",
+              "onnx::Conv_410"
+            ],
+            "output": [
+              "/model.9/conv/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__75",
+              256,
+              "unk__90",
+              "unk__91"
+            ],
+            "output_shape": [
+              "unk__75",
+              1280,
+              "unk__92",
+              "unk__93"
+            ],
+            "weight_shape": [
+              1280,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "rknn": {
+        "file": "models/best_eye.rknn",
+        "bytes": 4366262,
+        "sha256": "4242d1bd649c35a16e6197d069ade0c7f9c8be417b5d596ded6d10987661d3c3"
+      }
+    },
+    "yawn": {
+      "torch": {
+        "file": "camera_classical/best_yawn.pt",
+        "bytes": 2965512,
+        "sha256": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1",
+        "task": "classify",
+        "labels": {
+          "0": "no_yawn",
+          "1": "yawn"
+        },
+        "checkpoint_ultralytics": "8.4.163",
+        "checkpoint_epoch": -1,
+        "checkpoint_date": "2026-09-27T05:32:58.967188+00:00",
+        "checkpoint_train_args": {
+          "task": "classify",
+          "model": "yolov8n-cls.pt",
+          "imgsz": 224,
+          "epochs": 40,
+          "batch": 32,
+          "optimizer": "auto",
+          "lr0": 0.01,
+          "dropout": 0.0,
+          "pretrained": true,
+          "seed": 42
+        },
+        "yaml": {
+          "nc": 2,
+          "scales": {
+            "n": [
+              0.33,
+              0.25,
+              1024
+            ],
+            "s": [
+              0.33,
+              0.5,
+              1024
+            ],
+            "m": [
+              0.67,
+              0.75,
+              1024
+            ],
+            "l": [
+              1.0,
+              1.0,
+              1024
+            ],
+            "x": [
+              1.0,
+              1.25,
+              1024
+            ]
+          },
+          "backbone": [
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                64,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                128,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              3,
+              "C2f",
+              [
+                128,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                256,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              6,
+              "C2f",
+              [
+                256,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                512,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              6,
+              "C2f",
+              [
+                512,
+                true
+              ]
+            ],
+            [
+              -1,
+              1,
+              "Conv",
+              [
+                1024,
+                3,
+                2
+              ]
+            ],
+            [
+              -1,
+              3,
+              "C2f",
+              [
+                1024,
+                true
+              ]
+            ]
+          ],
+          "head": [
+            [
+              -1,
+              1,
+              "Classify",
+              [
+                "nc"
+              ]
+            ]
+          ],
+          "scale": "n",
+          "yaml_file": "yolov8n-cls.yaml",
+          "ch": 3,
+          "channels": 3
+        },
+        "stages": [
+          {
+            "index": 0,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              3,
+              224,
+              224
+            ],
+            "output_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "parameters": 464,
+            "conv": {
+              "in_channels": 3,
+              "out_channels": 16,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 1,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "parameters": 4672,
+            "conv": {
+              "in_channels": 16,
+              "out_channels": 32,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 2,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "parameters": 7360,
+            "c2f": {
+              "hidden_channels": 16,
+              "bottlenecks": 1,
+              "shortcut": [
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "parameters": 18560,
+            "conv": {
+              "in_channels": 32,
+              "out_channels": 64,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 4,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "output_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "parameters": 49664,
+            "c2f": {
+              "hidden_channels": 32,
+              "bottlenecks": 2,
+              "shortcut": [
+                true,
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 5,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              64,
+              28,
+              28
+            ],
+            "output_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "parameters": 73984,
+            "conv": {
+              "in_channels": 64,
+              "out_channels": 128,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 6,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "output_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "parameters": 197632,
+            "c2f": {
+              "hidden_channels": 64,
+              "bottlenecks": 2,
+              "shortcut": [
+                true,
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 7,
+            "type": "Conv",
+            "input_shape": [
+              1,
+              128,
+              14,
+              14
+            ],
+            "output_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "parameters": 295424,
+            "conv": {
+              "in_channels": 128,
+              "out_channels": 256,
+              "kernel": [
+                3,
+                3
+              ],
+              "stride": [
+                2,
+                2
+              ],
+              "groups": 1,
+              "bias": false,
+              "activation": "SiLU",
+              "batch_norm_eps": 1e-05
+            }
+          },
+          {
+            "index": 8,
+            "type": "C2f",
+            "input_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "output_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "parameters": 460288,
+            "c2f": {
+              "hidden_channels": 128,
+              "bottlenecks": 1,
+              "shortcut": [
+                true
+              ],
+              "bottleneck_expansion": [
+                1.0
+              ]
+            }
+          },
+          {
+            "index": 9,
+            "type": "Classify",
+            "input_shape": [
+              1,
+              256,
+              7,
+              7
+            ],
+            "output_shape": [
+              1,
+              2
+            ],
+            "parameters": 332802,
+            "head": {
+              "conv_out_channels": 1280,
+              "pool": "AdaptiveAvgPool2d",
+              "pool_output_size": 1,
+              "dropout_probability": 0.0,
+              "linear_in_features": 1280,
+              "linear_out_features": 2
+            }
+          }
+        ],
+        "total_parameters": 1440850,
+        "parameter_dtype": "torch.float32",
+        "conv_linear_macs_at_batch1": 201308672,
+        "macs_definition": "Conv2d and Linear multiply-accumulates only; excludes activation, BN, pooling and Softmax",
+        "output_shape": [
+          1,
+          2
+        ],
+        "source_files": {
+          "Conv": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\conv.py",
+          "C2f": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\block.py",
+          "Classify": "C:\\Users\\P1 Gen 5\\Downloads\\yolov10n\\.venv\\Lib\\site-packages\\ultralytics\\nn\\modules\\head.py"
+        }
+      },
+      "onnx": {
+        "file": "models/best_yawn.onnx",
+        "bytes": 5771257,
+        "sha256": "fdf971a428c4b24de47fb1126bf179db7e3282e9f7d9baf2b32e3bdba04d8844",
+        "opsets": {
+          "ai.onnx": 12
+        },
+        "inputs": [
+          {
+            "name": "images",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              3,
+              224,
+              224
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              2
+            ]
+          }
+        ],
+        "node_count": 148,
+        "operator_counts": {
+          "Add": 10,
+          "Concat": 4,
+          "Constant": 24,
+          "Conv": 26,
+          "Div": 4,
+          "Flatten": 1,
+          "Gather": 4,
+          "Gemm": 1,
+          "GlobalAveragePool": 1,
+          "Mul": 34,
+          "Shape": 4,
+          "Sigmoid": 26,
+          "Slice": 8,
+          "Softmax": 1
+        },
+        "initializer_elements": 1437442,
+        "conv_gemm_weight_bias_elements": 1437442,
+        "initializer_count": 54,
+        "initializer_types": {
+          "FLOAT": 54
+        },
+        "convolutions": [
+          {
+            "name": "/model.0/conv/Conv",
+            "input": [
+              "images",
+              "onnx::Conv_334",
+              "onnx::Conv_335"
+            ],
+            "output": [
+              "/model.0/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              3,
+              224,
+              224
+            ],
+            "output_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "weight_shape": [
+              16,
+              3,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.1/conv/Conv",
+            "input": [
+              "/model.0/act/Mul_output_0",
+              "onnx::Conv_337",
+              "onnx::Conv_338"
+            ],
+            "output": [
+              "/model.1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              16,
+              112,
+              112
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "weight_shape": [
+              32,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/cv1/conv/Conv",
+            "input": [
+              "/model.1/act/Mul_output_0",
+              "onnx::Conv_340",
+              "onnx::Conv_341"
+            ],
+            "output": [
+              "/model.2/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "output_shape": [
+              1,
+              32,
+              56,
+              56
+            ],
+            "weight_shape": [
+              32,
+              32,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.2/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.2/Slice_1_output_0",
+              "onnx::Conv_343",
+              "onnx::Conv_344"
+            ],
+            "output": [
+              "/model.2/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__4",
+              "unk__5",
+              "unk__6",
+              "unk__7"
+            ],
+            "output_shape": [
+              "unk__4",
+              16,
+              "unk__8",
+              "unk__9"
+            ],
+            "weight_shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.2/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_346",
+              "onnx::Conv_347"
+            ],
+            "output": [
+              "/model.2/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__4",
+              16,
+              "unk__8",
+              "unk__9"
+            ],
+            "output_shape": [
+              "unk__4",
+              16,
+              "unk__10",
+              "unk__11"
+            ],
+            "weight_shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.2/cv2/conv/Conv",
+            "input": [
+              "/model.2/Concat_output_0",
+              "onnx::Conv_349",
+              "onnx::Conv_350"
+            ],
+            "output": [
+              "/model.2/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              "unk__14",
+              "unk__2",
+              "unk__3"
+            ],
+            "output_shape": [
+              "unk__0",
+              32,
+              "unk__15",
+              "unk__16"
+            ],
+            "weight_shape": [
+              32,
+              48,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.3/conv/Conv",
+            "input": [
+              "/model.2/cv2/act/Mul_output_0",
+              "onnx::Conv_352",
+              "onnx::Conv_353"
+            ],
+            "output": [
+              "/model.3/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              32,
+              "unk__15",
+              "unk__16"
+            ],
+            "output_shape": [
+              "unk__0",
+              64,
+              "unk__17",
+              "unk__18"
+            ],
+            "weight_shape": [
+              64,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/cv1/conv/Conv",
+            "input": [
+              "/model.3/act/Mul_output_0",
+              "onnx::Conv_355",
+              "onnx::Conv_356"
+            ],
+            "output": [
+              "/model.4/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__0",
+              64,
+              "unk__17",
+              "unk__18"
+            ],
+            "output_shape": [
+              "unk__0",
+              64,
+              "unk__19",
+              "unk__20"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.4/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.4/Slice_1_output_0",
+              "onnx::Conv_358",
+              "onnx::Conv_359"
+            ],
+            "output": [
+              "/model.4/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              "unk__26",
+              "unk__27",
+              "unk__28"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__29",
+              "unk__30"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.4/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_361",
+              "onnx::Conv_362"
+            ],
+            "output": [
+              "/model.4/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__29",
+              "unk__30"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__31",
+              "unk__32"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.1/cv1/conv/Conv",
+            "input": [
+              "/model.4/m.0/Add_output_0",
+              "onnx::Conv_364",
+              "onnx::Conv_365"
+            ],
+            "output": [
+              "/model.4/m.1/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__33",
+              "unk__34"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__35",
+              "unk__36"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/m.1/cv2/conv/Conv",
+            "input": [
+              "/model.4/m.1/cv1/act/Mul_output_0",
+              "onnx::Conv_367",
+              "onnx::Conv_368"
+            ],
+            "output": [
+              "/model.4/m.1/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__25",
+              32,
+              "unk__35",
+              "unk__36"
+            ],
+            "output_shape": [
+              "unk__25",
+              32,
+              "unk__37",
+              "unk__38"
+            ],
+            "weight_shape": [
+              32,
+              32,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.4/cv2/conv/Conv",
+            "input": [
+              "/model.4/Concat_output_0",
+              "onnx::Conv_370",
+              "onnx::Conv_371"
+            ],
+            "output": [
+              "/model.4/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              "unk__41",
+              "unk__23",
+              "unk__24"
+            ],
+            "output_shape": [
+              "unk__21",
+              64,
+              "unk__42",
+              "unk__43"
+            ],
+            "weight_shape": [
+              64,
+              128,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.5/conv/Conv",
+            "input": [
+              "/model.4/cv2/act/Mul_output_0",
+              "onnx::Conv_373",
+              "onnx::Conv_374"
+            ],
+            "output": [
+              "/model.5/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              64,
+              "unk__42",
+              "unk__43"
+            ],
+            "output_shape": [
+              "unk__21",
+              128,
+              "unk__44",
+              "unk__45"
+            ],
+            "weight_shape": [
+              128,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/cv1/conv/Conv",
+            "input": [
+              "/model.5/act/Mul_output_0",
+              "onnx::Conv_376",
+              "onnx::Conv_377"
+            ],
+            "output": [
+              "/model.6/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__21",
+              128,
+              "unk__44",
+              "unk__45"
+            ],
+            "output_shape": [
+              "unk__21",
+              128,
+              "unk__46",
+              "unk__47"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.6/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.6/Slice_1_output_0",
+              "onnx::Conv_379",
+              "onnx::Conv_380"
+            ],
+            "output": [
+              "/model.6/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              "unk__53",
+              "unk__54",
+              "unk__55"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__56",
+              "unk__57"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.6/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_382",
+              "onnx::Conv_383"
+            ],
+            "output": [
+              "/model.6/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__56",
+              "unk__57"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__58",
+              "unk__59"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.1/cv1/conv/Conv",
+            "input": [
+              "/model.6/m.0/Add_output_0",
+              "onnx::Conv_385",
+              "onnx::Conv_386"
+            ],
+            "output": [
+              "/model.6/m.1/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__60",
+              "unk__61"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__62",
+              "unk__63"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/m.1/cv2/conv/Conv",
+            "input": [
+              "/model.6/m.1/cv1/act/Mul_output_0",
+              "onnx::Conv_388",
+              "onnx::Conv_389"
+            ],
+            "output": [
+              "/model.6/m.1/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__52",
+              64,
+              "unk__62",
+              "unk__63"
+            ],
+            "output_shape": [
+              "unk__52",
+              64,
+              "unk__64",
+              "unk__65"
+            ],
+            "weight_shape": [
+              64,
+              64,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.6/cv2/conv/Conv",
+            "input": [
+              "/model.6/Concat_output_0",
+              "onnx::Conv_391",
+              "onnx::Conv_392"
+            ],
+            "output": [
+              "/model.6/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              "unk__68",
+              "unk__50",
+              "unk__51"
+            ],
+            "output_shape": [
+              "unk__48",
+              128,
+              "unk__69",
+              "unk__70"
+            ],
+            "weight_shape": [
+              128,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.7/conv/Conv",
+            "input": [
+              "/model.6/cv2/act/Mul_output_0",
+              "onnx::Conv_394",
+              "onnx::Conv_395"
+            ],
+            "output": [
+              "/model.7/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              128,
+              "unk__69",
+              "unk__70"
+            ],
+            "output_shape": [
+              "unk__48",
+              256,
+              "unk__71",
+              "unk__72"
+            ],
+            "weight_shape": [
+              256,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              2,
+              2
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/cv1/conv/Conv",
+            "input": [
+              "/model.7/act/Mul_output_0",
+              "onnx::Conv_397",
+              "onnx::Conv_398"
+            ],
+            "output": [
+              "/model.8/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__48",
+              256,
+              "unk__71",
+              "unk__72"
+            ],
+            "output_shape": [
+              "unk__48",
+              256,
+              "unk__73",
+              "unk__74"
+            ],
+            "weight_shape": [
+              256,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.8/m.0/cv1/conv/Conv",
+            "input": [
+              "/model.8/Slice_1_output_0",
+              "onnx::Conv_400",
+              "onnx::Conv_401"
+            ],
+            "output": [
+              "/model.8/m.0/cv1/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__79",
+              "unk__80",
+              "unk__81",
+              "unk__82"
+            ],
+            "output_shape": [
+              "unk__79",
+              128,
+              "unk__83",
+              "unk__84"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/m.0/cv2/conv/Conv",
+            "input": [
+              "/model.8/m.0/cv1/act/Mul_output_0",
+              "onnx::Conv_403",
+              "onnx::Conv_404"
+            ],
+            "output": [
+              "/model.8/m.0/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__79",
+              128,
+              "unk__83",
+              "unk__84"
+            ],
+            "output_shape": [
+              "unk__79",
+              128,
+              "unk__85",
+              "unk__86"
+            ],
+            "weight_shape": [
+              128,
+              128,
+              3,
+              3
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              3,
+              3
+            ],
+            "pads": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "/model.8/cv2/conv/Conv",
+            "input": [
+              "/model.8/Concat_output_0",
+              "onnx::Conv_406",
+              "onnx::Conv_407"
+            ],
+            "output": [
+              "/model.8/cv2/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__75",
+              "unk__89",
+              "unk__77",
+              "unk__78"
+            ],
+            "output_shape": [
+              "unk__75",
+              256,
+              "unk__90",
+              "unk__91"
+            ],
+            "weight_shape": [
+              256,
+              384,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "/model.9/conv/conv/Conv",
+            "input": [
+              "/model.8/cv2/act/Mul_output_0",
+              "onnx::Conv_409",
+              "onnx::Conv_410"
+            ],
+            "output": [
+              "/model.9/conv/conv/Conv_output_0"
+            ],
+            "input_shape": [
+              "unk__75",
+              256,
+              "unk__90",
+              "unk__91"
+            ],
+            "output_shape": [
+              "unk__75",
+              1280,
+              "unk__92",
+              "unk__93"
+            ],
+            "weight_shape": [
+              1280,
+              256,
+              1,
+              1
+            ],
+            "group": 1,
+            "strides": [
+              1,
+              1
+            ],
+            "kernel_shape": [
+              1,
+              1
+            ],
+            "pads": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "rknn": {
+        "file": "models/best_yawn.rknn",
+        "bytes": 4366262,
+        "sha256": "95a006917c498fa5ee577ad0a1a8821c285781b87e545f2d07f8f33f4a309367"
+      }
+    }
+  },
+  "yunet": {
+    "file": "models/face_detection_yunet_2023mar.onnx",
+    "bytes": 232589,
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "opsets": {
+      "ai.onnx": 11
+    },
+    "inputs": [
+      {
+        "name": "input",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cls_8",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          6400,
+          1
+        ]
+      },
+      {
+        "name": "cls_16",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1600,
+          1
+        ]
+      },
+      {
+        "name": "cls_32",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          400,
+          1
+        ]
+      },
+      {
+        "name": "obj_8",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          6400,
+          1
+        ]
+      },
+      {
+        "name": "obj_16",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1600,
+          1
+        ]
+      },
+      {
+        "name": "obj_32",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          400,
+          1
+        ]
+      },
+      {
+        "name": "bbox_8",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          6400,
+          4
+        ]
+      },
+      {
+        "name": "bbox_16",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1600,
+          4
+        ]
+      },
+      {
+        "name": "bbox_32",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          400,
+          4
+        ]
+      },
+      {
+        "name": "kps_8",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          6400,
+          10
+        ]
+      },
+      {
+        "name": "kps_16",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1600,
+          10
+        ]
+      },
+      {
+        "name": "kps_32",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          400,
+          10
+        ]
+      }
+    ],
+    "node_count": 106,
+    "operator_counts": {
+      "Add": 2,
+      "Conv": 53,
+      "MaxPool": 4,
+      "Relu": 15,
+      "Reshape": 12,
+      "Resize": 2,
+      "Sigmoid": 6,
+      "Transpose": 12
+    },
+    "initializer_elements": 53121,
+    "conv_gemm_weight_bias_elements": 53104,
+    "initializer_count": 112,
+    "initializer_types": {
+      "FLOAT": 109,
+      "INT64": 3
+    },
+    "convolutions": [
+      {
+        "name": "Conv_0",
+        "input": [
+          "input",
+          "420",
+          "421"
+        ],
+        "output": [
+          "419"
+        ],
+        "input_shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "output_shape": [
+          1,
+          16,
+          320,
+          320
+        ],
+        "weight_shape": [
+          16,
+          3,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          2,
+          2
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_2",
+        "input": [
+          "184",
+          "backbone.model0.conv2.conv1.weight",
+          "backbone.model0.conv2.conv1.bias"
+        ],
+        "output": [
+          "185"
+        ],
+        "input_shape": [
+          1,
+          16,
+          320,
+          320
+        ],
+        "output_shape": [
+          1,
+          16,
+          320,
+          320
+        ],
+        "weight_shape": [
+          16,
+          16,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_3",
+        "input": [
+          "185",
+          "423",
+          "424"
+        ],
+        "output": [
+          "422"
+        ],
+        "input_shape": [
+          1,
+          16,
+          320,
+          320
+        ],
+        "output_shape": [
+          1,
+          16,
+          320,
+          320
+        ],
+        "weight_shape": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "group": 16,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_6",
+        "input": [
+          "189",
+          "backbone.model1.conv1.conv1.weight",
+          "backbone.model1.conv1.conv1.bias"
+        ],
+        "output": [
+          "190"
+        ],
+        "input_shape": [
+          1,
+          16,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          16,
+          160,
+          160
+        ],
+        "weight_shape": [
+          16,
+          16,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_7",
+        "input": [
+          "190",
+          "426",
+          "427"
+        ],
+        "output": [
+          "425"
+        ],
+        "input_shape": [
+          1,
+          16,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          16,
+          160,
+          160
+        ],
+        "weight_shape": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "group": 16,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_9",
+        "input": [
+          "193",
+          "backbone.model1.conv2.conv1.weight",
+          "backbone.model1.conv2.conv1.bias"
+        ],
+        "output": [
+          "194"
+        ],
+        "input_shape": [
+          1,
+          16,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "weight_shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_10",
+        "input": [
+          "194",
+          "429",
+          "430"
+        ],
+        "output": [
+          "428"
+        ],
+        "input_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "weight_shape": [
+          32,
+          1,
+          3,
+          3
+        ],
+        "group": 32,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_12",
+        "input": [
+          "197",
+          "backbone.model2.conv1.conv1.weight",
+          "backbone.model2.conv1.conv1.bias"
+        ],
+        "output": [
+          "198"
+        ],
+        "input_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "weight_shape": [
+          32,
+          32,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_13",
+        "input": [
+          "198",
+          "432",
+          "433"
+        ],
+        "output": [
+          "431"
+        ],
+        "input_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "weight_shape": [
+          32,
+          1,
+          3,
+          3
+        ],
+        "group": 32,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_15",
+        "input": [
+          "201",
+          "backbone.model2.conv2.conv1.weight",
+          "backbone.model2.conv2.conv1.bias"
+        ],
+        "output": [
+          "202"
+        ],
+        "input_shape": [
+          1,
+          32,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "weight_shape": [
+          64,
+          32,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_16",
+        "input": [
+          "202",
+          "435",
+          "436"
+        ],
+        "output": [
+          "434"
+        ],
+        "input_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "output_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_19",
+        "input": [
+          "206",
+          "backbone.model3.conv1.conv1.weight",
+          "backbone.model3.conv1.conv1.bias"
+        ],
+        "output": [
+          "207"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_20",
+        "input": [
+          "207",
+          "438",
+          "439"
+        ],
+        "output": [
+          "437"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_22",
+        "input": [
+          "210",
+          "backbone.model3.conv2.conv1.weight",
+          "backbone.model3.conv2.conv1.bias"
+        ],
+        "output": [
+          "211"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_23",
+        "input": [
+          "211",
+          "441",
+          "442"
+        ],
+        "output": [
+          "440"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_26",
+        "input": [
+          "215",
+          "backbone.model4.conv1.conv1.weight",
+          "backbone.model4.conv1.conv1.bias"
+        ],
+        "output": [
+          "216"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_27",
+        "input": [
+          "216",
+          "444",
+          "445"
+        ],
+        "output": [
+          "443"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_29",
+        "input": [
+          "219",
+          "backbone.model4.conv2.conv1.weight",
+          "backbone.model4.conv2.conv1.bias"
+        ],
+        "output": [
+          "220"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_30",
+        "input": [
+          "220",
+          "447",
+          "448"
+        ],
+        "output": [
+          "446"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_33",
+        "input": [
+          "224",
+          "backbone.model5.conv1.conv1.weight",
+          "backbone.model5.conv1.conv1.bias"
+        ],
+        "output": [
+          "225"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_34",
+        "input": [
+          "225",
+          "450",
+          "451"
+        ],
+        "output": [
+          "449"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_36",
+        "input": [
+          "228",
+          "backbone.model5.conv2.conv1.weight",
+          "backbone.model5.conv2.conv1.bias"
+        ],
+        "output": [
+          "229"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_37",
+        "input": [
+          "229",
+          "453",
+          "454"
+        ],
+        "output": [
+          "452"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_39",
+        "input": [
+          "232",
+          "neck.lateral_convs.2.conv1.weight",
+          "neck.lateral_convs.2.conv1.bias"
+        ],
+        "output": [
+          "233"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_40",
+        "input": [
+          "233",
+          "456",
+          "457"
+        ],
+        "output": [
+          "455"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_45",
+        "input": [
+          "242",
+          "neck.lateral_convs.1.conv1.weight",
+          "neck.lateral_convs.1.conv1.bias"
+        ],
+        "output": [
+          "243"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_46",
+        "input": [
+          "243",
+          "459",
+          "460"
+        ],
+        "output": [
+          "458"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_51",
+        "input": [
+          "252",
+          "neck.lateral_convs.0.conv1.weight",
+          "neck.lateral_convs.0.conv1.bias"
+        ],
+        "output": [
+          "253"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_52",
+        "input": [
+          "253",
+          "462",
+          "463"
+        ],
+        "output": [
+          "461"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "weight_shape": [
+          64,
+          1,
+          3,
+          3
+        ],
+        "group": 64,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_54",
+        "input": [
+          "256",
+          "bbox_head.multi_level_cls.0.conv1.weight",
+          "bbox_head.multi_level_cls.0.conv1.bias"
+        ],
+        "output": [
+          "257"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_55",
+        "input": [
+          "257",
+          "bbox_head.multi_level_cls.0.conv2.weight",
+          "bbox_head.multi_level_cls.0.conv2.bias"
+        ],
+        "output": [
+          "258"
+        ],
+        "input_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_56",
+        "input": [
+          "246",
+          "bbox_head.multi_level_cls.1.conv1.weight",
+          "bbox_head.multi_level_cls.1.conv1.bias"
+        ],
+        "output": [
+          "259"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_57",
+        "input": [
+          "259",
+          "bbox_head.multi_level_cls.1.conv2.weight",
+          "bbox_head.multi_level_cls.1.conv2.bias"
+        ],
+        "output": [
+          "260"
+        ],
+        "input_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_58",
+        "input": [
+          "236",
+          "bbox_head.multi_level_cls.2.conv1.weight",
+          "bbox_head.multi_level_cls.2.conv1.bias"
+        ],
+        "output": [
+          "261"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_59",
+        "input": [
+          "261",
+          "bbox_head.multi_level_cls.2.conv2.weight",
+          "bbox_head.multi_level_cls.2.conv2.bias"
+        ],
+        "output": [
+          "262"
+        ],
+        "input_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_60",
+        "input": [
+          "256",
+          "bbox_head.multi_level_bbox.0.conv1.weight",
+          "bbox_head.multi_level_bbox.0.conv1.bias"
+        ],
+        "output": [
+          "263"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          4,
+          80,
+          80
+        ],
+        "weight_shape": [
+          4,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_61",
+        "input": [
+          "263",
+          "bbox_head.multi_level_bbox.0.conv2.weight",
+          "bbox_head.multi_level_bbox.0.conv2.bias"
+        ],
+        "output": [
+          "264"
+        ],
+        "input_shape": [
+          1,
+          4,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          4,
+          80,
+          80
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "group": 4,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_62",
+        "input": [
+          "246",
+          "bbox_head.multi_level_bbox.1.conv1.weight",
+          "bbox_head.multi_level_bbox.1.conv1.bias"
+        ],
+        "output": [
+          "265"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          4,
+          40,
+          40
+        ],
+        "weight_shape": [
+          4,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_63",
+        "input": [
+          "265",
+          "bbox_head.multi_level_bbox.1.conv2.weight",
+          "bbox_head.multi_level_bbox.1.conv2.bias"
+        ],
+        "output": [
+          "266"
+        ],
+        "input_shape": [
+          1,
+          4,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          4,
+          40,
+          40
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "group": 4,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_64",
+        "input": [
+          "236",
+          "bbox_head.multi_level_bbox.2.conv1.weight",
+          "bbox_head.multi_level_bbox.2.conv1.bias"
+        ],
+        "output": [
+          "267"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          4,
+          20,
+          20
+        ],
+        "weight_shape": [
+          4,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_65",
+        "input": [
+          "267",
+          "bbox_head.multi_level_bbox.2.conv2.weight",
+          "bbox_head.multi_level_bbox.2.conv2.bias"
+        ],
+        "output": [
+          "268"
+        ],
+        "input_shape": [
+          1,
+          4,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          4,
+          20,
+          20
+        ],
+        "weight_shape": [
+          4,
+          1,
+          3,
+          3
+        ],
+        "group": 4,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_66",
+        "input": [
+          "256",
+          "bbox_head.multi_level_obj.0.conv1.weight",
+          "bbox_head.multi_level_obj.0.conv1.bias"
+        ],
+        "output": [
+          "269"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_67",
+        "input": [
+          "269",
+          "bbox_head.multi_level_obj.0.conv2.weight",
+          "bbox_head.multi_level_obj.0.conv2.bias"
+        ],
+        "output": [
+          "270"
+        ],
+        "input_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_68",
+        "input": [
+          "246",
+          "bbox_head.multi_level_obj.1.conv1.weight",
+          "bbox_head.multi_level_obj.1.conv1.bias"
+        ],
+        "output": [
+          "271"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_69",
+        "input": [
+          "271",
+          "bbox_head.multi_level_obj.1.conv2.weight",
+          "bbox_head.multi_level_obj.1.conv2.bias"
+        ],
+        "output": [
+          "272"
+        ],
+        "input_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_70",
+        "input": [
+          "236",
+          "bbox_head.multi_level_obj.2.conv1.weight",
+          "bbox_head.multi_level_obj.2.conv1.bias"
+        ],
+        "output": [
+          "273"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "weight_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_71",
+        "input": [
+          "273",
+          "bbox_head.multi_level_obj.2.conv2.weight",
+          "bbox_head.multi_level_obj.2.conv2.bias"
+        ],
+        "output": [
+          "274"
+        ],
+        "input_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "weight_shape": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_72",
+        "input": [
+          "256",
+          "bbox_head.multi_level_kps.0.conv1.weight",
+          "bbox_head.multi_level_kps.0.conv1.bias"
+        ],
+        "output": [
+          "275"
+        ],
+        "input_shape": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          10,
+          80,
+          80
+        ],
+        "weight_shape": [
+          10,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_73",
+        "input": [
+          "275",
+          "bbox_head.multi_level_kps.0.conv2.weight",
+          "bbox_head.multi_level_kps.0.conv2.bias"
+        ],
+        "output": [
+          "276"
+        ],
+        "input_shape": [
+          1,
+          10,
+          80,
+          80
+        ],
+        "output_shape": [
+          1,
+          10,
+          80,
+          80
+        ],
+        "weight_shape": [
+          10,
+          1,
+          3,
+          3
+        ],
+        "group": 10,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_74",
+        "input": [
+          "246",
+          "bbox_head.multi_level_kps.1.conv1.weight",
+          "bbox_head.multi_level_kps.1.conv1.bias"
+        ],
+        "output": [
+          "277"
+        ],
+        "input_shape": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          10,
+          40,
+          40
+        ],
+        "weight_shape": [
+          10,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_75",
+        "input": [
+          "277",
+          "bbox_head.multi_level_kps.1.conv2.weight",
+          "bbox_head.multi_level_kps.1.conv2.bias"
+        ],
+        "output": [
+          "278"
+        ],
+        "input_shape": [
+          1,
+          10,
+          40,
+          40
+        ],
+        "output_shape": [
+          1,
+          10,
+          40,
+          40
+        ],
+        "weight_shape": [
+          10,
+          1,
+          3,
+          3
+        ],
+        "group": 10,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "Conv_76",
+        "input": [
+          "236",
+          "bbox_head.multi_level_kps.2.conv1.weight",
+          "bbox_head.multi_level_kps.2.conv1.bias"
+        ],
+        "output": [
+          "279"
+        ],
+        "input_shape": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          10,
+          20,
+          20
+        ],
+        "weight_shape": [
+          10,
+          64,
+          1,
+          1
+        ],
+        "group": 1,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Conv_77",
+        "input": [
+          "279",
+          "bbox_head.multi_level_kps.2.conv2.weight",
+          "bbox_head.multi_level_kps.2.conv2.bias"
+        ],
+        "output": [
+          "280"
+        ],
+        "input_shape": [
+          1,
+          10,
+          20,
+          20
+        ],
+        "output_shape": [
+          1,
+          10,
+          20,
+          20
+        ],
+        "weight_shape": [
+          10,
+          1,
+          3,
+          3
+        ],
+        "group": 10,
+        "strides": [
+          1,
+          1
+        ],
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "opencv_runtime_probe": {
+      "opencv": "4.11.0",
+      "input_shape": [
+        1,
+        3,
+        320,
+        320
+      ],
+      "input_color": "BGR",
+      "input_scale": 1.0,
+      "outputs": [
+        {
+          "name": "cls_8",
+          "shape": [
+            1,
+            1600,
+            1
+          ]
+        },
+        {
+          "name": "cls_16",
+          "shape": [
+            1,
+            400,
+            1
+          ]
+        },
+        {
+          "name": "cls_32",
+          "shape": [
+            1,
+            100,
+            1
+          ]
+        },
+        {
+          "name": "obj_8",
+          "shape": [
+            1,
+            1600,
+            1
+          ]
+        },
+        {
+          "name": "obj_16",
+          "shape": [
+            1,
+            400,
+            1
+          ]
+        },
+        {
+          "name": "obj_32",
+          "shape": [
+            1,
+            100,
+            1
+          ]
+        },
+        {
+          "name": "bbox_8",
+          "shape": [
+            1,
+            1600,
+            4
+          ]
+        },
+        {
+          "name": "bbox_16",
+          "shape": [
+            1,
+            400,
+            4
+          ]
+        },
+        {
+          "name": "bbox_32",
+          "shape": [
+            1,
+            100,
+            4
+          ]
+        },
+        {
+          "name": "kps_8",
+          "shape": [
+            1,
+            1600,
+            10
+          ]
+        },
+        {
+          "name": "kps_16",
+          "shape": [
+            1,
+            400,
+            10
+          ]
+        },
+        {
+          "name": "kps_32",
+          "shape": [
+            1,
+            100,
+            10
+          ]
+        }
+      ],
+      "probe_image": "all-zero synthetic image; tensor contract only, not accuracy measurement"
+    }
+  }
+}

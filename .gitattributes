@@ -1,0 +1,24 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+# Manifests and evidence JSON have recorded checksums; keep their bytes intact.
+*.json -text whitespace=cr-at-eol
+*.ipynb text eol=lf
+*.sh text eol=lf
+*.ino text eol=lf
+*.cpp text eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.pt binary
+*.onnx binary
+*.rknn binary
+*.docx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+# Generated SVG paths and Markdown hard line breaks contain intentional end spaces.
+*.svg text eol=lf whitespace=-blank-at-eol
+*.md whitespace=-blank-at-eol

@@ -1,0 +1,137 @@
+{
+  "scope": "Image-quality gates only; metric replay does not regenerate images or classifier predictions. Live sessions differ in time and are not paired accuracy trials.",
+  "test_profile": "configs/camera_pc.yaml",
+  "original": {
+    "session": "logs\\20261006T122039_722946Z.jsonl",
+    "summary": {
+      "source": "0",
+      "live": true,
+      "backend": "onnx",
+      "frames": 733,
+      "wall_seconds": 49.93800000000002,
+      "media_seconds": 49.57900000000001,
+      "fps": 14.678200969201805,
+      "states": {
+        "UNKNOWN": 731,
+        "NORMAL": 2
+      },
+      "latency_p95_ms": 48,
+      "processing_p95_ms": 48,
+      "percentile_resolution_ms": 1,
+      "percentile_overflow_ms": 5000,
+      "fault": null,
+      "accuracy": null,
+      "accuracy_note": "Ground truth required; throughput is not accuracy."
+    },
+    "all_frames": {
+      "count": 733,
+      "quality": {
+        "blurry": 728,
+        "usable": 3,
+        "no_face": 2
+      },
+      "reasons": {
+        "blurry": 728,
+        "uncertain_eyes": 1,
+        "none": 2,
+        "no_face": 2
+      }
+    },
+    "sampled_quality_metrics": {
+      "count": 53,
+      "face_sharpness": {
+        "min": 10.224924521685463,
+        "median": 30.4848805651468,
+        "max": 53.47998696464077
+      },
+      "eye_sharpness_min": {
+        "min": 6.303122262921713,
+        "median": 7.892745337726033,
+        "max": 20.923310986159166
+      },
+      "replay_recorded_cutoffs": {
+        "blurry": 51,
+        "usable": 2
+      },
+      "replay_pc_profile_cutoffs": {
+        "usable": 46,
+        "blurry": 7
+      }
+    },
+    "recorded_cutoffs": {
+      "min_brightness": 25.0,
+      "min_sharpness": 20.0,
+      "min_eye_sharpness": 20.0,
+      "max_overexposed_ratio": 0.6
+    }
+  },
+  "live_pc_profile": {
+    "session": "reports\\camera_pc_check\\20261006T123514_244359Z.jsonl",
+    "summary": {
+      "source": "0",
+      "live": true,
+      "backend": "onnx",
+      "frames": 176,
+      "wall_seconds": 12.0150000000001,
+      "media_seconds": 11.75,
+      "fps": 14.648356221389808,
+      "states": {
+        "NORMAL": 135,
+        "UNKNOWN": 41
+      },
+      "latency_p95_ms": 32,
+      "processing_p95_ms": 32,
+      "percentile_resolution_ms": 1,
+      "percentile_overflow_ms": 5000,
+      "fault": null,
+      "accuracy": null,
+      "accuracy_note": "Ground truth required; throughput is not accuracy."
+    },
+    "all_frames": {
+      "count": 176,
+      "quality": {
+        "usable": 173,
+        "blurry": 3
+      },
+      "reasons": {
+        "none": 135,
+        "uncertain_eyes": 38,
+        "blurry": 3
+      }
+    },
+    "sampled_quality_metrics": {
+      "count": 26,
+      "face_sharpness": {
+        "min": 18.25401442022129,
+        "median": 28.131960522680828,
+        "max": 35.760183761100755
+      },
+      "eye_sharpness_min": {
+        "min": 14.501453491328892,
+        "median": 20.156745443218803,
+        "max": 40.03426078971533
+      },
+      "replay_recorded_cutoffs": {
+        "usable": 25,
+        "blurry": 1
+      },
+      "replay_pc_profile_cutoffs": {
+        "usable": 25,
+        "blurry": 1
+      }
+    },
+    "recorded_cutoffs": {
+      "min_brightness": 25.0,
+      "min_sharpness": 20.0,
+      "min_eye_sharpness": 6.0,
+      "max_overexposed_ratio": 0.6
+    }
+  },
+  "automated_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "tests": 35,
+    "passed": 35
+  },
+  "accuracy": null,
+  "accuracy_note": "No annotated ground truth. Eye cutoff 6 is an experimental PC setting, not validated for Radxa/cabin acceptance."
+}

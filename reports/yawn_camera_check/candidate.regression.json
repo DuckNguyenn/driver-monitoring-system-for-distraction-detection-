@@ -1,0 +1,38 @@
+{
+  "scope": "annotated development replay; does not establish subject independence",
+  "events": {
+    "type": "annotated_clip",
+    "clip_id": "20261007T070644_475102Z.avi",
+    "subject_id": "camera_subject_01",
+    "split": "train",
+    "lighting": "indoor_backlit",
+    "config_sha256": "8f1bd2490171f960bd35dac2af822d55e6a8a616a1ff4dacbde6cb603ff6c476",
+    "frames_sha256": "d3502b84f051ba68bf48eca44797b874f96712b7ae0986ab4b7dfffac131b274",
+    "annotations_sha256": "ae5c2ff86f15432a9a05f98c264b2ee0eae92c19de2c0accc9ce1fde1846c545",
+    "source_sha256": "8a904d2c6234c1792804410b77374185eb5884128c53e5667e3bdbe8f5a92e45",
+    "backend": "onnx",
+    "frames": 1131,
+    "closure_events": 0,
+    "closure_hits": 0,
+    "closure_recall": null,
+    "yawn_events": 2,
+    "yawn_hits": 2,
+    "yawn_event_recall": 1.0,
+    "normal_seconds": 17.0,
+    "false_alarm_count": 0,
+    "false_alarms_per_hour": 0.0,
+    "reaction_p95_ms": null,
+    "reaction_delays_ms": [],
+    "reaction_note": "Decision time only; physical buzzer/ACK delay requires an ESP32 bench test.",
+    "unknown_frame_fraction": 0.4526967285587975,
+    "latency_p95_ms": 32.000000000152795,
+    "acceptance": "requires aggregate >=5 subjects, >=2 held-out test subjects, >=30 closure and yawn events, >=2 normal hours"
+  },
+  "confirmation_seconds": [
+    10.625,
+    29.04699999999957
+  ],
+  "false_yawn_confirmations_in_normal": 0,
+  "unmatched_confirmation_seconds": [],
+  "passed": true
+}

@@ -1,0 +1,28 @@
+# Experimental calibration for the PC camera session 20261006T122039_722946Z.
+# Eye crops scored much lower than face crops. Validate on labeled video before
+# using these thresholds for acceptance testing or transferring them to Radxa.
+# Paths are relative to this file; all other settings use Config defaults.
+# Development eye refinement on reviewed runtime crops + CEW closed eyes.
+# Yawn head repaired using reviewed camera yawns and retained smile negatives;
+# the second bout was excluded from training/model selection. One-person data
+# is development evidence, not independent cabin acceptance.
+# Restore the original classifier with --manifest models/manifest.json.
+# Restore the pre-repair PC model with --config configs/camera_yawn_previous.yaml.
+manifest: ../models/yawn_camera_refined/manifest.json
+log_dir: ../logs
+backend: onnx
+width: 640
+height: 480
+min_sharpness: 20.0
+min_eye_sharpness: 6.0
+serial_port: null
+headless: false
+eye_motion_window_seconds: 0.30
+eye_motion_settle_seconds: 0.35
+eye_motion_max_shift_ratio: 0.08
+eye_motion_max_roll_degrees: 3.0
+monitor:
+  # Stable Open before arming/finishing a cycle; closure duration stays original.
+  eye_event_open_seconds: 0.10
+  # Experimental time-based EMA; raw probabilities remain visible/logged.
+  yawn_smoothing_seconds: 0.20

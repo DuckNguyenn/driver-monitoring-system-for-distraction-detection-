@@ -1,0 +1,4525 @@
+{
+  "baseline_static": {
+    "legacy_face": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          59,
+          0
+        ],
+        [
+          0,
+          59
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 0.9672131147540983,
+          "f1": 0.9833333333333333,
+          "support": 61
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 0.9672131147540983,
+          "f1": 0.9833333333333333,
+          "support": 61
+        }
+      },
+      "macro_f1": 0.9833333333333333,
+      "accuracy": 0.9672131147540983,
+      "samples": 122,
+      "unknown_samples": 4,
+      "coverage": 0.9672131147540983,
+      "yawn_recall_at_070": 0.9672131147540983
+    },
+    "legacy_full": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          61,
+          0
+        ],
+        [
+          0,
+          61
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 122,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "yawn_recall_at_070": 1.0
+    },
+    "smiles": {
+      "samples": 563,
+      "false_yawn_at_050": 0,
+      "false_yawn_at_070": 0,
+      "false_positive_rate_at_070": 0.0,
+      "runtime_usable_faces": 0,
+      "runtime_usable_false_yawn_at_070": 0
+    },
+    "genki": {
+      "samples": 322,
+      "false_yawn_at_050": 1,
+      "false_yawn_at_070": 0,
+      "false_positive_rate_at_070": 0.0,
+      "runtime_usable_faces": 183,
+      "runtime_usable_false_yawn_at_070": 0
+    }
+  },
+  "baseline_camera": {
+    "all_face_crops": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          104,
+          0
+        ],
+        [
+          59,
+          1
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 0.6380368098159509,
+          "recall": 1.0,
+          "f1": 0.7790262172284644,
+          "support": 104
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 0.016666666666666666,
+          "f1": 0.03278688524590164,
+          "support": 60
+        }
+      },
+      "macro_f1": 0.40590655123718306,
+      "accuracy": 0.6402439024390244,
+      "samples": 164,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "yawn_recall_at_070": 0.0,
+      "false_yawn_at_070": 0
+    },
+    "runtime_usable": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          100,
+          0
+        ],
+        [
+          57,
+          1
+        ]
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 0.6369426751592356,
+          "recall": 1.0,
+          "f1": 0.7782101167315175,
+          "support": 100
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 0.017241379310344827,
+          "f1": 0.03389830508474576,
+          "support": 58
+        }
+      },
+      "macro_f1": 0.40605421090813165,
+      "accuracy": 0.6392405063291139,
+      "samples": 158,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "yawn_recall_at_070": 0.0,
+      "false_yawn_at_070": 0
+    }
+  },
+  "camera_training_samples": {
+    "normal": 28,
+    "yawn": 14,
+    "smile": 10
+  },
+  "trials": [
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.001,
+      "epoch": 25,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9804486193961012,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              6
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9423076923076923,
+              "f1": 0.9702970297029703,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9613389910419613,
+          "accuracy": 0.9634146341463414,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              94,
+              6
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.94,
+              "f1": 0.9690721649484536,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.90625,
+              "recall": 1.0,
+              "f1": 0.9508196721311475,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9599459185398005,
+          "accuracy": 0.9620253164556962,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.001,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9892533465655996,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.001,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9876050127408824,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 1,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.001,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9892533465655996,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 1,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.01,
+      "epoch": 25,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9778171236681312,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              100,
+              4
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9900990099009901,
+              "recall": 0.9615384615384616,
+              "f1": 0.975609756097561,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9365079365079365,
+              "recall": 0.9833333333333333,
+              "f1": 0.959349593495935,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.967479674796748,
+          "accuracy": 0.9695121951219512,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9666666666666667,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              96,
+              4
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9896907216494846,
+              "recall": 0.96,
+              "f1": 0.9746192893401016,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9344262295081968,
+              "recall": 0.9827586206896551,
+              "f1": 0.957983193277311,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9663012413087062,
+          "accuracy": 0.9683544303797469,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9655172413793104,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.01,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9792716794075491,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.95,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9482758620689655,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.01,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9792716794075491,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.95,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9482758620689655,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.15,
+      "regularization": 0.01,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9792716794075491,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.95,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9482758620689655,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.001,
+      "epoch": 25,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9743231032111244,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              2,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9682539682539683,
+              "recall": 1.0,
+              "f1": 0.9838709677419355,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9836021505376344,
+          "accuracy": 0.9836065573770492,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9508196721311475
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              102,
+              2
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9902912621359223,
+              "recall": 0.9807692307692307,
+              "f1": 0.9855072463768116,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9672131147540983,
+              "recall": 0.9833333333333333,
+              "f1": 0.9752066115702479,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9803569289735298,
+          "accuracy": 0.9817073170731707,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.95,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.98989898989899,
+              "recall": 0.98,
+              "f1": 0.9849246231155779,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9661016949152542,
+              "recall": 0.9827586206896551,
+              "f1": 0.9743589743589743,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9796417987372761,
+          "accuracy": 0.9810126582278481,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9482758620689655,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.001,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9876274965902602,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9836065573770492
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              102,
+              2
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9807692307692307,
+              "f1": 0.9902912621359223,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.967741935483871,
+              "recall": 1.0,
+              "f1": 0.9836065573770492,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9869489097564857,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9666666666666667,
+              "recall": 1.0,
+              "f1": 0.9830508474576272,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9864749186783086,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.001,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9892533465655996,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.001,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9892533465655996,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.01,
+      "epoch": 25,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.965989769877791,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              2,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9682539682539683,
+              "recall": 1.0,
+              "f1": 0.9838709677419355,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9836021505376344,
+          "accuracy": 0.9836065573770492,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9508196721311475
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              102,
+              2
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9902912621359223,
+              "recall": 0.9807692307692307,
+              "f1": 0.9855072463768116,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9672131147540983,
+              "recall": 0.9833333333333333,
+              "f1": 0.9752066115702479,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9803569289735298,
+          "accuracy": 0.9817073170731707,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9166666666666666,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.98989898989899,
+              "recall": 0.98,
+              "f1": 0.9849246231155779,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9661016949152542,
+              "recall": 0.9827586206896551,
+              "f1": 0.9743589743589743,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9796417987372761,
+          "accuracy": 0.9810126582278481,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9137931034482759,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.01,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9876050127408824,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.01,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9876050127408824,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.3,
+      "regularization": 0.01,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9876050127408824,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 2,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.001,
+      "epoch": 25,
+      "static_validation_preserved": false,
+      "camera_validation_passed": true,
+      "score": 0.9606204189033473,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              3,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.953125,
+              "recall": 1.0,
+              "f1": 0.976,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "f1": 0.9747899159663865,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9753949579831933,
+          "accuracy": 0.9754098360655737,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9508196721311475
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 5,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.896551724137931,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.001,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9860747015592043,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 5,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              102,
+              2
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9807692307692307,
+              "f1": 0.9902912621359223,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.967741935483871,
+              "recall": 1.0,
+              "f1": 0.9836065573770492,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9869489097564857,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9666666666666667,
+              "recall": 1.0,
+              "f1": 0.9830508474576272,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9864749186783086,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.001,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9884769490500717,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.001,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9892533465655996,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 0
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.01,
+      "epoch": 25,
+      "static_validation_preserved": false,
+      "camera_validation_passed": true,
+      "score": 0.9606204189033473,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              3,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.953125,
+              "recall": 1.0,
+              "f1": 0.976,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "f1": 0.9747899159663865,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9753949579831933,
+          "accuracy": 0.9754098360655737,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9508196721311475
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 5,
+          "false_yawn_at_070": 1,
+          "false_positive_rate_at_070": 0.003105590062111801,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.896551724137931,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.01,
+      "epoch": 50,
+      "static_validation_preserved": true,
+      "camera_validation_passed": false,
+      "score": 0.9860747015592043,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 5,
+          "false_yawn_at_070": 3,
+          "false_positive_rate_at_070": 0.009316770186335404,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 2
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              102,
+              2
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9807692307692307,
+              "f1": 0.9902912621359223,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.967741935483871,
+              "recall": 1.0,
+              "f1": 0.9836065573770492,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9869489097564857,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 1
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              98,
+              2
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.98,
+              "f1": 0.98989898989899,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9666666666666667,
+              "recall": 1.0,
+              "f1": 0.9830508474576272,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9864749186783086,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 1
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.01,
+      "epoch": 100,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9868286152253545,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 4,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              1,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.9903846153846154,
+              "recall": 0.9903846153846154,
+              "f1": 0.9903846153846154,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9833333333333333,
+              "recall": 0.9833333333333333,
+              "f1": 0.9833333333333333,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9868589743589744,
+          "accuracy": 0.9878048780487805,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              1,
+              57
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.99,
+              "recall": 0.99,
+              "f1": 0.99,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9827586206896551,
+              "recall": 0.9827586206896551,
+              "f1": 0.9827586206896551,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9863793103448275,
+          "accuracy": 0.9873417721518988,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    },
+    {
+      "camera_weight": 0.5,
+      "regularization": 0.01,
+      "epoch": 150,
+      "static_validation_preserved": true,
+      "camera_validation_passed": true,
+      "score": 0.9884769490500717,
+      "static_validation": {
+        "legacy_face": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0
+            ],
+            [
+              0,
+              59
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9672131147540983,
+              "f1": 0.9833333333333333,
+              "support": 61
+            }
+          },
+          "macro_f1": 0.9833333333333333,
+          "accuracy": 0.9672131147540983,
+          "samples": 122,
+          "unknown_samples": 4,
+          "coverage": 0.9672131147540983,
+          "yawn_recall_at_070": 0.9672131147540983
+        },
+        "legacy_full": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 1.0
+        },
+        "smiles": {
+          "samples": 563,
+          "false_yawn_at_050": 0,
+          "false_yawn_at_070": 0,
+          "false_positive_rate_at_070": 0.0,
+          "runtime_usable_faces": 0,
+          "runtime_usable_false_yawn_at_070": 0
+        },
+        "genki": {
+          "samples": 322,
+          "false_yawn_at_050": 3,
+          "false_yawn_at_070": 2,
+          "false_positive_rate_at_070": 0.006211180124223602,
+          "runtime_usable_faces": 183,
+          "runtime_usable_false_yawn_at_070": 1
+        }
+      },
+      "camera_validation": {
+        "all_face_crops": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              103,
+              1
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.9903846153846154,
+              "f1": 0.9951690821256038,
+              "support": 104
+            },
+            "yawn": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "support": 60
+            }
+          },
+          "macro_f1": 0.9934523096578433,
+          "accuracy": 0.9939024390243902,
+          "samples": 164,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9833333333333333,
+          "false_yawn_at_070": 0
+        },
+        "runtime_usable": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              99,
+              1
+            ],
+            [
+              0,
+              58
+            ]
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593,
+              "support": 100
+            },
+            "yawn": {
+              "precision": 0.9830508474576272,
+              "recall": 1.0,
+              "f1": 0.9914529914529915,
+              "support": 58
+            }
+          },
+          "macro_f1": 0.9932139329124254,
+          "accuracy": 0.9936708860759493,
+          "samples": 158,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "yawn_recall_at_070": 0.9827586206896551,
+          "false_yawn_at_070": 0
+        }
+      }
+    }
+  ],
+  "selected": {
+    "camera_weight": 0.15,
+    "regularization": 0.001,
+    "epoch": 150,
+    "static_validation_preserved": true,
+    "camera_validation_passed": true,
+    "score": 0.9892533465655996,
+    "static_validation": {
+      "legacy_face": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            59,
+            0
+          ],
+          [
+            0,
+            59
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.9672131147540983,
+            "f1": 0.9833333333333333,
+            "support": 61
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.9672131147540983,
+            "f1": 0.9833333333333333,
+            "support": 61
+          }
+        },
+        "macro_f1": 0.9833333333333333,
+        "accuracy": 0.9672131147540983,
+        "samples": 122,
+        "unknown_samples": 4,
+        "coverage": 0.9672131147540983,
+        "yawn_recall_at_070": 0.9672131147540983
+      },
+      "legacy_full": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "yawn_recall_at_070": 1.0
+      },
+      "smiles": {
+        "samples": 563,
+        "false_yawn_at_050": 0,
+        "false_yawn_at_070": 0,
+        "false_positive_rate_at_070": 0.0,
+        "runtime_usable_faces": 0,
+        "runtime_usable_false_yawn_at_070": 0
+      },
+      "genki": {
+        "samples": 322,
+        "false_yawn_at_050": 1,
+        "false_yawn_at_070": 1,
+        "false_positive_rate_at_070": 0.003105590062111801,
+        "runtime_usable_faces": 183,
+        "runtime_usable_false_yawn_at_070": 0
+      }
+    },
+    "camera_validation": {
+      "all_face_crops": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            103,
+            1
+          ],
+          [
+            0,
+            60
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.9903846153846154,
+            "f1": 0.9951690821256038,
+            "support": 104
+          },
+          "yawn": {
+            "precision": 0.9836065573770492,
+            "recall": 1.0,
+            "f1": 0.9917355371900827,
+            "support": 60
+          }
+        },
+        "macro_f1": 0.9934523096578433,
+        "accuracy": 0.9939024390243902,
+        "samples": 164,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "yawn_recall_at_070": 0.9833333333333333,
+        "false_yawn_at_070": 0
+      },
+      "runtime_usable": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            99,
+            1
+          ],
+          [
+            0,
+            58
+          ]
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "yawn": {
+            "precision": 0.9830508474576272,
+            "recall": 1.0,
+            "f1": 0.9914529914529915,
+            "support": 58
+          }
+        },
+        "macro_f1": 0.9932139329124254,
+        "accuracy": 0.9936708860759493,
+        "samples": 158,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "yawn_recall_at_070": 0.9827586206896551,
+        "false_yawn_at_070": 0
+      }
+    }
+  }
+}
