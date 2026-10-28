@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "purpose": "locked_same_person_camera_diagnostic_not_training_or_selection",
+  "video": "reports/original_model_check/20261010T132214_553016Z_yawn.avi",
+  "video_sha256": "a41674d5674e2be2d3b5be465fc5a65fe8fb0f3e15f48404fddd3aaad1881267",
+  "timestamps_sha256": "579f1af37d7470b528fe990f69bbee112edce97c0a7d8e21c2484b0e838fc2cc",
+  "csv_sha256": "408cf2133b94b3ccead2f9b4a56f685cc11cd8b6b3d7163fdd3c15d87a0eebd6",
+  "metadata_sha256": "84af20ac729b014a3a2ad0ba836b4cd03ae0b1a3a9bcd80d2fd7f38079b6deed",
+  "subject_id": "camera_subject_01",
+  "subject_independent": false,
+  "review_method": "Raw-frame contact sheets, denser early/turn review, exact 224x224 inputs; user confirmed staged yawns. Boundary gaps left unlabeled.",
+  "training_allowed": false,
+  "checkpoint_selection_allowed": false,
+  "reviewed_intervals": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "label": "normal",
+      "action": "relaxed_mouth_close"
+    },
+    {
+      "start": 7.3,
+      "end": 20.3,
+      "label": "yawn",
+      "action": "staged_yawn_near_to_far"
+    },
+    {
+      "start": 21.0,
+      "end": 22.8,
+      "label": "yawn",
+      "action": "staged_yawn_tilted"
+    },
+    {
+      "start": 23.5,
+      "end": 25.5,
+      "label": "yawn",
+      "action": "staged_yawn_far"
+    },
+    {
+      "start": 26.0,
+      "end": 28.9,
+      "label": "yawn",
+      "action": "staged_yawn_below_face_size_gate"
+    },
+    {
+      "start": 30.0,
+      "end": 33.4371,
+      "label": "yawn",
+      "action": "staged_yawn_far"
+    }
+  ],
+  "notes": "Actions are staged demonstrations. Frame scores do not measure event recall or false alarms per hour. No weight or threshold change."
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "preview": {
+    "width": 640,
+    "height": 480
+  },
+  "render_samples": 18,
+  "preview_image_loads": 52,
+  "preview_render_fps": 12.896047740662402,
+  "probability_chart_rows": 3,
+  "render_p95_ms": 184,
+  "history_opened": true,
+  "csv_downloaded": true,
+  "page_errors": [],
+  "physical_iphone_tested": false,
+  "scope": "one real Chromium client with real replay API on same PC"
+}

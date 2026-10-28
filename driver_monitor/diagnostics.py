@@ -39,6 +39,16 @@ def preflight_report(config, output):
         checks["yunet"] = "checksum_ok"
     except (OSError, ValueError, KeyError) as exc:
         checks["manifest"] = str(exc)
+    if config.auto_glasses:
+        from .eyewear import read_eyewear_manifest
+        for name, path in (("eyewear_selector", config.eyewear_manifest), ("eye_glasses", config.glasses_eye_manifest)):
+            try:
+                spec = (read_eyewear_manifest(path)["classifier"]["artifact"] if name == "eyewear_selector"
+                        else read_manifest(path)["classifiers"]["eye"]["artifacts"][config.backend])
+                artifact_path(path, spec)
+                checks[name] = "checksum_ok"
+            except (OSError, ValueError, KeyError) as exc:
+                checks[name] = str(exc)
     board_matches = "rk3576" in (system.get("board_compatible") or "").lower()
     runtime_libraries = {}
     for path in ("/usr/lib/librknnrt.so", "/usr/lib/aarch64-linux-gnu/librknnrt.so", "/usr/local/lib/librknnrt.so"):

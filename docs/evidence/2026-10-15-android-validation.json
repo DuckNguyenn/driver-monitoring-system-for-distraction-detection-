@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Bangkok",
+  "feature": "android",
+  "status": "apk-built-installed-emulator-smoke-pass",
+  "software": {
+    "client_tests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "typecheck": "pass",
+    "expo_doctor": {
+      "passed": 21,
+      "total": 21
+    },
+    "android_export": "pass",
+    "native_prebuild": "pass",
+    "min_sdk": 24,
+    "compile_sdk": 36,
+    "target_sdk": 36,
+    "ios_export": "pass",
+    "native_build": "pass",
+    "build_regression_tests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "context_docs_tests": {
+      "passed": 16,
+      "failed": 0
+    },
+    "docs_guard": {
+      "status": "pass",
+      "files": 202,
+      "links": 75
+    },
+    "android_context_pack": {
+      "file_count": 11,
+      "within_96000_byte_limit": true
+    }
+  },
+  "emulator": {
+    "product": "LDPlayer 9",
+    "android": "9",
+    "abis": [
+      "x86_64",
+      "x86",
+      "arm64-v8a",
+      "armeabi-v7a",
+      "armeabi"
+    ],
+    "adb_connected": true,
+    "fixture_api_reachable": true,
+    "installed": true,
+    "standalone_launch": "pass",
+    "ui": {
+      "input_focus": "pass after emulator restart; confirmed by user",
+      "valid_connection": "pass",
+      "invalid_code": "401 and Vietnamese error shown",
+      "synthetic_preview": "pass; SYNTHETIC / NO CAMERA image",
+      "normal_and_alert_status": "pass",
+      "null_metrics": "dash placeholders preserved",
+      "foreground_banner": "pass with synthetic camera metadata",
+      "replay_alert_banner": "suppressed as designed",
+      "history_list_and_detail": "pass",
+      "csv_export": "HTTP 200 and Android ChooserActivity opened; no recipient selected",
+      "secure_store_cold_restore": "pass",
+      "api_loss": "disconnected notice and stale data dimmed",
+      "api_reconnect": "pass",
+      "background_preview": {
+        "before": 813,
+        "after": 813,
+        "additional_requests": 0
+      },
+      "cleanup": "fixture connection removed using app disconnect; fixture server stopped; app left at empty connection form"
+    },
+    "input_incident": {
+      "symptom": "All of LDPlayer stopped responding, reported by user",
+      "observed_before": "DispatchFrozen=1, inbound queue length 217; persists after force-stop Driver Monitor; no ANR",
+      "window_manager_reason": "startFreezingDisplayLocked during orientation update",
+      "recovery": "quit/launch LDPlayer index 0, without clearing app data or changing emulator settings",
+      "observed_after": "DispatchFrozen=0, inbound queue empty; token field receives focus; user confirmed app responds",
+      "scope": "Emulator system freeze; no application code change made for this incident; underlying cause not proven",
+      "regression": "Repeat app launch, field input, Android Home/resume, history and share-sheet round trip passed"
+    },
+    "final_input_state": {
+      "dispatch_frozen": false,
+      "inbound_queue_empty": true
+    }
+  },
+  "boundaries": {
+    "camera_opened": false,
+    "esp32_opened": false,
+    "physical_haptics_verified": false,
+    "background_alerts_implemented": false,
+    "physical_android_verified": false,
+    "full_wifi_loss_tested": false
+  },
+  "pending": [
+    "physical Android phone: camera API, vibration and CSV delivery",
+    "Wi-Fi disconnect and reconnect on physical phone",
+    "Radxa Android LAN integration"
+  ],
+  "artifact": {
+    "path": "dist/android/DriverMonitor-1.0.0.apk",
+    "artifact": "DriverMonitor.apk",
+    "package": "com.da2.drivermonitor",
+    "architectures": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64"
+    ],
+    "sha256": "8f360373ee7a0dff7ec5a0da82f2fbb202efbd9a1ff9ca48a7efac4549286ce4",
+    "bytes": 63088137,
+    "signing": "Expo template debug key; internal testing only",
+    "signature_v2_verified": true,
+    "embedded_javascript": true,
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "cleartext_lan": true,
+    "forbidden_permissions_absent": [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "SYSTEM_ALERT_WINDOW"
+    ],
+    "preview": "dist/android/android-ui-synthetic.png",
+    "version": "1.0.0"
+  },
+  "cleanup": {
+    "api_fixture_listener_stopped": true,
+    "temporary_subst_removed": true,
+    "app_left_installed": true,
+    "fixture_connection_removed_via_ui": true
+  },
+  "superseded_by": "docs/evidence/2026-10-15-mobile-ui-validation.json"
+}

@@ -1,0 +1,5357 @@
+{
+  "task": "eye",
+  "classes": [
+    "Closed",
+    "Open"
+  ],
+  "selected_epoch": 1,
+  "trials": [
+    {
+      "epoch": 1,
+      "loss": 0.03478665105531136,
+      "score": 0.984343851470106,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 2,
+      "loss": 0.033026300783086965,
+      "score": 0.9805261994681025,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 3,
+      "loss": 0.01627961623162801,
+      "score": 0.9841931235237947,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 4,
+      "loss": 0.024518332251680954,
+      "score": 0.9804523959586826,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 5,
+      "loss": 0.011083505458346262,
+      "score": 0.9767983233845281,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 6,
+      "loss": 0.02167091576590433,
+      "score": 0.9731729484857847,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 7,
+      "loss": 0.01446941725882217,
+      "score": 0.9731915389882257,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    },
+    {
+      "epoch": 8,
+      "loss": 0.008685982091063667,
+      "score": 0.9803989564968909,
+      "rejection_reasons": [
+        "confident_recall_regression:static/roi/original:Open"
+      ]
+    }
+  ],
+  "trainable_parameters": 332802,
+  "backbone_and_bn_buffers_unchanged": true,
+  "baseline_validation": {
+    "classes": [
+      "Closed",
+      "Open"
+    ],
+    "confusion_matrix": [
+      [
+        167,
+        3
+      ],
+      [
+        2,
+        114
+      ]
+    ],
+    "confusion_matrix_with_unknown": [
+      [
+        167,
+        3,
+        0
+      ],
+      [
+        2,
+        114,
+        0
+      ]
+    ],
+    "prediction_columns": [
+      "Closed",
+      "Open",
+      "UNKNOWN"
+    ],
+    "per_class": {
+      "Closed": {
+        "precision": 0.9881656804733728,
+        "recall": 0.9823529411764705,
+        "f1": 0.9852507374631269,
+        "support": 170
+      },
+      "Open": {
+        "precision": 0.9743589743589743,
+        "recall": 0.9827586206896551,
+        "f1": 0.9785407725321889,
+        "support": 116
+      }
+    },
+    "macro_f1": 0.9818957549976579,
+    "accuracy": 0.9825174825174825,
+    "samples": 286,
+    "unknown_samples": 0,
+    "coverage": 1.0,
+    "brier_score": 0.011567020788788795,
+    "confidence_and_quality_gate": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          166,
+          1
+        ],
+        [
+          1,
+          114
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          166,
+          1,
+          3
+        ],
+        [
+          1,
+          114,
+          1
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.9940119760479041,
+          "recall": 0.9764705882352941,
+          "f1": 0.9851632047477745,
+          "support": 170
+        },
+        "Open": {
+          "precision": 0.991304347826087,
+          "recall": 0.9827586206896551,
+          "f1": 0.987012987012987,
+          "support": 116
+        }
+      },
+      "macro_f1": 0.9860880958803808,
+      "accuracy": 0.9790209790209791,
+      "samples": 286,
+      "unknown_samples": 4,
+      "coverage": 0.986013986013986
+    },
+    "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+    "groups": {
+      "static/legacy/original": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            61,
+            0,
+            0
+          ],
+          [
+            0,
+            61,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              61,
+              0,
+              0
+            ],
+            [
+              0,
+              61,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/roi/original": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            106,
+            3
+          ],
+          [
+            2,
+            53
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            106,
+            3,
+            0
+          ],
+          [
+            2,
+            53,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.9814814814814815,
+            "recall": 0.9724770642201835,
+            "f1": 0.9769585253456221,
+            "support": 109
+          },
+          "Open": {
+            "precision": 0.9464285714285714,
+            "recall": 0.9636363636363636,
+            "f1": 0.954954954954955,
+            "support": 55
+          }
+        },
+        "macro_f1": 0.9659567401502885,
+        "accuracy": 0.9695121951219512,
+        "samples": 164,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              105,
+              1
+            ],
+            [
+              1,
+              53
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              105,
+              1,
+              3
+            ],
+            [
+              1,
+              53,
+              1
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9905660377358491,
+              "recall": 0.963302752293578,
+              "f1": 0.9767441860465116,
+              "support": 109
+            },
+            "Open": {
+              "precision": 0.9814814814814815,
+              "recall": 0.9636363636363636,
+              "f1": 0.9724770642201835,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9746106251333475,
+          "accuracy": 0.9634146341463414,
+          "samples": 164,
+          "unknown_samples": 4,
+          "coverage": 0.975609756097561
+        }
+      }
+    }
+  },
+  "candidate_validation": {
+    "classes": [
+      "Closed",
+      "Open"
+    ],
+    "confusion_matrix": [
+      [
+        169,
+        1
+      ],
+      [
+        3,
+        113
+      ]
+    ],
+    "confusion_matrix_with_unknown": [
+      [
+        169,
+        1,
+        0
+      ],
+      [
+        3,
+        113,
+        0
+      ]
+    ],
+    "prediction_columns": [
+      "Closed",
+      "Open",
+      "UNKNOWN"
+    ],
+    "per_class": {
+      "Closed": {
+        "precision": 0.9825581395348837,
+        "recall": 0.9941176470588236,
+        "f1": 0.9883040935672515,
+        "support": 170
+      },
+      "Open": {
+        "precision": 0.9912280701754386,
+        "recall": 0.9741379310344828,
+        "f1": 0.9826086956521739,
+        "support": 116
+      }
+    },
+    "macro_f1": 0.9854563946097127,
+    "accuracy": 0.986013986013986,
+    "samples": 286,
+    "unknown_samples": 0,
+    "coverage": 1.0,
+    "brier_score": 0.011112567037343979,
+    "confidence_and_quality_gate": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          167,
+          0
+        ],
+        [
+          2,
+          112
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          167,
+          0,
+          3
+        ],
+        [
+          2,
+          112,
+          2
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.9881656804733728,
+          "recall": 0.9823529411764705,
+          "f1": 0.9852507374631269,
+          "support": 170
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 0.9655172413793104,
+          "f1": 0.9824561403508771,
+          "support": 116
+        }
+      },
+      "macro_f1": 0.9838534389070019,
+      "accuracy": 0.9755244755244755,
+      "samples": 286,
+      "unknown_samples": 5,
+      "coverage": 0.9825174825174825
+    },
+    "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+    "groups": {
+      "static/legacy/original": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            61
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            61,
+            0,
+            0
+          ],
+          [
+            0,
+            61,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 61
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 122,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              61,
+              0
+            ],
+            [
+              0,
+              61
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              61,
+              0,
+              0
+            ],
+            [
+              0,
+              61,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 61
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 122,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/roi/original": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            108,
+            1
+          ],
+          [
+            3,
+            52
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            108,
+            1,
+            0
+          ],
+          [
+            3,
+            52,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.972972972972973,
+            "recall": 0.9908256880733946,
+            "f1": 0.9818181818181818,
+            "support": 109
+          },
+          "Open": {
+            "precision": 0.9811320754716981,
+            "recall": 0.9454545454545454,
+            "f1": 0.9629629629629629,
+            "support": 55
+          }
+        },
+        "macro_f1": 0.9723905723905724,
+        "accuracy": 0.975609756097561,
+        "samples": 164,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              106,
+              0
+            ],
+            [
+              2,
+              51
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              106,
+              0,
+              3
+            ],
+            [
+              2,
+              51,
+              2
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.9814814814814815,
+              "recall": 0.9724770642201835,
+              "f1": 0.9769585253456221,
+              "support": 109
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9272727272727272,
+              "f1": 0.9622641509433962,
+              "support": 55
+            }
+          },
+          "macro_f1": 0.9696113381445092,
+          "accuracy": 0.9573170731707317,
+          "samples": 164,
+          "unknown_samples": 5,
+          "coverage": 0.9695121951219512
+        }
+      }
+    }
+  },
+  "heldout_camera": {
+    "baseline": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          32,
+          0
+        ],
+        [
+          8,
+          134
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          32,
+          0,
+          0
+        ],
+        [
+          8,
+          134,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888,
+          "support": 32
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 0.9436619718309859,
+          "f1": 0.9710144927536232,
+          "support": 142
+        }
+      },
+      "macro_f1": 0.929951690821256,
+      "accuracy": 0.9540229885057471,
+      "samples": 174,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 0.031806062906980515,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            27,
+            0
+          ],
+          [
+            5,
+            114
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            27,
+            0,
+            5
+          ],
+          [
+            5,
+            114,
+            23
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.84375,
+            "recall": 0.84375,
+            "f1": 0.84375,
+            "support": 32
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 0.8028169014084507,
+            "f1": 0.890625,
+            "support": 142
+          }
+        },
+        "macro_f1": 0.8671875,
+        "accuracy": 0.8103448275862069,
+        "samples": 174,
+        "unknown_samples": 28,
+        "coverage": 0.8390804597701149
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              4,
+              67
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              4,
+              67,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 16
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 71
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 87,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                16,
+                0
+              ],
+              [
+                3,
+                67
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                16,
+                0,
+                0
+              ],
+              [
+                3,
+                67,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.8421052631578947,
+                "recall": 1.0,
+                "f1": 0.9142857142857143,
+                "support": 16
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9436619718309859,
+                "f1": 0.9710144927536232,
+                "support": 71
+              }
+            },
+            "macro_f1": 0.9426501035196687,
+            "accuracy": 0.9540229885057471,
+            "samples": 87,
+            "unknown_samples": 1,
+            "coverage": 0.9885057471264368
+          }
+        },
+        "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              4,
+              67
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              4,
+              67,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 16
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 71
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 87,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                11,
+                0
+              ],
+              [
+                2,
+                47
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                11,
+                0,
+                5
+              ],
+              [
+                2,
+                47,
+                22
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.8461538461538461,
+                "recall": 0.6875,
+                "f1": 0.7586206896551724,
+                "support": 16
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.6619718309859155,
+                "f1": 0.7966101694915254,
+                "support": 71
+              }
+            },
+            "macro_f1": 0.7776154295733488,
+            "accuracy": 0.6666666666666666,
+            "samples": 87,
+            "unknown_samples": 27,
+            "coverage": 0.6896551724137931
+          }
+        }
+      }
+    },
+    "candidate": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          32,
+          0
+        ],
+        [
+          8,
+          134
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          32,
+          0,
+          0
+        ],
+        [
+          8,
+          134,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888,
+          "support": 32
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 0.9436619718309859,
+          "f1": 0.9710144927536232,
+          "support": 142
+        }
+      },
+      "macro_f1": 0.929951690821256,
+      "accuracy": 0.9540229885057471,
+      "samples": 174,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 0.04444567859172821,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            27,
+            0
+          ],
+          [
+            7,
+            111
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            27,
+            0,
+            5
+          ],
+          [
+            7,
+            111,
+            24
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.7941176470588235,
+            "recall": 0.84375,
+            "f1": 0.8181818181818182,
+            "support": 32
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 0.7816901408450704,
+            "f1": 0.8774703557312253,
+            "support": 142
+          }
+        },
+        "macro_f1": 0.8478260869565217,
+        "accuracy": 0.7931034482758621,
+        "samples": 174,
+        "unknown_samples": 29,
+        "coverage": 0.8333333333333334
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              4,
+              67
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              4,
+              67,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 16
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 71
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 87,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                16,
+                0
+              ],
+              [
+                4,
+                66
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                16,
+                0,
+                0
+              ],
+              [
+                4,
+                66,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.8888888888888888,
+                "support": 16
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9295774647887324,
+                "f1": 0.9635036496350365,
+                "support": 71
+              }
+            },
+            "macro_f1": 0.9261962692619627,
+            "accuracy": 0.9425287356321839,
+            "samples": 87,
+            "unknown_samples": 1,
+            "coverage": 0.9885057471264368
+          }
+        },
+        "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              16,
+              0
+            ],
+            [
+              4,
+              67
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              4,
+              67,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 16
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 71
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 87,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                11,
+                0
+              ],
+              [
+                3,
+                45
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                11,
+                0,
+                5
+              ],
+              [
+                3,
+                45,
+                23
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.7857142857142857,
+                "recall": 0.6875,
+                "f1": 0.7333333333333333,
+                "support": 16
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.6338028169014085,
+                "f1": 0.7758620689655172,
+                "support": 71
+              }
+            },
+            "macro_f1": 0.7545977011494253,
+            "accuracy": 0.6436781609195402,
+            "samples": 87,
+            "unknown_samples": 28,
+            "coverage": 0.6781609195402298
+          }
+        }
+      }
+    }
+  },
+  "camera_train_diagnostic": {
+    "baseline": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          29,
+          1
+        ],
+        [
+          2,
+          252
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          29,
+          1,
+          0
+        ],
+        [
+          2,
+          252,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.9354838709677419,
+          "recall": 0.9666666666666667,
+          "f1": 0.9508196721311475,
+          "support": 30
+        },
+        "Open": {
+          "precision": 0.9960474308300395,
+          "recall": 0.9921259842519685,
+          "f1": 0.9940828402366864,
+          "support": 254
+        }
+      },
+      "macro_f1": 0.9724512561839169,
+      "accuracy": 0.9894366197183099,
+      "samples": 284,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 0.007120889611542225,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            27,
+            0
+          ],
+          [
+            1,
+            248
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            27,
+            0,
+            3
+          ],
+          [
+            1,
+            248,
+            5
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.9642857142857143,
+            "recall": 0.9,
+            "f1": 0.9310344827586207,
+            "support": 30
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 0.9763779527559056,
+            "f1": 0.9880478087649402,
+            "support": 254
+          }
+        },
+        "macro_f1": 0.9595411457617804,
+        "accuracy": 0.9683098591549296,
+        "samples": 284,
+        "unknown_samples": 8,
+        "coverage": 0.971830985915493
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_05_46_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              1
+            ],
+            [
+              0,
+              85
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              10,
+              1,
+              0
+            ],
+            [
+              0,
+              85,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523,
+              "support": 11
+            },
+            "Open": {
+              "precision": 0.9883720930232558,
+              "recall": 1.0,
+              "f1": 0.9941520467836257,
+              "support": 85
+            }
+          },
+          "macro_f1": 0.9732664995822891,
+          "accuracy": 0.9895833333333334,
+          "samples": 96,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                10,
+                0
+              ],
+              [
+                0,
+                85
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                10,
+                0,
+                1
+              ],
+              [
+                0,
+                85,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 1.0,
+                "recall": 0.9090909090909091,
+                "f1": 0.9523809523809523,
+                "support": 11
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 85
+              }
+            },
+            "macro_f1": 0.9761904761904762,
+            "accuracy": 0.9895833333333334,
+            "samples": 96,
+            "unknown_samples": 1,
+            "coverage": 0.9895833333333334
+          }
+        },
+        "camera/WIN_20261013_17_05_46_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0
+            ],
+            [
+              0,
+              85
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              85,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 85
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 96,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                10,
+                0
+              ],
+              [
+                0,
+                83
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                10,
+                0,
+                1
+              ],
+              [
+                0,
+                83,
+                2
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 1.0,
+                "recall": 0.9090909090909091,
+                "f1": 0.9523809523809523,
+                "support": 11
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9764705882352941,
+                "f1": 0.9880952380952381,
+                "support": 85
+              }
+            },
+            "macro_f1": 0.9702380952380952,
+            "accuracy": 0.96875,
+            "samples": 96,
+            "unknown_samples": 3,
+            "coverage": 0.96875
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              41
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              1,
+              41,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9761904761904762,
+              "f1": 0.9879518072289156,
+              "support": 42
+            }
+          },
+          "macro_f1": 0.9384203480589022,
+          "accuracy": 0.9782608695652174,
+          "samples": 46,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                0,
+                41
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0,
+                41,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 4
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9761904761904762,
+                "f1": 0.9879518072289156,
+                "support": 42
+              }
+            },
+            "macro_f1": 0.9939759036144578,
+            "accuracy": 0.9782608695652174,
+            "samples": 46,
+            "unknown_samples": 1,
+            "coverage": 0.9782608695652174
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              41
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              1,
+              41,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9761904761904762,
+              "f1": 0.9879518072289156,
+              "support": 42
+            }
+          },
+          "macro_f1": 0.9384203480589022,
+          "accuracy": 0.9782608695652174,
+          "samples": 46,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                3,
+                0
+              ],
+              [
+                1,
+                39
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                1,
+                39,
+                2
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75,
+                "support": 4
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9285714285714286,
+                "f1": 0.9629629629629629,
+                "support": 42
+              }
+            },
+            "macro_f1": 0.8564814814814814,
+            "accuracy": 0.9130434782608695,
+            "samples": 46,
+            "unknown_samples": 3,
+            "coverage": 0.9347826086956522
+          }
+        }
+      }
+    },
+    "candidate": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "confusion_matrix": [
+        [
+          30,
+          0
+        ],
+        [
+          4,
+          250
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          4,
+          250,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "Closed",
+        "Open",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "Closed": {
+          "precision": 0.8823529411764706,
+          "recall": 1.0,
+          "f1": 0.9375,
+          "support": 30
+        },
+        "Open": {
+          "precision": 1.0,
+          "recall": 0.984251968503937,
+          "f1": 0.9920634920634921,
+          "support": 254
+        }
+      },
+      "macro_f1": 0.964781746031746,
+      "accuracy": 0.9859154929577465,
+      "samples": 284,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 0.011275460943579674,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "Closed",
+          "Open"
+        ],
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            3,
+            245
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            29,
+            0,
+            1
+          ],
+          [
+            3,
+            245,
+            6
+          ]
+        ],
+        "prediction_columns": [
+          "Closed",
+          "Open",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "Closed": {
+            "precision": 0.90625,
+            "recall": 0.9666666666666667,
+            "f1": 0.9354838709677419,
+            "support": 30
+          },
+          "Open": {
+            "precision": 1.0,
+            "recall": 0.9645669291338582,
+            "f1": 0.9819639278557114,
+            "support": 254
+          }
+        },
+        "macro_f1": 0.9587238994117266,
+        "accuracy": 0.9647887323943662,
+        "samples": 284,
+        "unknown_samples": 7,
+        "coverage": 0.9753521126760564
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_05_46_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0
+            ],
+            [
+              0,
+              85
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              85,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 85
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 96,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                11,
+                0
+              ],
+              [
+                0,
+                84
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                84,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 11
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9882352941176471,
+                "f1": 0.9940828402366864,
+                "support": 85
+              }
+            },
+            "macro_f1": 0.9970414201183432,
+            "accuracy": 0.9895833333333334,
+            "samples": 96,
+            "unknown_samples": 1,
+            "coverage": 0.9895833333333334
+          }
+        },
+        "camera/WIN_20261013_17_05_46_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0
+            ],
+            [
+              2,
+              83
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              11,
+              0,
+              0
+            ],
+            [
+              2,
+              83,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8461538461538461,
+              "recall": 1.0,
+              "f1": 0.9166666666666666,
+              "support": 11
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9764705882352941,
+              "f1": 0.9880952380952381,
+              "support": 85
+            }
+          },
+          "macro_f1": 0.9523809523809523,
+          "accuracy": 0.9791666666666666,
+          "samples": 96,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                11,
+                0
+              ],
+              [
+                1,
+                81
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                1,
+                81,
+                3
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.9166666666666666,
+                "recall": 1.0,
+                "f1": 0.9565217391304348,
+                "support": 11
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9529411764705882,
+                "f1": 0.9759036144578314,
+                "support": 85
+              }
+            },
+            "macro_f1": 0.966212676794133,
+            "accuracy": 0.9583333333333334,
+            "samples": 96,
+            "unknown_samples": 3,
+            "coverage": 0.96875
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/letterbox_640": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              41
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              1,
+              41,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9761904761904762,
+              "f1": 0.9879518072289156,
+              "support": 42
+            }
+          },
+          "macro_f1": 0.9384203480589022,
+          "accuracy": 0.9782608695652174,
+          "samples": 46,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                41
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                41,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.8888888888888888,
+                "support": 4
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9761904761904762,
+                "f1": 0.9879518072289156,
+                "support": 42
+              }
+            },
+            "macro_f1": 0.9384203480589022,
+            "accuracy": 0.9782608695652174,
+            "samples": 46,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/native_1080": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0
+            ],
+            [
+              1,
+              41
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              1,
+              41,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9761904761904762,
+              "f1": 0.9879518072289156,
+              "support": 42
+            }
+          },
+          "macro_f1": 0.9384203480589022,
+          "accuracy": 0.9782608695652174,
+          "samples": 46,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                3,
+                0
+              ],
+              [
+                1,
+                39
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                1,
+                39,
+                2
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.75,
+                "recall": 0.75,
+                "f1": 0.75,
+                "support": 4
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.9285714285714286,
+                "f1": 0.9629629629629629,
+                "support": 42
+              }
+            },
+            "macro_f1": 0.8564814814814814,
+            "accuracy": 0.9130434782608695,
+            "samples": 46,
+            "unknown_samples": 3,
+            "coverage": 0.9347826086956522
+          }
+        }
+      }
+    },
+    "note": "Training fit, not an independent evaluation."
+  },
+  "heldout_predictions": [
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        2.1467951683007414e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        6.704879069729941e-07,
+        0.9999992847442627
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        3.9696313791637294e-08,
+        1.0
+      ],
+      "candidate": [
+        5.199672514777376e-08,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.172569111280609e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        7.50108426927909e-07,
+        0.9999992847442627
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.192282846015587e-08,
+        0.9999998807907104
+      ],
+      "candidate": [
+        1.6894915688681067e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        9.952083200914785e-05,
+        0.9999004602432251
+      ],
+      "candidate": [
+        0.0004119373916182667,
+        0.9995880722999573
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        1.2231271284690592e-05,
+        0.9999877214431763
+      ],
+      "candidate": [
+        6.032325472915545e-05,
+        0.9999396800994873
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.3594299161923118e-06,
+        0.9999986886978149
+      ],
+      "candidate": [
+        6.634872988797724e-06,
+        0.9999933242797852
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.8381633455865085e-05,
+        0.9999716281890869
+      ],
+      "candidate": [
+        0.000156397873070091,
+        0.9998435974121094
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        9.352863344247453e-06,
+        0.999990701675415
+      ],
+      "candidate": [
+        3.184346132911742e-05,
+        0.9999681711196899
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        4.462233846425079e-06,
+        0.9999955892562866
+      ],
+      "candidate": [
+        1.2951378266734537e-05,
+        0.999987006187439
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.1610644580505323e-06,
+        0.9999978542327881
+      ],
+      "candidate": [
+        8.491880180372391e-06,
+        0.9999915361404419
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.5430730602238327e-05,
+        0.9999746084213257
+      ],
+      "candidate": [
+        9.581892663845792e-05,
+        0.9999041557312012
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Closed",
+      "baseline": [
+        0.9999895095825195,
+        1.0458826182002667e-05
+      ],
+      "candidate": [
+        0.9999977350234985,
+        2.3155134840635583e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.0026140331756323576,
+        0.9973859190940857
+      ],
+      "candidate": [
+        0.010806411504745483,
+        0.9891936182975769
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999581575393677,
+        4.1799736209213734e-05
+      ],
+      "candidate": [
+        0.9999915361404419,
+        8.442058970103972e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.002030548406764865,
+        0.9979694485664368
+      ],
+      "candidate": [
+        0.009283499792218208,
+        0.9907165169715881
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Closed",
+      "baseline": [
+        0.9983093738555908,
+        0.0016905706143006682
+      ],
+      "candidate": [
+        0.9996623992919922,
+        0.00033764870022423565
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.00013209097960498184,
+        0.9998679161071777
+      ],
+      "candidate": [
+        0.0006017989362590015,
+        0.9993982315063477
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9980114698410034,
+        0.0019885434303432703
+      ],
+      "candidate": [
+        0.9995521903038025,
+        0.0004477721231523901
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.895603367709555e-05,
+        0.9999610185623169
+      ],
+      "candidate": [
+        0.00018461143190506846,
+        0.9998154044151306
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.6032330449888832e-06,
+        0.9999984502792358
+      ],
+      "candidate": [
+        5.712177426175913e-06,
+        0.9999942779541016
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.950466857029824e-06,
+        0.9999940395355225
+      ],
+      "candidate": [
+        1.4381722394318786e-05,
+        0.9999855756759644
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.8408542003007824e-08,
+        1.0
+      ],
+      "candidate": [
+        2.0430275071703363e-07,
+        0.9999997615814209
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.079381258430658e-06,
+        0.9999969005584717
+      ],
+      "candidate": [
+        7.892167559475638e-06,
+        0.9999921321868896
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        8.504682114107709e-07,
+        0.9999991655349731
+      ],
+      "candidate": [
+        1.942749577210634e-06,
+        0.9999980926513672
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.770363269315567e-05,
+        0.9999822378158569
+      ],
+      "candidate": [
+        3.463045140961185e-05,
+        0.9999653100967407
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.7891172723902855e-06,
+        0.9999961853027344
+      ],
+      "candidate": [
+        1.0275706699758302e-05,
+        0.9999897480010986
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.960148606234725e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        5.500601787389314e-07,
+        0.9999994039535522
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 70,
+      "timestamp": 3.0080666666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Closed",
+      "baseline": [
+        0.9990168809890747,
+        0.0009831023635342717
+      ],
+      "candidate": [
+        0.9997860789299011,
+        0.00021389937319327146
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 70,
+      "timestamp": 3.0080666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9397814869880676,
+        0.0602184534072876
+      ],
+      "candidate": [
+        0.9877041578292847,
+        0.012295881286263466
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.5655110478401184,
+        0.4344889223575592
+      ],
+      "candidate": [
+        0.915741503238678,
+        0.08425850421190262
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999964237213135,
+        3.5248140193289146e-06
+      ],
+      "candidate": [
+        0.9999995231628418,
+        5.302247245708713e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.7890490889549255,
+        0.21095094084739685
+      ],
+      "candidate": [
+        0.9639021158218384,
+        0.03609780967235565
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999650716781616,
+        3.497142097330652e-05
+      ],
+      "candidate": [
+        0.9999946355819702,
+        5.3797052714799065e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 90,
+      "timestamp": 3.8719,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        1.7519657831144286e-06,
+        0.9999982118606567
+      ],
+      "candidate": [
+        4.337308382673655e-06,
+        0.9999957084655762
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 90,
+      "timestamp": 3.8719,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.8382589814791572e-06,
+        0.9999982118606567
+      ],
+      "candidate": [
+        5.704365321435034e-06,
+        0.9999942779541016
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.601953484950627e-09,
+        1.0
+      ],
+      "candidate": [
+        8.213356217368073e-09,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.398074219760019e-06,
+        0.9999935626983643
+      ],
+      "candidate": [
+        1.4237100913305767e-05,
+        0.9999858140945435
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.133582974854335e-09,
+        1.0
+      ],
+      "candidate": [
+        1.1161890078881243e-08,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.146792369079776e-05,
+        0.9999685287475586
+      ],
+      "candidate": [
+        0.00010857795859919861,
+        0.9998914003372192
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 110,
+      "timestamp": 4.736000000000001,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.771705602342081e-08,
+        1.0
+      ],
+      "candidate": [
+        1.4681020843454462e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 110,
+      "timestamp": 4.736000000000001,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.865118585759774e-05,
+        0.9999713897705078
+      ],
+      "candidate": [
+        8.601909939898178e-05,
+        0.9999139308929443
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 110,
+      "timestamp": 4.736000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        8.04226516493145e-08,
+        0.9999998807907104
+      ],
+      "candidate": [
+        1.8800656675921346e-07,
+        0.9999997615814209
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 110,
+      "timestamp": 4.736000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.02695989375934e-05,
+        0.9999697208404541
+      ],
+      "candidate": [
+        0.000101038946013432,
+        0.9998989105224609
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        3.0967364637035644e-06,
+        0.9999969005584717
+      ],
+      "candidate": [
+        1.151122705778107e-05,
+        0.9999884366989136
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.009847665205597878,
+        0.9901522994041443
+      ],
+      "candidate": [
+        0.0631270632147789,
+        0.9368729591369629
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.550970748416148e-06,
+        0.9999974966049194
+      ],
+      "candidate": [
+        8.278074346890207e-06,
+        0.999991774559021
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.004431947134435177,
+        0.9955680966377258
+      ],
+      "candidate": [
+        0.026602454483509064,
+        0.9733976125717163
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.082027480947545e-07,
+        0.9999998807907104
+      ],
+      "candidate": [
+        2.43380014808281e-07,
+        0.9999997615814209
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00022420036839321256,
+        0.9997758269309998
+      ],
+      "candidate": [
+        0.0009015695541165769,
+        0.9990984201431274
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.427101872461208e-07,
+        0.9999990463256836
+      ],
+      "candidate": [
+        2.659590791154187e-06,
+        0.9999973773956299
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00010283317533321679,
+        0.9998971223831177
+      ],
+      "candidate": [
+        0.0003769471659325063,
+        0.9996230602264404
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        2.486685843905434e-05,
+        0.9999750852584839
+      ],
+      "candidate": [
+        9.64180871960707e-05,
+        0.9999035596847534
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.007417569402605295,
+        0.9925824403762817
+      ],
+      "candidate": [
+        0.042924121022224426,
+        0.957075834274292
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.325716872699559e-06,
+        0.9999957084655762
+      ],
+      "candidate": [
+        1.6159663573489524e-05,
+        0.9999837875366211
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.06895461678504944,
+        0.9310453534126282
+      ],
+      "candidate": [
+        0.27803611755371094,
+        0.7219638824462891
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        1.8621284425535123e-06,
+        0.9999980926513672
+      ],
+      "candidate": [
+        3.7922479805274634e-06,
+        0.9999961853027344
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.011935872957110405,
+        0.9880641102790833
+      ],
+      "candidate": [
+        0.05700036138296127,
+        0.9429996609687805
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.644315479003126e-06,
+        0.9999943971633911
+      ],
+      "candidate": [
+        1.5490652003791183e-05,
+        0.9999845027923584
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.004828218370676041,
+        0.9951717257499695
+      ],
+      "candidate": [
+        0.023037532344460487,
+        0.9769624471664429
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.6738093495368958,
+        0.32619065046310425
+      ],
+      "candidate": [
+        0.9341561198234558,
+        0.06584388017654419
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.002814193954691291,
+        0.9971857666969299
+      ],
+      "candidate": [
+        0.019826335832476616,
+        0.9801735877990723
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.9332289099693298,
+        0.06677107512950897
+      ],
+      "candidate": [
+        0.9781798124313354,
+        0.021820152178406715
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.005322585813701153,
+        0.9946774244308472
+      ],
+      "candidate": [
+        0.03596397861838341,
+        0.9640360474586487
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.2191501355118817e-06,
+        0.9999988079071045
+      ],
+      "candidate": [
+        3.482719193925732e-06,
+        0.999996542930603
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00019126398547086865,
+        0.9998087286949158
+      ],
+      "candidate": [
+        0.0004886665265075862,
+        0.9995113611221313
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.629033022254589e-06,
+        0.9999983310699463
+      ],
+      "candidate": [
+        5.423305537988199e-06,
+        0.9999946355819702
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.45104329730384e-06,
+        0.9999905824661255
+      ],
+      "candidate": [
+        2.6575713491183706e-05,
+        0.9999734163284302
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        7.454965356146204e-08,
+        0.9999998807907104
+      ],
+      "candidate": [
+        1.509796874188396e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0004281969740986824,
+        0.9995717406272888
+      ],
+      "candidate": [
+        0.0012626948300749063,
+        0.9987372756004333
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.180576749808097e-07,
+        0.9999995231628418
+      ],
+      "candidate": [
+        1.3340238638193114e-06,
+        0.9999986886978149
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.003427183022722602,
+        0.9965728521347046
+      ],
+      "candidate": [
+        0.014197811484336853,
+        0.9858022332191467
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.086818469455466e-05,
+        0.9999691247940063
+      ],
+      "candidate": [
+        0.00018001170246861875,
+        0.9998200535774231
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0010025850497186184,
+        0.9989973902702332
+      ],
+      "candidate": [
+        0.005584904458373785,
+        0.9944150447845459
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.571463124302682e-06,
+        0.9999904632568359
+      ],
+      "candidate": [
+        4.311137308832258e-05,
+        0.9999568462371826
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.918460273183882e-05,
+        0.9999008178710938
+      ],
+      "candidate": [
+        0.0004628869646694511,
+        0.9995371103286743
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        8.418078323302325e-06,
+        0.9999915361404419
+      ],
+      "candidate": [
+        3.306162398075685e-05,
+        0.9999669790267944
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00029986441950313747,
+        0.9997001886367798
+      ],
+      "candidate": [
+        0.0015080064767971635,
+        0.9984920024871826
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.4487495718640275e-05,
+        0.9999854564666748
+      ],
+      "candidate": [
+        5.809254798805341e-05,
+        0.9999419450759888
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.000502385082654655,
+        0.999497652053833
+      ],
+      "candidate": [
+        0.0023149941116571426,
+        0.9976849555969238
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.3793797860635095e-08,
+        1.0
+      ],
+      "candidate": [
+        1.3232482842795434e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.2147774365730584e-05,
+        0.999957799911499
+      ],
+      "candidate": [
+        0.00014763124636374414,
+        0.9998522996902466
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.6411969972505176e-07,
+        0.9999996423721313
+      ],
+      "candidate": [
+        1.0874405234062579e-06,
+        0.999998927116394
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.9310698664630763e-05,
+        0.9999706745147705
+      ],
+      "candidate": [
+        0.00011007308785337955,
+        0.9998899698257446
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.01385874766856432,
+        0.9861413240432739
+      ],
+      "candidate": [
+        0.07216275483369827,
+        0.9278372526168823
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.00013383985788095742,
+        0.9998661279678345
+      ],
+      "candidate": [
+        0.00031874378328211606,
+        0.9996812343597412
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.000772723404224962,
+        0.9992272853851318
+      ],
+      "candidate": [
+        0.004202856682240963,
+        0.9957971572875977
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.7547510399017483e-05,
+        0.9999724626541138
+      ],
+      "candidate": [
+        8.619498839834705e-05,
+        0.9999138116836548
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999819993972778,
+        1.7950724213733338e-05
+      ],
+      "candidate": [
+        0.9999971389770508,
+        2.8047722935298225e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999489784240723,
+        5.105817035655491e-05
+      ],
+      "candidate": [
+        0.999994158744812,
+        5.87231625104323e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9872451424598694,
+        0.012754839845001698
+      ],
+      "candidate": [
+        0.9977821707725525,
+        0.0022178497165441513
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999313354492188,
+        6.863773887744173e-05
+      ],
+      "candidate": [
+        0.9999897480010986,
+        1.024375160341151e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Closed",
+      "baseline": [
+        0.9999980926513672,
+        1.9345609416632215e-06
+      ],
+      "candidate": [
+        0.9999995231628418,
+        4.3339446165191475e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Closed",
+      "baseline": [
+        0.9999977350234985,
+        2.2671376882499317e-06
+      ],
+      "candidate": [
+        0.9999997615814209,
+        2.8270028451515827e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999628067016602,
+        3.7231133319437504e-05
+      ],
+      "candidate": [
+        0.9999923706054688,
+        7.630802429048344e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.999933123588562,
+        6.683228275505826e-05
+      ],
+      "candidate": [
+        0.9999905824661255,
+        9.420483365829568e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.160734642435273e-07,
+        0.9999994039535522
+      ],
+      "candidate": [
+        1.8817906948243035e-06,
+        0.9999980926513672
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.441935627459316e-06,
+        0.9999945163726807
+      ],
+      "candidate": [
+        1.762515057635028e-05,
+        0.9999823570251465
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.23555195791414e-06,
+        0.9999967813491821
+      ],
+      "candidate": [
+        1.3361895980779082e-05,
+        0.9999866485595703
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.4929325920529664e-05,
+        0.9999650716781616
+      ],
+      "candidate": [
+        0.00012191948917461559,
+        0.9998780488967896
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999878406524658,
+        1.2196409443276934e-05
+      ],
+      "candidate": [
+        0.9999985694885254,
+        1.4165818811306963e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999997615814209,
+        2.2793335574533558e-07
+      ],
+      "candidate": [
+        1.0,
+        3.1284358215089014e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999618530273438,
+        3.810248745139688e-05
+      ],
+      "candidate": [
+        0.999994158744812,
+        5.8059713410330005e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999986886978149,
+        1.343812527920818e-06
+      ],
+      "candidate": [
+        0.9999997615814209,
+        2.1326863475223945e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999529123306274,
+        4.707352491095662e-05
+      ],
+      "candidate": [
+        0.999992847442627,
+        7.2092989285010844e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        1.0,
+        5.2071257528041315e-08
+      ],
+      "candidate": [
+        1.0,
+        8.024502839987235e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.999671220779419,
+        0.0003287801519036293
+      ],
+      "candidate": [
+        0.9999381303787231,
+        6.186414248077199e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999887943267822,
+        1.1229967640247196e-05
+      ],
+      "candidate": [
+        0.999997615814209,
+        2.353936224608333e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.181016043323325e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        6.380699915098376e-07,
+        0.9999994039535522
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00023852920276112854,
+        0.9997615218162537
+      ],
+      "candidate": [
+        0.0008108713082037866,
+        0.9991890788078308
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.8675083879315935e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        5.318691478350956e-07,
+        0.9999995231628418
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00015051128866616637,
+        0.9998494386672974
+      ],
+      "candidate": [
+        0.0005307060200721025,
+        0.9994693398475647
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.834813237015624e-06,
+        0.999994158744812
+      ],
+      "candidate": [
+        1.8007889593718573e-05,
+        0.9999819993972778
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0024842112325131893,
+        0.9975157976150513
+      ],
+      "candidate": [
+        0.010002176277339458,
+        0.9899978041648865
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.4468812625855207e-05,
+        0.9999755620956421
+      ],
+      "candidate": [
+        0.00010789861698867753,
+        0.9998921155929565
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.000670204812195152,
+        0.9993298053741455
+      ],
+      "candidate": [
+        0.002774495165795088,
+        0.9972255229949951
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        3.578259202186018e-05,
+        0.9999642372131348
+      ],
+      "candidate": [
+        0.00012748550216201693,
+        0.9998724460601807
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "blurry",
+      "label": "Open",
+      "baseline": [
+        0.004325312562286854,
+        0.9956746697425842
+      ],
+      "candidate": [
+        0.023009920492768288,
+        0.9769901037216187
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.0410158110025804e-06,
+        0.9999949932098389
+      ],
+      "candidate": [
+        1.592063927091658e-05,
+        0.9999840259552002
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.512024704832584e-05,
+        0.9999648332595825
+      ],
+      "candidate": [
+        0.00019741849973797798,
+        0.9998026490211487
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.010225454630927e-08,
+        0.9999998807907104
+      ],
+      "candidate": [
+        2.5842180662039027e-07,
+        0.9999997615814209
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0005754944286309183,
+        0.9994245767593384
+      ],
+      "candidate": [
+        0.003223781706765294,
+        0.9967761635780334
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.202132004138548e-06,
+        0.9999958276748657
+      ],
+      "candidate": [
+        1.1714198990375735e-05,
+        0.999988317489624
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0001002674616756849,
+        0.9998997449874878
+      ],
+      "candidate": [
+        0.00043047129292972386,
+        0.9995694756507874
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.63577771117707e-07,
+        0.9999994039535522
+      ],
+      "candidate": [
+        1.410074446539511e-06,
+        0.9999985694885254
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.323460674029775e-05,
+        0.9999867677688599
+      ],
+      "candidate": [
+        3.6615299904951826e-05,
+        0.9999634027481079
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.2285316819979926e-07,
+        0.9999996423721313
+      ],
+      "candidate": [
+        1.0120510296474095e-06,
+        0.9999990463256836
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.327929723833222e-05,
+        0.9999767541885376
+      ],
+      "candidate": [
+        7.604916027048603e-05,
+        0.9999239444732666
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.0666876448794937e-07,
+        0.9999998807907104
+      ],
+      "candidate": [
+        2.5103534539994143e-07,
+        0.9999997615814209
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.766068509023171e-06,
+        0.9999932050704956
+      ],
+      "candidate": [
+        1.6421792679466307e-05,
+        0.999983549118042
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.7109787222580053e-06,
+        0.9999983310699463
+      ],
+      "candidate": [
+        4.891449862043373e-06,
+        0.9999951124191284
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.0302230748493457e-06,
+        0.999998927116394
+      ],
+      "candidate": [
+        3.0260250696301227e-06,
+        0.9999970197677612
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        9.384282151359002e-08,
+        0.9999998807907104
+      ],
+      "candidate": [
+        1.6801593005766335e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.619241968204733e-06,
+        0.9999973773956299
+      ],
+      "candidate": [
+        6.2122026065480895e-06,
+        0.9999938011169434
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        7.023369335001917e-07,
+        0.9999992847442627
+      ],
+      "candidate": [
+        1.9152894310536794e-06,
+        0.9999980926513672
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.0167136679228861e-05,
+        0.9999898672103882
+      ],
+      "candidate": [
+        2.8525937523227185e-05,
+        0.9999715089797974
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.8637436483004421e-07,
+        0.9999997615814209
+      ],
+      "candidate": [
+        4.736992877951707e-07,
+        0.9999995231628418
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.7554953198414296e-05,
+        0.9999524354934692
+      ],
+      "candidate": [
+        0.00015100046584848315,
+        0.9998489618301392
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.360693305396126e-07,
+        0.9999994039535522
+      ],
+      "candidate": [
+        1.7304769244219642e-06,
+        0.9999982118606567
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.609085226547904e-05,
+        0.9999538660049438
+      ],
+      "candidate": [
+        0.00015598606842104346,
+        0.999843955039978
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.054168451577425,
+        0.9458314776420593
+      ],
+      "candidate": [
+        0.24494782090187073,
+        0.7550522089004517
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.0002616758574731648,
+        0.9997382760047913
+      ],
+      "candidate": [
+        0.000903796055354178,
+        0.9990962743759155
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.009078767150640488,
+        0.9909212589263916
+      ],
+      "candidate": [
+        0.06348419934511185,
+        0.9365158081054688
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00019994900503661484,
+        0.9998000264167786
+      ],
+      "candidate": [
+        0.000901795516256243,
+        0.9990981817245483
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9998093247413635,
+        0.000190650942386128
+      ],
+      "candidate": [
+        0.9999662637710571,
+        3.378868132131174e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        1.0,
+        3.147768978806198e-08
+      ],
+      "candidate": [
+        1.0,
+        4.108486439946546e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999499320983887,
+        5.005691491533071e-05
+      ],
+      "candidate": [
+        0.9999897480010986,
+        1.030882413033396e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9999994039535522,
+        6.038326318957843e-07
+      ],
+      "candidate": [
+        0.9999998807907104,
+        8.13496967566607e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.8777078986167908,
+        0.12229210883378983
+      ],
+      "candidate": [
+        0.9764477610588074,
+        0.02355225943028927
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.9231873154640198,
+        0.076812744140625
+      ],
+      "candidate": [
+        0.9858476519584656,
+        0.014152326621115208
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.8109817504882812,
+        0.18901826441287994
+      ],
+      "candidate": [
+        0.9664966464042664,
+        0.03350339084863663
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.982882022857666,
+        0.01711793802678585
+      ],
+      "candidate": [
+        0.9969456791877747,
+        0.0030543110333383083
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.582708399742842e-05,
+        0.9999442100524902
+      ],
+      "candidate": [
+        0.00020732507982756943,
+        0.9997926354408264
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9998599290847778,
+        0.00014003449177835137
+      ],
+      "candidate": [
+        0.9999669790267944,
+        3.301584365544841e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.2760481442674063e-05,
+        0.9999772310256958
+      ],
+      "candidate": [
+        8.954988152254373e-05,
+        0.9999104738235474
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9990793466567993,
+        0.0009206570102833211
+      ],
+      "candidate": [
+        0.9997805953025818,
+        0.00021947073400951922
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 400,
+      "timestamp": 17.183933333333336,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.012784222140908241,
+        0.9872157573699951
+      ],
+      "candidate": [
+        0.0902324691414833,
+        0.9097675085067749
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 400,
+      "timestamp": 17.183933333333336,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.005555001087486744,
+        0.9944450259208679
+      ],
+      "candidate": [
+        0.03830670192837715,
+        0.961693286895752
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9851107597351074,
+        0.014889288693666458
+      ],
+      "candidate": [
+        0.9974892139434814,
+        0.002510777907446027
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.08462345600128174,
+        0.915376603603363
+      ],
+      "candidate": [
+        0.316982626914978,
+        0.683017373085022
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Closed",
+      "baseline": [
+        0.9919202327728271,
+        0.00807979702949524
+      ],
+      "candidate": [
+        0.9985641837120056,
+        0.0014358117477968335
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.026296963915228844,
+        0.9737029671669006
+      ],
+      "candidate": [
+        0.11421748995780945,
+        0.8857824802398682
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        4.229346814099699e-06,
+        0.9999958276748657
+      ],
+      "candidate": [
+        1.8276943592354655e-05,
+        0.9999817609786987
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.002141371602192521,
+        0.9978585839271545
+      ],
+      "candidate": [
+        0.007522806990891695,
+        0.9924772381782532
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.038022547727451e-05,
+        0.9999395608901978
+      ],
+      "candidate": [
+        0.00029726698994636536,
+        0.9997027516365051
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        0.00010249924525851384,
+        0.9998974800109863
+      ],
+      "candidate": [
+        0.00043105133227072656,
+        0.9995689988136292
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.9894719205382216e-09,
+        1.0
+      ],
+      "candidate": [
+        4.0858858518788566e-09,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        2.846430470526684e-05,
+        0.9999715089797974
+      ],
+      "candidate": [
+        6.654909520875663e-05,
+        0.9999334812164307
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        3.9374327798213926e-08,
+        1.0
+      ],
+      "candidate": [
+        8.067475931738954e-08,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.8137264987672097e-06,
+        0.9999982118606567
+      ],
+      "candidate": [
+        3.5447435493551893e-06,
+        0.9999964237213135
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "native_1080",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        5.682047277133506e-09,
+        1.0
+      ],
+      "candidate": [
+        7.900214704648079e-09,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "native_1080",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        1.7116499293479137e-05,
+        0.9999828338623047
+      ],
+      "candidate": [
+        4.218106914777309e-05,
+        0.999957799911499
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "letterbox_640",
+      "eye_index": 0,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        7.39566274887693e-09,
+        1.0
+      ],
+      "candidate": [
+        1.2255385151149767e-08,
+        1.0
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "letterbox_640",
+      "eye_index": 1,
+      "quality": "usable",
+      "label": "Open",
+      "baseline": [
+        6.167292212921893e-06,
+        0.9999938011169434
+      ],
+      "candidate": [
+        2.0212735762470402e-05,
+        0.9999797344207764
+      ]
+    }
+  ],
+  "selection_split": "val",
+  "selection_domain": "retained_static_only",
+  "test_used_for_selection": false,
+  "subject_independence": false,
+  "event_accuracy": null,
+  "camera_live_acceptance": false
+}

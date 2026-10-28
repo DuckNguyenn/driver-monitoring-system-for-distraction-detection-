@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.md"
+SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md"
 QA = ROOT / "reports/reference_style/system_design_scope"
 
 

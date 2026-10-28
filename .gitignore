@@ -2,8 +2,12 @@
 .venv-rknn/
 .venv*/
 .cache/
+.tmp*/
 .codex/
 .agents/
+# Prompt filenames stay local, regardless of letter case.
+*[Pp][Rr][Oo][Mm][Pp][Tt]*
+.playwright-mcp/
 __pycache__/
 *.py[cod]
 logs/
@@ -19,10 +23,33 @@ dist/
 ~$*
 .vscode/
 .idea/
+node_modules/
+frontend/mobile/.expo/
+frontend/mobile/dist/
+playwright-report/
+test-results/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.dashboard-token
+!frontend/web/dist/
 
 # Training datasets and personal camera evidence stay on this machine.
 kaggle_output/
 data_collection/videos/
+data_collection/eye_glasses/*
+!data_collection/eye_glasses/README.md
+!data_collection/eye_glasses/RGB_WORKFLOW.md
+data_collection/eye_medium/*
+!data_collection/eye_medium/README.md
+data_collection/multiview_20261013/
+data_collection/yawn_distance/*
+!data_collection/yawn_distance/README.md
+models/yawn_distance_candidate/
+models/yawn_near_medium_candidate/
+models/yawn_kaggle_near_medium/
+kaggle_upload/*
+!kaggle_upload/README.md
 *.avi
 *.mp4
 *.mov
@@ -32,14 +59,22 @@ data_collection/videos/
 tests/fixtures/*
 !tests/fixtures/README.md
 BAO_CAO_DA2_HE_THONG_GIAM_SAT_TAI_XE.docx
+# These local review documents include personal camera images.
+BaocaoDA/Chuong2_test.docx
+BaocaoDA/Chuong3_test.docx
+BaocaoDA/Chuong3_test.md
 
 # Publish the current reports and selected aggregate evidence, not session logs.
 reports/*
-!reports/*.md
+!reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md
+!reports/BLUR_REFINEMENT.md
 !reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.docx
 !reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.pdf
-!reports/BAO_CAO_KIEN_TRUC_MODEL.docx
-!reports/BAO_CAO_KIEN_TRUC_MODEL.pdf
+!reports/BAO_CAO_GIAM_SAT_BUON_NGU_CHINH_SUA.docx
+!reports/BAO_CAO_GIAM_SAT_BUON_NGU_CHINH_SUA.pdf
+!reports/BAO_CAO_GIAM_SAT_BUON_NGU_CHINH_SUA.md
+!reports/THU_VIEN_HINH_THAM_KHAO.html
+!reports/NGUON_HINH_THAM_KHAO.md
 !reports/model_architecture_inventory.json
 !reports/eye_onnx_parity.json
 !reports/yawn_onnx_parity.json
@@ -50,6 +85,10 @@ reports/*
 !reports/software_verification.json
 !reports/project_cleanup_checks.json
 !reports/github_repository_checks.json
+!reports/dashboard_verification/
+reports/dashboard_verification/*
+!reports/dashboard_verification/latest.json
+!reports/dashboard_verification/web-browser.json
 !reports/eye_classifier_verification.json
 !reports/eye_motion_verification.json
 !reports/camera_event_verification.json
@@ -62,11 +101,37 @@ reports/yawn_camera_check/*
 !reports/yawn_camera_check/baseline.regression.json
 !reports/yawn_camera_check/yawn_onnx_parity.json
 
+# Aggregate blur measurements may be shared; source faces and replay logs stay local.
+!reports/blur_refinement/
+reports/blur_refinement/*
+!reports/blur_refinement/replay_comparison.json
+!reports/blur_refinement/ablation.png
+!reports/blur_refinement/pixel_regressions.json
+!reports/blur_refinement/software_verification.json
+
+# USB diagnostic aggregates contain no camera frames or session logs.
+!reports/usb_yawn_diagnosis/
+reports/usb_yawn_diagnosis/*
+!reports/usb_yawn_diagnosis/diagnosis.json
+!reports/usb_yawn_diagnosis/original_distance_check.json
+!reports/usb_yawn_diagnosis/original_raw_distance_check.json
+!reports/usb_yawn_diagnosis/original_raw_distance_check.png
+!reports/usb_yawn_diagnosis/usb_refinement.png
+!reports/usb_yawn_diagnosis/usb_low_angle.png
+!reports/usb_yawn_diagnosis/usb_lossless_check.png
+
 # Architecture drawings are included; screenshots with faces and render QA are local.
 report_assets/*
 !report_assets/architecture.png
 !report_assets/rknn.png
 !report_assets/project_report/
+!report_assets/humanized/
+!report_assets/web_references_20261024/
 !report_assets/model_architecture/
 report_assets/model_architecture/page_*.png
 report_assets/model_architecture/contact_sheet.png
+
+# Android native output is regenerated from Expo config.
+frontend/mobile/android/
+*.jks
+*.keystore

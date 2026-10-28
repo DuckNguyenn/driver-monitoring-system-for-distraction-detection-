@@ -1,6 +1,8 @@
 # Triển khai trên Radxa ROCK 4D
 
-**Trạng thái 07/10/2026:** bo chưa được setup. Đã có runtime, model ONNX và hai `.rknn` nền RK3576 được Toolkit2 2.3.2 tạo trong Ubuntu WSL, chưa lượng tử hóa. Trọng số mắt/ngáp hiệu chỉnh đang dùng trên PC chưa xuất RKNN. Chưa chạy NPU/camera/ESP32 trên bo. Các ZIP cũ được dọn để tránh chuyển nhầm phiên bản; tạo lại gói bằng các lệnh ở dưới sau khi chọn đúng manifest/model. Công cụ đóng gói hiện chọn manifest nền `models/manifest.json`.
+> Tiếp tục theo feature: [bản đồ context](CONTEXT-MAP.md), [checkpoint mới nhất](CHECKPOINT.md), [docs](docs/README.md).
+
+**Trạng thái 14/10/2026:** chưa có bằng chứng chạy trên bo. Model mắt/ngáp hiện dùng trong `models/yawn_kaggle_near_medium/runtime.yaml` có ONNX; gói `dist/DA2-radxa-onnx.zip` giữ đúng model, crop và ngưỡng thời gian của profile này, đã kiểm tra relocation/checksum/inference/API trên PC. Hai `.rknn` nền RK3576 cũ được Toolkit2 2.3.2 tạo trong Ubuntu WSL thuộc checkpoint nền; chưa phải RKNN của profile hiện dùng. Phải chuyển đúng manifest trước khi tạo gói NPU. Nhánh tự nhận kính vẫn thử nghiệm và chưa được công cụ này đóng gói.
 
 ROCK 4D dùng RK3576/RK3576J theo [thông tin phần cứng Radxa](https://docs.radxa.com/en/rock4/rock4d/hardware-use/hardware-info). Converter dùng `target_platform="rk3576"`. SDK tham chiếu là [Rockchip v2.3.2](https://github.com/airockchip/rknn-toolkit2/tree/v2.3.2).
 
@@ -39,15 +41,24 @@ sudo usermod -aG video,dialout "$USER"
 Tạo ZIP trên PC:
 
 ```powershell
-& '.\.venv\Scripts\python.exe' tools/build_radxa_bundle.py --backend onnx
+& '.\.venv\Scripts\python.exe' tools/build_radxa_bundle.py --backend onnx --config models/yawn_kaggle_near_medium/runtime.yaml --output dist/DA2-radxa-onnx.zip
 ```
 
-Chép `dist/driver-monitor-rock4d.zip` vào bo, giải nén vào một thư mục làm việc và chạy từ gốc gói:
+Chép `dist/DA2-radxa-onnx.zip` vào bo, giải nén vào một thư mục làm việc và chạy từ gốc gói. Các YAML trong gói đã trỏ về manifest và model được đóng gói; không dùng lại đường dẫn Windows:
 
 ```bash
 bash scripts/setup_radxa.sh onnx
 .venv/bin/python -m driver_monitor run --source /dev/video0 --backend onnx --headless --duration 20 --log-dir reports/camera_cpu
 ```
+
+Để xem trên web/iPhone, cài dependency API rồi chạy `serve` thay cho `run` (không chạy cả hai cùng sở hữu camera):
+
+```bash
+.venv/bin/python -m pip install -r requirements-dashboard.txt
+.venv/bin/python -m driver_monitor serve --source /dev/video0 --backend onnx --host 0.0.0.0 --port 8765 --preview-fps 5
+```
+
+Dùng địa chỉ IP LAN của Radxa và mã kết nối được lệnh `serve` in ra. Đo FPS/độ trễ trên bo; ONNX CPU chưa được chứng minh đạt ≥15FPS trên ROCK4D.
 
 Script tạo venv cục bộ, cài các phiên bản đã ghim, tạo `reports/radxa_preflight.json`, kiểm tra checksum và chạy suy luận thử cả hai classifier. Nó không cài driver NPU hoặc cấu hình camera CSI. `rock4d_matches` và suy luận smoke chưa chứng minh đạt FPS/độ chính xác.
 
@@ -67,7 +78,7 @@ Trong WSL2/Linux x86_64, chép/checkout thư mục dự án, rồi:
 python3 -m venv .venv-rknn
 .venv-rknn/bin/python -m pip install -r radxa_rock4d/rknn_conversion/requirements-host.txt
 .venv-rknn/bin/python -m pip check
-.venv-rknn/bin/python -m driver_monitor convert --manifest models/manifest.json
+.venv-rknn/bin/python -m driver_monitor convert --manifest models/yawn_kaggle_near_medium/manifest.json
 ```
 
 Nếu pip không có wheel phù hợp, lấy wheel đúng Python/kiến trúc từ [gói Toolkit2 chính thức](https://github.com/airockchip/rknn-toolkit2/tree/v2.3.2/rknn-toolkit2/packages). Converter khởi đầu không lượng tử hóa, tạo `models/best_eye.rknn`, `models/best_yawn.rknn`, lưu hash, đích và SDK vào manifest sau khi cả hai thành công.
@@ -85,7 +96,7 @@ Cần ≥200 bản ghi calibration **train-only** cho mỗi classifier, được
 Tạo gói NPU trong thư mục dự án có `.rknn` mới:
 
 ```bash
-.venv-rknn/bin/python tools/build_radxa_bundle.py --backend rknn --output dist/driver-monitor-rock4d-rknn.zip
+.venv-rknn/bin/python tools/build_radxa_bundle.py --backend rknn --config models/yawn_kaggle_near_medium/runtime.yaml --output dist/DA2-radxa-rknn.zip
 ```
 
 Công cụ sẽ từ chối nếu thiếu bất kỳ artifact RKNN nào. Gói chứa runtime dùng chung, YuNet, hai model đã chọn, YAML, manifest, firmware và hướng dẫn; không mang venv Windows/dataset/video cá nhân sang bo.
@@ -144,6 +155,8 @@ journalctl -u driver-monitor@radxa.service -n 100 --no-pager
 `radxa` là ví dụ, thay bằng user hiện có. Venv/thư mục model cần đọc được bởi user đó. Service chỉ cho ghi `logs/`, restart khi lỗi và dừng trong 5 s; gửi `SIGTERM` làm runtime tắt còi rồi đóng tài nguyên. Camera khác chỉ số 0 cần thêm `--source` vào `ExecStart` trước khi cài service. Mẫu này chỉ dùng sau khi RKNN inference, camera và serial đã chạy tay thành công.
 
 ## 6. Nghiệm thu thực tế
+
+Để dùng dashboard web trong cùng Wi-Fi sau khi chạy model/camera thành công, xem [DASHBOARD.md](DASHBOARD.md). Gói mới kèm `frontend/web/dist` và dependency API đã ghim; Radxa không cần Node.js để phục vụ web. Dịch vụ `driver-monitor-dashboard@.service` chạy lệnh `serve`, thay cho dịch vụ `run` nếu chọn giao diện web. Chỉ bật một dịch vụ sở hữu camera và ESP32. Model PC hiện tại có thể đóng gói riêng bằng `--manifest models/yawn_camera_refined/manifest.json --backend onnx`; gói RKNN vẫn cần manifest có trọng số NPU đúng phiên bản.
 
 | Việc cần đo | Cách thu bằng chứng |
 |---|---|

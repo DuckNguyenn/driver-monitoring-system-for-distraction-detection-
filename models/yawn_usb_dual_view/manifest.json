@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "target_platform": "rk3576",
+  "detector": {
+    "file": "../face_detection_yunet_2023mar.onnx",
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+    "commit": "47534e27c9851bb1128ccc0102f1145e27f23f98",
+    "license": "MIT",
+    "input_size": 320
+  },
+  "classifiers": {
+    "eye": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "../eye_refined_v4/best_eye.pt",
+          "sha256": "122a79bd1122b1791f4d6758ed698eae599e72200fea86e246bf6be14a942ae4"
+        },
+        "onnx": {
+          "file": "../eye_refined_v4/best_eye.onnx",
+          "sha256": "165e8cf94e0283135d6f4cb1c799261c47c5b6aca4501cbc43b98a7d66e5e6ed"
+        }
+      }
+    },
+    "yawn": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "../yawn_camera_refined/best_yawn.pt",
+          "sha256": "c31bb50bb024c93ed5caa4bf6553680c140396daa47a8a8b4e402e9d15e8e359"
+        },
+        "onnx": {
+          "file": "../yawn_camera_refined/best_yawn.onnx",
+          "sha256": "b5a0cdc1b859b160787f404b9f6f36e4884d2f45cbd4d7e4f95f29ae84db500b"
+        }
+      },
+      "inference_views": [
+        "center",
+        "edge_pad_square"
+      ],
+      "view_aggregation": "max_yawn"
+    }
+  },
+  "export_versions": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "ultralytics": "8.4.163",
+    "onnx": "1.17.0"
+  },
+  "deployment_validation": "Experimental two-view inference; raw USB video and Radxa acceptance pending",
+  "refinement": {
+    "eye": {
+      "method": "freeze YOLO backbone; fine-tune Classify conv/BN affine/linear; fixed BN running statistics",
+      "baseline_sha256": "3c124c05d9d01849c70823eeab8f25c48e740aa836be319ef881588e188d308f",
+      "labels_sha256": "4e6755947a0c38262e2ac9d965c233193e21302d696f4f54252a808421c82cb2",
+      "spatial_features_sha256": "c2124f8ff38093bd2da19f260e0c3998a4381b3f5ca89fd4b543470e87a8b478",
+      "known_failure_split": "train",
+      "selection": "validation metrics with a known-bug regression guard; no test selection"
+    },
+    "yawn": {
+      "method": "freeze backbone/conv/BN; refine final linear using retained static data and camera development crops",
+      "baseline_sha256": "e6f2b598fd1ba96c3ecf5abef53da9fa968734064cae7264466ec50637c2a1be",
+      "labels_sha256": "be6b07e82a55cf6a82ee847e6dd807f2b09727b93e70aff5483aa8d94e4f389e",
+      "video_sha256": "8a904d2c6234c1792804410b77374185eb5884128c53e5667e3bdbe8f5a92e45",
+      "frozen_extractor_sha256": "2a00385580a34219528cf32ec2856ff9acfcf2fb2132f777b71c86220212b1c8",
+      "selection": "static + first-bout camera validation; second bout and static test excluded from selection",
+      "study_status": "Development regression from one person, one clip; correlated time segments are not an independent subject-held-out test."
+    }
+  },
+  "eye_roi": {
+    "detector_size": 320,
+    "detector_confidence": 0.8,
+    "eye_width_ratio": 0.8,
+    "eye_height_ratio": 0.6
+  },
+  "inference_variant": {
+    "type": "two views of the same face ROI with existing weights",
+    "source_manifest_sha256": "d2349de3521811f8627a7a54a526d3dae0c7a110aa3c0e6ae8770ca435134520",
+    "weights_retrained": false,
+    "score": "Maximum of per-view yawn scores; not a calibrated posterior",
+    "status": "Experimental USB-camera profile. Screen-derived diagnostics are not raw camera acceptance. Validate smiles and normal activity using clean USB video."
+  }
+}

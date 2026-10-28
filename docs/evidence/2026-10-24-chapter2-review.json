@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-24",
+  "output": "BaocaoDA\\CHUONG_2_CO_SO_LY_THUYET_NGAN_GON.docx",
+  "sha256": "29b996bce6e6a715126b2c1033e03f49f814b600dec3f7c2c60803291afc391a",
+  "pages": 12,
+  "major_sections": [
+    "2.1 Cơ sở xử lý ảnh số",
+    "2.2 Phát hiện khuôn mặt và xác định điểm mốc",
+    "2.3 Mạng nơ-ron tích chập và phân loại ảnh",
+    "2.4 Xác định trạng thái tài xế theo thời gian",
+    "2.5 Thiết bị phần cứng",
+    "2.6 Công cụ phần mềm và triển khai mô hình",
+    "2.7 Các chỉ số đánh giá"
+  ],
+  "subsection_count": 26,
+  "figures": 8,
+  "native_equations": 10,
+  "references": 16,
+  "body_word_count": 3414,
+  "preserved_blank_heading": {
+    "old": "2.6.2. Thông số kỹ thuật camera rời",
+    "new": "2.5.2 Thông số kỹ thuật camera rời"
+  },
+  "agent_reviews": {
+    "outline": ".cache/chapter2-review/outline-editor.md",
+    "technical": ".cache/chapter2-review/technical-audit.md",
+    "primary_sources": ".cache/chapter2-review/sources-reviewed.json"
+  },
+  "outline": "BaocaoDA/DE_MUC_CHUONG_2_DA_THONG_NHAT.md",
+  "image_assets": "report_assets/chapter2_20261024/",
+  "qa": {
+    "renderer": "Microsoft Word native ExportAsFixedFormat plus documents/render_docx.py rasterization with bundled Poppler",
+    "all_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "page_png_dpi": 110,
+    "outside_page_spans": [],
+    "figure_caption_pages": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "all_native_equations_visually_reviewed": true,
+    "title_border_removed": true,
+    "no_mobile_or_placeholders": true,
+    "source_citations_match_reference_list": true
+  },
+  "full_report_edited": false,
+  "source_code_models_or_thresholds_edited": false,
+  "status": "standalone Chapter 2 ready for user review; not merged into full report"
+}

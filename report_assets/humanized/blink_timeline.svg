@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="288pt" viewBox="0 0 792 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-23T22:37:28.335117</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 288 
+L 792 288 
+L 792 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 147.5 116.3 
+L 360.5 116.3 
+L 360.5 97.833333 
+L 147.5 97.833333 
+z
+" clip-path="url(#p2236f7f6a5)" style="fill: #3189aa"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 183 171.7 
+L 388.9 171.7 
+L 388.9 153.233333 
+L 183 153.233333 
+z
+" clip-path="url(#p2236f7f6a5)" style="fill: #3189aa"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 183 231.716667 
+L 360.5 231.716667 
+L 360.5 208.633333 
+L 183 208.633333 
+z
+" clip-path="url(#p2236f7f6a5)" style="fill: #419c79"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 133.3 107.066667 
+L 701.3 107.066667 
+" clip-path="url(#p2236f7f6a5)" style="fill: none; stroke: #9aabb6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 133.3 162.466667 
+L 701.3 162.466667 
+" clip-path="url(#p2236f7f6a5)" style="fill: none; stroke: #9aabb6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 700 17.25px 'DejaVu Sans'; text-anchor: start" x="33.9" y="28.583333" transform="rotate(-0 33.9 28.583333)">Ghép hai chu kỳ mắt thành một lần chớp hai mắt</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 14.85px 'DejaVu Sans'; text-anchor: start" x="41" y="102.45" transform="rotate(-0 41 102.45)">Mắt 1</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: middle" x="254" y="86.291667" transform="rotate(-0 254 86.291667)">Khoảng nhắm</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 14.85px 'DejaVu Sans'; text-anchor: start" x="41" y="157.85" transform="rotate(-0 41 157.85)">Mắt 2</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: middle" x="285.95" y="141.691667" transform="rotate(-0 285.95 141.691667)">Khoảng nhắm</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: middle" x="271.75" y="250.183333" transform="rotate(-0 271.75 250.183333)">Phần chồng lấp ≥ 0,05 s</text>
+   </g>
+   <g id="text_7">
+    <g id="patch_5">
+     <path d="M 424.8175 149.154169 
+L 636.123719 149.154169 
+L 636.123719 72.752311 
+L 424.8175 72.752311 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font: 14.85px 'DejaVu Sans'" transform="translate(431.5 92.484249)">Mỗi chu kỳ dài 0,05–0,50 s</text>
+    <text style="font: 14.85px 'DejaVu Sans'" transform="translate(431.5 115.415897)">Mở ổn định trước và sau</text>
+    <text style="font: 14.85px 'DejaVu Sans'" transform="translate(431.5 139.383333)">Ghép mỗi cặp một lần</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: start" x="41" y="275.575" transform="rotate(-0 41 275.575)">Sơ đồ thời gian nguyên lý. Nháy riêng một mắt chỉ tăng bộ đếm chu kỳ của mắt đó.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2236f7f6a5">
+   <rect x="5.5" y="5.5" width="781" height="277"/>
+  </clipPath>
+ </defs>
+</svg>

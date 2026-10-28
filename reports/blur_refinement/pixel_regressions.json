@@ -1,0 +1,10 @@
+{
+  "candidate_config": "configs\\camera_blur_candidate.yaml",
+  "manifest_sha256": "309ef8599933f08cca0335f1ee096fe463477a5ae7d04c44e9f877a4d97a256d",
+  "tests_run": 21,
+  "skipped": [],
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "independent_camera_acceptance": false
+}

@@ -17,7 +17,8 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.md"
+PROJECT_TITLE = 'HỆ THỐNG GIÁM SÁT VÀ PHÁT HIỆN SỰ MẤT TẬP TRUNG CỦA TÀI XẾ'
+SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md"
 TARGET = SOURCE.with_suffix(".docx")
 QA = ROOT / "reports/reference_style"
 ASSETS = ROOT / "report_assets/project_report"
@@ -205,7 +206,7 @@ def cover(doc):
     p.paragraph_format.page_break_before=False
     p.paragraph_format.space_before=Pt(45)
     p.paragraph_format.space_after=Pt(24)
-    p=doc.add_paragraph("ỨNG DỤNG XỬ LÝ ẢNH VÀ TRÍ TUỆ NHÂN TẠO\nTRONG HỆ THỐNG GIÁM SÁT\nTRẠNG THÁI BUỒN NGỦ CỦA TÀI XẾ", "Title")
+    p=doc.add_paragraph(PROJECT_TITLE, "Title")
     p=doc.add_paragraph("Hướng đến triển khai trên Radxa ROCK 4D")
     p.alignment=WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent=Cm(0)
@@ -308,7 +309,7 @@ def build():
     from docx.enum.section import WD_SECTION_START
     s=d.add_section(WD_SECTION_START.NEW_PAGE)
     set_page(s,"lowerRoman",1)
-    d.core_properties.title="Hệ thống giám sát trạng thái buồn ngủ của tài xế"
+    d.core_properties.title=PROJECT_TITLE
     d.core_properties.subject="Báo cáo đồ án theo văn phong tài liệu tham khảo"
     d.core_properties.author=""
     d.core_properties.keywords="YuNet, YOLOv8n classification, Radxa ROCK 4D, ESP32"
@@ -449,9 +450,9 @@ def build():
     references={}
     for path in [
         SOURCE,ROOT/"configs/camera_pc.yaml",ROOT/"models/yawn_camera_refined/manifest.json",
-        ROOT/"models/eye_refined_v4/manifest.json",ROOT/"reports/YAWN_CAMERA_FIX.md",
+        ROOT/"models/eye_refined_v4/manifest.json",ROOT/"models/yawn_camera_refined/evaluation.json",
         ROOT/"reports/yawn_camera_check/candidate.regression.json",
-        ROOT/"reports/eye_classifier_verification.json",ROOT/"reports/SMILE_YAWN_FIX.md",
+        ROOT/"reports/eye_classifier_verification.json",ROOT/"models/smile_refined/evaluation.json",
         Path(r"C:\Users\P1 Gen 5\Downloads\ung-dung-xu-ly-anh-iot-trong-giam-sat-tai-xe-tren-o-to.pdf"),
         ROOT/"BAO_CAO_DA2_HE_THONG_GIAM_SAT_TAI_XE.docx",
     ]:

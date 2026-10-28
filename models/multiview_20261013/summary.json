@@ -1,0 +1,1304 @@
+{
+  "status": "experimental_multiview",
+  "GPU": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "numpy": "2.2.6",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "test_clip": "WIN_20261013_17_07_01_Pro",
+  "subject_independence": false,
+  "selection_domain": "retained_static_validation_only",
+  "metrics": {
+    "eye": {
+      "epoch": 1,
+      "heldout_camera": {
+        "baseline": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              32,
+              0
+            ],
+            [
+              8,
+              134
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              32,
+              0,
+              0
+            ],
+            [
+              8,
+              134,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 32
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 142
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 174,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "brier_score": 0.031806062906980515,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                27,
+                0
+              ],
+              [
+                5,
+                114
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                27,
+                0,
+                5
+              ],
+              [
+                5,
+                114,
+                23
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.84375,
+                "recall": 0.84375,
+                "f1": 0.84375,
+                "support": 32
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.8028169014084507,
+                "f1": 0.890625,
+                "support": 142
+              }
+            },
+            "macro_f1": 0.8671875,
+            "accuracy": 0.8103448275862069,
+            "samples": 174,
+            "unknown_samples": 28,
+            "coverage": 0.8390804597701149
+          },
+          "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+          "groups": {
+            "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+              "classes": [
+                "Closed",
+                "Open"
+              ],
+              "confusion_matrix": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  4,
+                  67
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  16,
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  67,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "Closed",
+                "Open",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "Closed": {
+                  "precision": 0.8,
+                  "recall": 1.0,
+                  "f1": 0.8888888888888888,
+                  "support": 16
+                },
+                "Open": {
+                  "precision": 1.0,
+                  "recall": 0.9436619718309859,
+                  "f1": 0.9710144927536232,
+                  "support": 71
+                }
+              },
+              "macro_f1": 0.929951690821256,
+              "accuracy": 0.9540229885057471,
+              "samples": 87,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "Closed",
+                  "Open"
+                ],
+                "confusion_matrix": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    3,
+                    67
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    16,
+                    0,
+                    0
+                  ],
+                  [
+                    3,
+                    67,
+                    1
+                  ]
+                ],
+                "prediction_columns": [
+                  "Closed",
+                  "Open",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "Closed": {
+                    "precision": 0.8421052631578947,
+                    "recall": 1.0,
+                    "f1": 0.9142857142857143,
+                    "support": 16
+                  },
+                  "Open": {
+                    "precision": 1.0,
+                    "recall": 0.9436619718309859,
+                    "f1": 0.9710144927536232,
+                    "support": 71
+                  }
+                },
+                "macro_f1": 0.9426501035196687,
+                "accuracy": 0.9540229885057471,
+                "samples": 87,
+                "unknown_samples": 1,
+                "coverage": 0.9885057471264368
+              }
+            },
+            "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+              "classes": [
+                "Closed",
+                "Open"
+              ],
+              "confusion_matrix": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  4,
+                  67
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  16,
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  67,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "Closed",
+                "Open",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "Closed": {
+                  "precision": 0.8,
+                  "recall": 1.0,
+                  "f1": 0.8888888888888888,
+                  "support": 16
+                },
+                "Open": {
+                  "precision": 1.0,
+                  "recall": 0.9436619718309859,
+                  "f1": 0.9710144927536232,
+                  "support": 71
+                }
+              },
+              "macro_f1": 0.929951690821256,
+              "accuracy": 0.9540229885057471,
+              "samples": 87,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "Closed",
+                  "Open"
+                ],
+                "confusion_matrix": [
+                  [
+                    11,
+                    0
+                  ],
+                  [
+                    2,
+                    47
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    11,
+                    0,
+                    5
+                  ],
+                  [
+                    2,
+                    47,
+                    22
+                  ]
+                ],
+                "prediction_columns": [
+                  "Closed",
+                  "Open",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "Closed": {
+                    "precision": 0.8461538461538461,
+                    "recall": 0.6875,
+                    "f1": 0.7586206896551724,
+                    "support": 16
+                  },
+                  "Open": {
+                    "precision": 1.0,
+                    "recall": 0.6619718309859155,
+                    "f1": 0.7966101694915254,
+                    "support": 71
+                  }
+                },
+                "macro_f1": 0.7776154295733488,
+                "accuracy": 0.6666666666666666,
+                "samples": 87,
+                "unknown_samples": 27,
+                "coverage": 0.6896551724137931
+              }
+            }
+          }
+        },
+        "candidate": {
+          "classes": [
+            "Closed",
+            "Open"
+          ],
+          "confusion_matrix": [
+            [
+              32,
+              0
+            ],
+            [
+              8,
+              134
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              32,
+              0,
+              0
+            ],
+            [
+              8,
+              134,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "Closed",
+            "Open",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "Closed": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 32
+            },
+            "Open": {
+              "precision": 1.0,
+              "recall": 0.9436619718309859,
+              "f1": 0.9710144927536232,
+              "support": 142
+            }
+          },
+          "macro_f1": 0.929951690821256,
+          "accuracy": 0.9540229885057471,
+          "samples": 174,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "brier_score": 0.04444567859172821,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "Closed",
+              "Open"
+            ],
+            "confusion_matrix": [
+              [
+                27,
+                0
+              ],
+              [
+                7,
+                111
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                27,
+                0,
+                5
+              ],
+              [
+                7,
+                111,
+                24
+              ]
+            ],
+            "prediction_columns": [
+              "Closed",
+              "Open",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "Closed": {
+                "precision": 0.7941176470588235,
+                "recall": 0.84375,
+                "f1": 0.8181818181818182,
+                "support": 32
+              },
+              "Open": {
+                "precision": 1.0,
+                "recall": 0.7816901408450704,
+                "f1": 0.8774703557312253,
+                "support": 142
+              }
+            },
+            "macro_f1": 0.8478260869565217,
+            "accuracy": 0.7931034482758621,
+            "samples": 174,
+            "unknown_samples": 29,
+            "coverage": 0.8333333333333334
+          },
+          "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+          "groups": {
+            "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+              "classes": [
+                "Closed",
+                "Open"
+              ],
+              "confusion_matrix": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  4,
+                  67
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  16,
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  67,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "Closed",
+                "Open",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "Closed": {
+                  "precision": 0.8,
+                  "recall": 1.0,
+                  "f1": 0.8888888888888888,
+                  "support": 16
+                },
+                "Open": {
+                  "precision": 1.0,
+                  "recall": 0.9436619718309859,
+                  "f1": 0.9710144927536232,
+                  "support": 71
+                }
+              },
+              "macro_f1": 0.929951690821256,
+              "accuracy": 0.9540229885057471,
+              "samples": 87,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "Closed",
+                  "Open"
+                ],
+                "confusion_matrix": [
+                  [
+                    16,
+                    0
+                  ],
+                  [
+                    4,
+                    66
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    16,
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    66,
+                    1
+                  ]
+                ],
+                "prediction_columns": [
+                  "Closed",
+                  "Open",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "Closed": {
+                    "precision": 0.8,
+                    "recall": 1.0,
+                    "f1": 0.8888888888888888,
+                    "support": 16
+                  },
+                  "Open": {
+                    "precision": 1.0,
+                    "recall": 0.9295774647887324,
+                    "f1": 0.9635036496350365,
+                    "support": 71
+                  }
+                },
+                "macro_f1": 0.9261962692619627,
+                "accuracy": 0.9425287356321839,
+                "samples": 87,
+                "unknown_samples": 1,
+                "coverage": 0.9885057471264368
+              }
+            },
+            "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+              "classes": [
+                "Closed",
+                "Open"
+              ],
+              "confusion_matrix": [
+                [
+                  16,
+                  0
+                ],
+                [
+                  4,
+                  67
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  16,
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  67,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "Closed",
+                "Open",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "Closed": {
+                  "precision": 0.8,
+                  "recall": 1.0,
+                  "f1": 0.8888888888888888,
+                  "support": 16
+                },
+                "Open": {
+                  "precision": 1.0,
+                  "recall": 0.9436619718309859,
+                  "f1": 0.9710144927536232,
+                  "support": 71
+                }
+              },
+              "macro_f1": 0.929951690821256,
+              "accuracy": 0.9540229885057471,
+              "samples": 87,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "Closed",
+                  "Open"
+                ],
+                "confusion_matrix": [
+                  [
+                    11,
+                    0
+                  ],
+                  [
+                    3,
+                    45
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    11,
+                    0,
+                    5
+                  ],
+                  [
+                    3,
+                    45,
+                    23
+                  ]
+                ],
+                "prediction_columns": [
+                  "Closed",
+                  "Open",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "Closed": {
+                    "precision": 0.7857142857142857,
+                    "recall": 0.6875,
+                    "f1": 0.7333333333333333,
+                    "support": 16
+                  },
+                  "Open": {
+                    "precision": 1.0,
+                    "recall": 0.6338028169014085,
+                    "f1": 0.7758620689655172,
+                    "support": 71
+                  }
+                },
+                "macro_f1": 0.7545977011494253,
+                "accuracy": 0.6436781609195402,
+                "samples": 87,
+                "unknown_samples": 28,
+                "coverage": 0.6781609195402298
+              }
+            }
+          }
+        }
+      }
+    },
+    "yawn": {
+      "epoch": 30,
+      "heldout_camera": {
+        "baseline": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              72,
+              0
+            ],
+            [
+              0,
+              16
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 72
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 16
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 88,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "brier_score": 1.4368456504598726e-05,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                61,
+                0
+              ],
+              [
+                0,
+                13
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                61,
+                0,
+                11
+              ],
+              [
+                0,
+                13,
+                3
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.8472222222222222,
+                "f1": 0.9172932330827067,
+                "support": 72
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.8125,
+                "f1": 0.896551724137931,
+                "support": 16
+              }
+            },
+            "macro_f1": 0.9069224786103189,
+            "accuracy": 0.8409090909090909,
+            "samples": 88,
+            "unknown_samples": 14,
+            "coverage": 0.8409090909090909
+          },
+          "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+          "groups": {
+            "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+              "classes": [
+                "no_yawn",
+                "yawn"
+              ],
+              "confusion_matrix": [
+                [
+                  36,
+                  0
+                ],
+                [
+                  0,
+                  8
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  36,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  8,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "no_yawn",
+                "yawn",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "no_yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 36
+                },
+                "yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 8
+                }
+              },
+              "macro_f1": 1.0,
+              "accuracy": 1.0,
+              "samples": 44,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "no_yawn",
+                  "yawn"
+                ],
+                "confusion_matrix": [
+                  [
+                    36,
+                    0
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    36,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    8,
+                    0
+                  ]
+                ],
+                "prediction_columns": [
+                  "no_yawn",
+                  "yawn",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "no_yawn": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0,
+                    "support": 36
+                  },
+                  "yawn": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0,
+                    "support": 8
+                  }
+                },
+                "macro_f1": 1.0,
+                "accuracy": 1.0,
+                "samples": 44,
+                "unknown_samples": 0,
+                "coverage": 1.0
+              }
+            },
+            "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+              "classes": [
+                "no_yawn",
+                "yawn"
+              ],
+              "confusion_matrix": [
+                [
+                  36,
+                  0
+                ],
+                [
+                  0,
+                  8
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  36,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  8,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "no_yawn",
+                "yawn",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "no_yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 36
+                },
+                "yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 8
+                }
+              },
+              "macro_f1": 1.0,
+              "accuracy": 1.0,
+              "samples": 44,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "no_yawn",
+                  "yawn"
+                ],
+                "confusion_matrix": [
+                  [
+                    25,
+                    0
+                  ],
+                  [
+                    0,
+                    5
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    25,
+                    0,
+                    11
+                  ],
+                  [
+                    0,
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_columns": [
+                  "no_yawn",
+                  "yawn",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "no_yawn": {
+                    "precision": 1.0,
+                    "recall": 0.6944444444444444,
+                    "f1": 0.819672131147541,
+                    "support": 36
+                  },
+                  "yawn": {
+                    "precision": 1.0,
+                    "recall": 0.625,
+                    "f1": 0.7692307692307693,
+                    "support": 8
+                  }
+                },
+                "macro_f1": 0.7944514501891551,
+                "accuracy": 0.6818181818181818,
+                "samples": 44,
+                "unknown_samples": 14,
+                "coverage": 0.6818181818181819
+              }
+            }
+          }
+        },
+        "candidate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              72,
+              0
+            ],
+            [
+              0,
+              16
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 72
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 16
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 88,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "brier_score": 4.6418091415034723e-07,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                61,
+                0
+              ],
+              [
+                0,
+                13
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                61,
+                0,
+                11
+              ],
+              [
+                0,
+                13,
+                3
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.8472222222222222,
+                "f1": 0.9172932330827067,
+                "support": 72
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.8125,
+                "f1": 0.896551724137931,
+                "support": 16
+              }
+            },
+            "macro_f1": 0.9069224786103189,
+            "accuracy": 0.8409090909090909,
+            "samples": 88,
+            "unknown_samples": 14,
+            "coverage": 0.8409090909090909
+          },
+          "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+          "groups": {
+            "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+              "classes": [
+                "no_yawn",
+                "yawn"
+              ],
+              "confusion_matrix": [
+                [
+                  36,
+                  0
+                ],
+                [
+                  0,
+                  8
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  36,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  8,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "no_yawn",
+                "yawn",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "no_yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 36
+                },
+                "yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 8
+                }
+              },
+              "macro_f1": 1.0,
+              "accuracy": 1.0,
+              "samples": 44,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "no_yawn",
+                  "yawn"
+                ],
+                "confusion_matrix": [
+                  [
+                    36,
+                    0
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    36,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    8,
+                    0
+                  ]
+                ],
+                "prediction_columns": [
+                  "no_yawn",
+                  "yawn",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "no_yawn": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0,
+                    "support": 36
+                  },
+                  "yawn": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1": 1.0,
+                    "support": 8
+                  }
+                },
+                "macro_f1": 1.0,
+                "accuracy": 1.0,
+                "samples": 44,
+                "unknown_samples": 0,
+                "coverage": 1.0
+              }
+            },
+            "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+              "classes": [
+                "no_yawn",
+                "yawn"
+              ],
+              "confusion_matrix": [
+                [
+                  36,
+                  0
+                ],
+                [
+                  0,
+                  8
+                ]
+              ],
+              "confusion_matrix_with_unknown": [
+                [
+                  36,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  8,
+                  0
+                ]
+              ],
+              "prediction_columns": [
+                "no_yawn",
+                "yawn",
+                "UNKNOWN"
+              ],
+              "per_class": {
+                "no_yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 36
+                },
+                "yawn": {
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "support": 8
+                }
+              },
+              "macro_f1": 1.0,
+              "accuracy": 1.0,
+              "samples": 44,
+              "unknown_samples": 0,
+              "coverage": 1.0,
+              "confidence_and_quality_gate": {
+                "classes": [
+                  "no_yawn",
+                  "yawn"
+                ],
+                "confusion_matrix": [
+                  [
+                    25,
+                    0
+                  ],
+                  [
+                    0,
+                    5
+                  ]
+                ],
+                "confusion_matrix_with_unknown": [
+                  [
+                    25,
+                    0,
+                    11
+                  ],
+                  [
+                    0,
+                    5,
+                    3
+                  ]
+                ],
+                "prediction_columns": [
+                  "no_yawn",
+                  "yawn",
+                  "UNKNOWN"
+                ],
+                "per_class": {
+                  "no_yawn": {
+                    "precision": 1.0,
+                    "recall": 0.6944444444444444,
+                    "f1": 0.819672131147541,
+                    "support": 36
+                  },
+                  "yawn": {
+                    "precision": 1.0,
+                    "recall": 0.625,
+                    "f1": 0.7692307692307693,
+                    "support": 8
+                  }
+                },
+                "macro_f1": 0.7944514501891551,
+                "accuracy": 0.6818181818181818,
+                "samples": 44,
+                "unknown_samples": 14,
+                "coverage": 0.6818181818181819
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "parity": {
+    "eye": {
+      "samples": 32,
+      "max_probability_delta": 1.2814998626708984e-06,
+      "passed": true,
+      "onnx_ir": 7,
+      "onnx_version": "1.19.1",
+      "onnxruntime_version": "1.23.2"
+    },
+    "yawn": {
+      "samples": 32,
+      "max_probability_delta": 2.7474015951156616e-08,
+      "passed": true,
+      "onnx_ir": 7,
+      "onnx_version": "1.19.1",
+      "onnxruntime_version": "1.23.2"
+    }
+  }
+}

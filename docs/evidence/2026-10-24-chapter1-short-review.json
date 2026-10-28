@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "output": "BaocaoDA\\CHUONG_1_TONG_QUAN_NGAN_GON.docx",
+  "sha256": "7b27e4f5176eea1d04a6ac90ab102cb0265ad1cd5dedd3059cba2169d88e2933",
+  "pages": 3,
+  "sections": [
+    "1.1\tLý do chọn đề tài",
+    "1.2\tMục tiêu đề tài",
+    "1.3\tĐối tượng nghiên cứu",
+    "1.4\tGiới hạn đề tài",
+    "1.5\tPhương pháp nghiên cứu",
+    "1.6\tBố cục đồ án",
+    "1.7\tNội dung đồ án"
+  ],
+  "words_before": 2259,
+  "words_after": 924,
+  "true_footnotes": 3,
+  "visual_qa": "All 3 pages reviewed after Word ExportAsFixedFormat and canonical documents rasterizer; no clipping or title border",
+  "retained_previous_document": "BaocaoDA/CHUONG_1_TONG_QUAN_REVIEW.docx (open in user Word; kept unchanged)",
+  "full_report_edited": false
+}

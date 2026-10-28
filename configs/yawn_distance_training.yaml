@@ -1,0 +1,33 @@
+# All paths are relative to THIS file. Candidates never replace active models.
+runtime_config: camera_usb_robust.yaml
+annotations: ../data_collection/yawn_distance/annotations.csv
+videos: ../data_collection/yawn_distance/videos
+dataset: ../.cache/yawn_distance/dataset
+output: ../models/yawn_distance_candidate
+# Existing train/val assignments are retained; static test is never selected.
+retained_static_records: ../.cache/yawn_refinement/records.json
+static_train_per_group: 80
+static_val_per_group: 40
+# clip = same-person development; subject = required for independent study.
+split_mode: clip
+sample_seconds: 0.20
+training_min_face_sharpness: 12.0
+seed: 42
+threads: 2
+batch_size: 16
+epochs: 40
+learning_rate: 0.0001
+weight_decay: 0.0001
+camera_weight: 0.80
+max_epoch_samples: 2000
+patience: 8
+# Fine-tune Classify conv + BN affine + Linear; freeze backbone and BN buffers.
+trainable: classifier
+augmentation:
+  factors: [0.75, 0.50, 0.35]
+  downsample_probability: 0.50
+  gaussian_probability: 0.25
+  gaussian_sigma: [0.35, 0.70]
+  motion_probability: 0.15
+  motion_length: 3
+  min_short_side: 24

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "context": {
+    "startup_files": [
+      "AGENTS.md",
+      "CHECKPOINT.md",
+      "CONTEXT-MAP.md"
+    ],
+    "startup_max_bytes": 24000,
+    "pack_max_bytes": 96000,
+    "pack_hard_max_bytes": 160000,
+    "max_files": 12
+  },
+  "rules": [
+    {
+      "patterns": [
+        "AGENTS.md"
+      ],
+      "max_lines": 100,
+      "max_bytes": 12000
+    },
+    {
+      "patterns": [
+        "CONTEXT-MAP.md",
+        "CONTEXT.md"
+      ],
+      "max_lines": 120,
+      "max_bytes": 16000
+    },
+    {
+      "patterns": [
+        "CHECKPOINT.md"
+      ],
+      "max_lines": 180,
+      "max_bytes": 18000
+    },
+    {
+      "patterns": [
+        "docs/*.md"
+      ],
+      "max_lines": 180,
+      "max_bytes": 18000
+    },
+    {
+      "patterns": [
+        "tests/*",
+        "frontend/*/tests/*",
+        "camera_classical/tests/*"
+      ],
+      "max_lines": 500,
+      "max_bytes": 30000
+    },
+    {
+      "patterns": [
+        "*.md"
+      ],
+      "max_lines": 300,
+      "max_bytes": 36000
+    },
+    {
+      "patterns": [
+        "driver_monitor/*",
+        "camera_classical/*",
+        "frontend/*",
+        "tools/*",
+        "scripts/*",
+        "esp32_buzzer/*"
+      ],
+      "max_lines": 400,
+      "max_bytes": 24000
+    }
+  ],
+  "legacy_exceptions": {
+    "tools/build_project_style_report.py": {
+      "max_lines": 478,
+      "max_bytes": 20919,
+      "reason": "Existing file at 2026-10-15 baseline; split responsibilities before exceeding this fixed ceiling."
+    },
+    "tools/expand_report_algorithm_theory.py": {
+      "max_lines": 234,
+      "max_bytes": 29319,
+      "reason": "Existing file at 2026-10-15 baseline; split responsibilities before exceeding this fixed ceiling."
+    },
+    "tools/finetune_yawn_distance.py": {
+      "max_lines": 574,
+      "max_bytes": 34352,
+      "reason": "Existing file at 2026-10-15 baseline; split responsibilities before exceeding this fixed ceiling."
+    },
+    "tools/refine_blur.py": {
+      "max_lines": 635,
+      "max_bytes": 35528,
+      "reason": "Existing file at 2026-10-15 baseline; split responsibilities before exceeding this fixed ceiling."
+    },
+    "tools/refine_yawn_camera.py": {
+      "max_lines": 436,
+      "max_bytes": 26729,
+      "reason": "Existing file at 2026-10-15 baseline; split responsibilities before exceeding this fixed ceiling."
+    }
+  }
+}

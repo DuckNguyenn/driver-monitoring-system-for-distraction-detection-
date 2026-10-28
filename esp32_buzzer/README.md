@@ -1,4 +1,6 @@
-# ESP32 WROOM — còi và watchdog
+# ESP32 WROOM — sketch tham khảo cho còi và watchdog
+
+Người dùng xác nhận ngày 28/10/2026 rằng firmware thực tế được nạp bằng **ESP-IDF**. Thư mục này hiện chỉ chứa `.ino` tham khảo; chưa xác định được project ESP-IDF của DA2 trong các thư mục đã rà. [Hướng dẫn chạy và nạp bằng ESP-IDF](../HUONG_DAN_CHAY_CHUONG_TRINH.md) ghi riêng quy trình thực tế và giới hạn xác minh.
 
 Firmware `esp32_buzzer.ino` nhận lệnh ASCII qua USB serial 115200 baud. GPIO25 điều khiển còi active ở mức HIGH; nếu bo/còi của bạn khác, sửa `BUZZER_PIN` hoặc mức active theo phần cứng thực.
 
@@ -9,7 +11,7 @@ Firmware `esp32_buzzer.ino` nhận lệnh ASCII qua USB serial 115200 baud. GPIO
 | GND ESP32 | GND module còi |
 | Nguồn module | Theo điện áp định mức của module, GND chung |
 
-Còi rời cần transistor/MOSFET hoặc module driver theo dòng tải; GPIO chỉ cấp tín hiệu điều khiển. Còi passive cần PWM và không phù hợp với sketch HIGH/LOW hiện tại. Nạp sketch bằng Arduino IDE, chọn đúng ESP32/cổng USB thực.
+Còi rời cần transistor/MOSFET hoặc module driver theo dòng tải; GPIO chỉ cấp tín hiệu điều khiển. Còi passive cần PWM và không phù hợp với sketch HIGH/LOW hiện tại. Các thông số bên dưới mô tả sketch tham khảo; firmware IDF thật cần được đối chiếu trước khi nạp.
 
 ```text
 ALERT 1 eyes_closed_too_long

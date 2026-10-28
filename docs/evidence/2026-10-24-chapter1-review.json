@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-24",
+  "scope": "Rewrite and export only Chapter 1 for user review",
+  "output": "BaocaoDA\\CHUONG_1_TONG_QUAN_REVIEW.docx",
+  "sha256": "9f5fccd10f6c49530cf1b1529d60b63e3393180f5d8a0b639ab08fb100b0f61f",
+  "pages": 6,
+  "sections": [
+    "1.1\tLý do chọn đề tài",
+    "1.2\tMục tiêu đề tài",
+    "1.3\tĐối tượng nghiên cứu",
+    "1.4\tGiới hạn đề tài",
+    "1.5\tPhương pháp nghiên cứu",
+    "1.6\tBố cục đồ án",
+    "1.7\tNội dung đồ án"
+  ],
+  "true_footnotes": 3,
+  "sources": [
+    "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries",
+    "https://www.nhtsa.gov/risky-driving/drowsy-driving",
+    "https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod2/23.html"
+  ],
+  "style_reference": "User supplied Chapter 1 screenshots and previously supplied reference report",
+  "visual_qa": {
+    "renderer": "Microsoft Word native PDF export plus documents/render_docx.py rasterize using bundled Poppler",
+    "all_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "overflow_spans": [],
+    "title_border_removed": true,
+    "all_headings_times_new_roman": true,
+    "footnotes_readable": true
+  },
+  "delivery_folder_files": 1,
+  "full_report_edited": false,
+  "user_mobile_exclusion_checked": true,
+  "status": "ready for user review; not merged into full report"
+}

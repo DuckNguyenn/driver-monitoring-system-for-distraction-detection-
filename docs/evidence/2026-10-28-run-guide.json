@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-28",
+  "guide": "HUONG_DAN_CHAY_CHUONG_TRINH.md",
+  "guide_sha256": "6b5cd6cbc883530f19b888a223df4de62eadf8e394e48a18953569db469cec9b",
+  "guide_lines": 224,
+  "guide_bytes": 15702,
+  "branch": "feature/lan-dashboard-ios",
+  "head": "a0fbdda",
+  "primary_profile": "models/yawn_kaggle_near_medium/runtime.yaml",
+  "verified_artifacts": {
+    "yunet": "models\\face_detection_yunet_2023mar.onnx",
+    "eye_onnx": "models\\eye_refined_v4\\best_eye.onnx",
+    "eye_torch": "models\\eye_refined_v4\\best_eye.pt",
+    "yawn_onnx": "models\\yawn_kaggle_near_medium\\best_yawn.onnx",
+    "yawn_torch": "models\\yawn_kaggle_near_medium\\best_yawn.pt"
+  },
+  "near_medium_backends": [
+    "torch",
+    "onnx"
+  ],
+  "portable_configs": {
+    "configs/driver_monitor.yaml": "../models/manifest.json",
+    "configs/camera_pc.yaml": "../models/manifest.json"
+  },
+  "web_build_exists": true,
+  "android_apk_exists": true,
+  "cli_examples_parsed": 10,
+  "cli_validation_method": "Real CLI parser and config loader with no-I/O execution stubs",
+  "context_docs_tests": {
+    "result": "PASS",
+    "run": 16,
+    "duration_seconds": 2.101,
+    "environment": "outside sandbox to permit test temporary directories"
+  },
+  "docs_guard": {
+    "result": "PASS",
+    "files": 210,
+    "links": 121,
+    "startup_bytes": 23979,
+    "existing_size_warnings": true
+  },
+  "esp32": {
+    "user_confirmed_framework": "ESP-IDF",
+    "native_da2_firmware_project_found": false,
+    "sketch_in_repo_is_reference": true,
+    "search_scope": [
+      "DA2 including hidden/ignored project files",
+      "user project directories and home marker search",
+      "C:/Espressif",
+      "C:/esp"
+    ],
+    "search_limitations": "Known dependency/build/cache trees excluded; not a claim that source cannot exist elsewhere or inside archives.",
+    "detected_sdk_roots": [
+      "C:/Espressif/frameworks/esp-idf-v5.5.4",
+      "C:/esp/v6.0.1"
+    ],
+    "official_commands_source": "https://github.com/espressif/esp-idf/blob/master/docs/en/get-started/start-project.rst"
+  },
+  "camera_serial_server_flash_build_or_training_started": false,
+  "report_documents_models_firmware_source_and_thresholds_modified": false,
+  "changed_documents": [
+    "HUONG_DAN_CHAY_CHUONG_TRINH.md",
+    "README.md",
+    "CHECKPOINT.md",
+    "docs/features/runtime.md",
+    "docs/features/esp32-alerts.md",
+    "esp32_buzzer/README.md"
+  ]
+}

@@ -98,7 +98,7 @@ class Vision:
         small = np.zeros((size, size, 3), np.uint8)
         small[oy:oy + rh, ox:ox + rw] = cv2.resize(frame, (rw, rh))
         _, found = self.detector.detect(small)
-        candidates = []
+        candidates, roi_faces = [], []
         if found is not None:
             for face in found:
                 row = face.astype(float).copy()
@@ -109,22 +109,34 @@ class Vision:
                 row[5:14:2] = (row[5:14:2] - oy) / scale
                 cx, cy = (row[0] + row[2] / 2) / w, (row[1] + row[3] / 2) / h
                 x1, y1, x2, y2 = c.driver_roi
-                if x1 <= cx <= x2 and y1 <= cy <= y2 and min(row[2:4]) >= c.min_face_size:
-                    candidates.append(row)
+                if x1 <= cx <= x2 and y1 <= cy <= y2:
+                    roi_faces.append(row)
+                    if min(row[2:4]) >= c.min_face_size:
+                        candidates.append(row)
+        # Size is measured in original camera pixels, not the padded detector input.
+        largest = max(roi_faces, key=lambda row: min(row[2:4])) if roi_faces else None
+        detection_metrics = {"detected_face_count": 0 if found is None else len(found),
+                             "faces_in_driver_roi": len(roi_faces),
+                             "accepted_face_count": len(candidates),
+                             "min_face_size_threshold": c.min_face_size,
+                             "face_min_side_pixels": None if largest is None else float(min(largest[2:4]))}
         if len(candidates) != 1:
             self.eye_motion.reset()
             if candidates:  # ambiguous drivers invalidate the old track
                 self.previous_box = None
-            return VisionResult("no_face" if not candidates else "ambiguous_faces")
+            quality = "ambiguous_faces" if candidates else "face_too_small" if roi_faces else "no_face"
+            confidence = float(largest[-1]) if quality == "face_too_small" else None
+            return VisionResult(quality, metrics=detection_metrics, confidence=confidence, eye_quality=quality)
         face = candidates[0]
         try:
             crops, boxes = face_crops(frame, face, c)
         except ValueError:
             self.eye_motion.reset()
-            return VisionResult("invalid_landmarks")
+            return VisionResult("invalid_landmarks", metrics=detection_metrics, confidence=float(face[-1]),
+                                eye_quality="invalid_landmarks")
         changed = self.previous_box is None or iou(self.previous_box, boxes[2]) < 0.2
         self.previous_box = boxes[2]
-        metrics = quality_metrics(crops[2])
+        metrics = {**detection_metrics, **quality_metrics(crops[2])}
         eye_metrics = [quality_metrics(crop) for crop in crops[:2]]
         metrics["eye_brightness_min"] = min(m["brightness_median"] for m in eye_metrics)
         metrics["eye_sharpness_min"] = min(m["sharpness"] for m in eye_metrics)

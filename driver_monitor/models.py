@@ -18,7 +18,7 @@ def sha256(path):
 def read_manifest(path):
     path = Path(path).resolve()
     manifest = json.loads(path.read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != 1:
+    if manifest.get("schema_version") not in (1, 2):
         raise ValueError("unsupported model manifest version")
     for name, expected in (("eye", {"closed", "open"}), ("yawn", {"no_yawn", "yawn"})):
         spec = manifest["classifiers"][name]
@@ -34,6 +34,14 @@ def read_manifest(path):
             raise ValueError("invalid normalization")
         if spec["output"] not in ("probabilities", "logits"):
             raise ValueError("unsupported classifier output")
+        views = spec.get("inference_views", ["center"])
+        if views not in (["center"], ["center", "edge_pad_square"]):
+            raise ValueError("unsupported classifier inference views")
+        if views != ["center"]:
+            if manifest["schema_version"] != 2 or name != "yawn" or spec.get("view_aggregation") != "max_yawn":
+                raise ValueError("multi-view yawning requires manifest v2 and max_yawn aggregation")
+        elif spec.get("view_aggregation") is not None:
+            raise ValueError("single-view classifiers must not declare view aggregation")
     return manifest
 
 
@@ -69,6 +77,14 @@ def prepare_tensor(rgb, spec):
     data = rgb.astype(np.float32) / 255.0
     data = (data - np.asarray(p["mean"], np.float32)) / np.asarray(p["std"], np.float32)
     return np.ascontiguousarray(data.transpose(2, 0, 1)[None])
+
+
+def edge_pad_square(crop):
+    """Keep the entire ROI visible through the existing square input transform."""
+    height, width = crop.shape[:2]
+    side = max(height, width)
+    top, left = (side-height)//2, (side-width)//2
+    return np.pad(crop, ((top, side-height-top), (left, side-width-left), (0, 0)), mode="edge")
 
 
 class Classifier:
@@ -128,6 +144,19 @@ class Classifier:
             raise ValueError(f"unknown backend {backend}")
 
     def predict(self, crop):
+        primary = self._predict_one(crop)
+        self.last_views = {"center": primary}
+        if self.spec.get("inference_views", ["center"]) == ["center"]:
+            return primary
+        secondary = self._predict_one(edge_pad_square(crop)) if crop.shape[0] != crop.shape[1] else primary
+        self.last_views["edge_pad_square"] = secondary
+        positive = next(label for label in self.spec["classes"] if label.casefold() == "yawn")
+        score = max(primary[positive], secondary[positive])
+        # Maximum fusion retains existing positives. The combined score is
+        # uncalibrated; both views and the policy are explicit in manifest v2.
+        return {label: score if label == positive else 1.-score for label in self.spec["classes"]}
+
+    def _predict_one(self, crop):
         rgb = prepare_rgb(crop, self.spec)
         if self.backend == "torch":
             import torch

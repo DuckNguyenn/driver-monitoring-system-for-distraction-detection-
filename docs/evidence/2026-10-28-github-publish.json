@@ -1,0 +1,55 @@
+{
+  "recorded_at_utc": "2026-10-28T04:25:18.468104+00:00",
+  "branch": "feature/lan-dashboard-ios",
+  "base_commit": "a0fbdda212595e65671677419cdd3c6f02ef7de2",
+  "validation": {
+    "python_workspace_before_fixture_changes": {
+      "total": 213,
+      "passed": 213,
+      "skipped": 0
+    },
+    "changed_fixture_tests": {
+      "total": 19,
+      "passed": 19
+    },
+    "python_exported_index": {
+      "total": 214,
+      "passed": 188,
+      "skipped": 26,
+      "failed": 0,
+      "errors": 0,
+      "seconds": 30.646,
+      "skip_reason": "Optional local model/data diagnostic artifacts are not distributed"
+    },
+    "client_tests": {
+      "passed": 10
+    },
+    "web_tests": {
+      "startTime": "2026-10-28T04:12:42.704Z",
+      "duration": 18761.72,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "typescript": "passed",
+    "web_build": "passed",
+    "docs_context_guard_exported_index": "passed",
+    "staged_whitespace_check": "passed"
+  },
+  "privacy": {
+    "prompt_filename_case_insensitive": "excluded and ignore rules checked",
+    "raw_dataset_camera_media": "excluded",
+    "personal_face_report_docx": "kept local by user request",
+    "credentials": "no real credentials found by text scan; two matches were test sentinels"
+  },
+  "fixture_changes": [
+    "Use shipped camera PC profile/manifest in synthetic RGB and bundle tests",
+    "Separate optional local near-medium fingerprint check from shipped configuration checks",
+    "Generate synthetic retained static provenance in training workflow test"
+  ],
+  "limitations": [
+    "No camera, Radxa, ESP32 or physical alert validation performed",
+    "Selected near-medium model artifacts remain local; see run guide for required setup"
+  ]
+}

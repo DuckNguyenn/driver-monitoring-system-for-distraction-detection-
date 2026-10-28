@@ -1,0 +1,30 @@
+{
+  "name": "driver-monitor-clients",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend/shared",
+    "frontend/web",
+    "frontend/mobile"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@driver-monitor/web",
+    "build:web": "npm run build --workspace=@driver-monitor/web",
+    "start:mobile": "npm run start --workspace=@driver-monitor/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:clients": "npm run test --workspace=@driver-monitor/shared",
+    "test:web": "playwright test",
+    "check:docs": "node tools/run_python.mjs tools/check_repo_docs.py",
+    "context": "node tools/run_python.mjs tools/context_pack.py",
+    "start:android": "npm run start:android --workspace=@driver-monitor/mobile",
+    "export:android": "npm run export:android --workspace=@driver-monitor/mobile",
+    "build:android": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/build_android_apk.ps1"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@playwright/test": "1.64.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

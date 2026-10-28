@@ -1,0 +1,23 @@
+# Paths are relative to this file. Raw faces, videos and feature caches stay local.
+baseline_config: camera_pc.yaml
+cache: ../.cache/blur_refinement
+output: ../models/blur_refined
+eye_records: ../.cache/eye_refinement_v4/records.json
+yawn_records: ../.cache/yawn_refinement/records.json
+camera_labels: ../reports/yawn_camera_check/camera_development_labels.json
+camera_eye_labels: ../data_reviews/camera_eye_blur_labels.json
+real_eye_labels: ../data_reviews/cew_real_blur_labels.json
+seed: 42
+threads: 2
+batch_size: 32
+epochs: 120
+learning_rates: [0.0003, 0.001]
+regularization: [0.001, 0.01]
+eye:
+  learning_rates: [0.00001, 0.00003]
+  regularization: [0.1, 1.0]
+  clear_anchor_weight: 0.75
+yawn:
+  clear_anchor_weight: 0.50
+face_grid: [20.0, 18.0, 16.0, 14.0, 12.0]
+eye_grid: [6.0, 5.0, 4.0, 3.0]

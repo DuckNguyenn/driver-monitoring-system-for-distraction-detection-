@@ -1,0 +1,4221 @@
+{
+  "task": "yawn",
+  "classes": [
+    "no_yawn",
+    "yawn"
+  ],
+  "selected_epoch": 30,
+  "trials": [
+    {
+      "epoch": 1,
+      "loss": 0.03186187953286882,
+      "score": 0.9999901428782323,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 2,
+      "loss": 0.023243478340098045,
+      "score": 0.9999911263323156,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 3,
+      "loss": 0.026662590754219673,
+      "score": 0.9999952336427669,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 4,
+      "loss": 0.019042574439997875,
+      "score": 0.9999931729522359,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 5,
+      "loss": 0.021848249365097848,
+      "score": 0.9999867604507017,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 6,
+      "loss": 0.02442448897600663,
+      "score": 0.9999964132392052,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 7,
+      "loss": 0.018694653389172783,
+      "score": 0.9999887539175688,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 8,
+      "loss": 0.02639897871143331,
+      "score": 0.9999869494538871,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 9,
+      "loss": 0.01353595779365293,
+      "score": 0.9999978134812408,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 10,
+      "loss": 0.012962807221503779,
+      "score": 0.9999985535812812,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 11,
+      "loss": 0.01533135197733092,
+      "score": 0.9999982525683663,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 12,
+      "loss": 0.014954677194187471,
+      "score": 0.9999965681934555,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 13,
+      "loss": 0.011956976962029913,
+      "score": 0.999991284780117,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 14,
+      "loss": 0.00856736111142526,
+      "score": 0.9999979777177941,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 15,
+      "loss": 0.011822466474795961,
+      "score": 0.9999943156581139,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 16,
+      "loss": 0.006295705461784148,
+      "score": 0.9999981311222654,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 17,
+      "loss": 0.011487548070081934,
+      "score": 0.9999987649379364,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 18,
+      "loss": 0.01979044393990469,
+      "score": 0.9999983996091032,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 19,
+      "loss": 0.007973487174237803,
+      "score": 0.9999983712745234,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 20,
+      "loss": 0.006252090515767602,
+      "score": 0.9999936344494926,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 21,
+      "loss": 0.008213965752239755,
+      "score": 0.9999980241569574,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 22,
+      "loss": 0.006481539535115787,
+      "score": 0.9999979975866153,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 23,
+      "loss": 0.008688342064445796,
+      "score": 0.9999959233919071,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 24,
+      "loss": 0.010674322190886891,
+      "score": 0.9999987873978171,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 25,
+      "loss": 0.011783425688390683,
+      "score": 0.9999959153668897,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 26,
+      "loss": 0.004785589582035789,
+      "score": 0.9999959590331855,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 27,
+      "loss": 0.009036647010640471,
+      "score": 0.9999979830821758,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 28,
+      "loss": 0.010485204730422406,
+      "score": 0.9999985248959092,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 29,
+      "loss": 0.004915677247028773,
+      "score": 0.9999991260060597,
+      "rejection_reasons": []
+    },
+    {
+      "epoch": 30,
+      "loss": 0.009908337761723167,
+      "score": 0.9999994417780727,
+      "rejection_reasons": []
+    }
+  ],
+  "trainable_parameters": 332802,
+  "backbone_and_bn_buffers_unchanged": true,
+  "baseline_validation": {
+    "classes": [
+      "no_yawn",
+      "yawn"
+    ],
+    "confusion_matrix": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        40
+      ]
+    ],
+    "confusion_matrix_with_unknown": [
+      [
+        120,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0
+      ]
+    ],
+    "prediction_columns": [
+      "no_yawn",
+      "yawn",
+      "UNKNOWN"
+    ],
+    "per_class": {
+      "no_yawn": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 120
+      },
+      "yawn": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "samples": 160,
+    "unknown_samples": 0,
+    "coverage": 1.0,
+    "brier_score": 1.2759471246681642e-05,
+    "confidence_and_quality_gate": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 40
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 160,
+      "unknown_samples": 0,
+      "coverage": 1.0
+    },
+    "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+    "groups": {
+      "static/genki/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 0.0,
+            "recall": null,
+            "f1": null,
+            "support": 0
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 40,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 0.0,
+              "recall": null,
+              "f1": null,
+              "support": 0
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 40,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/legacy/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            40
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            40,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 80,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              40
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 80,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/smiles/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 0.0,
+            "recall": null,
+            "f1": null,
+            "support": 0
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 40,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 0.0,
+              "recall": null,
+              "f1": null,
+              "support": 0
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 40,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      }
+    }
+  },
+  "candidate_validation": {
+    "classes": [
+      "no_yawn",
+      "yawn"
+    ],
+    "confusion_matrix": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        40
+      ]
+    ],
+    "confusion_matrix_with_unknown": [
+      [
+        120,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0
+      ]
+    ],
+    "prediction_columns": [
+      "no_yawn",
+      "yawn",
+      "UNKNOWN"
+    ],
+    "per_class": {
+      "no_yawn": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 120
+      },
+      "yawn": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "samples": 160,
+    "unknown_samples": 0,
+    "coverage": 1.0,
+    "brier_score": 5.588881776930066e-06,
+    "confidence_and_quality_gate": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          120,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 120
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 40
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 160,
+      "unknown_samples": 0,
+      "coverage": 1.0
+    },
+    "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+    "groups": {
+      "static/genki/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 0.0,
+            "recall": null,
+            "f1": null,
+            "support": 0
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 40,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 0.0,
+              "recall": null,
+              "f1": null,
+              "support": 0
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 40,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/legacy/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            40
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            40,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 80,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              40
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 80,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      },
+      "static/smiles/original": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            40,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            40,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          },
+          "yawn": {
+            "precision": 0.0,
+            "recall": null,
+            "f1": null,
+            "support": 0
+          }
+        },
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "samples": 40,
+        "unknown_samples": 0,
+        "coverage": 1.0,
+        "confidence_and_quality_gate": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              40,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 40
+            },
+            "yawn": {
+              "precision": 0.0,
+              "recall": null,
+              "f1": null,
+              "support": 0
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 40,
+          "unknown_samples": 0,
+          "coverage": 1.0
+        }
+      }
+    }
+  },
+  "heldout_camera": {
+    "baseline": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          72,
+          0
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 16
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 88,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 1.4368456504598726e-05,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            61,
+            0,
+            11
+          ],
+          [
+            0,
+            13,
+            3
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.8472222222222222,
+            "f1": 0.9172932330827067,
+            "support": 72
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.8125,
+            "f1": 0.896551724137931,
+            "support": 16
+          }
+        },
+        "macro_f1": 0.9069224786103189,
+        "accuracy": 0.8409090909090909,
+        "samples": 88,
+        "unknown_samples": 14,
+        "coverage": 0.8409090909090909
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              36,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 36
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 44,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                36,
+                0
+              ],
+              [
+                0,
+                8
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                36,
+                0,
+                0
+              ],
+              [
+                0,
+                8,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 36
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 8
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 44,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              36,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 36
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 44,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                25,
+                0
+              ],
+              [
+                0,
+                5
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                25,
+                0,
+                11
+              ],
+              [
+                0,
+                5,
+                3
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.6944444444444444,
+                "f1": 0.819672131147541,
+                "support": 36
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.625,
+                "f1": 0.7692307692307693,
+                "support": 8
+              }
+            },
+            "macro_f1": 0.7944514501891551,
+            "accuracy": 0.6818181818181818,
+            "samples": 44,
+            "unknown_samples": 14,
+            "coverage": 0.6818181818181819
+          }
+        }
+      }
+    },
+    "candidate": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          72,
+          0
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          72,
+          0,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 72
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 16
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 88,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 4.6418091415034723e-07,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            61,
+            0
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            61,
+            0,
+            11
+          ],
+          [
+            0,
+            13,
+            3
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.8472222222222222,
+            "f1": 0.9172932330827067,
+            "support": 72
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.8125,
+            "f1": 0.896551724137931,
+            "support": 16
+          }
+        },
+        "macro_f1": 0.9069224786103189,
+        "accuracy": 0.8409090909090909,
+        "samples": 88,
+        "unknown_samples": 14,
+        "coverage": 0.8409090909090909
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_07_01_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              36,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 36
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 44,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                36,
+                0
+              ],
+              [
+                0,
+                8
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                36,
+                0,
+                0
+              ],
+              [
+                0,
+                8,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 36
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 8
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 44,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_01_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              36,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 36
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 44,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                25,
+                0
+              ],
+              [
+                0,
+                5
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                25,
+                0,
+                11
+              ],
+              [
+                0,
+                5,
+                3
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.6944444444444444,
+                "f1": 0.819672131147541,
+                "support": 36
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.625,
+                "f1": 0.7692307692307693,
+                "support": 8
+              }
+            },
+            "macro_f1": 0.7944514501891551,
+            "accuracy": 0.6818181818181818,
+            "samples": 44,
+            "unknown_samples": 14,
+            "coverage": 0.6818181818181819
+          }
+        }
+      }
+    }
+  },
+  "camera_train_diagnostic": {
+    "baseline": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          114,
+          0
+        ],
+        [
+          2,
+          40
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          114,
+          0,
+          0
+        ],
+        [
+          2,
+          40,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 0.9827586206896551,
+          "recall": 1.0,
+          "f1": 0.991304347826087,
+          "support": 114
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 0.9523809523809523,
+          "f1": 0.975609756097561,
+          "support": 42
+        }
+      },
+      "macro_f1": 0.983457051961824,
+      "accuracy": 0.9871794871794872,
+      "samples": 156,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 0.008558814413845539,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            110,
+            0
+          ],
+          [
+            2,
+            38
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            110,
+            0,
+            4
+          ],
+          [
+            2,
+            38,
+            2
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 0.9821428571428571,
+            "recall": 0.9649122807017544,
+            "f1": 0.9734513274336283,
+            "support": 114
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.9047619047619048,
+            "f1": 0.95,
+            "support": 42
+          }
+        },
+        "macro_f1": 0.9617256637168141,
+        "accuracy": 0.9487179487179487,
+        "samples": 156,
+        "unknown_samples": 6,
+        "coverage": 0.9615384615384616
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_05_46_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              39,
+              0
+            ],
+            [
+              1,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              39,
+              0,
+              0
+            ],
+            [
+              1,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.975,
+              "recall": 1.0,
+              "f1": 0.9873417721518988,
+              "support": 39
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523,
+              "support": 11
+            }
+          },
+          "macro_f1": 0.9698613622664256,
+          "accuracy": 0.98,
+          "samples": 50,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                39,
+                0
+              ],
+              [
+                1,
+                10
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                39,
+                0,
+                0
+              ],
+              [
+                1,
+                10,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 0.975,
+                "recall": 1.0,
+                "f1": 0.9873417721518988,
+                "support": 39
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.9090909090909091,
+                "f1": 0.9523809523809523,
+                "support": 11
+              }
+            },
+            "macro_f1": 0.9698613622664256,
+            "accuracy": 0.98,
+            "samples": 50,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_05_46_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              39,
+              0
+            ],
+            [
+              1,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              39,
+              0,
+              0
+            ],
+            [
+              1,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 0.975,
+              "recall": 1.0,
+              "f1": 0.9873417721518988,
+              "support": 39
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523,
+              "support": 11
+            }
+          },
+          "macro_f1": 0.9698613622664256,
+          "accuracy": 0.98,
+          "samples": 50,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                39,
+                0
+              ],
+              [
+                1,
+                9
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                39,
+                0,
+                0
+              ],
+              [
+                1,
+                9,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 0.975,
+                "recall": 1.0,
+                "f1": 0.9873417721518988,
+                "support": 39
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.8181818181818182,
+                "f1": 0.9,
+                "support": 11
+              }
+            },
+            "macro_f1": 0.9436708860759494,
+            "accuracy": 0.96,
+            "samples": 50,
+            "unknown_samples": 1,
+            "coverage": 0.98
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              18,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 18
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 28,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                0
+              ],
+              [
+                0,
+                10
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                18,
+                0,
+                0
+              ],
+              [
+                0,
+                10,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 18
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 10
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 28,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              18,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 18
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 28,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                14,
+                0
+              ],
+              [
+                0,
+                9
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                14,
+                0,
+                4
+              ],
+              [
+                0,
+                9,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.7777777777777778,
+                "f1": 0.875,
+                "support": 18
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.9,
+                "f1": 0.9473684210526315,
+                "support": 10
+              }
+            },
+            "macro_f1": 0.9111842105263157,
+            "accuracy": 0.8214285714285714,
+            "samples": 28,
+            "unknown_samples": 5,
+            "coverage": 0.8214285714285714
+          }
+        }
+      }
+    },
+    "candidate": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "confusion_matrix": [
+        [
+          114,
+          0
+        ],
+        [
+          0,
+          42
+        ]
+      ],
+      "confusion_matrix_with_unknown": [
+        [
+          114,
+          0,
+          0
+        ],
+        [
+          0,
+          42,
+          0
+        ]
+      ],
+      "prediction_columns": [
+        "no_yawn",
+        "yawn",
+        "UNKNOWN"
+      ],
+      "per_class": {
+        "no_yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 114
+        },
+        "yawn": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 42
+        }
+      },
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "samples": 156,
+      "unknown_samples": 0,
+      "coverage": 1.0,
+      "brier_score": 9.722787126520416e-07,
+      "confidence_and_quality_gate": {
+        "classes": [
+          "no_yawn",
+          "yawn"
+        ],
+        "confusion_matrix": [
+          [
+            110,
+            0
+          ],
+          [
+            0,
+            41
+          ]
+        ],
+        "confusion_matrix_with_unknown": [
+          [
+            110,
+            0,
+            4
+          ],
+          [
+            0,
+            41,
+            1
+          ]
+        ],
+        "prediction_columns": [
+          "no_yawn",
+          "yawn",
+          "UNKNOWN"
+        ],
+        "per_class": {
+          "no_yawn": {
+            "precision": 1.0,
+            "recall": 0.9649122807017544,
+            "f1": 0.9821428571428571,
+            "support": 114
+          },
+          "yawn": {
+            "precision": 1.0,
+            "recall": 0.9761904761904762,
+            "f1": 0.9879518072289156,
+            "support": 42
+          }
+        },
+        "macro_f1": 0.9850473321858864,
+        "accuracy": 0.967948717948718,
+        "samples": 156,
+        "unknown_samples": 5,
+        "coverage": 0.967948717948718
+      },
+      "gate_note": "Eye confidence 0.8; yawn frame proxy 0.70/0.35. Static gates are not temporal event accuracy.",
+      "groups": {
+        "camera/WIN_20261013_17_05_46_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              39,
+              0
+            ],
+            [
+              0,
+              11
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              39,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 39
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 50,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                39,
+                0
+              ],
+              [
+                0,
+                11
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                39,
+                0,
+                0
+              ],
+              [
+                0,
+                11,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 39
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 11
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 50,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_05_46_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              39,
+              0
+            ],
+            [
+              0,
+              11
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              39,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 39
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 50,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                39,
+                0
+              ],
+              [
+                0,
+                11
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                39,
+                0,
+                0
+              ],
+              [
+                0,
+                11,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 39
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 11
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 50,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/letterbox_640": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              18,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 18
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 28,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                0
+              ],
+              [
+                0,
+                10
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                18,
+                0,
+                0
+              ],
+              [
+                0,
+                10,
+                0
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 18
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 10
+              }
+            },
+            "macro_f1": 1.0,
+            "accuracy": 1.0,
+            "samples": 28,
+            "unknown_samples": 0,
+            "coverage": 1.0
+          }
+        },
+        "camera/WIN_20261013_17_07_34_Pro/native_1080": {
+          "classes": [
+            "no_yawn",
+            "yawn"
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "confusion_matrix_with_unknown": [
+            [
+              18,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ],
+          "prediction_columns": [
+            "no_yawn",
+            "yawn",
+            "UNKNOWN"
+          ],
+          "per_class": {
+            "no_yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 18
+            },
+            "yawn": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 10
+            }
+          },
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "samples": 28,
+          "unknown_samples": 0,
+          "coverage": 1.0,
+          "confidence_and_quality_gate": {
+            "classes": [
+              "no_yawn",
+              "yawn"
+            ],
+            "confusion_matrix": [
+              [
+                14,
+                0
+              ],
+              [
+                0,
+                9
+              ]
+            ],
+            "confusion_matrix_with_unknown": [
+              [
+                14,
+                0,
+                4
+              ],
+              [
+                0,
+                9,
+                1
+              ]
+            ],
+            "prediction_columns": [
+              "no_yawn",
+              "yawn",
+              "UNKNOWN"
+            ],
+            "per_class": {
+              "no_yawn": {
+                "precision": 1.0,
+                "recall": 0.7777777777777778,
+                "f1": 0.875,
+                "support": 18
+              },
+              "yawn": {
+                "precision": 1.0,
+                "recall": 0.9,
+                "f1": 0.9473684210526315,
+                "support": 10
+              }
+            },
+            "macro_f1": 0.9111842105263157,
+            "accuracy": 0.8214285714285714,
+            "samples": 28,
+            "unknown_samples": 5,
+            "coverage": 0.8214285714285714
+          }
+        }
+      }
+    },
+    "note": "Training fit, not an independent evaluation."
+  },
+  "heldout_predictions": [
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999996423721313,
+        3.143167930375057e-07
+      ],
+      "candidate": [
+        1.0,
+        9.622555197097427e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 0,
+      "timestamp": 0.0,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.999998927116394,
+        1.0566333230599412e-06
+      ],
+      "candidate": [
+        1.0,
+        2.9264645817761448e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        1.0,
+        4.358182792429943e-08
+      ],
+      "candidate": [
+        1.0,
+        1.2950432948244384e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 10,
+      "timestamp": 0.4318666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999996423721313,
+        3.7695863852604816e-07
+      ],
+      "candidate": [
+        1.0,
+        1.9537003126401942e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        1.0,
+        4.9203880081449825e-08
+      ],
+      "candidate": [
+        1.0,
+        1.1188229231962055e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 20,
+      "timestamp": 0.8639333333333333,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        1.0,
+        1.5234949302112e-08
+      ],
+      "candidate": [
+        1.0,
+        4.6298778699771503e-10
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999862909317017,
+        1.3674154615728185e-05
+      ],
+      "candidate": [
+        0.9999991655349731,
+        8.300883678202808e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 30,
+      "timestamp": 1.2959666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999954700469971,
+        4.507553512667073e-06
+      ],
+      "candidate": [
+        0.9999997615814209,
+        2.009936110880517e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999892711639404,
+        1.0736356671259273e-05
+      ],
+      "candidate": [
+        0.9999996423721313,
+        3.8444770211754076e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 40,
+      "timestamp": 1.728,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999732971191406,
+        2.6680056180339307e-05
+      ],
+      "candidate": [
+        0.9999990463256836,
+        9.122781534642854e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999949932098389,
+        4.9498826228955295e-06
+      ],
+      "candidate": [
+        0.9999994039535522,
+        5.385527970247495e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 50,
+      "timestamp": 2.1439333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999939203262329,
+        6.073253643990029e-06
+      ],
+      "candidate": [
+        0.9999988079071045,
+        1.242460825778835e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999958276748657,
+        4.231142156640999e-06
+      ],
+      "candidate": [
+        0.9999992847442627,
+        7.405490123346681e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 60,
+      "timestamp": 2.5760333333333336,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9997077584266663,
+        0.0002922620333265513
+      ],
+      "candidate": [
+        0.9999834299087524,
+        1.6573554603382945e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 70,
+      "timestamp": 3.0080666666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999555349349976,
+        4.451788481674157e-05
+      ],
+      "candidate": [
+        0.9999983310699463,
+        1.6577556607444421e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 70,
+      "timestamp": 3.0080666666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999321699142456,
+        6.781867705285549e-05
+      ],
+      "candidate": [
+        0.9999964237213135,
+        3.575967639335431e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999984502792358,
+        1.5179944057308603e-06
+      ],
+      "candidate": [
+        0.9999998807907104,
+        1.5584733148443775e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 80,
+      "timestamp": 3.440066666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999990463256836,
+        9.401002785125456e-07
+      ],
+      "candidate": [
+        0.9999998807907104,
+        1.1164789981421563e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 90,
+      "timestamp": 3.8719,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9997839331626892,
+        0.00021610595285892487
+      ],
+      "candidate": [
+        0.9999899864196777,
+        1.0057421604869887e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 90,
+      "timestamp": 3.8719,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9997588992118835,
+        0.0002411189634585753
+      ],
+      "candidate": [
+        0.9999817609786987,
+        1.826356128731277e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999990463256836,
+        9.652738981458242e-07
+      ],
+      "candidate": [
+        1.0,
+        4.143611320728269e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 100,
+      "timestamp": 4.304,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999997615814209,
+        2.247092396601147e-07
+      ],
+      "candidate": [
+        1.0,
+        8.085095259957598e-09
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "yawn",
+      "baseline": [
+        1.3772834790870547e-05,
+        0.9999861717224121
+      ],
+      "candidate": [
+        2.038252887359704e-06,
+        0.9999979734420776
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 120,
+      "timestamp": 5.152,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        3.269312946940772e-05,
+        0.9999673366546631
+      ],
+      "candidate": [
+        2.2738001916877693e-06,
+        0.9999977350234985
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.0025043755304068327,
+        0.9974955916404724
+      ],
+      "candidate": [
+        0.00024114381812978536,
+        0.9997588992118835
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 130,
+      "timestamp": 5.5839,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.0007974534528329968,
+        0.99920254945755
+      ],
+      "candidate": [
+        2.9629365599248558e-05,
+        0.9999703168869019
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "yawn",
+      "baseline": [
+        0.00118536117952317,
+        0.9988147020339966
+      ],
+      "candidate": [
+        0.00043381977593526244,
+        0.9995661377906799
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 140,
+      "timestamp": 6.0159,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.00040895494748838246,
+        0.999591052532196
+      ],
+      "candidate": [
+        2.3546373995486647e-05,
+        0.999976396560669
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "yawn",
+      "baseline": [
+        0.002869610907509923,
+        0.9971304535865784
+      ],
+      "candidate": [
+        0.0008350202115252614,
+        0.9991649389266968
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 150,
+      "timestamp": 6.448033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.0003254491603001952,
+        0.9996745586395264
+      ],
+      "candidate": [
+        2.557943844294641e-05,
+        0.9999743700027466
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999932050704956,
+        6.851579200883862e-06
+      ],
+      "candidate": [
+        0.9999997615814209,
+        2.8128945928074245e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 160,
+      "timestamp": 6.88,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999679327011108,
+        3.2068175642052665e-05
+      ],
+      "candidate": [
+        0.9999994039535522,
+        6.416342444026668e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999616146087646,
+        3.8338930608006194e-05
+      ],
+      "candidate": [
+        0.9999992847442627,
+        7.555504453193862e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 170,
+      "timestamp": 7.312,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999030828475952,
+        9.693406900623813e-05
+      ],
+      "candidate": [
+        0.9999948740005493,
+        5.181746018934064e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        4.1325856727780774e-05,
+        0.9999586343765259
+      ],
+      "candidate": [
+        3.4339936973992735e-05,
+        0.9999656677246094
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 180,
+      "timestamp": 7.7279333333333335,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        1.1343848882461316e-06,
+        0.9999988079071045
+      ],
+      "candidate": [
+        1.015031259044008e-07,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        8.397249621339142e-05,
+        0.9999160766601562
+      ],
+      "candidate": [
+        3.152932185912505e-05,
+        0.9999685287475586
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 190,
+      "timestamp": 8.160033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.00012164611689513549,
+        0.9998782873153687
+      ],
+      "candidate": [
+        2.2437086954596452e-05,
+        0.9999775886535645
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.0006167499232105911,
+        0.9993832111358643
+      ],
+      "candidate": [
+        4.412901762407273e-05,
+        0.9999558925628662
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 200,
+      "timestamp": 8.592,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        0.000257976382272318,
+        0.9997419714927673
+      ],
+      "candidate": [
+        7.294792794709792e-06,
+        0.9999927282333374
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        2.3708698790869676e-05,
+        0.9999762773513794
+      ],
+      "candidate": [
+        3.980109340773197e-06,
+        0.9999960660934448
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 210,
+      "timestamp": 9.024,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "yawn",
+      "baseline": [
+        2.7845117074321024e-06,
+        0.9999972581863403
+      ],
+      "candidate": [
+        8.683613117455025e-08,
+        0.9999998807907104
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.999998927116394,
+        1.0937860679405276e-06
+      ],
+      "candidate": [
+        0.9999998807907104,
+        9.977900106150628e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 220,
+      "timestamp": 9.456000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999997615814209,
+        2.3840283347453806e-07
+      ],
+      "candidate": [
+        1.0,
+        2.6619449755571623e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9991222023963928,
+        0.000877830374520272
+      ],
+      "candidate": [
+        0.9997904896736145,
+        0.00020956395019311458
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 230,
+      "timestamp": 9.888033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9961467981338501,
+        0.0038531592581421137
+      ],
+      "candidate": [
+        0.9993628859519958,
+        0.0006370882620103657
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.9991878867149353,
+        0.0008120942511595786
+      ],
+      "candidate": [
+        0.9999338388442993,
+        6.6116735979449e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 240,
+      "timestamp": 10.32,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9995304346084595,
+        0.00046955622383393347
+      ],
+      "candidate": [
+        0.9999545812606812,
+        4.536584310699254e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999990463256836,
+        9.587107570041553e-07
+      ],
+      "candidate": [
+        0.9999998807907104,
+        1.1963275881043955e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 250,
+      "timestamp": 10.736033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999996423721313,
+        4.140601959079504e-07
+      ],
+      "candidate": [
+        0.9999998807907104,
+        6.354812143172239e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999833106994629,
+        1.665405579842627e-05
+      ],
+      "candidate": [
+        0.9999983310699463,
+        1.7143287323051482e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 260,
+      "timestamp": 11.168000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999884366989136,
+        1.15966549856239e-05
+      ],
+      "candidate": [
+        0.9999982118606567,
+        1.759208657858835e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999988079071045,
+        1.2325663192314096e-06
+      ],
+      "candidate": [
+        0.9999998807907104,
+        6.034819932665414e-08
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 270,
+      "timestamp": 11.600000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999816417694092,
+        1.830218025133945e-05
+      ],
+      "candidate": [
+        0.9999988079071045,
+        1.2150875363658997e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9997839331626892,
+        0.00021613563876599073
+      ],
+      "candidate": [
+        0.9999772310256958,
+        2.2800106307840906e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 280,
+      "timestamp": 12.032,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999673366546631,
+        3.26333538396284e-05
+      ],
+      "candidate": [
+        0.9999946355819702,
+        5.4220695346884895e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9973100423812866,
+        0.0026899506337940693
+      ],
+      "candidate": [
+        0.9998005032539368,
+        0.0001994900667341426
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 290,
+      "timestamp": 12.463933333333333,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9979721903800964,
+        0.002027803100645542
+      ],
+      "candidate": [
+        0.9997308850288391,
+        0.0002690732362680137
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "blurry",
+      "label": "no_yawn",
+      "baseline": [
+        0.990637481212616,
+        0.009362539276480675
+      ],
+      "candidate": [
+        0.9991793036460876,
+        0.0008206492639146745
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 300,
+      "timestamp": 12.896,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9696378707885742,
+        0.03036206029355526
+      ],
+      "candidate": [
+        0.9939380884170532,
+        0.0060619474388659
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9994602799415588,
+        0.0005397378699854016
+      ],
+      "candidate": [
+        0.9999716281890869,
+        2.8321717763901688e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 310,
+      "timestamp": 13.311966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9985896944999695,
+        0.0014102389104664326
+      ],
+      "candidate": [
+        0.9998807907104492,
+        0.00011922202975256369
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999926090240479,
+        7.422328053507954e-06
+      ],
+      "candidate": [
+        0.999998927116394,
+        1.0262790510751074e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 320,
+      "timestamp": 13.744033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999967813491821,
+        3.2317832392436685e-06
+      ],
+      "candidate": [
+        0.9999994039535522,
+        5.889539238523867e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999891519546509,
+        1.0898899745370727e-05
+      ],
+      "candidate": [
+        0.9999994039535522,
+        5.518208467947261e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 330,
+      "timestamp": 14.176,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999901056289673,
+        9.926749953592662e-06
+      ],
+      "candidate": [
+        0.9999990463256836,
+        9.135091545431351e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9989448189735413,
+        0.0010551754385232925
+      ],
+      "candidate": [
+        0.9998412132263184,
+        0.00015874122618697584
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 340,
+      "timestamp": 14.608033333333333,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9988491535186768,
+        0.001150860101915896
+      ],
+      "candidate": [
+        0.9996670484542847,
+        0.0003329491592012346
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9992668032646179,
+        0.0007331447559408844
+      ],
+      "candidate": [
+        0.9998407363891602,
+        0.00015926444029901177
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 350,
+      "timestamp": 15.039966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9983522891998291,
+        0.0016477241879329085
+      ],
+      "candidate": [
+        0.9993088245391846,
+        0.0006912064854986966
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999409914016724,
+        5.901823897147551e-05
+      ],
+      "candidate": [
+        0.9999924898147583,
+        7.495280442526564e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 360,
+      "timestamp": 15.472000000000001,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.999984622001648,
+        1.5378873285953887e-05
+      ],
+      "candidate": [
+        0.9999971389770508,
+        2.884998593799537e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9996629953384399,
+        0.0003369844635017216
+      ],
+      "candidate": [
+        0.9999390840530396,
+        6.088418740546331e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 370,
+      "timestamp": 15.903966666666667,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999253749847412,
+        7.46583245927468e-05
+      ],
+      "candidate": [
+        0.9999762773513794,
+        2.3728740416117944e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9910327792167664,
+        0.008967163041234016
+      ],
+      "candidate": [
+        0.9992353916168213,
+        0.0007645827136002481
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 380,
+      "timestamp": 16.32,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9988265633583069,
+        0.0011734013678506017
+      ],
+      "candidate": [
+        0.9998645782470703,
+        0.0001353634725091979
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9896823763847351,
+        0.010317630134522915
+      ],
+      "candidate": [
+        0.9992570281028748,
+        0.0007428974495269358
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 390,
+      "timestamp": 16.751966666666668,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9973894953727722,
+        0.0026105225551873446
+      ],
+      "candidate": [
+        0.9997488856315613,
+        0.00025116378674283624
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 400,
+      "timestamp": 17.183933333333336,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9979372024536133,
+        0.002062789397314191
+      ],
+      "candidate": [
+        0.9998630285263062,
+        0.00013689619663637131
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 400,
+      "timestamp": 17.183933333333336,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9986249208450317,
+        0.0013751463266089559
+      ],
+      "candidate": [
+        0.9999051094055176,
+        9.488033538218588e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9995829463005066,
+        0.00041709464858286083
+      ],
+      "candidate": [
+        0.9999489784240723,
+        5.1022878324147314e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 410,
+      "timestamp": 17.616033333333334,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999862909317017,
+        1.3714718988921959e-05
+      ],
+      "candidate": [
+        0.9999982118606567,
+        1.82213329935621e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9998681545257568,
+        0.00013186055002734065
+      ],
+      "candidate": [
+        0.9999889135360718,
+        1.1138666195620317e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 420,
+      "timestamp": 18.048,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999728202819824,
+        2.714330912567675e-05
+      ],
+      "candidate": [
+        0.999997615814209,
+        2.4000200937734917e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999467134475708,
+        5.333272565621883e-05
+      ],
+      "candidate": [
+        0.9999977350234985,
+        2.2699457531416556e-06
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 430,
+      "timestamp": 18.480033333333335,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9998394250869751,
+        0.00016054198204074055
+      ],
+      "candidate": [
+        0.9999895095825195,
+        1.0471821042301599e-05
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "native_1080",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.9999904632568359,
+        9.518012120679487e-06
+      ],
+      "candidate": [
+        0.9999991655349731,
+        8.919793685890909e-07
+      ]
+    },
+    {
+      "source": "WIN_20261013_17_07_01_Pro",
+      "frame": 440,
+      "timestamp": 18.896,
+      "resolution": "letterbox_640",
+      "eye_index": null,
+      "quality": "usable",
+      "label": "no_yawn",
+      "baseline": [
+        0.999998927116394,
+        1.0451918797116377e-06
+      ],
+      "candidate": [
+        0.9999998807907104,
+        1.1916237951936637e-07
+      ]
+    }
+  ],
+  "selection_split": "val",
+  "selection_domain": "retained_static_only",
+  "test_used_for_selection": false,
+  "subject_independence": false,
+  "event_accuracy": null,
+  "camera_live_acceptance": false
+}

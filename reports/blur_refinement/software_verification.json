@@ -1,0 +1,52 @@
+{
+  "physical_board_tested": false,
+  "esp32_flashing_tested": false,
+  "test_suites": {
+    "tests": {
+      "tests": 78,
+      "passed": true,
+      "skipped": 0,
+      "output": "Report: C:\\Users\\P1GEN5~1\\AppData\\Local\\Temp\\tmpe3yy4oxr\\report.json\nReport: C:\\Users\\P1GEN5~1\\AppData\\Local\\Temp\\tmp_7ygnlkw\\study.json\nSummary: C:\\Users\\P1GEN5~1\\AppData\\Local\\Temp\\tmptmcoga2t\\logs\\20261007T135401_696630Z.summary.json\nRunning C:\\Users\\P1GEN5~1\\AppData\\Local\\Temp\\tmpplt7b827\\test.avi (onnx); log: 20261007T135401_736329Z\nSummary: C:\\Users\\P1GEN5~1\\AppData\\Local\\Temp\\tmpplt7b827\\logs\\20261007T135401_736329Z.summary.json\n..............................................................................\n----------------------------------------------------------------------\nRan 78 tests in 14.673s\n\nOK"
+    },
+    "camera_classical/tests": {
+      "tests": 2,
+      "passed": true,
+      "skipped": 0,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK"
+    }
+  },
+  "tests_total": 80,
+  "tests_skipped": 0,
+  "pip_check": {
+    "passed": true,
+    "output": "No broken requirements found."
+  },
+  "models": {
+    "yunet": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "eye": {
+      "torch": "3c124c05d9d01849c70823eeab8f25c48e740aa836be319ef881588e188d308f",
+      "onnx": "b5732f3c8b029bcc76015ae3e9cc168243a4f7e1dd72a94bce2074ab5f532c67",
+      "rknn": "4242d1bd649c35a16e6197d069ade0c7f9c8be417b5d596ded6d10987661d3c3"
+    },
+    "yawn": {
+      "torch": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1",
+      "onnx": "fdf971a428c4b24de47fb1126bf179db7e3282e9f7d9baf2b32e3bdba04d8844",
+      "rknn": "95a006917c498fa5ee577ad0a1a8821c285781b87e545f2d07f8f33f4a309367"
+    }
+  },
+  "technical_video": {
+    "passed": true,
+    "skipped": false,
+    "frames": 135,
+    "csv": "reports\\video_fixture_final\\20261006T071631_526750Z.csv",
+    "source_sha256": "9a699869000228c1b764adb7334a5e818b38c5243eb0c533f8dcfdc8c49e0733",
+    "real_cabin_accuracy_test": false
+  },
+  "firmware_host_simulator": {
+    "passed": true,
+    "output": "Firmware: startup, ACK, heartbeat, TTL, malformed command, overflow and millis rollover PASS",
+    "sketch_sha256": "327a67611cc3e32e4e0fb123431a86a00d04c2dc7d6407b52234aade6574572d"
+  },
+  "local_evidence_complete": true,
+  "software_checks_passed": true
+}

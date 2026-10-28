@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-10-20T10:07:33+07:00",
+  "scope": "User-level Codex MCP configuration; no DA2 runtime or model changes",
+  "codex_cli": "0.162.1",
+  "node": "24.11.1",
+  "config": "C:\\Users\\P1 Gen 5\\.codex\\config.toml",
+  "backup": "C:\\Users\\P1 Gen 5\\.codex\\config.toml.backup-mcp-20261020-100551",
+  "added": [
+    "context7",
+    "filesystem",
+    "playwright"
+  ],
+  "existing_settings_preserved": true,
+  "servers": [
+    {
+      "name": "context7",
+      "repository": "https://github.com/upstash/context7",
+      "package_version": "4.4.4",
+      "transport": "stdio",
+      "authentication": "anonymous; no API key added",
+      "tool_count": 2,
+      "checks": [
+        "initialize",
+        "tools/list",
+        "resolve-library-id React",
+        "query-docs useState"
+      ]
+    },
+    {
+      "name": "filesystem",
+      "repository": "https://github.com/cyanheads/filesystem-mcp-server",
+      "commit": "513ec49313dd83a7e960ba2f73e431e53410d457",
+      "package_version": "1.0.4",
+      "transport": "stdio",
+      "base_directory": "C:\\Users\\P1 Gen 5\\Downloads\\DA2",
+      "node_env": "development (upstream default for local stdio; production imports HTTP JWT validation)",
+      "tool_count": 10,
+      "checks": [
+        "initialize",
+        "tools/list",
+        "read_file DA2/AGENTS.md",
+        "reject ../ nonexistent scope probe"
+      ]
+    },
+    {
+      "name": "playwright",
+      "repository": "https://github.com/microsoft/playwright-mcp",
+      "package_version": "0.0.83",
+      "transport": "stdio",
+      "browser": "Microsoft Edge, isolated profile",
+      "tool_count": 25,
+      "checks": [
+        "initialize",
+        "tools/list",
+        "browser_navigate about:blank",
+        "browser_snapshot",
+        "browser_close"
+      ]
+    }
+  ],
+  "limitations": [
+    "Current chat tool catalog is not hot-reloaded; restart Codex and open a new session.",
+    "Filesystem is intentionally scoped to DA2.",
+    "Anonymous Context7 has smaller rate limits."
+  ],
+  "raw_validation": ".cache/mcp-setup/validation.json"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-25",
+  "checkpoint": "CHECKPOINT.md",
+  "checkpoint_sha256": "bf33ed72132f29b4a9f5a6f7427e97283f3d8b64b6eb8ccf33ea38081aee3c4a",
+  "lines": 101,
+  "bytes": 11629,
+  "branch": "feature/lan-dashboard-ios",
+  "head": "a0fbdda",
+  "active_feature": "reporting",
+  "active_artifact": "BaocaoDA/Chuong2_test.docx",
+  "active_artifact_matches_latest_qa": true,
+  "previous_checkpoint": ".cache/checkpoint-handoff/CHECKPOINT.before-reporting-20261025.md",
+  "guard": "PASS: docs/LOC/context guard; Files: 209; links: 106; startup: 19569 bytes",
+  "documents_runtime_models_and_datasets_edited": false,
+  "context_docs_tests": {
+    "result": "PASS",
+    "run": 16,
+    "environment": "outside sandbox after sandbox temporary-directory permission errors",
+    "duration_seconds": 1.588
+  }
+}

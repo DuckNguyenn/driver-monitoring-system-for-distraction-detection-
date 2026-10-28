@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "scope": "Reference PDF image presentation review and web image collection; report DOCX/PDF unchanged",
+  "reference_pdf": "C:\\Users\\P1 Gen 5\\Downloads\\ung-dung-xu-ly-anh-iot-trong-giam-sat-tai-xe-tren-o-to(1).pdf",
+  "reference_pdf_pages": 82,
+  "visually_inspected_pages": [
+    22,
+    30,
+    35,
+    37,
+    44,
+    45,
+    59,
+    60
+  ],
+  "selected_images": 12,
+  "priority_images": 8,
+  "reserve_images": 4,
+  "sources_manifest": "report_assets/web_references_20261024/sources.json",
+  "catalog": "reports/THU_VIEN_HINH_THAM_KHAO.html",
+  "source_notes": "reports/NGUON_HINH_THAM_KHAO.md",
+  "verification": {
+    "sha256_all_match": true,
+    "images_loaded_in_edge": 12,
+    "horizontal_overflow": false,
+    "full_page_screenshot_reviewed": true,
+    "console_note": "Only missing favicon 404; no image load failures"
+  },
+  "excluded_candidate": {
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11644966/#sensors-24-07810-f003",
+    "reason": "Figure labels eye samples as MRL, but color image appearance does not match primary MRL infrared dataset description. Excluded pending verification."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-25",
+  "output": "BaocaoDA\\CHUONG_2_CO_SO_LY_THUYET_CHINH_LY.docx",
+  "sha256": "d00ab1f6608e9cc03c2a69a5b8e7c2617b8f0dad6f158f42eed09ef977cf5af4",
+  "pages": 12,
+  "major_sections": [
+    "2.1 Cơ sở xử lý ảnh số",
+    "2.2 Phát hiện khuôn mặt và xác định điểm mốc",
+    "2.3 Mạng nơ-ron tích chập và phân loại ảnh",
+    "2.4 Phương pháp xử lý thông tin theo thời gian",
+    "2.5 Thiết bị phần cứng",
+    "2.6 Ngôn ngữ, công cụ và định dạng mô hình",
+    "2.7 Các chỉ số đánh giá"
+  ],
+  "subsection_count": 26,
+  "figures": 8,
+  "native_equations": 11,
+  "references": 27,
+  "body_word_count": 3243,
+  "preserved_blank_heading": {
+    "old": "2.6.2. Thông số kỹ thuật camera rời",
+    "new": "2.5.2 Thông số kỹ thuật camera rời"
+  },
+  "correction": "Theory only; removed implementation instructions and project-specific architecture, states, fusion and interfaces.",
+  "boundary_note": "BaocaoDA/RANH_GIOI_CO_SO_LY_THUYET_VA_THIET_KE.md",
+  "reviews": {
+    "technical": ".cache/chapter2-theory-20261025/technical-review.md",
+    "cross_review": ".cache/chapter2-theory-20261025/cross-review.md",
+    "sources": ".cache/chapter2-theory-20261025/sources-reviewed.json",
+    "root_visual_and_boundary_review": "All sections, equations and figures reviewed after final render."
+  },
+  "image_assets": "report_assets/chapter2_theory_20261025/",
+  "figure_limits": "Four newly drawn concept figures; blink curve is illustrative, not measured or copied from the all-rights-reserved paper.",
+  "qa": {
+    "renderer": "Microsoft Word native ExportAsFixedFormat plus documents/render_docx.py rasterization with bundled Poppler",
+    "all_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "page_png_dpi": 110,
+    "outside_page_spans": [],
+    "figure_caption_pages": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "all_native_equations_visually_reviewed": true,
+    "no_mobile_or_placeholders": true,
+    "citations_match_reference_list": true,
+    "forbidden_project_terms_absent": true
+  },
+  "full_report_edited": false,
+  "source_code_models_or_thresholds_edited": false,
+  "original_full_report_sha256": "579c437e1dfacadd5eb923c9ba24ccde658517fd2fb4a4f4b6bd64081261fb17",
+  "old_review_preserved": true,
+  "status": "standalone corrected Chapter 2 ready for review; not merged into full report"
+}

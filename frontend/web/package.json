@@ -1,0 +1,6 @@
+{
+ "name":"@driver-monitor/web", "version":"1.0.0", "private":true, "type":"module",
+ "scripts":{"dev":"vite --host 0.0.0.0", "build":"tsc --noEmit && vite build", "typecheck":"tsc --noEmit"},
+ "dependencies":{"@driver-monitor/shared":"1.0.0", "react":"19.2.3", "react-dom":"19.2.3"},
+ "devDependencies":{"vite":"8.3.4", "@vitejs/plugin-react":"6.1.2", "@types/react":"19.3.0", "@types/react-dom":"19.3.0"}
+}

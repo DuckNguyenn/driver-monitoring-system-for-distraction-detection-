@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-25",
+  "output": "BaocaoDA\\Chuong2_test.docx",
+  "sha256": "e8a1c5221a1e2b48925a962f52f07ddecc3365184c08a243bead73ca954eca36",
+  "figure": "2-2",
+  "caption": "Hình 2-2. Ảnh khuôn mặt trước và sau làm mờ Gaussian. Nguồn: video tự thu thập.",
+  "image_asset": "report_assets/chapter2_user_face_20261025/figure_2_2_face_gaussian.jpg",
+  "source": {
+    "source_video": "C:/Users/P1 Gen 5/Pictures/Camera Roll/WIN_20261013_17_07_01_Pro.mp4",
+    "frame_index_zero_based": 10,
+    "frame_shape": [
+      1080,
+      1920,
+      3
+    ],
+    "crop_xywh": [
+      250,
+      20,
+      1000,
+      1000
+    ],
+    "operation": "cv2.GaussianBlur",
+    "kernel": [
+      73,
+      73
+    ],
+    "sigma_x": 12,
+    "sigma_y": 12,
+    "border": "BORDER_REFLECT_101",
+    "original_crop_sha256": "49d79cdae4148395a12a2a04c247ae07892241b770f50efd6e8765dc1c06e529",
+    "blurred_crop_sha256": "4dd08a81abed9e17b8a6e89a12fb67e546376cf2f583a9ca0e7807d2b086c03a",
+    "source_video_modified": false,
+    "purpose": "replace Chapter 2 figure 2-2 with a true before/after filtering example using user-authorized personal video"
+  },
+  "pages": 15,
+  "inline_images": 15,
+  "figures": 11,
+  "native_equations": 8,
+  "references": 29,
+  "changed_text_paragraphs": 1,
+  "other_embedded_images_retained_byte_for_byte": 14,
+  "original_user_images_preserved": 7,
+  "gaussian_recomputation_exact": true,
+  "blank_camera_preserved": true,
+  "qa": {
+    "renderer": "Microsoft Word ExportAsFixedFormat plus documents/render_docx.py rasterization",
+    "changed_pages_viewed": [
+      3,
+      4,
+      5
+    ],
+    "unchanged_pages_pixel_identical_to_previous_review": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "outside_page_spans": [],
+    "rendered_copy_paragraphs_and_embedded_images_match_final": true
+  },
+  "backup": ".cache\\report-face-illustration\\Chuong2_test.before-face.docx",
+  "no_runtime_model_threshold_or_dataset_changes": true
+}

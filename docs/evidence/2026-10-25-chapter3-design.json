@@ -1,0 +1,72 @@
+﻿{
+    "date":  "2026-10-25",
+    "output":  "BaocaoDA/Chuong3_test.docx",
+    "sha256":  "119cfbeed62b31f9811ad0facf4ff299437372cfe8ae04834761143fa27e0247",
+    "pages":  14,
+    "major_sections":  8,
+    "subsections":  25,
+    "figures":  7,
+    "tables":  3,
+    "outline_review":  {
+                           "A7":  [
+                                      87,
+                                      91
+                                  ],
+                           "B8":  [
+                                      94,
+                                      95
+                                  ],
+                           "chosen":  "B8",
+                           "scoring":  "subjective editorial assessment by two subagents"
+                       },
+    "profile":  "models/yawn_kaggle_near_medium/runtime.yaml",
+    "esp32_module":  "ESP32-WROOM-32",
+    "figures_final":  "SVG with explicit noncrossing routes, high-resolution PNG exports; draw.io requirement relaxed by user",
+    "original_face_frame_reused":  true,
+    "gaussian_in_classifier":  false,
+    "yawn_crop":  "expanded full face",
+    "product_background":  "white, original alpha composited correctly",
+    "letterbox_padding":  "black retained as data",
+    "qa":  {
+               "renderer":  "Microsoft Word GUI Save As PDF + documents/render_docx.py rasterize",
+               "all_pages_viewed":  [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12,
+                                        13,
+                                        14
+                                    ],
+               "final_pages_1_7":  "primary agent",
+               "final_pages_8_14":  "outline_system subagent",
+               "source_and_output_match":  true
+           },
+    "chapter2_sha256":  "e8a1c5221a1e2b48925a962f52f07ddecc3365184c08a243bead73ca954eca36",
+    "chapter2_unchanged":  true,
+    "full_report_merged":  false,
+    "runtime_models_firmware_changed":  false,
+    "tailscale_deferred":  true,
+    "source_refs":  [
+                        "models/yawn_kaggle_near_medium/runtime.yaml",
+                        "models/yawn_kaggle_near_medium/manifest.json",
+                        "driver_monitor/vision.py",
+                        "driver_monitor/models.py",
+                        "driver_monitor/core.py",
+                        "driver_monitor/eye_events.py",
+                        "driver_monitor/eye_motion.py",
+                        "driver_monitor/alerting.py",
+                        "esp32_buzzer/esp32_buzzer.ino",
+                        "driver_monitor/dashboard_history.py",
+                        "driver_monitor/dashboard_server.py",
+                        "driver_monitor/dashboard_data.py"
+                    ],
+    "docs_guard":  "PASS: 209 files, 112 links, startup 20994 bytes; pre-existing size warnings retained"
+}

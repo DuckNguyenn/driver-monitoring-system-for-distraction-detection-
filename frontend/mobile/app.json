@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Driver Monitor",
+    "slug": "driver-monitor-lan",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Kết nối máy tính hoặc Radxa trong cùng Wi-Fi để giám sát tài xế."
+      }
+    },
+    "plugins": [
+      "expo-image",
+      "expo-secure-store",
+      "expo-sharing",
+      "./plugins/withAndroidLan.cjs"
+    ],
+    "experiments": {
+      "autolinkingModuleResolution": true
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "android": {
+      "package": "com.da2.drivermonitor",
+      "versionCode": 2,
+      "permissions": [
+        "android.permission.VIBRATE"
+      ],
+      "blockedPermissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#23634f"
+      }
+    },
+    "icon": "./assets/icon.png"
+  }
+}

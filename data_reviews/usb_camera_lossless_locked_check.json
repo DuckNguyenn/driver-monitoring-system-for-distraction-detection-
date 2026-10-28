@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "purpose": "locked_same_person_camera_verification_not_training",
+  "video": "reports/usb_camera_check/20261010T110453_140956Z.avi",
+  "video_sha256": "c4a9737a38aabaea7f25c81b6bfe47e61e69f4a501a6ba2d19eba9e0254d34a2",
+  "timestamps_sha256": "4616140ac49cf5d1d7c1483bdd700d938c59b3476fc2c5dfc192d4dd7854a396",
+  "probe_sha256": "fb81c86b04f32d961184c6f2c23dee769b1c78a5d89199ec497bb88cf308820b",
+  "protocol_sha256": "8afcc274c56e522b95692637edfd8965fc42eaa0666e971bc0cb25391c2ccdcd",
+  "subject_id": "camera_subject_01",
+  "subject_independent": false,
+  "review_method": "Contact sheet of all 38 seconds plus denser boundaries and actual 224x224 model inputs. Labels describe staged actions; protocol prompts were not treated as labels.",
+  "training_allowed": false,
+  "reviewed_intervals": [
+    {
+      "start": 0,
+      "end": 5.5,
+      "label": "normal",
+      "action": "relaxed_mouth"
+    },
+    {
+      "start": 5.75,
+      "end": 12.75,
+      "label": "yawn",
+      "action": "first_staged_yawn_low_camera"
+    },
+    {
+      "start": 13,
+      "end": 16,
+      "label": "normal",
+      "action": "relaxed_mouth"
+    },
+    {
+      "start": 16.5,
+      "end": 23.5,
+      "label": "normal",
+      "action": "teeth_smile"
+    },
+    {
+      "start": 24,
+      "end": 28,
+      "label": "normal",
+      "action": "relaxed_mouth"
+    },
+    {
+      "start": 28.25,
+      "end": 34.9,
+      "label": "yawn",
+      "action": "second_staged_yawn_low_camera"
+    },
+    {
+      "start": 35.05,
+      "end": 37.969,
+      "label": "normal",
+      "action": "relaxed_mouth"
+    }
+  ],
+  "notes": "Boundary gaps intentionally unlabeled. Same subject was used in earlier development; this is not a held-out-person test. Original clip remains unchanged and was not used to train or select weights."
+}

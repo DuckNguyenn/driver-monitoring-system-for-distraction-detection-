@@ -1,0 +1,23 @@
+{
+  "video": "reports/usb_camera_check/20261009T120936_563235Z.avi",
+  "video_sha256": "4768d033d1677bb0fe8915bf2484f21518241cc2e6af9611f7671e899ea44ae6",
+  "config": "configs/camera_usb_refined.yaml",
+  "subject_id": "camera_subject_01",
+  "review": "Visual review of original frames sampled across all 38 seconds. First-bout open-mouth actions and smile negatives are development labels; prompts alone are not labels. Transition intervals omitted.",
+  "recording_limitation": "MJPG changes pixels and classifier scores. Original capture probes confirm only one yawn; decoded baseline confirms two. This clip cannot validate recovery on original raw sensor pixels.",
+  "study_status": "Same-person low-angle USB development. First bout split temporally for training/validation; correlated samples. Second bout excluded from training and checkpoint selection. New lossless live recapture and subject-held-out acceptance remain required.",
+  "intervals": [
+    {"start": 0, "end": 3, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 4, "end": 5.5, "label": "no_yawn", "split": "val", "action": "neutral"},
+    {"start": 7, "end": 8.5, "label": "yawn", "split": "train", "action": "first_yawn_round"},
+    {"start": 10, "end": 11.2, "label": "yawn", "split": "train", "action": "first_yawn_teeth"},
+    {"start": 11.4, "end": 13.2, "label": "yawn", "split": "val", "action": "first_yawn_teeth"},
+    {"start": 14, "end": 16, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 17.5, "end": 20, "label": "no_yawn", "split": "train", "action": "smile"},
+    {"start": 21, "end": 23.3, "label": "no_yawn", "split": "val", "action": "smile"},
+    {"start": 24.5, "end": 26, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 26.2, "end": 27.5, "label": "no_yawn", "split": "val", "action": "neutral"},
+    {"start": 28.7, "end": 34.7, "label": "yawn", "split": "regression", "action": "second_yawn"},
+    {"start": 35.3, "end": 37.96, "label": "no_yawn", "split": "regression", "action": "neutral"}
+  ]
+}
