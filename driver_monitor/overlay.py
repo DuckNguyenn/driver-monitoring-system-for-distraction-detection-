@@ -34,7 +34,9 @@ def draw_overlay(frame, vision, status, observation, config, *, elapsed, fps, la
         eyes = f"stabilizing {vision.metrics.get('eye_motion_settle_remaining_seconds', 0.):.2f}s"
     yawn_state = f"confirm {status.yawn_candidate_seconds:.2f}/{config.monitor.yawn_enter_seconds:g}s" if status.yawn_state == "candidate" else status.yawn_state
     line(f"Eyes:{eyes} | Yawn:{yawn_state}", 71)
-    line(f"Eyes P(closed): {left[1]} / {right[1]}", height - 86)
+    branch = vision.metrics.get("eye_model_branch")
+    suffix = "" if branch is None else f" | eye:{branch}"
+    line(f"Eyes P(closed): {left[1]} / {right[1]}{suffix}", height - 86)
     line(f"Blink both:{status.blink_total} (5s:{status.blink_count}) | Eye cycles total:{status.left_eye_events + status.right_eye_events}", height - 61)
     raw = "?" if status.yawn_raw_probability is None else f"{status.yawn_raw_probability:.2f}"
     filtered = "?" if status.yawn_probability is None else f"{status.yawn_probability:.2f}"
@@ -42,4 +44,6 @@ def draw_overlay(frame, vision, status, observation, config, *, elapsed, fps, la
     metrics = vision.metrics
     if "sharpness" in metrics:
         line(f"Sharp face:{metrics['sharpness']:.1f}/{config.min_sharpness:g} eyes:{metrics['eye_sharpness_min']:.1f}/{config.min_eye_sharpness:g} | light:{metrics['eye_brightness_min']:.0f}", height - 11)
+    elif vision.quality == "face_too_small" and metrics.get("face_min_side_pixels") is not None:
+        line(f"Face min:{metrics['face_min_side_pixels']:.1f}/{config.min_face_size}px | MOVE CLOSER", height - 11)
     return output

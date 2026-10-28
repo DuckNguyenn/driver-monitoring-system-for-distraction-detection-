@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "video": "reports/yawn_camera_check/20261007T070644_475102Z.avi",
+  "video_sha256": "8a904d2c6234c1792804410b77374185eb5884128c53e5667e3bdbe8f5a92e45",
+  "study_status": "One previously used development clip; not an independent person/clip test.",
+  "annotation_method": "coding-agent visual review of two contact sheets; human audit recommended",
+  "excluded_ambiguous_frames": [
+    193,
+    223,
+    253,
+    303,
+    321,
+    339,
+    878,
+    967
+  ],
+  "records": [
+    {
+      "frame": 18,
+      "timestamp": 0.6089999999994689,
+      "path": ".cache/blur_refinement/eye_review/frame_0018.png",
+      "eye_boxes": [
+        [
+          424,
+          191,
+          508,
+          255
+        ],
+        [
+          321,
+          197,
+          405,
+          260
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 64.0,
+        "sharpness": 17.07787970057827,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 75.0,
+        "eye_sharpness_min": 13.510037861173114,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "927a71fd80cbc1d79f1654393f748c49292ca8d6e215984054bc706d83a0a390",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 41,
+      "timestamp": 1.405999999999949,
+      "path": ".cache/blur_refinement/eye_review/frame_0041.png",
+      "eye_boxes": [
+        [
+          420,
+          187,
+          504,
+          251
+        ],
+        [
+          316,
+          193,
+          401,
+          256
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 65.0,
+        "sharpness": 18.58226984958133,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 76.0,
+        "eye_sharpness_min": 11.63132426636019,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "67cdd60f2c6183ab6d0e01ae3aeb7ce271356a9b1c2defd3e0cd45f03753f5cd",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 65,
+      "timestamp": 2.20299999999952,
+      "path": ".cache/blur_refinement/eye_review/frame_0065.png",
+      "eye_boxes": [
+        [
+          420,
+          198,
+          505,
+          262
+        ],
+        [
+          315,
+          205,
+          400,
+          269
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 62.0,
+        "sharpness": 17.146028835881026,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 72.0,
+        "eye_sharpness_min": 12.071136968804066,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "6f20d09a040702469f74ed96346da60463c28bca63d9ceaab1d4951c732ee5be",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 89,
+      "timestamp": 3.0,
+      "path": ".cache/blur_refinement/eye_review/frame_0089.png",
+      "eye_boxes": [
+        [
+          396,
+          191,
+          479,
+          253
+        ],
+        [
+          293,
+          197,
+          376,
+          260
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 63.0,
+        "sharpness": 17.67340901618618,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 73.0,
+        "eye_sharpness_min": 10.740558550791055,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "30c06b9b19f996f2e3d92fe6d7593f8dd055d191775240b056113b070c97cddd",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 113,
+      "timestamp": 3.811999999999898,
+      "path": ".cache/blur_refinement/eye_review/frame_0113.png",
+      "eye_boxes": [
+        [
+          404,
+          187,
+          484,
+          248
+        ],
+        [
+          305,
+          194,
+          385,
+          255
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 66.0,
+        "sharpness": 17.785739251114517,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 73.0,
+        "eye_sharpness_min": 12.357902739518947,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "4acc7ab1ca66f8b3d8026773791d12c44a5979b22d331bd66eb3600797981760",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 431,
+      "timestamp": 14.5,
+      "path": ".cache/blur_refinement/eye_review/frame_0431.png",
+      "eye_boxes": [
+        [
+          361,
+          168,
+          447,
+          233
+        ],
+        [
+          255,
+          181,
+          341,
+          246
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 76.0,
+        "sharpness": 16.24853602389166,
+        "overexposed_ratio": 0.010763986177267208,
+        "eye_brightness_min": 84.0,
+        "eye_sharpness_min": 11.340164842022395,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "6bda4eabb03cb42e8cf22243707c43cd413c6a1c172382e64f1ac2b8b6bb1aad",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 461,
+      "timestamp": 15.515999999999622,
+      "path": ".cache/blur_refinement/eye_review/frame_0461.png",
+      "eye_boxes": [
+        [
+          375,
+          167,
+          462,
+          233
+        ],
+        [
+          268,
+          173,
+          355,
+          238
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 78.0,
+        "sharpness": 20.674010543477078,
+        "overexposed_ratio": 0.01110728628800918,
+        "eye_brightness_min": 94.0,
+        "eye_sharpness_min": 17.575759547213085,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -2.868533045120362,
+        "eye_distance_pixels": 107.3972343557985,
+        "eye_motion_shift_ratio": 0.037420404681257596,
+        "eye_motion_shape_ratio": 0.009371564526189266,
+        "eye_motion_scale_ratio": 0.010833810382064548,
+        "eye_motion_roll_change_degrees": 0.4619977677496081,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "64b25ce108d3bed5d7a7cfc34f0d7507499d418a6d1779c745abb0a231b70d69",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 551,
+      "timestamp": 18.53099999999995,
+      "path": ".cache/blur_refinement/eye_review/frame_0551.png",
+      "eye_boxes": [
+        [
+          384,
+          157,
+          475,
+          226
+        ],
+        [
+          272,
+          162,
+          363,
+          231
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 84.0,
+        "sharpness": 22.823434702108898,
+        "overexposed_ratio": 0.014513253981944684,
+        "eye_brightness_min": 94.0,
+        "eye_sharpness_min": 20.811907753597442,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -2.545758516460704,
+        "eye_distance_pixels": 112.28718101604233,
+        "eye_motion_shift_ratio": 0.02742571584797546,
+        "eye_motion_shape_ratio": 0.013043385626064002,
+        "eye_motion_scale_ratio": 0.012344063537402123,
+        "eye_motion_roll_change_degrees": 0.6508928143533126,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "a0308df940c78c315d4d2092d5fcdd257043e32b8ae7f9f943a43fa6751e584e",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 580,
+      "timestamp": 19.5,
+      "path": ".cache/blur_refinement/eye_review/frame_0580.png",
+      "eye_boxes": [
+        [
+          385,
+          153,
+          470,
+          217
+        ],
+        [
+          281,
+          157,
+          366,
+          221
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 87.0,
+        "sharpness": 13.772303211010247,
+        "overexposed_ratio": 0.017368543366317258,
+        "eye_brightness_min": 96.0,
+        "eye_sharpness_min": 12.551654377973618,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "sha256": "69e082e0495087837e2e8c8524bba024e449817bb3b17e90ce0b4a615eac5b8a",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "train",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 631,
+      "timestamp": 21.21900000000005,
+      "path": ".cache/blur_refinement/eye_review/frame_0631.png",
+      "eye_boxes": [
+        [
+          392,
+          142,
+          477,
+          206
+        ],
+        [
+          287,
+          148,
+          372,
+          212
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 85.0,
+        "sharpness": 22.552886380970982,
+        "overexposed_ratio": 0.004612938077375966,
+        "eye_brightness_min": 88.0,
+        "eye_sharpness_min": 23.994776032655714,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -3.6495499630007684,
+        "eye_distance_pixels": 104.97860756767543,
+        "eye_motion_shift_ratio": 0.012683833622781042,
+        "eye_motion_shape_ratio": 0.009067808415420943,
+        "eye_motion_scale_ratio": 0.006114771097031076,
+        "eye_motion_roll_change_degrees": 0.27345701259625343,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "a7417d61e8311fd3bf77b16466ea3c31cf0e22abdf0080819e9388fd063a2ec5",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "val",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 649,
+      "timestamp": 21.811999999999898,
+      "path": ".cache/blur_refinement/eye_review/frame_0649.png",
+      "eye_boxes": [
+        [
+          392,
+          141,
+          477,
+          205
+        ],
+        [
+          287,
+          147,
+          372,
+          211
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 85.0,
+        "sharpness": 22.12444038810927,
+        "overexposed_ratio": 0.005189288343410208,
+        "eye_brightness_min": 89.0,
+        "eye_sharpness_min": 24.6735314392301,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -3.599518953196532,
+        "eye_distance_pixels": 105.28983273348801,
+        "eye_motion_shift_ratio": 0.01703499000772728,
+        "eye_motion_shape_ratio": 0.0075947418714188255,
+        "eye_motion_scale_ratio": 0.01574911713228059,
+        "eye_motion_roll_change_degrees": 0.1907210051822119,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "ff6c1a6987ffd9f322852ca262f2916b45487d16ff08a63cd8a6a6f339fb492f",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "val",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 664,
+      "timestamp": 22.32799999999952,
+      "path": ".cache/blur_refinement/eye_review/frame_0664.png",
+      "eye_boxes": [
+        [
+          392,
+          141,
+          478,
+          207
+        ],
+        [
+          285,
+          148,
+          372,
+          213
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 86.0,
+        "sharpness": 21.699116068689158,
+        "overexposed_ratio": 0.005509641873278237,
+        "eye_brightness_min": 88.0,
+        "eye_sharpness_min": 23.374289428774016,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -3.604304317923192,
+        "eye_distance_pixels": 106.87888599631322,
+        "eye_motion_shift_ratio": 0.025550302423160656,
+        "eye_motion_shape_ratio": 0.014631262479898108,
+        "eye_motion_scale_ratio": 0.014924773920367394,
+        "eye_motion_roll_change_degrees": 0.25502322142796174,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "7dbadc06defb1d48e2413a4c35aa069c1fdcd0cf63d0a5419b413b0e53184228",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "val",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 729,
+      "timestamp": 24.5,
+      "path": ".cache/blur_refinement/eye_review/frame_0729.png",
+      "eye_boxes": [
+        [
+          391,
+          144,
+          475,
+          207
+        ],
+        [
+          287,
+          150,
+          371,
+          213
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 84.0,
+        "sharpness": 21.229955913185346,
+        "overexposed_ratio": 0.00669133864154611,
+        "eye_brightness_min": 87.0,
+        "eye_sharpness_min": 25.740875393997353,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -3.216902863474313,
+        "eye_distance_pixels": 104.09988715673812,
+        "eye_motion_shift_ratio": 0.01743546850493073,
+        "eye_motion_shape_ratio": 0.008225420591030184,
+        "eye_motion_scale_ratio": 0.00742715768056719,
+        "eye_motion_roll_change_degrees": 0.16641596647082224,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "bdf2eb1b18e9c762f4457fb1c32c655ad920271f8bad739489be6473a28d831a",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "val",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 759,
+      "timestamp": 25.51599999999962,
+      "path": ".cache/blur_refinement/eye_review/frame_0759.png",
+      "eye_boxes": [
+        [
+          389,
+          143,
+          473,
+          206
+        ],
+        [
+          285,
+          148,
+          369,
+          212
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 84.0,
+        "sharpness": 21.334554440329452,
+        "overexposed_ratio": 0.0069900497512437815,
+        "eye_brightness_min": 89.0,
+        "eye_sharpness_min": 27.027717400029672,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -3.0218456560471534,
+        "eye_distance_pixels": 104.14484313185513,
+        "eye_motion_shift_ratio": 0.029198707240189525,
+        "eye_motion_shape_ratio": 0.015150145816730347,
+        "eye_motion_scale_ratio": 0.006291535544627209,
+        "eye_motion_roll_change_degrees": 0.3244557941078483,
+        "eye_motion_settle_remaining_seconds": 0.0,
+        "eye_quality": "usable"
+      },
+      "sha256": "82918dcbb74e34032bfb46588343fc452f9a66005a322b725a24ac019c86c135",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "val",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 1066,
+      "timestamp": 35.82799999999952,
+      "path": ".cache/blur_refinement/eye_review/frame_1066.png",
+      "eye_boxes": [
+        [
+          386,
+          162,
+          472,
+          227
+        ],
+        [
+          280,
+          165,
+          366,
+          230
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 84.0,
+        "sharpness": 20.545342848089778,
+        "overexposed_ratio": 0.02174663019639733,
+        "eye_brightness_min": 94.0,
+        "eye_sharpness_min": 20.882624415564464,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -1.367316678472668,
+        "eye_distance_pixels": 106.47044047706962,
+        "eye_motion_shift_ratio": 0.05333208673948173,
+        "eye_motion_shape_ratio": 0.009646657149337549,
+        "eye_motion_scale_ratio": 0.008068652896977741,
+        "eye_motion_roll_change_degrees": 0.4069586984992952,
+        "eye_motion_settle_remaining_seconds": 0.14700000000048163,
+        "eye_quality": "head_motion"
+      },
+      "sha256": "1746117d1da3de95e820385b1a889cdc71fce3985ef7427af7843535622f49fc",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "regression",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    },
+    {
+      "frame": 1095,
+      "timestamp": 36.8119999999999,
+      "path": ".cache/blur_refinement/eye_review/frame_1095.png",
+      "eye_boxes": [
+        [
+          354,
+          161,
+          438,
+          224
+        ],
+        [
+          251,
+          169,
+          334,
+          232
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 87.0,
+        "sharpness": 20.39155654032109,
+        "overexposed_ratio": 0.04796843208582527,
+        "eye_brightness_min": 91.0,
+        "eye_sharpness_min": 11.496969248352737,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_roll_degrees": -4.284886293389036,
+        "eye_distance_pixels": 103.58726864763393,
+        "eye_motion_shift_ratio": 0.012744767429159351,
+        "eye_motion_shape_ratio": 0.01258138340975521,
+        "eye_motion_scale_ratio": 0.017677823621469645,
+        "eye_motion_roll_change_degrees": 0.30431612563802446,
+        "eye_motion_settle_remaining_seconds": 0.31900000000005235,
+        "eye_quality": "head_motion"
+      },
+      "sha256": "297cf6999f8df1e2c472be834e29ff148c489753c5fd6a94991cd607898bf9a8",
+      "eye_labels": [
+        "Open",
+        "Open"
+      ],
+      "split": "regression",
+      "source": "camera_reviewed",
+      "review": "Visual inspection of original frame and both eye crops; visible eye apertures. Not inferred from smile/yawn labels."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "target_platform": "rk3576",
+  "detector": {
+    "file": "../face_detection_yunet_2023mar.onnx",
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+    "commit": "47534e27c9851bb1128ccc0102f1145e27f23f98",
+    "license": "MIT",
+    "input_size": 320
+  },
+  "classifiers": {
+    "eye": {
+      "classes": [
+        "Closed",
+        "Open"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "best_eye.pt",
+          "sha256": "fb750a10725b08623b8de5821ad42a72dc67e689bcff118201fecfa2731e7946"
+        },
+        "onnx": {
+          "file": "best_eye.onnx",
+          "sha256": "b1e4310ee94f30e96fcc3d680d39e9f9a352858f2a21b7832ca339dc55e65a8e"
+        }
+      }
+    },
+    "yawn": {
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ],
+      "input_size": 224,
+      "output": "probabilities",
+      "preprocessing": {
+        "color": "RGB",
+        "resize": "shorter_center_crop",
+        "resize_shorter": 224,
+        "interpolation": "bilinear",
+        "mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "std": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_transform": "Compose(\n    Resize(size=224, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=tensor([0., 0., 0.]), std=tensor([1., 1., 1.]))\n)",
+      "checkpoint_ultralytics": "8.4.163",
+      "artifacts": {
+        "torch": {
+          "file": "best_yawn.pt",
+          "sha256": "c19dfc38423f515980eed1f15da4231157d04a0687563aa237a5eba784eca90f"
+        },
+        "onnx": {
+          "file": "best_yawn.onnx",
+          "sha256": "29f15c0463476e7ce16565eba78147e40bf58163bfe483e32586bfcb12b9f252"
+        }
+      }
+    }
+  },
+  "export_versions": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "ultralytics": "8.4.163",
+    "onnx": "1.17.0"
+  },
+  "deployment_validation": "Blur development candidate; independent cabin study and RK3576 hardware pending",
+  "refinement": {
+    "eye": "eye.training.json",
+    "yawn": "yawn.training.json"
+  }
+}

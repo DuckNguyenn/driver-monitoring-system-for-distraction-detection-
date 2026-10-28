@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-15",
+  "timezone": "Asia/Bangkok",
+  "scope": "Feature docs, checkpoint, LOC/context tooling; runtime/model behavior unchanged",
+  "unit_tests": {
+    "command": "python -m unittest tests.test_context_docs -v",
+    "ran": 15,
+    "passed": true,
+    "skipped": 0
+  },
+  "docs_guard": {
+    "files_checked": 195,
+    "errors": [],
+    "warnings": [
+      "driver_monitor/dashboard_server.py: 324 lines; prefer a focused module",
+      "driver_monitor/evaluation.py: 310 lines; prefer a focused module",
+      "tools/build_project_style_report.py: 478 lines; prefer a focused module",
+      "tools/finetune_yawn_distance.py: 574 lines; prefer a focused module",
+      "tools/refine_blur.py: 635 lines; prefer a focused module",
+      "tools/refine_yawn_camera.py: 436 lines; prefer a focused module"
+    ],
+    "links_checked": 67,
+    "startup_bytes": 15194,
+    "feature_packs": {
+      "runtime": {
+        "bytes": 49187,
+        "files": 9
+      },
+      "vision": {
+        "bytes": 47496,
+        "files": 10
+      },
+      "monitoring": {
+        "bytes": 50668,
+        "files": 9
+      },
+      "models": {
+        "bytes": 52954,
+        "files": 9
+      },
+      "training": {
+        "bytes": 61030,
+        "files": 10
+      },
+      "glasses": {
+        "bytes": 48117,
+        "files": 10
+      },
+      "esp32-alerts": {
+        "bytes": 27587,
+        "files": 8
+      },
+      "api-history": {
+        "bytes": 68508,
+        "files": 10
+      },
+      "web-dashboard": {
+        "bytes": 73940,
+        "files": 8
+      },
+      "iphone": {
+        "bytes": 62879,
+        "files": 8
+      },
+      "radxa": {
+        "bytes": 39462,
+        "files": 9
+      },
+      "remote-access": {
+        "bytes": 64788,
+        "files": 8
+      },
+      "reporting": {
+        "bytes": 51368,
+        "files": 7
+      },
+      "docs-governance": {
+        "bytes": 41941,
+        "files": 9
+      }
+    },
+    "passed": true
+  },
+  "docs_encoding_review_passed": true,
+  "npm_checks": {
+    "check:docs": "passed on Windows",
+    "context -- --feature remote-access": "passed on Windows"
+  },
+  "launcher_syntax_check": "node --check tools/run_python.mjs passed",
+  "measurement_scope": "UTF-8 byte counts of selected repository text; total model/system/history tokens are not measured",
+  "radxa_zip_sha256": "2a962b44c3f1ff61ccad62156c028323dd06a51cde47cb152dfdcbdaa24cef06",
+  "full_ai_suite_run_in_this_task": false,
+  "physical_board_tested_in_this_task": false
+}

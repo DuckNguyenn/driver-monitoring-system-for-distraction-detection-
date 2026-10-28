@@ -1,0 +1,2 @@
+# Isolated tooling for Kaggle uploads/authentication; never install in AI runtime.
+kaggle==2.2.4

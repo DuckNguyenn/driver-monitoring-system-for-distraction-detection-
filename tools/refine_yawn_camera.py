@@ -19,14 +19,16 @@ sys.path.insert(0, str(ROOT))
 os.environ.setdefault("YOLO_CONFIG_DIR", str(ROOT / ".cache/ultralytics"))
 os.environ.setdefault("MPLCONFIGDIR", str(ROOT / ".cache/matplotlib"))
 import numpy as np
+import cv2
 import torch
 from ultralytics import YOLO
+from driver_monitor import Monitor, Observation
 from driver_monitor.capture import Capture
 from driver_monitor.config import load_config
 from driver_monitor.evaluation import classification_metrics
 from driver_monitor.models import Classifier, artifact_path, prepare_rgb, prepare_tensor, read_manifest, sha256
 from driver_monitor.vision import Vision, orient_frame
-from refine_yawn_head import CACHE as STATIC_CACHE, CLASSES, metrics, save
+from tools.refine_yawn_head import CACHE as STATIC_CACHE, CLASSES, metrics, save
 
 CAMERA_CACHE = ROOT / ".cache/yawn_camera_refinement"
 DEFAULT_LABELS = ROOT / "reports/yawn_camera_check/camera_development_labels.json"
@@ -51,7 +53,39 @@ def frozen_digest(model):
     return digest.hexdigest()
 
 
-def prepare(labels_path, baseline_config=None):
+def camera_feature_views(crop, spec, split, augment=False, seed=42):
+    """Create training-only noise/compression/crop variants; runtime is unchanged."""
+    rgb = prepare_rgb(crop, spec)
+    views = {'original': rgb}
+    if not augment or split != 'train':
+        return views
+    rng = np.random.default_rng(seed)
+    for sigma in (3, 7):
+        views[f'noise_{sigma}'] = np.clip(np.rint(rgb.astype(np.float32) +
+            rng.normal(0, sigma, rgb.shape)), 0, 255).astype(np.uint8)
+    views['blur_05'] = cv2.GaussianBlur(rgb, (3, 3), .5)
+    ok, encoded = cv2.imencode('.jpg', rgb[:,:,::-1], [cv2.IMWRITE_JPEG_QUALITY, 70])
+    if not ok:
+        raise RuntimeError('Cannot encode camera augmentation')
+    views['jpeg_70'] = cv2.imdecode(encoded, cv2.IMREAD_COLOR)[:,:,::-1].copy()
+    views['crop_in_2'] = prepare_rgb(crop[2:-2,2:-2], spec)
+    views['crop_out_2'] = prepare_rgb(np.pad(crop,((2,2),(2,2),(0,0)),mode='edge'), spec)
+    return views
+
+
+def sample_camera_training(rows, excluded_frames=()):
+    chosen, last_sample = [], {}
+    for row in rows:
+        if row['split'] != 'train' or row['feature'] is None or row['frame'] in excluded_frames:
+            continue
+        group = (row['label'], row['action'], row.get('augmentation','original'))
+        if row['timestamp'] - last_sample.get(group, -float('inf')) >= .2 - 1e-9:
+            chosen.append(row)
+            last_sample[group] = row['timestamp']
+    return chosen
+
+
+def prepare(labels_path, baseline_config=None, cache=CAMERA_CACHE, augment=False):
     labels = json.loads(labels_path.read_text(encoding="utf-8"))
     config = load_config(baseline_config or ROOT / labels["config"])
     manifest = read_manifest(config.manifest)
@@ -77,6 +111,8 @@ def prepare(labels_path, baseline_config=None):
         pending_rows.clear()
 
     video = ROOT / labels["video"]
+    if labels.get("video_sha256") and sha256(video) != labels["video_sha256"]:
+        raise ValueError("Reviewed camera video checksum changed")
     capture = Capture(video, config.width, config.height)
     vision = Vision(config)
     try:
@@ -91,12 +127,18 @@ def prepare(labels_path, baseline_config=None):
                    "action": interval["action"] if interval else None}
             rows.append(row)
             if result.crops is not None:
-                rgb = prepare_rgb(result.crops[2], spec)
-                row["input_sha256"] = hashlib.sha256(rgb.tobytes()).hexdigest()
-                pending.append(prepare_tensor(rgb, spec))
-                pending_rows.append(row)
-                if len(pending) == 16:
-                    flush()
+                views = camera_feature_views(result.crops[2],spec,row['split'],augment,
+                                            seed=42 + packet.index)
+                for name,rgb in views.items():
+                    view_row = row if name=='original' else {**row, 'feature':None}
+                    view_row['augmentation'] = name
+                    view_row['input_sha256'] = hashlib.sha256(rgb.tobytes()).hexdigest()
+                    if name!='original':
+                        rows.append(view_row)
+                    pending.append(prepare_tensor(rgb,spec))
+                    pending_rows.append(view_row)
+                    if len(pending)>=16:
+                        flush()
             if packet.index % 200 == 0:
                 print(f"Camera crops: {packet.index}", flush=True)
         flush()
@@ -105,18 +147,19 @@ def prepare(labels_path, baseline_config=None):
         hook.remove()
         classifier.close()
         reference.close()
-    CAMERA_CACHE.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(CAMERA_CACHE / "features.npz", features=np.stack(features).astype(np.float32))
+    cache.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(cache / "features.npz", features=np.stack(features).astype(np.float32))
     sidecar = video.with_suffix(".timestamps.json")
-    save(CAMERA_CACHE / "records.json", {"rows": rows, "labels": labels,
+    save(cache / "records.json", {"rows": rows, "labels": labels,
         "labels_sha256": sha256(labels_path), "video_sha256": sha256(video),
         "timestamps_sha256": sha256(sidecar) if sidecar.is_file() else None,
         "manifest": str(config.manifest.relative_to(ROOT)), "manifest_sha256": sha256(config.manifest),
         "config_sha256": config.fingerprint(), "frozen_extractor_sha256": frozen_digest(classifier.model),
-        "features_sha256": sha256(CAMERA_CACHE / "features.npz")})
-    print(json.dumps({"frames": len(rows), "features": len(features),
-                      "quality": dict(Counter(r["quality"] for r in rows)),
-                      "labels": dict(Counter(f"{r['split']}/{r['action']}" for r in rows if r["split"]))}), flush=True)
+        "features_sha256": sha256(cache / "features.npz")})
+    source_rows = [r for r in rows if r.get('augmentation','original')=='original']
+    print(json.dumps({"frames": len(source_rows), "features": len(features), "feature_rows":len(rows),
+                      "quality": dict(Counter(r["quality"] for r in source_rows)),
+                      "labels": dict(Counter(f"{r['split']}/{r['action']}" for r in source_rows if r["split"]))}), flush=True)
 
 
 def camera_metrics(rows, probabilities, split):
@@ -134,16 +177,61 @@ def camera_metrics(rows, probabilities, split):
     return result
 
 
-def train(labels_path, output, baseline_config=None):
+def camera_event_validation(rows, probabilities, intervals, monitor_config):
+    """Replay each validation interval with the actual temporal policy.
+
+    Training and regression intervals never enter checkpoint selection. Isolated
+    frames at event edges need not be positive; confirmation still requires the
+    unchanged consecutive duration, quality gates and source timestamps.
+    """
+    confirmations, details = [], []
+    hits = expected = false_events = 0
+    for interval in (item for item in intervals if item['split']=='val'):
+        monitor = Monitor(monitor_config)
+        previous = 0
+        local = []
+        for row in rows:
+            if row['split']!='val' or not interval['start']<=row['timestamp']<interval['end']:
+                continue
+            score = None if row['feature'] is None else float(probabilities[row['feature'],1])
+            values = None if score is None else {'yawn':score,'no_yawn':1-score}
+            if row.get('track_changed',False):previous = 0
+            status = monitor.update(Observation(row['timestamp'],yawn=values,quality=row['quality'],
+                track_changed=row.get('track_changed',False)))
+            if status.yawn_count>previous:
+                local.append(row['timestamp'])
+            previous = status.yawn_count
+        positive = interval['label']=='yawn'
+        expected += int(positive)
+        hits += int(positive and len(local)==1)
+        false_events += len(local) if not positive else 0
+        confirmations.extend(local)
+        details.append({'start':interval['start'],'end':interval['end'],'label':interval['label'],
+            'confirmation_seconds':local})
+    return {'expected_yawns':expected,'yawn_hits':hits,'false_yawn_confirmations':false_events,
+        'confirmation_seconds':confirmations,'intervals':details,
+        'passed':expected>0 and hits==expected and len(confirmations)==expected and false_events==0}
+
+
+def train(labels_path, output, baseline_config=None, cache=CAMERA_CACHE, epochs=150,
+          camera_weights=(.15, .30, .50), validation_policy='frames', retained_caches=()):
+    if epochs < 1:
+        raise ValueError("epochs must be positive")
+    if not camera_weights or any(not 0 < weight < 1 for weight in camera_weights):
+        raise ValueError("camera weights must be between zero and one")
+    if validation_policy not in ('frames','events'):
+        raise ValueError("unknown camera validation policy")
     provenance = json.loads((STATIC_CACHE / "records.json").read_text(encoding="utf-8"))
-    camera = json.loads((CAMERA_CACHE / "records.json").read_text(encoding="utf-8"))
+    camera = json.loads((cache / "records.json").read_text(encoding="utf-8"))
     manifest_path = ROOT / camera["manifest"]
+    video = ROOT / camera["labels"]["video"]
     if (sha256(STATIC_CACHE / "features.npz") != provenance["features_sha256"] or
         sha256(ROOT / "models/manifest.json") != provenance["manifest_sha256"] or
-        sha256(CAMERA_CACHE / "features.npz") != camera["features_sha256"] or
+        sha256(cache / "features.npz") != camera["features_sha256"] or
         sha256(labels_path) != camera["labels_sha256"] or
         sha256(manifest_path) != camera["manifest_sha256"] or
-        sha256(ROOT / camera["labels"]["video"]) != camera["video_sha256"]):
+        sha256(video) != camera["video_sha256"] or
+        (camera.get("timestamps_sha256") and sha256(video.with_suffix('.timestamps.json')) != camera['timestamps_sha256'])):
         raise ValueError("Stale or changed feature cache")
     config = load_config(baseline_config or ROOT / camera["labels"]["config"])
     if config.fingerprint() != camera["config_sha256"]:
@@ -172,7 +260,7 @@ def train(labels_path, output, baseline_config=None):
     duplicate_camera_frames = {r["frame"] for r in camera_rows if r["split"] == "train" and
         camera_owners.get(r.get("input_sha256"), set()) - {"train"}}
     static_features = torch.from_numpy(np.load(STATIC_CACHE / "features.npz")["features"])
-    camera_features = torch.from_numpy(np.load(CAMERA_CACHE / "features.npz")["features"])
+    camera_features = torch.from_numpy(np.load(cache / "features.npz")["features"])
     initial = copy.deepcopy(loaded.model.model[-1].linear)
     initial.requires_grad_(False)
     with torch.no_grad():
@@ -181,32 +269,43 @@ def train(labels_path, output, baseline_config=None):
     baseline_val = metrics(static_rows, baseline_static, "val")
     baseline_camera_val = camera_metrics(camera_rows, baseline_camera, "val")
     # 5 Hz sample spacing reduces adjacent-frame duplication in training.
-    chosen, last_sample = [], {}
-    for row in camera_rows:
-        if row["split"] != "train" or row["feature"] is None or row["frame"] in duplicate_camera_frames:
-            continue
-        group = (row["label"], row["action"])
-        if row["timestamp"] - last_sample.get(group, -float("inf")) >= .2:
-            chosen.append(row)
-            last_sample[group] = row["timestamp"]
+    chosen = sample_camera_training(camera_rows, duplicate_camera_frames)
+    training_camera_rows = [{**r,'training_source':camera['video_sha256']} for r in chosen]
+    training_camera_features = [camera_features[[r['feature'] for r in chosen]]]
+    retained_evidence = []
+    for retained_path in retained_caches:
+        retained = json.loads((retained_path/'records.json').read_text(encoding='utf-8'))
+        retained_video = ROOT/retained['labels']['video']
+        if (retained['frozen_extractor_sha256']!=camera['frozen_extractor_sha256'] or
+            sha256(retained_path/'features.npz')!=retained['features_sha256'] or
+            sha256(retained_video)!=retained['video_sha256'] or
+            (retained.get('timestamps_sha256') and sha256(retained_video.with_suffix('.timestamps.json'))!=retained['timestamps_sha256'])):
+            raise ValueError('Stale or incompatible retained camera cache')
+        retained_rows = sample_camera_training(retained['rows'])
+        retained_features = torch.from_numpy(np.load(retained_path/'features.npz')['features'])
+        training_camera_features.append(retained_features[[r['feature'] for r in retained_rows]])
+        training_camera_rows.extend({**r,'training_source':retained['video_sha256']} for r in retained_rows)
+        retained_evidence.append({'video_sha256':retained['video_sha256'],
+            'records_sha256':sha256(retained_path/'records.json'),'samples':len(retained_rows),
+            'splits_used':['train']})
     training = [r for r in static_rows if r["split"] == "train" and r["feature"] is not None]
     groups = Counter((r["source"], r["label"]) for r in training)
-    camera_groups = Counter((r["label"], r["action"]) for r in chosen)
+    camera_groups = Counter((r['training_source'], r['label'], r['action']) for r in training_camera_rows)
     x_static = static_features[[r["feature"] for r in training]]
     y_static = torch.tensor([CLASSES.index(r["label"]) for r in training])
     w_static = torch.tensor([1 / groups[r["source"], r["label"]] for r in training])
     w_static /= w_static.sum()
-    x_camera = camera_features[[r["feature"] for r in chosen]]
-    y_camera = torch.tensor([CLASSES.index(r["label"]) for r in chosen])
-    w_camera = torch.tensor([1 / camera_groups[r["label"], r["action"]] for r in chosen])
+    x_camera = torch.cat(training_camera_features)
+    y_camera = torch.tensor([CLASSES.index(r['label']) for r in training_camera_rows])
+    w_camera = torch.tensor([1 / camera_groups[r['training_source'],r['label'],r['action']] for r in training_camera_rows])
     w_camera /= w_camera.sum()
     trials, selected, best = [], None, -float("inf")
-    for camera_weight in (.15, .30, .50):
+    for camera_weight in camera_weights:
         for regularization in (.001, .01):
             head = copy.deepcopy(initial)
             head.requires_grad_(True)
             optimizer = torch.optim.Adam(head.parameters(), lr=.002)
-            for epoch in range(1, 151):
+            for epoch in range(1, epochs + 1):
                 optimizer.zero_grad(set_to_none=True)
                 static_loss = (torch.nn.functional.cross_entropy(head(x_static), y_static, reduction="none") * w_static).sum()
                 camera_loss = (torch.nn.functional.cross_entropy(head(x_camera), y_camera, reduction="none") * w_camera).sum()
@@ -214,7 +313,7 @@ def train(labels_path, output, baseline_config=None):
                 loss = (1 - camera_weight) * static_loss + camera_weight * camera_loss + regularization * penalty
                 loss.backward()
                 optimizer.step()
-                if epoch not in (25, 50, 100, 150):
+                if epoch not in (25, 50, 100, 150, epochs):
                     continue
                 with torch.no_grad():
                     p_static = torch.softmax(head(static_features), 1).numpy()
@@ -226,21 +325,30 @@ def train(labels_path, output, baseline_config=None):
                     val["legacy_full"]["macro_f1"] >= baseline_val["legacy_full"]["macro_f1"] - .02 and
                     val["smiles"]["false_positive_rate_at_070"] <= baseline_val["smiles"]["false_positive_rate_at_070"] + .01 and
                     val["genki"]["false_positive_rate_at_070"] <= baseline_val["genki"]["false_positive_rate_at_070"] + .01)
-                camera_ok = (val_camera["all_face_crops"]["yawn_recall_at_070"] >= .90 and
-                             val_camera["all_face_crops"]["false_yawn_at_070"] == 0)
+                frame_ok = (val_camera["all_face_crops"]["yawn_recall_at_070"] >= .90 and
+                            val_camera["all_face_crops"]["false_yawn_at_070"] == 0)
+                event_validation = (camera_event_validation(camera_rows,p_camera,camera['labels']['intervals'],config.monitor)
+                                    if validation_policy=='events' else None)
+                camera_ok = (frame_ok if event_validation is None else
+                    event_validation['passed'] and val_camera['all_face_crops']['macro_f1']>=.85)
                 score = (val["legacy_face"]["macro_f1"] + val["legacy_full"]["macro_f1"] +
                     val_camera["all_face_crops"]["macro_f1"] + val_camera["all_face_crops"]["yawn_recall_at_070"] -
                     val["smiles"]["false_positive_rate_at_070"] - val["genki"]["false_positive_rate_at_070"]) / 4
                 trial = {"camera_weight": camera_weight, "regularization": regularization, "epoch": epoch,
                          "static_validation_preserved": bool(static_ok), "camera_validation_passed": bool(camera_ok),
+                         "camera_frame_validation_passed": bool(frame_ok), "validation_policy":validation_policy,
+                         "camera_event_validation":event_validation,
                          "score": score, "static_validation": val, "camera_validation": val_camera}
                 trials.append(trial)
-                print(json.dumps({k:v for k,v in trial.items() if k not in ("static_validation", "camera_validation")}), flush=True)
+                print(json.dumps({k:v for k,v in trial.items() if k not in ("static_validation", "camera_validation", "camera_event_validation")}), flush=True)
                 if static_ok and camera_ok and score > best:
                     best, selected = score, (copy.deepcopy(head.state_dict()), trial)
     output.mkdir(parents=True, exist_ok=True)
     save(output / "validation.json", {"baseline_static": baseline_val, "baseline_camera": baseline_camera_val,
+        "validation_policy":validation_policy,
         "camera_training_samples": dict(Counter(r["action"] for r in chosen)),
+        'training_augmentation_samples':dict(Counter(r.get('augmentation','original') for r in chosen)),
+        'retained_camera_training':retained_evidence,
         "trials": trials, "selected": selected[1] if selected else None})
     if selected is None:
         raise RuntimeError("No candidate passed validation; active model/configuration unchanged")
@@ -253,11 +361,15 @@ def train(labels_path, output, baseline_config=None):
                   "video_sha256": camera["video_sha256"], "frozen_extractor_sha256": camera["frozen_extractor_sha256"],
                   "selection": "static + first-bout camera validation; second bout and static test excluded from selection",
                   "study_status": camera["labels"]["study_status"]}
+    refinement['training_augmentation'] = dict(Counter(r.get('augmentation','original') for r in chosen))
+    refinement['retained_camera_training'] = retained_evidence
     loaded.ckpt["refinement"] = refinement
     checkpoint = output / "best_yawn.pt"
     loaded.save(checkpoint)
     # Reload serialized weights before export/parity and before test reporting.
     serialized = YOLO(str(checkpoint)).model.cpu().float().eval()
+    if frozen_digest(serialized) != camera["frozen_extractor_sha256"]:
+        raise ValueError("Serialized checkpoint changed the frozen extractor")
     exported = copy.deepcopy(serialized)
     exported.model[-1].export = True
     onnx_path = output / "best_yawn.onnx"
@@ -303,10 +415,22 @@ if __name__ == "__main__":
     parser.add_argument("--config", type=Path, default=ROOT / "configs/camera_yawn_previous.yaml",
                         help="frozen baseline profile; keep the source model and crops stable")
     parser.add_argument("--output", type=Path, default=ROOT / "models/yawn_camera_refined")
+    parser.add_argument("--cache", type=Path, default=CAMERA_CACHE,
+                        help="isolated camera feature cache; keep the same directory for prepare and train")
+    parser.add_argument("--epochs", type=int, default=150,
+                        help="linear-head optimization steps per trial; selected by validation, never by the second bout")
+    parser.add_argument("--camera-weights", type=float, nargs='+', default=(.15,.30,.50),
+                        help="camera loss mixing weights; static validation guards still apply")
+    parser.add_argument("--validation-policy", choices=('frames','events'), default='frames',
+                        help="events replays only reviewed validation intervals with the unchanged Monitor policy")
+    parser.add_argument('--augment',action='store_true',help='prepare training-only noise, compression, blur and crop-jitter views')
+    parser.add_argument('--retain-camera-cache',type=Path,action='append',default=[],
+                        help='retain only training frames from an earlier compatible feature cache')
     args = parser.parse_args()
     torch.set_num_threads(2)
     torch.manual_seed(42)
     if args.stage == "prepare":
-        prepare(args.labels.resolve(), args.config.resolve())
+        prepare(args.labels.resolve(), args.config.resolve(), args.cache.resolve(), args.augment)
     else:
-        train(args.labels.resolve(), args.output.resolve(), args.config.resolve())
+        train(args.labels.resolve(), args.output.resolve(), args.config.resolve(), args.cache.resolve(), args.epochs,
+              args.camera_weights,args.validation_policy,[p.resolve() for p in args.retain_camera_cache])

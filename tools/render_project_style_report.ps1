@@ -1,6 +1,6 @@
 param(
-    [string]$ReportPath = 'reports/BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.docx',
-    [string]$PdfPath = 'reports/reference_style/report_render.pdf'
+    [string]$ReportPath = 'reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.docx',
+    [string]$PdfPath = 'reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.pdf'
 )
 $ErrorActionPreference = 'Stop'
 $reportResolved = (Resolve-Path -LiteralPath $ReportPath).Path

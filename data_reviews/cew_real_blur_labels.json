@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "source_sha256": "991fa8efc0ab8ef5d82abb7246177c6d3400816e45700a2f13775a92789e6bc3",
+  "counts": {
+    "val": 4,
+    "train": 14,
+    "test": 4
+  },
+  "records": [
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_0208.jpg_face_1.jpg",
+      "sha256": "859ac2b0f7ae7955b8592d18cdef30460bb88e41ae8d60e1e2557d1f7d435222",
+      "split": "val",
+      "photo_family": "0208",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          152,
+          56,
+          248,
+          128
+        ],
+        [
+          34,
+          68,
+          130,
+          141
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 38.0,
+        "sharpness": 16.150678989861674,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 40.0,
+        "eye_sharpness_min": 5.992455418381344,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_0539.jpg_face_1.jpg",
+      "sha256": "b4a70729314967d197850ceff858a3fa790fbb91b776f72167192ee84087573b",
+      "split": "train",
+      "photo_family": "0539",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          148,
+          74,
+          220,
+          129
+        ],
+        [
+          59,
+          88,
+          132,
+          142
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 57.0,
+        "sharpness": 17.234921638993676,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 42.0,
+        "eye_sharpness_min": 5.2667010696190655,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1239.jpg_face_1.jpg",
+      "sha256": "9d329ddd732b17cf197c6f05405a2d41cfccbae567bb4319745bd8d4100888f1",
+      "split": "train",
+      "photo_family": "1239",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          139,
+          67,
+          247,
+          148
+        ],
+        [
+          5,
+          80,
+          113,
+          162
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 192.0,
+        "sharpness": 13.685847805087782,
+        "overexposed_ratio": 0.005971880971880972,
+        "eye_brightness_min": 170.0,
+        "eye_sharpness_min": 9.445912609406419,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1279.jpg_face_1.jpg",
+      "sha256": "eab78437d9074a722f5dd671abf56700e0a0166757bdb4cb4b45587c1e3cf496",
+      "split": "train",
+      "photo_family": "1279",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          101,
+          45,
+          166,
+          95
+        ],
+        [
+          20,
+          44,
+          86,
+          94
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 74.0,
+        "sharpness": 13.763478654393861,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 66.0,
+        "eye_sharpness_min": 19.90404214876033,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1327.jpg_face_1.jpg",
+      "sha256": "b09ed2142284b1f1ec555738d5816e5f4cd7813c0dbf53dd275f16b97773125f",
+      "split": "test",
+      "photo_family": "1327",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          131,
+          73,
+          216,
+          137
+        ],
+        [
+          26,
+          70,
+          111,
+          134
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 106.0,
+        "sharpness": 14.74365266373425,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 75.0,
+        "eye_sharpness_min": 11.36570309120891,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1328.jpg_face_2.jpg",
+      "sha256": "5143c3d4ea4a362a645b141a313d5e9dad35a3de4ddcc14fa9ad35b19bdfab20",
+      "split": "train",
+      "photo_family": "1328",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          114,
+          34,
+          196,
+          96
+        ],
+        [
+          14,
+          55,
+          97,
+          117
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 177.0,
+        "sharpness": 19.832436831423465,
+        "overexposed_ratio": 0.013034454130344542,
+        "eye_brightness_min": 180.0,
+        "eye_sharpness_min": 24.85657581273473,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1420.jpg_face_1.jpg",
+      "sha256": "30f54ae1dc8d90321e3de3d67e74fb662b080924fa648e5551ff1a36ab41ff29",
+      "split": "val",
+      "photo_family": "1420",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          110,
+          46,
+          175,
+          95
+        ],
+        [
+          29,
+          47,
+          95,
+          97
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 94.0,
+        "sharpness": 16.85257361113955,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 85.0,
+        "eye_sharpness_min": 7.487686245129618,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1426.jpg_face_1.jpg",
+      "sha256": "fce718af84502a2e045e64dc61cb0104aaa0fabf4c827a841d40206f78047a81",
+      "split": "test",
+      "photo_family": "1426",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          315,
+          116,
+          508,
+          261
+        ],
+        [
+          74,
+          106,
+          268,
+          251
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 139.0,
+        "sharpness": 18.914141505319645,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 127.0,
+        "eye_sharpness_min": 15.373808824475363,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1673.jpg_face_2.jpg",
+      "sha256": "e59ee10d0e01afa7f5b0185034670b475a15614fc3c28ec9176cdafee6632557",
+      "split": "test",
+      "photo_family": "1673",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          115,
+          55,
+          174,
+          99
+        ],
+        [
+          44,
+          57,
+          102,
+          101
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 146.0,
+        "sharpness": 19.29354029316422,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 135.0,
+        "eye_sharpness_min": 13.499756168866268,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1819.jpg_face_1.jpg",
+      "sha256": "54aa9827f764a83a1d623a8f131cd26bb98fd9df3d298f55ec9d020ccb1b178a",
+      "split": "train",
+      "photo_family": "1819",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          630,
+          193,
+          1081,
+          532
+        ],
+        [
+          73,
+          271,
+          524,
+          609
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 179.0,
+        "sharpness": 13.81588698730299,
+        "overexposed_ratio": 0.0014176981285001584,
+        "eye_brightness_min": 179.0,
+        "eye_sharpness_min": 23.064806504698208,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1844.png_face_2.jpg",
+      "sha256": "1ece7e368f546c67f747e49ea3798f7b45e8c84a0203702133d492a421a1cc9f",
+      "split": "train",
+      "photo_family": "1844",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          99,
+          48,
+          155,
+          90
+        ],
+        [
+          31,
+          49,
+          87,
+          91
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 112.0,
+        "sharpness": 12.381294453927175,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 94.0,
+        "eye_sharpness_min": 18.727318478411775,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1856.jpg_face_1.jpg",
+      "sha256": "53d9eec6403f5a0a8318a13021919e98f0b6a0c93101de4be1801b5295ab8122",
+      "split": "train",
+      "photo_family": "1856",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          127,
+          73,
+          197,
+          126
+        ],
+        [
+          40,
+          66,
+          110,
+          119
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 58.0,
+        "sharpness": 13.292176389422872,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 52.0,
+        "eye_sharpness_min": 13.568299852514874,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1906.jpg_face_1.jpg",
+      "sha256": "ac511ad5f93bc7734e95efe1cf76dcbe18cfc61aa5a1d49d9f3785c3553ecde6",
+      "split": "train",
+      "photo_family": "1906",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          203,
+          80,
+          335,
+          179
+        ],
+        [
+          39,
+          79,
+          171,
+          179
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 162.0,
+        "sharpness": 14.332014820842744,
+        "overexposed_ratio": 0.00010654003622361232,
+        "eye_brightness_min": 160.0,
+        "eye_sharpness_min": 8.713422865013774,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1943.jpg_face_1.jpg",
+      "sha256": "c8b4a73736be1b7f60f862287344f3f3d7195d5b9e964a21fb732aa72beaa878",
+      "split": "train",
+      "photo_family": "1943",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          127,
+          59,
+          202,
+          116
+        ],
+        [
+          33,
+          51,
+          109,
+          109
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 75.0,
+        "sharpness": 15.775270406937816,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 57.0,
+        "eye_sharpness_min": 10.956379785886739,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_1986.jpg_face_1.jpg",
+      "sha256": "eda727a5cb80677e51cfdf2c22c27511966869b214de68670ce3152ee33167e0",
+      "split": "test",
+      "photo_family": "1986",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          114,
+          51,
+          169,
+          92
+        ],
+        [
+          48,
+          56,
+          102,
+          97
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 128.0,
+        "sharpness": 15.45403744699577,
+        "overexposed_ratio": 2.658160552897395e-05,
+        "eye_brightness_min": 106.0,
+        "eye_sharpness_min": 10.171134824868274,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2062.jpg_face_2.jpg",
+      "sha256": "5b98bd6be77789071666a703cde1dd8cfc653b4811bdf4d800b91814afdf9952",
+      "split": "train",
+      "photo_family": "2062",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          180,
+          77,
+          292,
+          161
+        ],
+        [
+          40,
+          74,
+          153,
+          159
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 131.0,
+        "sharpness": 14.006832902455706,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 124.0,
+        "eye_sharpness_min": 16.495766997673854,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2087.jpg_face_2.jpg",
+      "sha256": "43fe8a43738c24a318ebce48b2003e838ee7240d31ff17111f53c29c79ecd62b",
+      "split": "train",
+      "photo_family": "2087",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          205,
+          100,
+          313,
+          182
+        ],
+        [
+          71,
+          100,
+          179,
+          181
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 93.0,
+        "sharpness": 17.062515801356408,
+        "overexposed_ratio": 0.0350283170820416,
+        "eye_brightness_min": 73.0,
+        "eye_sharpness_min": 9.005670561871607,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2158.JPG_face_1.jpg",
+      "sha256": "c5f0062fae51d0535959538a7c015fc91c0e408c825afe3a81ee96dc71d037c5",
+      "split": "train",
+      "photo_family": "2158",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          459,
+          212,
+          716,
+          405
+        ],
+        [
+          140,
+          229,
+          397,
+          422
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 123.0,
+        "sharpness": 13.73357832467135,
+        "overexposed_ratio": 1.5651632230467155e-06,
+        "eye_brightness_min": 112.0,
+        "eye_sharpness_min": 8.178494269149164,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2224.jpg_face_1.jpg",
+      "sha256": "49266ef99029153d748bd3dd04a209962c16d78598977a25f3a6da8dbcbc6d82",
+      "split": "val",
+      "photo_family": "2224",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          205,
+          101,
+          323,
+          190
+        ],
+        [
+          59,
+          87,
+          177,
+          176
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 149.0,
+        "sharpness": 18.002926553505073,
+        "overexposed_ratio": 0.0019205514183993381,
+        "eye_brightness_min": 126.0,
+        "eye_sharpness_min": 9.967745739754626,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2243.jpg_face_4.jpg",
+      "sha256": "244064d08c088d53c59c4609fb3952aa68359353e26b224db2594b5fbc5e8ea4",
+      "split": "train",
+      "photo_family": "2243",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          99,
+          53,
+          154,
+          95
+        ],
+        [
+          32,
+          57,
+          87,
+          98
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 96.0,
+        "sharpness": 12.951916418804075,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 78.0,
+        "eye_sharpness_min": 16.026270470646654,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2247.jpg_face_1.jpg",
+      "sha256": "af9453db187c070344b8be2c6a30c1c6239925d377067be5c3841f99d39af8d4",
+      "split": "train",
+      "photo_family": "2247",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          91,
+          49,
+          148,
+          92
+        ],
+        [
+          22,
+          45,
+          78,
+          87
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 142.0,
+        "sharpness": 14.311350122526742,
+        "overexposed_ratio": 3.6301593639960794e-05,
+        "eye_brightness_min": 140.0,
+        "eye_sharpness_min": 24.824586796878616,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    },
+    {
+      "path": ".cache/cew/faces/dataset_B_FacialImages_highResolution/closed_eye_2659.jpg_face_1.jpg",
+      "sha256": "aa971957aa05580c3bf4d0a6c79a4847ab97eb2d616bdcc6b792f5f3a5b6f44a",
+      "split": "val",
+      "photo_family": "2659",
+      "source": "roi",
+      "dataset": "cew_real_blur",
+      "eye_labels": [
+        "Closed",
+        "Closed"
+      ],
+      "eye_boxes": [
+        [
+          203,
+          108,
+          317,
+          193
+        ],
+        [
+          63,
+          111,
+          176,
+          196
+        ]
+      ],
+      "metrics": {
+        "brightness_median": 115.0,
+        "sharpness": 19.183171773899527,
+        "overexposed_ratio": 0.0,
+        "eye_brightness_min": 63.0,
+        "eye_sharpness_min": 27.005003803274636,
+        "face_sharpness_threshold": 20.0,
+        "eye_sharpness_threshold": 6.0,
+        "eye_quality": "blurry"
+      },
+      "review": "CEW closed_eye source labels; automatically selected mild blur; human audit recommended"
+    }
+  ]
+}

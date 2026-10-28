@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "driver_monitor_eyewear_selector",
+  "classifier": {
+    "classes": [
+      "no_glasses",
+      "glasses"
+    ],
+    "input_size": 128,
+    "output": "probabilities",
+    "preprocessing": {
+      "color": "RGB",
+      "resize": "shorter_center_crop",
+      "resize_shorter": 128,
+      "interpolation": "bilinear",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "architecture": "MobileNetV3-Small",
+    "artifact": {
+      "file": "eyewear.onnx",
+      "sha256": "465c8d767af5010cbc6cbe392d77a8082f1658ecef6ee8e11780a7ef62847ea9"
+    }
+  },
+  "gate": {
+    "enter_probability": 0.9975159168243408,
+    "confirm_seconds": 1.5,
+    "poll_seconds": 0.5,
+    "max_score_age_seconds": 0.8
+  },
+  "status": "experimental; real RGB glasses camera acceptance pending"
+}

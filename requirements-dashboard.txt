@@ -1,0 +1,4 @@
+# Optional LAN API; inference-only installations need requirements-runtime.txt.
+fastapi==0.143.0
+uvicorn==0.54.0
+websockets==17.2

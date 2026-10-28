@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "features": {
+    "runtime": {
+      "summary": "Vòng xử lý camera/video, cấu hình, đóng tài nguyên và log",
+      "doc": "docs/features/runtime.md",
+      "sources": [
+        "driver_monitor/runtime.py",
+        "driver_monitor/capture.py",
+        "driver_monitor/config.py"
+      ],
+      "tests": [
+        "tests/test_runtime.py",
+        "tests/test_evidence.py"
+      ],
+      "related": [
+        "vision",
+        "monitoring",
+        "api-history"
+      ],
+      "commands": [
+        "python -m unittest tests.test_runtime tests.test_evidence -v"
+      ]
+    },
+    "vision": {
+      "summary": "YuNet, crop mắt/mặt, chất lượng ảnh, chuyển động và camera USB",
+      "doc": "docs/features/vision.md",
+      "sources": [
+        "driver_monitor/vision.py",
+        "driver_monitor/eye_motion.py",
+        "driver_monitor/overlay.py"
+      ],
+      "tests": [
+        "tests/test_camera_quality.py",
+        "tests/test_face_size_gate.py",
+        "tests/test_head_motion.py"
+      ],
+      "related": [
+        "runtime",
+        "models",
+        "glasses"
+      ],
+      "commands": []
+    },
+    "monitoring": {
+      "summary": "Logic thời gian, blink, eye cycle, ngáp, NORMAL/WARNING/ALERT/UNKNOWN",
+      "doc": "docs/features/monitoring.md",
+      "sources": [
+        "driver_monitor/core.py",
+        "driver_monitor/eye_events.py",
+        "driver_monitor/eye_motion.py"
+      ],
+      "tests": [
+        "tests/test_monitor.py",
+        "tests/test_camera_events.py"
+      ],
+      "related": [
+        "vision",
+        "esp32-alerts",
+        "api-history"
+      ],
+      "commands": []
+    },
+    "models": {
+      "summary": "Manifest, preprocessing, classifier torch/ONNX/RKNN và chọn profile",
+      "doc": "docs/features/models.md",
+      "sources": [
+        "driver_monitor/models.py",
+        "driver_monitor/exporting.py",
+        "driver_monitor/config.py"
+      ],
+      "tests": [
+        "tests/test_models_vision.py",
+        "tests/test_eye_classifier.py"
+      ],
+      "related": [
+        "vision",
+        "training",
+        "radxa",
+        "glasses"
+      ],
+      "commands": []
+    },
+    "training": {
+      "summary": "Thu/gán nhãn, fine-tune Kaggle/Colab, blur và gần–trung bình",
+      "doc": "docs/features/training.md",
+      "sources": [
+        "driver_monitor/yawn_distance.py",
+        "tools/kaggle_yawn_training.py",
+        "tools/prepare_kaggle_training.py"
+      ],
+      "tests": [
+        "tests/test_yawn_training_validation.py",
+        "tests/test_yawn_distance_training.py",
+        "tests/test_yawn_kaggle_bundle.py"
+      ],
+      "related": [
+        "models",
+        "glasses",
+        "vision"
+      ],
+      "commands": []
+    },
+    "glasses": {
+      "summary": "Tự nhận kính, chuyển nhánh mắt và đánh giá RGB có kính",
+      "doc": "docs/features/glasses.md",
+      "sources": [
+        "driver_monitor/eyewear.py",
+        "driver_monitor/glasses_training.py",
+        "driver_monitor/eye_collection.py"
+      ],
+      "tests": [
+        "tests/test_eyewear.py",
+        "tests/test_glasses_training.py",
+        "tests/test_eye_glasses_rgb_evaluation.py"
+      ],
+      "related": [
+        "models",
+        "training",
+        "iphone"
+      ],
+      "commands": []
+    },
+    "esp32-alerts": {
+      "summary": "Serial ACK, heartbeat, watchdog ESP32 và buzzer",
+      "doc": "docs/features/esp32-alerts.md",
+      "sources": [
+        "driver_monitor/alerting.py",
+        "esp32_buzzer/esp32_buzzer.ino",
+        "tools/test_esp32.py"
+      ],
+      "tests": [
+        "tests/test_alerting.py"
+      ],
+      "related": [
+        "monitoring",
+        "runtime",
+        "radxa"
+      ],
+      "commands": []
+    },
+    "api-history": {
+      "summary": "FastAPI, snapshot, WebSocket, preview và SQLite/history",
+      "doc": "docs/features/api-history.md",
+      "sources": [
+        "driver_monitor/dashboard_server.py",
+        "driver_monitor/dashboard_history.py",
+        "driver_monitor/dashboard_data.py",
+        "driver_monitor/dashboard_transport.py"
+      ],
+      "tests": [
+        "tests/test_dashboard_api.py",
+        "tests/test_dashboard_history.py"
+      ],
+      "related": [
+        "runtime",
+        "web-dashboard",
+        "iphone",
+        "remote-access"
+      ],
+      "commands": []
+    },
+    "web-dashboard": {
+      "summary": "React dashboard, camera, biểu đồ riêng từng tín hiệu, history/CSV",
+      "doc": "docs/features/web-dashboard.md",
+      "sources": [
+        "frontend/web/src/App.tsx",
+        "frontend/web/src/style.css",
+        "frontend/shared/src/index.ts"
+      ],
+      "tests": [
+        "frontend/shared/tests/connection.test.ts"
+      ],
+      "related": [
+        "api-history",
+        "iphone",
+        "remote-access"
+      ],
+      "commands": []
+    },
+    "iphone": {
+      "summary": "React Native/Expo Go, kết nối, preview và cảnh báo foreground",
+      "doc": "docs/features/iphone.md",
+      "sources": [
+        "frontend/mobile/App.tsx",
+        "frontend/mobile/app.json",
+        "frontend/shared/src/index.ts"
+      ],
+      "tests": [
+        "frontend/shared/tests/connection.test.ts"
+      ],
+      "related": [
+        "api-history",
+        "web-dashboard",
+        "remote-access",
+        "android",
+        "mobile-ui"
+      ],
+      "commands": []
+    },
+    "radxa": {
+      "summary": "Đóng gói, Debian ARM64, ONNX CPU và lộ trình RKNN/RK3576",
+      "doc": "docs/features/radxa.md",
+      "sources": [
+        "scripts/setup_radxa.sh",
+        "tools/build_radxa_bundle.py",
+        "tools/verify_bundle.py"
+      ],
+      "tests": [
+        "tests/test_models_vision.py",
+        "tests/test_dashboard_cli.py"
+      ],
+      "related": [
+        "models",
+        "runtime",
+        "esp32-alerts",
+        "remote-access"
+      ],
+      "commands": []
+    },
+    "remote-access": {
+      "summary": "Tailscale/Cloudflare và yêu cầu thông báo iPhone từ xa",
+      "doc": "docs/features/remote-access.md",
+      "sources": [
+        "frontend/shared/src/index.ts",
+        "driver_monitor/dashboard_server.py"
+      ],
+      "tests": [
+        "frontend/shared/tests/connection.test.ts",
+        "tests/test_dashboard_api.py"
+      ],
+      "related": [
+        "radxa",
+        "iphone",
+        "web-dashboard"
+      ],
+      "commands": []
+    },
+    "reporting": {
+      "summary": "Báo cáo Word/PDF, kiến trúc, hình và nội dung đúng scope",
+      "doc": "docs/features/reporting.md",
+      "sources": [
+        "tools/build_project_style_report.py",
+        "tools/verify_system_design_report.py",
+        "tools/draw_ai_model_details.py"
+      ],
+      "tests": [],
+      "related": [
+        "models",
+        "training",
+        "web-dashboard",
+        "radxa"
+      ],
+      "commands": []
+    },
+    "docs-governance": {
+      "summary": "Docs, context pack, LOC/byte guard và checkpoint",
+      "doc": "docs/engineering/WORKFLOW.md",
+      "sources": [
+        "tools/context_policy.py",
+        "tools/context_pack.py",
+        "tools/check_repo_docs.py",
+        "tools/run_python.mjs"
+      ],
+      "tests": [
+        "tests/test_context_docs.py"
+      ],
+      "related": [
+        "reporting"
+      ],
+      "commands": [
+        "python -m unittest tests.test_context_docs -v",
+        "python tools/check_repo_docs.py"
+      ]
+    },
+    "android": {
+      "summary": "Android Expo/APK, kết nối LAN, preview và cảnh báo foreground",
+      "doc": "docs/features/android.md",
+      "sources": [
+        "frontend/mobile/app.json",
+        "frontend/mobile/plugins/withAndroidLan.cjs",
+        "frontend/mobile/eas.json",
+        "tools/build_android_apk.ps1",
+        "tools/android_native_command.ps1"
+      ],
+      "tests": [
+        "tests/test_android_build.py"
+      ],
+      "related": [
+        "iphone",
+        "api-history",
+        "remote-access",
+        "mobile-ui"
+      ],
+      "commands": [
+        "npm.cmd run test:clients",
+        "npm.cmd run typecheck",
+        "npm.cmd run export:android",
+        "npm.cmd run build:android"
+      ]
+    },
+    "mobile-ui": {
+      "summary": "Giao diện Android/iPhone: kết nối, camera, trạng thái, biểu đồ và lịch sử",
+      "doc": "docs/features/mobile-ui.md",
+      "sources": [
+        "frontend/mobile/App.tsx",
+        "frontend/mobile/components/ConnectionCard.tsx",
+        "frontend/mobile/components/Monitor.tsx",
+        "frontend/mobile/components/LivePreview.tsx",
+        "frontend/mobile/components/SignalChart.tsx",
+        "frontend/mobile/components/History.tsx",
+        "frontend/mobile/components/Icon.tsx",
+        "frontend/mobile/components/ui.tsx"
+      ],
+      "tests": [],
+      "related": [
+        "android",
+        "iphone",
+        "api-history"
+      ],
+      "commands": [
+        "npm.cmd run typecheck",
+        "npm.cmd run test:clients",
+        "npm.cmd run build:android"
+      ]
+    }
+  }
+}

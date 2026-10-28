@@ -1,0 +1,19 @@
+# Experimental USB-camera profile; opt in explicitly.
+# Existing eye/yawn weights and temporal thresholds are unchanged.
+# Requires manifest-v2 runtime; compare with camera_pc.yaml on clean USB video.
+manifest: ../models/yawn_usb_dual_view/manifest.json
+log_dir: ../logs
+backend: onnx
+width: 640
+height: 480
+min_sharpness: 20.0
+min_eye_sharpness: 6.0
+serial_port: null
+headless: false
+eye_motion_window_seconds: 0.3
+eye_motion_settle_seconds: 0.35
+eye_motion_max_shift_ratio: 0.08
+eye_motion_max_roll_degrees: 3.0
+monitor:
+  eye_event_open_seconds: 0.1
+  yawn_smoothing_seconds: 0.2

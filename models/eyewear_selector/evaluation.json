@@ -1,0 +1,563 @@
+{
+  "status": "experimental_gate",
+  "source": "jessicali9530/celeba-dataset",
+  "source_primary": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+  "counts": {
+    "train/no_glasses": 5000,
+    "train/glasses": 5000,
+    "val/no_glasses": 2000,
+    "val/glasses": 600,
+    "test/no_glasses": 2000,
+    "test/glasses": 600
+  },
+  "rejected": {
+    "train/0": 1205,
+    "train/1": 1746,
+    "val/0": 444,
+    "val/1": 201,
+    "test/0": 433,
+    "test/1": 192
+  },
+  "split": "provided CelebA partition; identity metadata not independently audited",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1689104999450943,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1985,
+            15
+          ],
+          [
+            33,
+            567
+          ]
+        ],
+        "accuracy": 0.9815384615384616,
+        "macro_f1": 0.9737223105163819,
+        "glasses_precision": 0.9742268041237113,
+        "glasses_recall": 0.945,
+        "no_glasses_false_route_rate": 0.0075,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1999,
+            1
+          ],
+          [
+            246,
+            354
+          ]
+        ],
+        "accuracy": 0.905,
+        "macro_f1": 0.8415875776244304,
+        "glasses_precision": 0.9971830985915493,
+        "glasses_recall": 0.59,
+        "no_glasses_false_route_rate": 0.0005,
+        "threshold": 0.9996370077133179
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.05134975617822213,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1980,
+            20
+          ],
+          [
+            13,
+            587
+          ]
+        ],
+        "accuracy": 0.9873076923076923,
+        "macro_f1": 0.9821975117599129,
+        "glasses_precision": 0.9670510708401977,
+        "glasses_recall": 0.9783333333333334,
+        "no_glasses_false_route_rate": 0.01,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            168,
+            432
+          ]
+        ],
+        "accuracy": 0.9346153846153846,
+        "macro_f1": 0.8973917064641368,
+        "glasses_precision": 0.9953917050691244,
+        "glasses_recall": 0.72,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9996578693389893
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.03895575091054168,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1971,
+            29
+          ],
+          [
+            3,
+            597
+          ]
+        ],
+        "accuracy": 0.9876923076923076,
+        "macro_f1": 0.9829232589318334,
+        "glasses_precision": 0.9536741214057508,
+        "glasses_recall": 0.995,
+        "no_glasses_false_route_rate": 0.0145,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            77,
+            523
+          ]
+        ],
+        "accuracy": 0.9696153846153847,
+        "macro_f1": 0.9551956373551466,
+        "glasses_precision": 0.9961904761904762,
+        "glasses_recall": 0.8716666666666667,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9988168478012085
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.027267291929714287,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1966,
+            34
+          ],
+          [
+            4,
+            596
+          ]
+        ],
+        "accuracy": 0.9853846153846154,
+        "macro_f1": 0.9797669513219062,
+        "glasses_precision": 0.946031746031746,
+        "glasses_recall": 0.9933333333333333,
+        "no_glasses_false_route_rate": 0.017,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            89,
+            511
+          ]
+        ],
+        "accuracy": 0.965,
+        "macro_f1": 0.9479866365666256,
+        "glasses_precision": 0.9961013645224172,
+        "glasses_recall": 0.8516666666666667,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9993075132369995
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.02228546473846028,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1988,
+            12
+          ],
+          [
+            6,
+            594
+          ]
+        ],
+        "accuracy": 0.9930769230769231,
+        "macro_f1": 0.9902839333627307,
+        "glasses_precision": 0.9801980198019802,
+        "glasses_recall": 0.99,
+        "no_glasses_false_route_rate": 0.006,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            69,
+            531
+          ]
+        ],
+        "accuracy": 0.9726923076923077,
+        "macro_f1": 0.959938462353114,
+        "glasses_precision": 0.9962476547842402,
+        "glasses_recall": 0.885,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.998071014881134
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.01654146463150465,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1976,
+            24
+          ],
+          [
+            5,
+            595
+          ]
+        ],
+        "accuracy": 0.9888461538461538,
+        "macro_f1": 0.9844627031723081,
+        "glasses_precision": 0.9612277867528272,
+        "glasses_recall": 0.9916666666666667,
+        "no_glasses_false_route_rate": 0.012,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            44,
+            556
+          ]
+        ],
+        "accuracy": 0.9823076923076923,
+        "macro_f1": 0.9744479169070186,
+        "glasses_precision": 0.996415770609319,
+        "glasses_recall": 0.9266666666666666,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9975159168243408
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.01157078941505921,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1989,
+            11
+          ],
+          [
+            11,
+            589
+          ]
+        ],
+        "accuracy": 0.9915384615384616,
+        "macro_f1": 0.9880833333333334,
+        "glasses_precision": 0.9816666666666667,
+        "glasses_recall": 0.9816666666666667,
+        "no_glasses_false_route_rate": 0.0055,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            59,
+            541
+          ]
+        ],
+        "accuracy": 0.9765384615384616,
+        "macro_f1": 0.9657979651730124,
+        "glasses_precision": 0.996316758747698,
+        "glasses_recall": 0.9016666666666666,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9981279969215393
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.011238638028691086,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1985,
+            15
+          ],
+          [
+            10,
+            590
+          ]
+        ],
+        "accuracy": 0.9903846153846154,
+        "macro_f1": 0.9864976448776739,
+        "glasses_precision": 0.9752066115702479,
+        "glasses_recall": 0.9833333333333333,
+        "no_glasses_false_route_rate": 0.0075,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            99,
+            501
+          ]
+        ],
+        "accuracy": 0.9611538461538461,
+        "macro_f1": 0.941889682896027,
+        "glasses_precision": 0.9960238568588469,
+        "glasses_recall": 0.835,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9996763467788696
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.011552817907325829,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1973,
+            27
+          ],
+          [
+            7,
+            593
+          ]
+        ],
+        "accuracy": 0.9869230769230769,
+        "macro_f1": 0.9817942169865722,
+        "glasses_precision": 0.9564516129032258,
+        "glasses_recall": 0.9883333333333333,
+        "no_glasses_false_route_rate": 0.0135,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            63,
+            537
+          ]
+        ],
+        "accuracy": 0.975,
+        "macro_f1": 0.9634632434824588,
+        "glasses_precision": 0.9962894248608535,
+        "glasses_recall": 0.895,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9998476505279541
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.009656001908020883,
+      "validation_raw": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1952,
+            48
+          ],
+          [
+            5,
+            595
+          ]
+        ],
+        "accuracy": 0.9796153846153847,
+        "macro_f1": 0.9719836187527587,
+        "glasses_precision": 0.9253499222395023,
+        "glasses_recall": 0.9916666666666667,
+        "no_glasses_false_route_rate": 0.024,
+        "threshold": 0.5
+      },
+      "validation_gate": {
+        "count": 2600,
+        "confusion_matrix": [
+          [
+            1998,
+            2
+          ],
+          [
+            158,
+            442
+          ]
+        ],
+        "accuracy": 0.9384615384615385,
+        "macro_f1": 0.9041223693575093,
+        "glasses_precision": 0.9954954954954955,
+        "glasses_recall": 0.7366666666666667,
+        "no_glasses_false_route_rate": 0.001,
+        "threshold": 0.9999988079071045
+      }
+    }
+  ],
+  "selected_epoch": 6,
+  "spec": {
+    "classes": [
+      "no_glasses",
+      "glasses"
+    ],
+    "input_size": 128,
+    "output": "probabilities",
+    "preprocessing": {
+      "color": "RGB",
+      "resize": "shorter_center_crop",
+      "resize_shorter": 128,
+      "interpolation": "bilinear",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "architecture": "MobileNetV3-Small",
+    "artifact": {
+      "file": "eyewear.onnx",
+      "sha256": "465c8d767af5010cbc6cbe392d77a8082f1658ecef6ee8e11780a7ef62847ea9"
+    }
+  },
+  "gpu": "Tesla T4",
+  "limits": [
+    "Celebrity still photos; no USB RGB glasses video yet",
+    "Eyeglasses attribute does not certify clear prescription lens subtype",
+    "Validation-selected precision target is not a guarantee on another camera"
+  ],
+  "seconds": 1143.823204979,
+  "base_models_modified": false,
+  "test_raw": {
+    "count": 2600,
+    "confusion_matrix": [
+      [
+        1974,
+        26
+      ],
+      [
+        13,
+        587
+      ]
+    ],
+    "accuracy": 0.985,
+    "macro_f1": 0.9790332595775513,
+    "glasses_precision": 0.9575856443719413,
+    "glasses_recall": 0.9783333333333334,
+    "no_glasses_false_route_rate": 0.013,
+    "threshold": 0.5
+  },
+  "test_gate": {
+    "count": 2600,
+    "confusion_matrix": [
+      [
+        1995,
+        5
+      ],
+      [
+        45,
+        555
+      ]
+    ],
+    "accuracy": 0.9807692307692307,
+    "macro_f1": 0.9722601570501878,
+    "glasses_precision": 0.9910714285714286,
+    "glasses_recall": 0.925,
+    "no_glasses_false_route_rate": 0.0025,
+    "threshold": 0.9975159168243408
+  },
+  "threshold": 0.9975159168243408,
+  "validation": {
+    "epoch": 6,
+    "train_loss": 0.01654146463150465,
+    "validation_raw": {
+      "count": 2600,
+      "confusion_matrix": [
+        [
+          1976,
+          24
+        ],
+        [
+          5,
+          595
+        ]
+      ],
+      "accuracy": 0.9888461538461538,
+      "macro_f1": 0.9844627031723081,
+      "glasses_precision": 0.9612277867528272,
+      "glasses_recall": 0.9916666666666667,
+      "no_glasses_false_route_rate": 0.012,
+      "threshold": 0.5
+    },
+    "validation_gate": {
+      "count": 2600,
+      "confusion_matrix": [
+        [
+          1998,
+          2
+        ],
+        [
+          44,
+          556
+        ]
+      ],
+      "accuracy": 0.9823076923076923,
+      "macro_f1": 0.9744479169070186,
+      "glasses_precision": 0.996415770609319,
+      "glasses_recall": 0.9266666666666666,
+      "no_glasses_false_route_rate": 0.001,
+      "threshold": 0.9975159168243408
+    }
+  }
+}

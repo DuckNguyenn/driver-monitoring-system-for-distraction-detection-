@@ -7,24 +7,33 @@ from .config import ROOT, load_config
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    commands = {"run", "fetch-models", "export", "convert", "preflight", "evaluate-classifier", "evaluate-session", "evaluate-study", "parity", "prepare-dataset", "train"}
+    commands = {"run", "serve", "fetch-models", "export", "convert", "preflight", "evaluate-classifier", "evaluate-session", "evaluate-study", "parity", "prepare-dataset", "train"}
     if not argv or argv[0] not in commands:
         argv.insert(0, "run")
     parser = argparse.ArgumentParser(description="Driver monitor for PC and ROCK 4D")
     sub = parser.add_subparsers(dest="command", required=True)
-    runtime = sub.add_parser("run")
-    runtime.add_argument("--config", default=str(ROOT / "configs/driver_monitor.yaml"))
-    runtime.add_argument("--source", default="0")
-    runtime.add_argument("--backend", choices=("torch", "onnx", "rknn"))
-    runtime.add_argument("--manifest")
-    runtime.add_argument("--log-dir")
-    runtime.add_argument("--esp32-port", dest="serial_port")
-    runtime.add_argument("--headless", action="store_true", default=None)
-    runtime.add_argument("--display", action="store_true")
-    runtime.add_argument("--realtime", action="store_true", default=None, help="pace video playback using media timestamps")
-    runtime.add_argument("--max-frames", type=int)
-    runtime.add_argument("--rotate", dest="rotation_degrees", type=int, choices=(0, 90, 180, 270))
-    runtime.add_argument("--duration", type=float, default=0)
+    for command in ("run", "serve"):
+        runtime = sub.add_parser(command)
+        runtime.add_argument("--config", default=str(ROOT / "configs" / ("camera_pc.yaml" if command == "serve" else "driver_monitor.yaml")))
+        runtime.add_argument("--source", default="0")
+        runtime.add_argument("--backend", choices=("torch", "onnx", "rknn"))
+        runtime.add_argument("--manifest")
+        runtime.add_argument("--auto-glasses", action="store_true", default=None,
+                             help="experimental RGB eyewear routing; preserves this profile's base eye and yawn")
+        runtime.add_argument("--eyewear-manifest")
+        runtime.add_argument("--glasses-eye-manifest")
+        runtime.add_argument("--log-dir")
+        runtime.add_argument("--esp32-port", dest="serial_port")
+        runtime.add_argument("--headless", action="store_true", default=True if command == "serve" else None)
+        runtime.add_argument("--display", action="store_true")
+        runtime.add_argument("--realtime", action="store_true", default=None, help="pace video playback using media timestamps")
+        runtime.add_argument("--max-frames", type=int)
+        runtime.add_argument("--rotate", dest="rotation_degrees", type=int, choices=(0, 90, 180, 270))
+        runtime.add_argument("--duration", type=float, default=0)
+    dashboard = runtime
+    dashboard.add_argument("--host", default="0.0.0.0")
+    dashboard.add_argument("--port", type=int, default=8765)
+    dashboard.add_argument("--preview-fps", type=int, choices=(2, 5, 10, 15, 30), default=15)
     fetch = sub.add_parser("fetch-models")
     fetch.add_argument("--output", default=str(ROOT / "models"))
     export = sub.add_parser("export")
@@ -74,14 +83,21 @@ def main(argv=None):
     p.add_argument("--device", default="cpu")
     args = parser.parse_args(argv)
     try:
-        if args.command == "run":
-            from .runtime import run
-            overrides = {k: getattr(args, k) for k in ("backend", "manifest", "log_dir", "serial_port", "headless", "max_frames", "rotation_degrees", "realtime")}
+        if args.command in ("run", "serve"):
+            overrides = {k: getattr(args, k) for k in ("backend", "manifest", "log_dir", "serial_port", "headless", "max_frames", "rotation_degrees", "realtime", "auto_glasses", "eyewear_manifest", "glasses_eye_manifest")}
             if args.display:
                 overrides["headless"] = False
             if args.duration < 0:
                 raise ValueError("duration cannot be negative")
-            run(load_config(args.config, **overrides), args.source, args.duration)
+            config = load_config(args.config, **overrides)
+            if args.command == "serve":
+                from .dashboard_server import serve
+                if not 1 <= args.port <= 65535:
+                    raise ValueError("port must be in 1..65535")
+                serve(config, args.source, args.duration, host=args.host, port=args.port, preview_fps=args.preview_fps)
+            else:
+                from .runtime import run
+                run(config, args.source, args.duration)
         elif args.command == "fetch-models":
             from .assets import fetch_yunet
             print(json.dumps(fetch_yunet(args.output), indent=2))

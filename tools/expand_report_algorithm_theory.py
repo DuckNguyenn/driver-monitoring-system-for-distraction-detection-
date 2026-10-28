@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / 'reports/BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.md'
+SOURCE = ROOT / 'reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md'
 
 
 def main():

@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Bangkok",
+  "feature": "mobile-ui",
+  "version": "1.1.0",
+  "version_code": 2,
+  "status": "complete-emulator-ui-verified",
+  "software": {
+    "shared_client_tests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "typecheck": "pass for shared/web/mobile",
+    "ios_export": "pass on final source",
+    "android_release_build": "pass; final incremental build1m43s",
+    "context_and_build_tests": {
+      "passed": 18,
+      "failed": 0
+    },
+    "signature_v2": "verified",
+    "native_abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64"
+    ],
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "docs_guard": "pass:209 files; startup and12-file UI pack within limits"
+  },
+  "scope": {
+    "ui_designer_agent": true,
+    "models_changed": false,
+    "api_changed": false,
+    "personal_images_used": false,
+    "physical_camera_opened": false,
+    "esp32_opened": false
+  },
+  "pending": [
+    "Physical Android camera/ESP32/haptics and Wi-Fi reconnection are unverified",
+    "Physical iPhone layout has not been checked"
+  ],
+  "artifact": {
+    "artifact": "DriverMonitor.apk",
+    "package": "com.da2.drivermonitor",
+    "architectures": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64"
+    ],
+    "sha256": "31f5bef95252c08384e50ba4a32643ab3009783700e90617f92baba71c515c5a",
+    "bytes": 63114957,
+    "signing": "Expo template debug key; internal testing only",
+    "path": "dist/android/DriverMonitor.apk",
+    "version": "1.1.0",
+    "version_code": 2
+  },
+  "emulator": {
+    "product": "LDPlayer 9",
+    "android": "9",
+    "installed_final_apk": true,
+    "version_confirmed": "1.1.0/code2",
+    "viewports_dp": [
+      617,
+      360
+    ],
+    "original_density": 280,
+    "test_override_density": 480,
+    "density_restored": true,
+    "visual_and_interaction": {
+      "connection_steps": "pass",
+      "input_focus_and_secure_toggle": "pass on UI1.1 component",
+      "normal_and_annotated_synthetic_preview": "pass",
+      "compact_phone_hierarchy": "pass on360dp",
+      "active_nav_rounding_after_switch": "pass after keyed native pill fix",
+      "synthetic_signal_charts": "pass; eye1/eye2/yawn share60s with null gaps",
+      "unknown_and_null": "pass",
+      "foreground_alert_banner": "pass on synthetic camera episode",
+      "history_list_detail_back_filters": "pass",
+      "csv": "HTTP200 and Android ChooserActivity verified after scrolling button into viewport; no recipient chosen",
+      "api_offline": "notice, last-known state, faded data, preview placeholder verified"
+    },
+    "input_dispatch_frozen": false
+  },
+  "testing_notes": [
+    "UIAutomator cannot obtain idle state during continuous preview; screenshot-observed navigation coordinates used to leave preview, then fresh hierarchy used on static pages. Cached XML rejected by harness.",
+    "360dp screenshot test used temporary LDPlayer density override; no physical Android phone or iPhone UI verified."
+  ],
+  "cleanup": {
+    "api_fixture_stopped": true,
+    "fixture_connection_removed_using_ui": true,
+    "app_left_at_empty_connection_form": true,
+    "temporary_subst_removed": true,
+    "density_override_removed": true
+  },
+  "screenshots": [
+    "dist/android/ui-connection.png",
+    "dist/android/ui-monitor-360dp.png",
+    "dist/android/ui-alert-360dp.png",
+    "dist/android/ui-history-360dp.png",
+    "dist/android/ui-signals-360dp.png"
+  ]
+}

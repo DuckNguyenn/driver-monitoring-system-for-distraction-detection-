@@ -183,6 +183,54 @@ def main():
         "outputs": [{"name": name, "shape": list(value.shape)}
                     for name, value in zip(names, net.forward(names))],
         "probe_image": "all-zero synthetic image; tensor contract only, not accuracy measurement"}
+    # Keep the original baseline inventory, and inventory every retained manifest.
+    # A different checkpoint or serialization does not imply a new architecture.
+    import yaml
+    unique_artifacts, variants = {}, {}
+    for variant_path in sorted((ROOT / "models").rglob("manifest.json")):
+        spec = json.loads(variant_path.read_text(encoding="utf-8"))
+        detector_path = (variant_path.parent / spec["detector"]["file"]).resolve()
+        if artifact(detector_path)["sha256"] != spec["detector"]["sha256"]:
+            raise ValueError(f"Detector differs from manifest: {variant_path}")
+        entry = {**artifact(variant_path), "classifiers": {},
+                 "refinement": spec.get("refinement"),
+                 "deployment_validation": spec.get("deployment_validation")}
+        for name, classifier in spec["classifiers"].items():
+            record = {"classes": classifier["classes"], "input_size": classifier["input_size"],
+                      "preprocessing": classifier["preprocessing"],
+                      "inference_views": classifier.get("inference_views"), "artifacts": {}}
+            for backend, blob in classifier["artifacts"].items():
+                blob_path = (variant_path.parent / blob["file"]).resolve()
+                actual = artifact(blob_path)
+                if actual["sha256"] != blob["sha256"]:
+                    raise ValueError(f"Artifact differs from manifest: {variant_path}/{name}/{backend}")
+                key = actual["file"]
+                if key not in unique_artifacts:
+                    if backend == "torch":
+                        actual = inspect_classifier(blob_path, classifier["input_size"])
+                        actual_names = [actual["labels"][i] for i in sorted(actual["labels"])]
+                        if actual_names != classifier["classes"]:
+                            raise ValueError(f"Class order differs from checkpoint: {variant_path}/{name}")
+                    elif backend == "onnx":
+                        actual = inspect_onnx(blob_path)
+                    unique_artifacts[key] = actual
+                record["artifacts"][backend] = key
+            entry["classifiers"][name] = record
+        variants[variant_path.relative_to(ROOT).as_posix()] = entry
+    inventory["model_variants"] = variants
+    inventory["unique_classifier_artifacts"] = unique_artifacts
+    inventory["runtime_profiles"] = {}
+    for profile in sorted((ROOT / "configs").glob("*.yaml")):
+        config = yaml.safe_load(profile.read_text(encoding="utf-8"))
+        if config.get("manifest"):
+            inventory["runtime_profiles"][profile.relative_to(ROOT).as_posix()] = {
+                "manifest": (profile.parent / config["manifest"]).resolve().relative_to(ROOT).as_posix(),
+                "backend": config.get("backend"),
+                "detector_size": config.get("detector_size", 320)}
+    baseline_stages = inventory["classifiers"]["eye"]["torch"]["stages"]
+    inventory["all_retained_classifiers_share_stage_architecture"] = all(
+        item["stages"] == baseline_stages for item in unique_artifacts.values() if "stages" in item)
+    inventory["validation_scope"] = "Artifact hashes, labels, graph validity and synthetic tensor shapes; not accuracy or hardware acceptance"
     target = ROOT / "reports/model_architecture_inventory.json"
     target.write_text(json.dumps(inventory, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Saved {target}")

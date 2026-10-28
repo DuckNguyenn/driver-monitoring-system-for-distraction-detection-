@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 QA = ROOT / "reports/reference_style/system_design_scope"
-SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.md"
+SOURCE = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md"
 DOCX = ROOT / "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.docx"
 PDF = DOCX.with_suffix(".pdf")
 FORBIDDEN = r"\b(?:GPS|SIM800L|GSM|GPRS|SMS|cvzone|FaceNet|AdaBoost|Haar(?:-like)?|EAR|MAR|MQTT|Firebase)\b|giọng nói|danh tính|website|bảng điều khiển từ xa"
@@ -88,8 +88,9 @@ def verify():
             raise ValueError(f"Unsupported fill in empty heading: {title}")
     figures = re.findall(r"^!\[([^]]+)\]\(([^)]+)\)$", source, re.MULTILINE)
     figure_sources = {caption: digest((SOURCE.parent / path).resolve()) for caption, path in figures}
-    # The front matter also includes an unnumbered abbreviations table.
-    if len(figures) != 14 or len(doc.inline_shapes) != 14 or len(doc.tables) != 15:
+    # Derive counts from reviewed source so added architecture sections are checked.
+    numbered_tables = re.findall(r"^@table (.+)$", source, re.MULTILINE)
+    if len(figures) != 18 or len(doc.inline_shapes) != len(figures) or len(doc.tables) != len(numbered_tables) + 1:
         raise ValueError("Missing figures/tables")
     equations = [p.text for p in doc.paragraphs if p.style.name == "Report Equation"]
     if len(equations) != 20:
@@ -133,12 +134,14 @@ def verify():
         raise ValueError("Removed topic remains in rendered PDF/TOC")
     if "3.1.3. Lưu đồ hoạt động toàn bộ chương trình" not in combined.replace('\n', ' '):
         raise ValueError("Updated heading not found in PDF")
-    if "yawn_camera_refined" not in combined:
-        raise ValueError("Active model omitted from PDF")
+    for required in ("yawn_camera_refined", "yawn_usb_robust", "blur_refined",
+                     "Tổng hợp các mạng AI trong pipeline", "53.104", "603.926.016"):
+        if required not in combined.replace('\n', ' '):
+            raise ValueError(f"Model architecture content omitted from PDF: {required}")
     if sparse_pages or outside_page:
         raise ValueError(f"Layout failed: sparse={sparse_pages}; outside={outside_page}")
     report = {"output_docx": str(DOCX), "output_pdf": str(PDF), "pages": len(pdf),
-              "figures": len(figures), "tables": len(doc.tables), "numbered_tables": 14, "equations": len(equations),
+              "figures": len(figures), "tables": len(doc.tables), "numbered_tables": len(numbered_tables), "equations": len(equations),
               "empty_headings_preserved": len(blanks), "removed_headings": len(audit["removed_headings"]),
               "out_of_scope_matches": [], "sparse_pages": sparse_pages, "outside_page": outside_page,
               "image_pages": image_pages, "figure_source_sha256": figure_sources,

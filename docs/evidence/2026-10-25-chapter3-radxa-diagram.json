@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-25",
+  "task": "Chapter 3 architecture revision, Radxa only",
+  "status": "complete; updated current DOCX and visually reviewed 14 pages",
+  "changes": [
+    "Removed PC from diagram and three design paragraphs",
+    "Replaced ambiguous board alternative with Radxa ROCK 4D / RK3576 processing unit",
+    "USB webcam reference and separate ESP32-WROOM-32 to buzzer photos",
+    "No route intersections with labels or images; enlarged JSONL / SQLite output"
+  ],
+  "retained": {
+    "other_media_exact": 6,
+    "other_media_total": 6,
+    "chapter2_sha256": "e8a1c5221a1e2b48925a962f52f07ddecc3365184c08a243bead73ca954eca36"
+  },
+  "camera_note": "Reference front view matching housing style; not the exact user attachment",
+  "buzzer_note": "Illustrative active buzzer product photo, actual model not established",
+  "visual_qa": {
+    "diagram": true,
+    "docx": true,
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "renderer": "Microsoft Word Save As PDF + canonical documents rasterizer",
+    "final_iteration": "page 2 rechecked; other 13 pages identical to the fully reviewed preceding render"
+  },
+  "next": "Wait for report feedback; keep current DOCX edits and do not run old chapter builders.",
+  "docx": "BaocaoDA/Chuong3_test.docx",
+  "sha256": "10341989a5a10f129cd35e3de310172209f391ac2be393f4354ea4ce1e682bbb",
+  "source_before_patch_sha256": "d76b7bc2b9e48c5af58bae5a1b2f735dda52b77a5ac7c4faaece63d4aa039001",
+  "pages": 14,
+  "pc_tokens_docx_pdf": 0,
+  "modified_body_paragraphs": 3,
+  "modified_table_cells": 1,
+  "backup": ".cache/chapter3-radxa-review/Chuong3_test.before-radxa-final.docx"
+}

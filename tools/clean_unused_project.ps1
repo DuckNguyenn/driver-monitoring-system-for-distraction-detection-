@@ -88,7 +88,7 @@ foreach ($cleanupKeptDir in @('driver_monitor','configs','scripts','esp32_buzzer
 $cleanupProtectedFiles += Get-ChildItem -LiteralPath (Join-Path $cleanupRoot 'models') -File -Force
 $cleanupProtectedFiles += Get-ChildItem -LiteralPath (Join-Path $cleanupRoot 'reports') -File -Force | Where-Object { $_.Extension -in @('.avi','.docx','.pdf') -and $_.Name -notlike '~$*' }
 $cleanupProtectedFiles += Get-ChildItem -LiteralPath (Join-Path $cleanupRoot 'reports\yawn_camera_check') -File -Force | Where-Object { $_.Extension -eq '.avi' -or $_.Name -like '*.timestamps.json' }
-foreach ($cleanupKeptFile in @('camera_classical\best_eye.pt','camera_classical\best_yawn.pt','train_eye_classifier.ipynb','train_yawn_classifier.ipynb','requirements-host.lock.txt','requirements-runtime.txt','requirements-rknn-linux.lock.txt','.venv\pyvenv.cfg','.venv\Scripts\python.exe','.venv-rknn\pyvenv.cfg','BAO_CAO_DA2_HE_THONG_GIAM_SAT_TAI_XE.docx','reports\BAO_CAO_GIAM_SAT_BUON_NGU_THEO_MAU.md','reports\reference_style\system_design_scope\scope_audit.json')) {
+foreach ($cleanupKeptFile in @('camera_classical\best_eye.pt','camera_classical\best_yawn.pt','train_eye_classifier.ipynb','train_yawn_classifier.ipynb','requirements-host.lock.txt','requirements-runtime.txt','requirements-rknn-linux.lock.txt','.venv\pyvenv.cfg','.venv\Scripts\python.exe','.venv-rknn\pyvenv.cfg','BAO_CAO_DA2_HE_THONG_GIAM_SAT_TAI_XE.docx','reports\BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md','reports\reference_style\system_design_scope\scope_audit.json')) {
     $cleanupProtectedFiles += Get-Item -LiteralPath (Join-Path $cleanupRoot $cleanupKeptFile) -Force
 }
 foreach ($cleanupProtectedFile in $cleanupProtectedFiles) {

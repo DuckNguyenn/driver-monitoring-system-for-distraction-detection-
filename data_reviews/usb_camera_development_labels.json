@@ -1,0 +1,20 @@
+{
+  "video": "reports/usb_camera_check/20261009T105555_466558Z.avi",
+  "video_sha256": "38ad9ebfcc87b9501faa3783348775d2dc6f43f59ed383de99d086421915a40a",
+  "config": "configs/camera_pc.yaml",
+  "subject_id": "camera_subject_01",
+  "review": "Visual review of original camera frames sampled across the entire clip, not labels inferred from protocol prompts or model scores. Transition intervals are omitted.",
+  "study_status": "Single-person USB development clip. First-bout temporal validation is correlated with training. Second bout is a locked development regression, never independent subject-held-out acceptance.",
+  "intervals": [
+    {"start": 0, "end": 3, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 4, "end": 5.5, "label": "no_yawn", "split": "val", "action": "neutral"},
+    {"start": 7, "end": 9, "label": "yawn", "split": "train", "action": "first_yawn"},
+    {"start": 10, "end": 12, "label": "yawn", "split": "val", "action": "first_yawn"},
+    {"start": 13.5, "end": 15.5, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 18, "end": 20, "label": "no_yawn", "split": "train", "action": "smile"},
+    {"start": 21, "end": 22.8, "label": "no_yawn", "split": "val", "action": "smile"},
+    {"start": 24, "end": 25.5, "label": "no_yawn", "split": "train", "action": "neutral"},
+    {"start": 28, "end": 34.5, "label": "yawn", "split": "regression", "action": "second_yawn"},
+    {"start": 35.5, "end": 37.9, "label": "no_yawn", "split": "regression", "action": "neutral"}
+  ]
+}

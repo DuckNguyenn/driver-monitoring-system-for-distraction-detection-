@@ -1,0 +1,185 @@
+{
+  "schema": "driver_monitor.original_yawn_distance_diagnostic.v1",
+  "date": "2026-10-10",
+  "status": "original_classifier_false_positives_reproduced; underlying_live_camera_case_unresolved",
+  "source": {
+    "file": "yawn_error.mp4",
+    "sha256": "977032a8eaa804345f388a4d9e78273167300160ecd37c1739c46295a3720efa",
+    "frames": 735,
+    "duration_seconds": 24.5,
+    "width": 702,
+    "height": 626,
+    "type": "screen_recording_of_original_yawn_test_window",
+    "original_camera_pixels_available": false,
+    "matched_csv": "reports/original_model_check/20261010T125905_921604Z_yawn.csv",
+    "csv_sha256": "cc5a6f11ad36780e95902e92f8df2947d8d9d544538ed3ac56b41ddf75b2f4a3"
+  },
+  "samples": [
+    {
+      "screen_seconds": 0.0,
+      "hud_seconds": 21.22,
+      "csv_source_seconds": 21.21899999999914,
+      "csv_frame": 318,
+      "reviewed_visible_state": "open_mouth_staged_yawn",
+      "quality": "usable",
+      "inference_ms": 13.117999998939922,
+      "original_recorded_raw_yawn_score": 0.701400637626648,
+      "display_face_width_pixels": 276,
+      "display_face_height_pixels": 372
+    },
+    {
+      "screen_seconds": 2.45,
+      "hud_seconds": 23.7,
+      "csv_source_seconds": 23.70299999999952,
+      "csv_frame": 355,
+      "reviewed_visible_state": "open_mouth_staged_yawn",
+      "quality": "usable",
+      "inference_ms": 10.895399998844368,
+      "original_recorded_raw_yawn_score": 0.9874164966175659,
+      "display_face_width_pixels": 266,
+      "display_face_height_pixels": 362
+    },
+    {
+      "screen_seconds": 7.35,
+      "hud_seconds": 28.58,
+      "csv_source_seconds": 28.57799999999952,
+      "csv_frame": 428,
+      "reviewed_visible_state": "normal_mouth_closed",
+      "quality": "usable",
+      "inference_ms": 11.653200001092046,
+      "original_recorded_raw_yawn_score": 0.9785945738127109,
+      "display_face_width_pixels": 214,
+      "display_face_height_pixels": 276
+    },
+    {
+      "screen_seconds": 12.25,
+      "hud_seconds": 33.45,
+      "csv_source_seconds": 33.45299999999952,
+      "csv_frame": 501,
+      "reviewed_visible_state": "normal_mouth_closed",
+      "quality": "usable",
+      "inference_ms": 11.657500001092558,
+      "original_recorded_raw_yawn_score": 0.3331608772277832,
+      "display_face_width_pixels": 248,
+      "display_face_height_pixels": 324
+    },
+    {
+      "screen_seconds": 17.15,
+      "hud_seconds": 38.39,
+      "csv_source_seconds": 38.39099999999962,
+      "csv_frame": 575,
+      "reviewed_visible_state": "normal_mouth_closed",
+      "quality": "usable",
+      "inference_ms": 12.86430000072869,
+      "original_recorded_raw_yawn_score": 0.37857475153057285,
+      "display_face_width_pixels": 286,
+      "display_face_height_pixels": 368
+    },
+    {
+      "screen_seconds": 19.6,
+      "hud_seconds": 40.8,
+      "csv_source_seconds": 40.79700000000048,
+      "csv_frame": 611,
+      "reviewed_visible_state": "open_mouth_staged_yawn",
+      "quality": "usable",
+      "inference_ms": 12.553799999295734,
+      "original_recorded_raw_yawn_score": 0.962039884321243,
+      "display_face_width_pixels": 280,
+      "display_face_height_pixels": 370
+    },
+    {
+      "screen_seconds": 22.05,
+      "hud_seconds": 43.27,
+      "csv_source_seconds": 43.26599999999962,
+      "csv_frame": 648,
+      "reviewed_visible_state": "normal_mouth_closed",
+      "quality": "usable",
+      "inference_ms": 13.571800000136136,
+      "original_recorded_raw_yawn_score": 0.7626900304165491,
+      "display_face_width_pixels": 266,
+      "display_face_height_pixels": 364
+    }
+  ],
+  "findings": [
+    "The visible relaxed mouth at HUD 28.58 seconds has recorded raw yawn probability 0.978595 despite usable quality.",
+    "The face is larger in the display at HUD 43.27 seconds; closed mouth still scores 0.762690, so distance alone is not established as the cause.",
+    "Usable is an image-quality result, not evidence that classification is correct.",
+    "The erroneous score is already in raw classifier output, before temporal EMA/event counting.",
+    "The model is loaded and warmed before acquisition; displayed inference takes roughly 11-14 ms at reviewed samples.",
+    "Torch and ONNX agree on the exploratory false-positive crop; this input does not indicate an ONNX conversion fault."
+  ],
+  "exploratory_reproduction": {
+    "screen_seconds": 7.35,
+    "label": "no_yawn",
+    "prepared_input_shape": [
+      224,
+      224,
+      3
+    ],
+    "screen_crop_probability_onnx": 0.9979009502831261,
+    "screen_crop_probability_torch": 0.9979009275136187,
+    "scope": "Decoded screen crop; probabilities differ from original camera HUD and must not replace camera scores.",
+    "hypotheses_probed": [
+      "Classifier sensitivity to camera data: false positive reproducible at the classifier input without runtime or temporal logic.",
+      "Resolution: downsample then resize increases false-positive scores on screen crops; original capture resolution or physical distance is unknown.",
+      "Crop border: changing inset by 0-12 pixels did not correct this original-checkpoint false positive."
+    ],
+    "diagnosis_only": true,
+    "independent_acceptance": false,
+    "training_allowed": false,
+    "checkpoint_selection_allowed": false
+  },
+  "changes": {
+    "tool": "tools/test_original_model.py",
+    "raw_recording_option": "--record",
+    "codec": "FFV1",
+    "source_timestamps_and_hashes": true,
+    "roi_boxes_sizes_and_input_hashes": true,
+    "model_weights_changed": false,
+    "thresholds_changed": false,
+    "default_profile_changed": false
+  },
+  "validation": {
+    "automated_recording_tests": 4,
+    "passed": true,
+    "real_model_recording_replays": [
+      {
+        "classifier": "yawn",
+        "backend": "onnx",
+        "frames": 8,
+        "source": "reports/usb_camera_check/20261010T110453_140956Z.avi",
+        "raw_pixels_match": true,
+        "timestamps_match": true,
+        "input_hashes_match": true,
+        "max_probability_replay_delta": 0.0
+      },
+      {
+        "classifier": "eye",
+        "backend": "onnx",
+        "frames": 3,
+        "source": "reports/usb_camera_check/20261010T110453_140956Z.avi",
+        "raw_pixels_match": true,
+        "timestamps_match": true,
+        "input_hashes_match": true,
+        "max_probability_replay_delta": 0.0
+      }
+    ]
+  },
+  "limitations": [
+    "Seven reviewed sample frames are diagnostic examples, not F1 or event-recall measurements.",
+    "Other video frames and the rest of the CSV are unlabeled.",
+    "Display bbox sizes are screen pixels, not original camera crop dimensions or centimeters.",
+    "One developer subject; no independent person or unseen raw-video acceptance.",
+    "No model has been retrained or selected using this screen recording."
+  ],
+  "next_capture": {
+    "command": "tools/test_original_model.py --name yawn --source 0 --inspect-model --record",
+    "protocol": "Fixed camera angle/light: near, normal seated distance, farther; at each position relaxed mouth, staged yawn, smile.",
+    "deliverables": [
+      "AVI",
+      "CSV",
+      "timestamps.json",
+      "metadata.json"
+    ]
+  }
+}

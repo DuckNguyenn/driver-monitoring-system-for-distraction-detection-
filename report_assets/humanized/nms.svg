@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="432pt" viewBox="0 0 792 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-23T22:37:27.938821</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 432 
+L 792 432 
+L 792 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 41 363.35 
+L 310.8 363.35 
+L 310.8 103.733333 
+L 41 103.733333 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: #f8fafb; stroke: #ccd5dc; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 481.2 363.35 
+L 751 363.35 
+L 751 103.733333 
+L 481.2 103.733333 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: #f8fafb; stroke: #ccd5dc; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 83.6 307.216667 
+L 204.3 307.216667 
+L 204.3 152.85 
+L 83.6 152.85 
+L 83.6 307.216667 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: none; stroke: #206d53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 101.35 321.25 
+L 222.05 321.25 
+L 222.05 166.883333 
+L 101.35 166.883333 
+L 101.35 321.25 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: none; stroke: #b06030; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 236.25 342.3 
+L 282.4 342.3 
+L 282.4 272.133333 
+L 236.25 272.133333 
+L 236.25 342.3 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: none; stroke: #246b9a; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 523.8 307.216667 
+L 644.5 307.216667 
+L 644.5 152.85 
+L 523.8 152.85 
+L 523.8 307.216667 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: none; stroke: #206d53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 676.45 342.3 
+L 722.6 342.3 
+L 722.6 272.133333 
+L 676.45 272.133333 
+L 676.45 342.3 
+z
+" clip-path="url(#pdcd2e1c1e3)" style="fill: none; stroke: #246b9a; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #263b4a; font: 700 17.25px 'DejaVu Sans'; text-anchor: start" x="26.8" y="33.566667" transform="rotate(-0 26.8 33.566667)">NMS giữ hộp có điểm cao và bỏ hộp trùng</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 700 14.85px 'DejaVu Sans'; text-anchor: start" x="41" y="82.683333" transform="rotate(-0 41 82.683333)">Các hộp ứng viên</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 700 14.85px 'DejaVu Sans'; text-anchor: start" x="481.2" y="82.683333" transform="rotate(-0 481.2 82.683333)">Sau NMS</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #206d53; font: 14.85px 'DejaVu Sans'; text-anchor: start" x="83.6" y="144.43" transform="rotate(-0 83.6 144.43)">A: 0,95</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #b06030; font: 14.85px 'DejaVu Sans'; text-anchor: start" x="101.35" y="198.458333" transform="rotate(-0 101.35 198.458333)">B: 0,88</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: start" x="232.7" y="258.1" transform="rotate(-0 232.7 258.1)">C: 0,82</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #206d53; font: 14.85px 'DejaVu Sans'; text-anchor: start" x="523.8" y="144.43" transform="rotate(-0 523.8 144.43)">Giữ A</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: start" x="672.9" y="258.1" transform="rotate(-0 672.9 258.1)">Giữ C</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 323.447525 223.016667 
+Q 395.999913 223.016667 467.098857 223.016667 
+" style="fill: none; stroke: #263b4a; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 461.158857 220.046667 
+L 467.098857 223.016667 
+L 461.158857 225.986667 
+z
+" style="fill: #263b4a; stroke: #263b4a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font: 13.5px 'DejaVu Sans'" transform="translate(343.301484 144.74962)">IoU(A,B) &gt; 0,30</text>
+    <text style="font: 13.5px 'DejaVu Sans'" transform="translate(368.900859 159.866667)">B bị loại</text>
+   </g>
+   <g id="text_10">
+    <text style="font: 13.5px 'DejaVu Sans'; text-anchor: start" x="41" y="408.958333" transform="rotate(-0 41 408.958333)">IoU = diện tích giao / diện tích hợp. Điểm số trong hình chỉ dùng minh họa.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdcd2e1c1e3">
+   <rect x="5.5" y="5.5" width="781" height="421"/>
+  </clipPath>
+ </defs>
+</svg>

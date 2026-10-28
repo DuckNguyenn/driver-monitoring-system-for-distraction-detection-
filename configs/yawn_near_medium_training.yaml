@@ -1,0 +1,33 @@
+# Experimental limited scope: camera train only; checkpoint selection uses old static val.
+# Independent near/medium camera validation remains pending; active profiles are preserved.
+runtime_config: camera_usb_robust.yaml
+annotations: ../data_collection/yawn_distance/annotations.csv
+videos: ../data_collection/yawn_distance/videos
+dataset: ../.cache/yawn_near_medium/dataset
+output: ../models/yawn_near_medium_candidate
+active_distances: [near, medium]
+validation_mode: static_only
+retained_static_records: ../.cache/yawn_refinement/records.json
+static_train_per_group: 80
+static_val_per_group: 40
+split_mode: clip
+sample_seconds: 0.20
+training_min_face_sharpness: 12.0
+seed: 42
+threads: 2
+batch_size: 16
+epochs: 30
+learning_rate: 0.0001
+weight_decay: 0.0001
+camera_weight: 0.80
+max_epoch_samples: 2000
+patience: 8
+trainable: classifier
+augmentation:
+  factors: [0.75, 0.50, 0.35]
+  downsample_probability: 0.50
+  gaussian_probability: 0.25
+  gaussian_sigma: [0.35, 0.70]
+  motion_probability: 0.15
+  motion_length: 3
+  min_short_side: 24

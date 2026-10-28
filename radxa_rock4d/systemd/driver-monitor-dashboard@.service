@@ -1,0 +1,30 @@
+[Unit]
+Description=Driver Monitor LAN dashboard on Radxa ROCK 4D
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=%i
+SupplementaryGroups=video dialout
+WorkingDirectory=/opt/driver-monitor
+EnvironmentFile=/etc/driver-monitor/dashboard.env
+ExecStart=/opt/driver-monitor/.venv/bin/python -m driver_monitor serve --config /opt/driver-monitor/configs/driver_monitor.yaml --backend rknn --source ${DRIVER_MONITOR_SOURCE} --esp32-port ${DRIVER_MONITOR_SERIAL_PORT} --port 8765 --preview-fps ${DRIVER_MONITOR_PREVIEW_FPS}
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+KillMode=mixed
+TimeoutStopSec=15
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/driver-monitor/logs
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

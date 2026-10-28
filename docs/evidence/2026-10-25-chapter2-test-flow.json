@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-25",
+  "output": "BaocaoDA\\Chuong2_test.docx",
+  "sha256": "c40d2ea9e439ba68bb71bcec8d5e1241e207c5ae0afbf94e78052f591538b562",
+  "pages": 15,
+  "major_sections": [
+    "2.1 Tổng quan về xử lý ảnh",
+    "2.2 Phát hiện khuôn mặt và xác định điểm mốc",
+    "2.3 Mạng nơ-ron tích chập và phân loại ảnh",
+    "2.4 Phương pháp xử lý thông tin theo thời gian",
+    "2.5 Thiết bị phần cứng",
+    "2.6 Ngôn ngữ, công cụ và định dạng mô hình",
+    "2.7 Các chỉ số đánh giá"
+  ],
+  "subsection_count": 27,
+  "nested_process_steps": [
+    "2.1.3.1 Thu nhận ảnh",
+    "2.1.3.2 Tiền xử lý ảnh",
+    "2.1.3.3 Phân đoạn hoặc phân vùng ảnh",
+    "2.1.3.4 Biểu diễn và trích chọn đặc trưng",
+    "2.1.3.5 Nhận dạng và phân loại ảnh",
+    "2.1.3.6 Cơ sở tri thức"
+  ],
+  "figures": 11,
+  "equations": 12,
+  "native_equations": 8,
+  "retained_equation_images": 4,
+  "references": 29,
+  "supplied_images_preserved_byte_for_byte": 7,
+  "source_backup": ".cache/chapter2-test-flow/Chuong2_test.before.docx",
+  "reference_document": "C:/Users/P1 Gen 5/Downloads/ung-dung-xu-ly-anh-iot-trong-giam-sat-tai-xe-tren-o-to.docx",
+  "editorial_sequence": "pixel and image representation -> general processing stages -> preprocessing/interpolation -> ROI/quality -> detection/landmarks -> CNN classification -> temporal information -> hardware/tools/metrics",
+  "theory_design_boundary_preserved": true,
+  "blank_camera_heading_preserved": true,
+  "corrections": [
+    "pixel count does not by itself guarantee optical sharpness",
+    "256 gray levels for 8-bit data",
+    "ROI coordinate formula repaired",
+    "interpolation distinguished from semantic interpretation",
+    "Fast R-CNN illustration identified as an example of RoI pooling",
+    "Laplacian prose uses G to match the supplied equation"
+  ],
+  "assets": "report_assets/chapter2_test_flow_20261025/",
+  "qa": {
+    "renderer": "Microsoft Word native PDF plus canonical documents/render_docx.py rasterization of the byte-identical prepared document",
+    "preview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "outside_page_spans": [],
+    "figure_caption_pages": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "final_docx_matches_reviewed_prepared_hash": true,
+    "docs_guard": "PASS: 209 files, 102 links, startup 22795 bytes; existing size warnings only",
+    "native_word_final_state": {
+      "requested_document_open": true,
+      "saved": true,
+      "read_only": false,
+      "contains_final_section": true
+    },
+    "full_report_hash_unchanged_against_prior_evidence": true
+  },
+  "install_note": "Original file was closed by the user during editing, unchanged against backup. The reviewed file was installed and reopened in Word. The helper stalled after reopening and was stopped without closing Word. QA uses the byte-identical prepared document.",
+  "image_provenance_limit": "Butterfly IoU illustration retained from user manuscript; original publisher not established. No invented attribution.",
+  "full_report_edited": false,
+  "code_models_thresholds_edited": false,
+  "status": "Updated requested user document in place and reopened it in Word"
+}

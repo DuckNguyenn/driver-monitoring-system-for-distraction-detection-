@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Bangkok",
+  "feature": "reporting",
+  "scope": "preliminary report review",
+  "status": "complete",
+  "artifacts": {
+    "docx": "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.docx",
+    "markdown": "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md",
+    "pdf": "reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.pdf"
+  },
+  "backup": ".cache/report-review/original/",
+  "changes": {
+    "paragraphs_revised": 16,
+    "new_android_section": "5.1.15",
+    "references_added": [
+      39,
+      40,
+      41
+    ],
+    "radxa_setup_updated": true,
+    "profile_historical_scope_clarified": true,
+    "caption_lists_synchronized": true
+  },
+  "validation": {
+    "pages": 79,
+    "changed_text_pages": [
+      3,
+      4,
+      6,
+      7,
+      9,
+      14,
+      37,
+      38,
+      52,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      66,
+      74,
+      75,
+      76,
+      79
+    ],
+    "outside_page": [],
+    "sparse_pages": [],
+    "images_preserved": 18,
+    "equations_preserved": 20,
+    "tables": 19,
+    "sha256": "3e33deab9f00160c5c59b699026a3c2cc8bcc006aab19353460fffd899825481"
+  },
+  "render": {
+    "docx_to_pdf": "Microsoft Word COM, Fields/TOC updated",
+    "pngs": "documents skill render_docx.py rasterize via pre-exported native Word PDF, bundled Poppler; DPI72",
+    "fallback_reason": "Windows runtime bundle has no LibreOffice; standard renderer direct call failed after dependency resolution",
+    "pages_visually_reviewed": 79,
+    "review_scale": "1:1 native72dpi page images composed four per sheet without resizing",
+    "formatting_after_caption_correction": "final revised sheets inspected again"
+  },
+  "boundaries": {
+    "historical_benchmarks_preserved": true,
+    "no_new_ai_accuracy_claims": true,
+    "physical_hardware_tested_during_task": false,
+    "missing_experiments_left_blank": true,
+    "bibliography_urls_revalidated": false
+  }
+}

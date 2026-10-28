@@ -1,0 +1,1091 @@
+{
+  "schema": "driver_monitor.original_yawn_raw_distance_diagnostic.v1",
+  "date": "2026-10-10",
+  "status": "classifier_scale_sensitivity_and_false_positives_confirmed; live_acceptance_not_met",
+  "user_confirmation": "First clip from about second 7 onward is staged yawning while varying distance. Second clip was recorded to test near and medium yawns.",
+  "checkpoints": {
+    "original": {
+      "manifest": "models/manifest.json",
+      "manifest_sha256": "83d85c5a154f49fce366b6dbfa6328c6e42bea6b59f0faa3b99dd1d589ba5e9a",
+      "torch_sha256": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1",
+      "onnx_sha256": "fdf971a428c4b24de47fb1126bf179db7e3282e9f7d9baf2b32e3bdba04d8844",
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ]
+    },
+    "pc_refined": {
+      "manifest": "models/yawn_camera_refined/manifest.json",
+      "manifest_sha256": "d2349de3521811f8627a7a54a526d3dae0c7a110aa3c0e6ae8770ca435134520",
+      "torch_sha256": "c31bb50bb024c93ed5caa4bf6553680c140396daa47a8a8b4e402e9d15e8e359",
+      "onnx_sha256": "b5a0cdc1b859b160787f404b9f6f36e4884d2f45cbd4d7e4f95f29ae84db500b",
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ]
+    },
+    "usb_robust": {
+      "manifest": "models/yawn_usb_robust/manifest.json",
+      "manifest_sha256": "b770b6242acde53fa064727316b9b714b78043beaa379ad974af8bbec249c590",
+      "torch_sha256": "dd0aa58501b784eb87d9fa9ce62f742e20518ff228a7c47a9404652d61f22539",
+      "onnx_sha256": "d567cecaacd96fbdd78df41da0277d8554b0c343ff53a69d3b0e97f2992edd1e",
+      "classes": [
+        "no_yawn",
+        "yawn"
+      ]
+    }
+  },
+  "captures": [
+    {
+      "video": "reports/original_model_check/20261010T132214_553016Z_yawn.avi",
+      "sha256": "a41674d5674e2be2d3b5be465fc5a65fe8fb0f3e15f48404fddd3aaad1881267",
+      "csv_sha256": "408cf2133b94b3ccead2f9b4a56f685cc11cd8b6b3d7163fdd3c15d87a0eebd6",
+      "duration_seconds": 33.4369999999999,
+      "frames": 502,
+      "average_processed_fps": 14.983401620958864,
+      "frames_with_predictions": 451,
+      "quality_counts": {
+        "usable": 274,
+        "blurry": 177,
+        "no_face": 51
+      },
+      "capture_artifact_sha256": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1",
+      "capture_manifest_sha256": "83d85c5a154f49fce366b6dbfa6328c6e42bea6b59f0faa3b99dd1d589ba5e9a",
+      "config_sha256": "4ad1dffd3eb6568bf61d20975443f17087c1c7963b37e0dc6a1ee0894e2c29e9",
+      "all_frame_hashes_match": true,
+      "all_model_input_hashes_match": true,
+      "review_file": "data_reviews/original_yawn_near_far_locked_check.json",
+      "reviewed_intervals": [
+        {
+          "start": 0.0,
+          "end": 7.0,
+          "reviewed_label": "normal",
+          "action": "relaxed_mouth_close",
+          "frames": 106,
+          "quality_counts": {
+            "usable": 4,
+            "blurry": 102
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 4,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.2363954203935487,
+              "min": 0.005241918904263514,
+              "max": 0.4499244526006118
+            },
+            "pc_refined": {
+              "frames": 4,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.017389093436241482,
+              "min": 0.00048748847043109773,
+              "max": 0.03704756139609054
+            },
+            "usb_robust": {
+              "frames": 4,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.0006102614345407682,
+              "min": 0.00013636387460098072,
+              "max": 0.0012649941430584574
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 7.3,
+          "end": 20.3,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_near_to_far",
+          "frames": 195,
+          "quality_counts": {
+            "blurry": 27,
+            "usable": 168
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 168,
+              "raw_score_ge_0_70_frames": 168,
+              "mean": 0.9914528935121988,
+              "min": 0.8272384158599849,
+              "max": 0.9999984400634663
+            },
+            "pc_refined": {
+              "frames": 168,
+              "raw_score_ge_0_70_frames": 7,
+              "mean": 0.11939658833086997,
+              "min": 0.00047341886584567405,
+              "max": 0.88732500867527
+            },
+            "usb_robust": {
+              "frames": 168,
+              "raw_score_ge_0_70_frames": 15,
+              "mean": 0.2733439003085788,
+              "min": 0.0024096810169165553,
+              "max": 0.9864031875665088
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 21.0,
+          "end": 22.8,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_tilted",
+          "frames": 27,
+          "quality_counts": {
+            "blurry": 25,
+            "no_face": 2
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "pc_refined": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "usb_robust": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 23.5,
+          "end": 25.5,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_far",
+          "frames": 29,
+          "quality_counts": {
+            "usable": 29
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 29,
+              "raw_score_ge_0_70_frames": 29,
+              "mean": 0.9999242177437583,
+              "min": 0.999214780100282,
+              "max": 0.9999981790776389
+            },
+            "pc_refined": {
+              "frames": 29,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.016746066195793434,
+              "min": 0.0010049639105890748,
+              "max": 0.0847785336491247
+            },
+            "usb_robust": {
+              "frames": 29,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.11905110113310453,
+              "min": 0.01800334087760501,
+              "max": 0.4253652945378598
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 26.0,
+          "end": 28.9,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_below_face_size_gate",
+          "frames": 44,
+          "quality_counts": {
+            "no_face": 44
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "pc_refined": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "usb_robust": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 30.0,
+          "end": 33.4371,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_far",
+          "frames": 52,
+          "quality_counts": {
+            "usable": 52
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 52,
+              "raw_score_ge_0_70_frames": 52,
+              "mean": 0.9999849543432227,
+              "min": 0.9999160294286058,
+              "max": 0.9999996366129572
+            },
+            "pc_refined": {
+              "frames": 52,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.003130822457528467,
+              "min": 0.0005732192889957785,
+              "max": 0.007375771683237277
+            },
+            "usb_robust": {
+              "frames": 52,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.06129945002509041,
+              "min": 0.0039826541158523455,
+              "max": 0.21922133026186616
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        }
+      ],
+      "samples": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "quality": "usable",
+          "original": 0.0892472199294509,
+          "pc_refined": 0.0037096629790855013,
+          "usb_robust": 0.00017636787419197773,
+          "face_crop_width": 218,
+          "face_crop_height": 296,
+          "face_sharpness": 22.382965056900396,
+          "eye_sharpness_min": 32.94759482554176
+        },
+        {
+          "recording_frame": 94,
+          "source_seconds": 6.265000000001237,
+          "quality": "blurry",
+          "original": 0.9544229747942472,
+          "pc_refined": 0.04546092247392584,
+          "usb_robust": 0.0002609792358891848,
+          "face_crop_width": 218,
+          "face_crop_height": 299,
+          "face_sharpness": 17.21702967903031,
+          "eye_sharpness_min": 12.609135370124383
+        },
+        {
+          "recording_frame": 150,
+          "source_seconds": 10.0,
+          "quality": "usable",
+          "original": 0.9962730470344825,
+          "pc_refined": 0.49734362975694957,
+          "usb_robust": 0.853800369110709,
+          "face_crop_width": 188,
+          "face_crop_height": 244,
+          "face_sharpness": 21.060151680845223,
+          "eye_sharpness_min": 24.760781182183155
+        },
+        {
+          "recording_frame": 270,
+          "source_seconds": 18.015000000001237,
+          "quality": "usable",
+          "original": 0.9999886017362093,
+          "pc_refined": 0.0012180146372146893,
+          "usb_robust": 0.0073308140897246155,
+          "face_crop_width": 107,
+          "face_crop_height": 150,
+          "face_sharpness": 38.11863894566241,
+          "eye_sharpness_min": 46.48092138608548
+        },
+        {
+          "recording_frame": 330,
+          "source_seconds": 22.03100000000086,
+          "quality": "blurry",
+          "original": 4.33089309133578e-06,
+          "pc_refined": 4.346589610062254e-05,
+          "usb_robust": 0.022350632975700818,
+          "face_crop_width": 241,
+          "face_crop_height": 311,
+          "face_sharpness": 11.769022416593625,
+          "eye_sharpness_min": 11.097934236109243
+        },
+        {
+          "recording_frame": 390,
+          "source_seconds": 26.03100000000086,
+          "quality": "no_face",
+          "original": null,
+          "pc_refined": null,
+          "usb_robust": null,
+          "face_crop_width": null,
+          "face_crop_height": null,
+          "face_sharpness": null,
+          "eye_sharpness_min": null
+        },
+        {
+          "recording_frame": 450,
+          "source_seconds": 30.03100000000086,
+          "quality": "usable",
+          "original": 0.9999947304519455,
+          "pc_refined": 0.0030899681035802956,
+          "usb_robust": 0.13390221300284028,
+          "face_crop_width": 116,
+          "face_crop_height": 150,
+          "face_sharpness": 26.80213634562029,
+          "eye_sharpness_min": 24.91784186282256
+        }
+      ],
+      "no_face_gate_probe": {
+        "no_face_original": 51,
+        "remaining_no_face_after_changing_only_min_face_size_80_to_1": 2,
+        "diagnosis_only_threshold_not_deployed": true
+      },
+      "controlled_resolution_probe": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "crop_shape": [
+            296,
+            218
+          ],
+          "visible_state": "normal_mouth_closed",
+          "same_geometry_resolution_scores": {
+            "1.0": {
+              "pc_refined": 0.0037096629790855013,
+              "usb_robust": 0.00017636787419197773
+            },
+            "0.75": {
+              "pc_refined": 0.27922624349594116,
+              "usb_robust": 0.003011556014753864
+            },
+            "0.5": {
+              "pc_refined": 0.2304377555847168,
+              "usb_robust": 0.013573055901387984
+            },
+            "0.35": {
+              "pc_refined": 0.008613051830580361,
+              "usb_robust": 0.002376585572802627
+            }
+          }
+        },
+        {
+          "recording_frame": 150,
+          "source_seconds": 10.0,
+          "crop_shape": [
+            244,
+            188
+          ],
+          "visible_state": "open_mouth",
+          "same_geometry_resolution_scores": {
+            "1.0": {
+              "pc_refined": 0.49734362975694957,
+              "usb_robust": 0.853800369110709
+            },
+            "0.75": {
+              "pc_refined": 0.023580984748473647,
+              "usb_robust": 0.18864568505747065
+            },
+            "0.5": {
+              "pc_refined": 0.004829815629374553,
+              "usb_robust": 0.08218932151794434
+            },
+            "0.35": {
+              "pc_refined": 0.0013191295767137339,
+              "usb_robust": 0.02418831789914484
+            }
+          }
+        }
+      ],
+      "max_live_torch_vs_onnx_difference_all_predicted_frames": 5.195188583606569e-06,
+      "original_resolution_and_crop_probes": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "reviewed_visible_state": "normal_mouth_closed",
+          "quality": "usable",
+          "width": 218,
+          "height": 296,
+          "live_original_score": 0.0892472199294509,
+          "scores_by_model": {
+            "original": 0.08924920045398771,
+            "pc_refined": 0.0037096629790855013,
+            "usb_robust": 0.00017636787419197773
+          },
+          "resolution_probe": {
+            "1.0": 0.08924920045398771,
+            "0.75": 0.8182067275047302,
+            "0.5": 0.99710439109405,
+            "0.35": 0.9999855620582968
+          },
+          "crop_probe": {
+            "original_center": 0.08924920045398771,
+            "full_face_edge_pad_square": 5.430403295111915e-07,
+            "full_face_stretch_224": 6.174168315670219e-07
+          },
+          "rotation_probe": {
+            "-20.0": 0.6422823454309908,
+            "-10.0": 0.13810135218350064,
+            "0.0": 0.08924920045398771,
+            "10.0": 0.15565611190116238,
+            "20.0": 0.9624034368006967
+          }
+        },
+        {
+          "recording_frame": 94,
+          "source_seconds": 6.265000000001237,
+          "reviewed_visible_state": "normal_mouth_closed",
+          "quality": "blurry",
+          "width": 218,
+          "height": 299,
+          "live_original_score": 0.9544229747942472,
+          "scores_by_model": {
+            "original": 0.9544235752351158,
+            "pc_refined": 0.04546092247392584,
+            "usb_robust": 0.0002609792358891848
+          },
+          "resolution_probe": {
+            "1.0": 0.9544235752351158,
+            "0.75": 0.9977553877101525,
+            "0.5": 0.9998704068582828,
+            "0.35": 0.999983305680955
+          },
+          "crop_probe": {
+            "original_center": 0.9544235752351158,
+            "full_face_edge_pad_square": 0.006871384742997581,
+            "full_face_stretch_224": 0.003394325863811047
+          },
+          "rotation_probe": {
+            "-20.0": 0.9682006437346867,
+            "-10.0": 0.9514153358122459,
+            "0.0": 0.9544235752351158,
+            "10.0": 0.9991202287026849,
+            "20.0": 0.9990641845159631
+          }
+        },
+        {
+          "recording_frame": 150,
+          "source_seconds": 10.0,
+          "reviewed_visible_state": "open_mouth",
+          "quality": "usable",
+          "width": 188,
+          "height": 244,
+          "live_original_score": 0.9962730470344825,
+          "scores_by_model": {
+            "original": 0.9962730454107422,
+            "pc_refined": 0.49734362975694957,
+            "usb_robust": 0.853800369110709
+          },
+          "resolution_probe": {
+            "1.0": 0.9962730454107422,
+            "0.75": 0.9998978650664135,
+            "0.5": 0.9999818419771718,
+            "0.35": 0.9999952877653496
+          },
+          "crop_probe": {
+            "original_center": 0.9962730454107422,
+            "full_face_edge_pad_square": 0.40224401361477413,
+            "full_face_stretch_224": 0.9362076451166894
+          },
+          "rotation_probe": {
+            "-20.0": 0.9992932142879046,
+            "-10.0": 0.9985118316539503,
+            "0.0": 0.9962730454107422,
+            "10.0": 0.9974288592871483,
+            "20.0": 0.9990513886474054
+          }
+        },
+        {
+          "recording_frame": 270,
+          "source_seconds": 18.015000000001237,
+          "reviewed_visible_state": "open_mouth",
+          "quality": "usable",
+          "width": 107,
+          "height": 150,
+          "live_original_score": 0.9999886017362093,
+          "scores_by_model": {
+            "original": 0.9999886018662656,
+            "pc_refined": 0.0012180146372146893,
+            "usb_robust": 0.0073308140897246155
+          },
+          "resolution_probe": {
+            "1.0": 0.9999886018662656,
+            "0.75": 0.9999955719891515,
+            "0.5": 0.9999446935431436,
+            "0.35": 0.9998771082302866
+          },
+          "crop_probe": {
+            "original_center": 0.9999886018662656,
+            "full_face_edge_pad_square": 0.9996692285235628,
+            "full_face_stretch_224": 0.999995038292358
+          },
+          "rotation_probe": {
+            "-20.0": 0.9999879287483172,
+            "-10.0": 0.9999976279115967,
+            "0.0": 0.9999886018662656,
+            "10.0": 0.9999920777904425,
+            "20.0": 0.9999982464728948
+          }
+        },
+        {
+          "recording_frame": 330,
+          "source_seconds": 22.03100000000086,
+          "reviewed_visible_state": "open_mouth_tilted",
+          "quality": "blurry",
+          "width": 241,
+          "height": 311,
+          "live_original_score": 4.33089309133578e-06,
+          "scores_by_model": {
+            "original": 4.330872627794421e-06,
+            "pc_refined": 4.346589610062254e-05,
+            "usb_robust": 0.022350632975700818
+          },
+          "resolution_probe": {
+            "1.0": 4.330872627794421e-06,
+            "0.75": 0.030957099165607613,
+            "0.5": 0.9962176198108902,
+            "0.35": 0.9999860687373725
+          },
+          "crop_probe": {
+            "original_center": 4.330872627794421e-06,
+            "full_face_edge_pad_square": 1.1025719041966753e-05,
+            "full_face_stretch_224": 1.3492019150153916e-06
+          },
+          "rotation_probe": {
+            "-20.0": 0.0002124408490660435,
+            "-10.0": 1.1395503505621836e-05,
+            "0.0": 4.330872627794421e-06,
+            "10.0": 0.0005817378425798537,
+            "20.0": 0.0010643160673063003
+          }
+        },
+        {
+          "recording_frame": 360,
+          "source_seconds": 24.03100000000086,
+          "reviewed_visible_state": "open_mouth",
+          "quality": "usable",
+          "width": 135,
+          "height": 177,
+          "live_original_score": 0.9999649087455391,
+          "scores_by_model": {
+            "original": 0.9999649092475625,
+            "pc_refined": 0.04505833137650047,
+            "usb_robust": 0.2715686559677124
+          },
+          "resolution_probe": {
+            "1.0": 0.9999649092475625,
+            "0.75": 0.9999993818673397,
+            "0.5": 0.9999993232086435,
+            "0.35": 0.9999961635918149
+          },
+          "crop_probe": {
+            "original_center": 0.9999649092475625,
+            "full_face_edge_pad_square": 0.6619001429706769,
+            "full_face_stretch_224": 0.9955822992329313
+          },
+          "rotation_probe": {
+            "-20.0": 0.9999951243239013,
+            "-10.0": 0.9999919297176175,
+            "0.0": 0.9999649092475625,
+            "10.0": 0.9999982184970004,
+            "20.0": 0.9999994620477225
+          }
+        },
+        {
+          "recording_frame": 450,
+          "source_seconds": 30.03100000000086,
+          "reviewed_visible_state": "open_mouth",
+          "quality": "usable",
+          "width": 116,
+          "height": 150,
+          "live_original_score": 0.9999947304519455,
+          "scores_by_model": {
+            "original": 0.9999947304819587,
+            "pc_refined": 0.0030899681035802956,
+            "usb_robust": 0.13390221300284028
+          },
+          "resolution_probe": {
+            "1.0": 0.9999947304819587,
+            "0.75": 0.999999482204167,
+            "0.5": 0.9999992313904454,
+            "0.35": 0.9999929499496188
+          },
+          "crop_probe": {
+            "original_center": 0.9999947304819587,
+            "full_face_edge_pad_square": 0.9977054048683061,
+            "full_face_stretch_224": 0.9999954063261791
+          },
+          "rotation_probe": {
+            "-20.0": 0.9999994141718898,
+            "-10.0": 0.999999637578556,
+            "0.0": 0.9999947304819587,
+            "10.0": 0.9999997405883275,
+            "20.0": 0.9999999053282073
+          }
+        }
+      ]
+    },
+    {
+      "video": "reports/original_model_check/20261010T133911_739010Z_yawn.avi",
+      "sha256": "6c012ebf245af5925667fc32b7cf9a3ec525207518fad2a50f544ad1ac7dc453",
+      "csv_sha256": "04f30fbbe7422a08e698e5cab53e377a04ba29d5327f6ce85d3a9becdcdf0758",
+      "duration_seconds": 11.078000000001339,
+      "frames": 167,
+      "average_processed_fps": 14.984654269721966,
+      "frames_with_predictions": 165,
+      "quality_counts": {
+        "blurry": 85,
+        "usable": 80,
+        "no_face": 2
+      },
+      "capture_artifact_sha256": "d2bbf3bf31e28f989a9e6f6a9994f2f5dc0246ad95a1a914e97f3f8f064067a1",
+      "capture_manifest_sha256": "83d85c5a154f49fce366b6dbfa6328c6e42bea6b59f0faa3b99dd1d589ba5e9a",
+      "config_sha256": "4ad1dffd3eb6568bf61d20975443f17087c1c7963b37e0dc6a1ee0894e2c29e9",
+      "all_frame_hashes_match": true,
+      "all_model_input_hashes_match": true,
+      "review_file": "data_reviews/original_yawn_near_medium_locked_check.json",
+      "reviewed_intervals": [
+        {
+          "start": 0.0,
+          "end": 0.6,
+          "reviewed_label": "normal",
+          "action": "relaxed_mouth_near",
+          "frames": 10,
+          "quality_counts": {
+            "blurry": 10
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "pc_refined": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "usb_robust": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 1.25,
+          "end": 2.1,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_near",
+          "frames": 13,
+          "quality_counts": {
+            "blurry": 10,
+            "usable": 3
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 3,
+              "raw_score_ge_0_70_frames": 3,
+              "mean": 0.9006203030947567,
+              "min": 0.8366696363191253,
+              "max": 0.9720698649365633
+            },
+            "pc_refined": {
+              "frames": 3,
+              "raw_score_ge_0_70_frames": 3,
+              "mean": 0.9735255572761496,
+              "min": 0.9648884786450094,
+              "max": 0.9800259112200455
+            },
+            "usb_robust": {
+              "frames": 3,
+              "raw_score_ge_0_70_frames": 3,
+              "mean": 0.9984669146905739,
+              "min": 0.997314099981145,
+              "max": 0.9990673533294573
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 2.6,
+          "end": 3.75,
+          "reviewed_label": "normal",
+          "action": "relaxed_mouth_near",
+          "frames": 18,
+          "quality_counts": {
+            "blurry": 18
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "pc_refined": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "usb_robust": {
+              "frames": 0,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": null,
+              "min": null,
+              "max": null
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 6.0,
+          "end": 8.25,
+          "reviewed_label": "normal",
+          "action": "relaxed_mouth_medium",
+          "frames": 34,
+          "quality_counts": {
+            "usable": 33,
+            "blurry": 1
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 33,
+              "raw_score_ge_0_70_frames": 31,
+              "mean": 0.9540452315891537,
+              "min": 0.5706010460853577,
+              "max": 0.9999582787167216
+            },
+            "pc_refined": {
+              "frames": 33,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.0016176035893512412,
+              "min": 0.00028893350693781655,
+              "max": 0.008314543885883367
+            },
+            "usb_robust": {
+              "frames": 33,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.00037582238363655573,
+              "min": 5.4418367199556785e-06,
+              "max": 0.0033182209399751942
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 8.55,
+          "end": 9.35,
+          "reviewed_label": "yawn",
+          "action": "staged_yawn_medium",
+          "frames": 11,
+          "quality_counts": {
+            "usable": 11
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 11,
+              "raw_score_ge_0_70_frames": 11,
+              "mean": 0.9998608572112745,
+              "min": 0.9995089278331996,
+              "max": 0.9999670987562979
+            },
+            "pc_refined": {
+              "frames": 11,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.006219164832197694,
+              "min": 0.0019006812814741222,
+              "max": 0.012956085578661174
+            },
+            "usb_robust": {
+              "frames": 11,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.23343679939618364,
+              "min": 0.051485278863130784,
+              "max": 0.36866458151744064
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        },
+        {
+          "start": 9.85,
+          "end": 11.0781,
+          "reviewed_label": "normal",
+          "action": "relaxed_mouth_medium_after_yawn",
+          "frames": 19,
+          "quality_counts": {
+            "usable": 19
+          },
+          "usable_frame_scores": {
+            "original": {
+              "frames": 19,
+              "raw_score_ge_0_70_frames": 19,
+              "mean": 0.9996280740850788,
+              "min": 0.999063695815542,
+              "max": 0.9999920241943088
+            },
+            "pc_refined": {
+              "frames": 19,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.0013669946463249715,
+              "min": 0.0001340860213550394,
+              "max": 0.005925702008381326
+            },
+            "usb_robust": {
+              "frames": 19,
+              "raw_score_ge_0_70_frames": 0,
+              "mean": 0.0004218608535575606,
+              "min": 1.0715265634537426e-05,
+              "max": 0.003211765225267242
+            }
+          },
+          "metric_scope": "Correlated frames in one staged clip; not event recall, F1 or independent acceptance."
+        }
+      ],
+      "samples": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "quality": "blurry",
+          "original": 0.0007024002709024534,
+          "pc_refined": 0.00038410181513704616,
+          "usb_robust": 4.234189206703466e-06,
+          "face_crop_width": 241,
+          "face_crop_height": 312,
+          "face_sharpness": 19.22880528146063,
+          "eye_sharpness_min": 11.468528778085565
+        },
+        {
+          "recording_frame": 30,
+          "source_seconds": 2.0,
+          "quality": "blurry",
+          "original": 0.865705668926239,
+          "pc_refined": 0.9446151258738977,
+          "usb_robust": 0.9953001222171903,
+          "face_crop_width": 249,
+          "face_crop_height": 346,
+          "face_sharpness": 18.497499422471776,
+          "eye_sharpness_min": 20.767920188886755
+        },
+        {
+          "recording_frame": 90,
+          "source_seconds": 6.016000000001441,
+          "quality": "usable",
+          "original": 0.5706010460853577,
+          "pc_refined": 0.0011323683437418903,
+          "usb_robust": 0.00011665229874326531,
+          "face_crop_width": 156,
+          "face_crop_height": 203,
+          "face_sharpness": 20.12924582449922,
+          "eye_sharpness_min": 14.289463711911356
+        },
+        {
+          "recording_frame": 120,
+          "source_seconds": 8.01600000000144,
+          "quality": "usable",
+          "original": 0.9999266213450222,
+          "pc_refined": 0.0012839191607498114,
+          "usb_robust": 0.001133385508783607,
+          "face_crop_width": 128,
+          "face_crop_height": 163,
+          "face_sharpness": 28.393074841685802,
+          "eye_sharpness_min": 21.44506973791945
+        },
+        {
+          "recording_frame": 127,
+          "source_seconds": 8.46900000000096,
+          "quality": "usable",
+          "original": 0.9999832939905053,
+          "pc_refined": 0.003974460440339259,
+          "usb_robust": 0.01275807051530388,
+          "face_crop_width": 126,
+          "face_crop_height": 165,
+          "face_sharpness": 26.700596278643417,
+          "eye_sharpness_min": 28.873318183703397
+        },
+        {
+          "recording_frame": 135,
+          "source_seconds": 9.01600000000144,
+          "quality": "usable",
+          "original": 0.9998157873586674,
+          "pc_refined": 0.0063215761672854,
+          "usb_robust": 0.2540851457689659,
+          "face_crop_width": 127,
+          "face_crop_height": 176,
+          "face_sharpness": 30.01796331898449,
+          "eye_sharpness_min": 30.58171597222222
+        },
+        {
+          "recording_frame": 150,
+          "source_seconds": 10.01600000000144,
+          "quality": "usable",
+          "original": 0.9994076974984848,
+          "pc_refined": 0.0002369470413747859,
+          "usb_robust": 8.69002909107951e-05,
+          "face_crop_width": 127,
+          "face_crop_height": 164,
+          "face_sharpness": 28.039607659822103,
+          "eye_sharpness_min": 20.399863888888888
+        },
+        {
+          "recording_frame": 166,
+          "source_seconds": 11.078000000001339,
+          "quality": "usable",
+          "original": 0.9999920241943088,
+          "pc_refined": 0.005925702008381326,
+          "usb_robust": 0.0004528972087190197,
+          "face_crop_width": 136,
+          "face_crop_height": 174,
+          "face_sharpness": 23.641096118063874,
+          "eye_sharpness_min": 18.34857971146476
+        }
+      ],
+      "no_face_gate_probe": {
+        "no_face_original": 2,
+        "remaining_no_face_after_changing_only_min_face_size_80_to_1": 2,
+        "diagnosis_only_threshold_not_deployed": true
+      },
+      "controlled_resolution_probe": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "crop_shape": [
+            312,
+            241
+          ],
+          "visible_state": "normal_mouth_closed",
+          "same_geometry_resolution_scores": {
+            "1.0": {
+              "pc_refined": 0.00038410181513704616,
+              "usb_robust": 4.234189206703466e-06
+            },
+            "0.75": {
+              "pc_refined": 0.019312899919467046,
+              "usb_robust": 7.343214389298547e-05
+            },
+            "0.5": {
+              "pc_refined": 0.017591792762432383,
+              "usb_robust": 0.0003294531334003231
+            },
+            "0.35": {
+              "pc_refined": 0.013879824675963532,
+              "usb_robust": 0.002244753336094261
+            }
+          }
+        },
+        {
+          "recording_frame": 30,
+          "source_seconds": 2.0,
+          "crop_shape": [
+            346,
+            249
+          ],
+          "visible_state": "open_mouth",
+          "same_geometry_resolution_scores": {
+            "1.0": {
+              "pc_refined": 0.9446151258738977,
+              "usb_robust": 0.9953001222171903
+            },
+            "0.75": {
+              "pc_refined": 0.98508226137547,
+              "usb_robust": 0.9988887129122473
+            },
+            "0.5": {
+              "pc_refined": 0.9574599408724895,
+              "usb_robust": 0.9981106016573158
+            },
+            "0.35": {
+              "pc_refined": 0.46480430767523323,
+              "usb_robust": 0.9749183618466617
+            }
+          }
+        }
+      ],
+      "native_ultralytics_parity": [
+        {
+          "recording_frame": 0,
+          "source_seconds": 0.0,
+          "live_adapter_torch": 0.0007024002709024534,
+          "native_ultralytics_torch": 0.0007024226943030953,
+          "absolute_delta": 2.2423400641933405e-08
+        },
+        {
+          "recording_frame": 30,
+          "source_seconds": 2.0,
+          "live_adapter_torch": 0.865705668926239,
+          "native_ultralytics_torch": 0.8657084703445435,
+          "absolute_delta": 2.8014183044433594e-06
+        },
+        {
+          "recording_frame": 120,
+          "source_seconds": 8.01600000000144,
+          "live_adapter_torch": 0.9999266213450222,
+          "native_ultralytics_torch": 0.9999265670776367,
+          "absolute_delta": 5.4267385474204843e-08
+        },
+        {
+          "recording_frame": 166,
+          "source_seconds": 11.078000000001339,
+          "live_adapter_torch": 0.9999920241943088,
+          "native_ultralytics_torch": 0.9999920129776001,
+          "absolute_delta": 1.1216708672989739e-08
+        }
+      ]
+    }
+  ],
+  "comparison_plot": "reports/usb_yawn_diagnosis/original_raw_distance_check.png",
+  "conclusions": [
+    "Lossless pixels and exact RGB model inputs match the original recordings for all 669 frames and 616 predictions.",
+    "A usable, closed-mouth medium-distance frame at clip 2 second 8.016 scores 0.999926621 under the original checkpoint.",
+    "The native Ultralytics predictor reproduces the same false positive; this is not an adapter-only preprocessing failure.",
+    "Reducing resolution of an unchanged closed-mouth ROI from clip 1 makes the original score rise from 0.089 to 0.818 at 0.75 scale and 0.997 at 0.5 scale.",
+    "On the same staged-yawn ROI from clip 1 second 10, degrading resolution while preserving crop geometry reduces USB robust score from 0.854 to 0.082 at 0.5 scale.",
+    "Current refined heads reduce selected normal-mouth false positives but do not reliably retain staged-yawn sensitivity over distance.",
+    "49 of 51 no_face frames in clip 1 receive valid crops when only the minimum face size is disabled; 2 frames still have no valid face.",
+    "A tilted blurry open-mouth frame is missed by all three checkpoints; padding or a simple rotation does not restore that case.",
+    "Raising the probability threshold alone cannot reject the original 0.999927 normal-mouth score while retaining the near-yawn original score 0.865706."
+  ],
+  "model_weights_changed": false,
+  "thresholds_changed": false,
+  "default_profile_changed": false,
+  "training_allowed": false,
+  "checkpoint_selection_allowed": false,
+  "subject_independent": false,
+  "limitations": [
+    "Staged actions on one developer; no independent-person F1/event recall or false alarms per hour.",
+    "This tool runs the classifier alone; its processed FPS and raw scores are not full runtime/buzzer performance.",
+    "Camera pose and physical distance were not calibrated in centimeters.",
+    "Blurry/no_face frames are unavailable observations in the production runtime, not confirmed no_yawn.",
+    "No new weights were fitted, selected or deployed using these clips."
+  ],
+  "next_training_requirements": [
+    "Separate development clips with both relaxed mouth and staged yawns at near, seated-driver and farther distances.",
+    "Include talking/teeth smiles as negatives, and usable low-resolution native crops from the real USB camera.",
+    "Apply resolution downsampling before runtime-equivalent resize/center crop, plus mild blur/motion/noise augmentation on train only.",
+    "Select on validation clips/people, retain these two recordings for diagnostic evaluation, and preserve image-quality gating pending validation."
+  ]
+}

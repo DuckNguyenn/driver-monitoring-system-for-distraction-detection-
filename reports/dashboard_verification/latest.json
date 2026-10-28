@@ -1,0 +1,185 @@
+{
+  "replay": {
+    "utc": "2026-10-09T09:35:08.774204+00:00",
+    "source_kind": "video",
+    "config": "configs/camera_pc.yaml",
+    "preview_fps": 15,
+    "local_display": true,
+    "physical_iphone_tested": false,
+    "radxa_tested": false,
+    "two_clients": {
+      "snapshot_latency_p95_ms": 203.257,
+      "snapshot_count": 600,
+      "client_counts": [
+        {
+          "client": 2,
+          "snapshots": 300
+        },
+        {
+          "client": 1,
+          "snapshots": 300
+        }
+      ],
+      "jpeg_responses": 1766,
+      "jpeg_mean_bytes": 35115.89920724802,
+      "preview_clients": [
+        {
+          "client": 1,
+          "unique_frames": 883,
+          "received_fps": 13.219622596261924,
+          "interarrival_p95_ms": 108.99999999946886,
+          "frame_age_with_request_p95_ms": 233.99999999946886
+        },
+        {
+          "client": 2,
+          "unique_frames": 883,
+          "received_fps": 13.219622596261924,
+          "interarrival_p95_ms": 108.99999999946886,
+          "frame_age_with_request_p95_ms": 233.99999999946886
+        }
+      ],
+      "rss_peak_bytes": 195313664,
+      "parent_cpu_percent_peak": 0.0
+    },
+    "dashboard": {
+      "source": "reports/yawn_camera_check/20261007T070644_475102Z.avi",
+      "live": false,
+      "backend": "onnx",
+      "frames": 1131,
+      "wall_seconds": 68.39000000000033,
+      "media_seconds": 37.96900000000005,
+      "fps": 16.537505483257707,
+      "states": {
+        "UNKNOWN": 512,
+        "NORMAL": 418,
+        "WARNING": 201
+      },
+      "latency_p95_ms": 79,
+      "processing_p95_ms": 79,
+      "percentile_resolution_ms": 1,
+      "percentile_overflow_ms": 5000,
+      "fault": null,
+      "accuracy": null,
+      "accuracy_note": "Ground truth required; throughput is not accuracy."
+    },
+    "baseline": {
+      "source": "reports/yawn_camera_check/20261007T070644_475102Z.avi",
+      "live": false,
+      "backend": "onnx",
+      "frames": 1131,
+      "wall_seconds": 61.625,
+      "media_seconds": 37.96900000000005,
+      "fps": 18.352941176470587,
+      "states": {
+        "UNKNOWN": 512,
+        "NORMAL": 418,
+        "WARNING": 201
+      },
+      "latency_p95_ms": 78,
+      "processing_p95_ms": 78,
+      "percentile_resolution_ms": 1,
+      "percentile_overflow_ms": 5000,
+      "fault": null,
+      "accuracy": null,
+      "accuracy_note": "Ground truth required; throughput is not accuracy."
+    },
+    "decisions": {
+      "identical": true,
+      "frames_baseline": 1131,
+      "frames_dashboard": 1131,
+      "different_indices": []
+    },
+    "fps_decrease_percent": 9.891797046352234,
+    "fps_target_passed": true,
+    "latency_target_passed": true,
+    "api_exit_code": 0
+  },
+  "camera": {
+    "utc": "2026-10-08T16:32:22.294054+00:00",
+    "source_kind": "camera",
+    "config": "configs/camera_pc.yaml",
+    "preview_fps": 5,
+    "physical_iphone_tested": false,
+    "radxa_tested": false,
+    "two_clients": {
+      "snapshot_latency_p95_ms": 205.349,
+      "snapshot_count": 176,
+      "client_counts": [
+        {
+          "client": 1,
+          "snapshots": 88
+        },
+        {
+          "client": 2,
+          "snapshots": 88
+        }
+      ],
+      "jpeg_responses": 205,
+      "jpeg_mean_bytes": 23344.70731707317,
+      "rss_peak_bytes": 201875456,
+      "parent_cpu_percent_peak": 0.0
+    },
+    "dashboard": {
+      "source": "0",
+      "live": true,
+      "backend": "onnx",
+      "frames": 371,
+      "wall_seconds": 20.031999999999243,
+      "media_seconds": 19.686999999999898,
+      "fps": 18.520367412141276,
+      "states": {
+        "UNKNOWN": 369,
+        "NORMAL": 2
+      },
+      "latency_p95_ms": 17,
+      "processing_p95_ms": 17,
+      "percentile_resolution_ms": 1,
+      "percentile_overflow_ms": 5000,
+      "fault": null,
+      "accuracy": null,
+      "accuracy_note": "Ground truth required; throughput is not accuracy."
+    },
+    "latency_target_passed": true,
+    "api_exit_code": 3
+  },
+  "python_tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "tests_run": 102,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "physical_hardware_tested": false,
+    "active_config_sha256": "ff6f1b42799be4d47f7e7edfba555d895b40b66448d2074317624c7eb690ac81",
+    "active_manifest_sha256": "d2349de3521811f8627a7a54a526d3dae0c7a110aa3c0e6ae8770ca435134520"
+  },
+  "web_browser_test_passed": true,
+  "web_ui_tests_passed": 3,
+  "web_ui_tests_failed": 0,
+  "built_web_real_video": {
+    "passed": true,
+    "preview": {
+      "width": 640,
+      "height": 480
+    },
+    "render_samples": 18,
+    "preview_image_loads": 52,
+    "preview_render_fps": 12.896047740662402,
+    "probability_chart_rows": 3,
+    "render_p95_ms": 184,
+    "history_opened": true,
+    "csv_downloaded": true,
+    "page_errors": [],
+    "physical_iphone_tested": false,
+    "scope": "one real Chromium client with real replay API on same PC"
+  },
+  "client_unit_tests": 10,
+  "typescript_passed": true,
+  "web_build_passed": true,
+  "ios_bundle_exported": true,
+  "expo_doctor_checks": 21,
+  "physical_iphone_tested": false,
+  "radxa_tested": false,
+  "user_confirmed_iphone_connection": true,
+  "physical_iphone_acceptance_complete": false,
+  "latency_scope": "snapshot reception by two simulated clients on same PC; not physical LAN rendering"
+}

@@ -41,11 +41,19 @@ class Config:
     max_frames: int = 0
     cpu_threads: int = 2
     rotation_degrees: int = 0
+    auto_glasses: bool = False
+    eyewear_manifest: str | Path = str(ROOT / "models/eyewear_selector/manifest.json")
+    glasses_eye_manifest: str | Path = str(ROOT / "models/eye_glasses_adapted/manifest.json")
     monitor: MonitorConfig = field(default_factory=MonitorConfig)
 
     def __post_init__(self):
         if self.min_eye_sharpness is None:
             self.min_eye_sharpness = self.min_sharpness
+        if not isinstance(self.auto_glasses, bool):
+            raise ValueError("auto_glasses must be a boolean")
+        # New optional paths stay YAML-safe in existing exporters using asdict.
+        self.eyewear_manifest = str(Path(self.eyewear_manifest).resolve())
+        self.glasses_eye_manifest = str(Path(self.glasses_eye_manifest).resolve())
         if self.backend not in ("torch", "onnx", "rknn"):
             raise ValueError("backend must be torch, onnx or rknn")
         if self.rotation_degrees not in (0, 90, 180, 270):
@@ -69,6 +77,16 @@ class Config:
 
     def fingerprint(self):
         values = asdict(self)
+        for key in ("auto_glasses", "eyewear_manifest", "glasses_eye_manifest"):
+            values.pop(key)
+        if self.auto_glasses:
+            from .eyewear import read_eyewear_manifest
+            from .models import read_manifest
+            selector = read_eyewear_manifest(self.eyewear_manifest)
+            specialist = read_manifest(self.glasses_eye_manifest)["classifiers"]["eye"]
+            values["auto_glasses"] = {"selector": selector, "specialist": {
+                "classes": specialist["classes"], "preprocessing": specialist["preprocessing"],
+                "sha256": specialist["artifacts"].get(self.backend, {}).get("sha256")}}
         for key in ("manifest", "log_dir", "headless", "realtime", "max_frames", "serial_port", "serial_baud", "cpu_threads"):
             values.pop(key)
         if self.manifest.exists():
@@ -76,6 +94,8 @@ class Config:
             values["models"] = {name: {"classes": spec["classes"], "preprocessing": spec["preprocessing"],
                                        "sha256": spec["artifacts"].get(self.backend, {}).get("sha256")}
                                 for name, spec in manifest["classifiers"].items()}
+            for name, spec in manifest["classifiers"].items():
+                values["models"][name].update({key: spec[key] for key in ("inference_views", "view_aggregation") if key in spec})
             values["detector_sha256"] = manifest["detector"]["sha256"]
         return hashlib.sha256(json.dumps(values, default=str, sort_keys=True).encode()).hexdigest()
 
@@ -93,13 +113,13 @@ def load_config(path=None, **overrides):
     monitor = values.pop("monitor", {})
     if not isinstance(monitor, dict):
         raise ValueError("monitor must be a mapping")
-    for key in ("manifest", "log_dir"):
+    for key in ("manifest", "log_dir", "eyewear_manifest", "glasses_eye_manifest"):
         if key in values:
             values[key] = (base / values[key]).resolve()
     # CLI paths follow the caller's working directory, YAML paths the YAML directory.
     for key, value in overrides.items():
         if value is not None:
-            values[key] = Path(value).resolve() if key in ("manifest", "log_dir") else value
+            values[key] = Path(value).resolve() if key in ("manifest", "log_dir", "eyewear_manifest", "glasses_eye_manifest") else value
     if "driver_roi" in values:
         values["driver_roi"] = tuple(values["driver_roi"])
     return Config(**values, monitor=MonitorConfig(**monitor))

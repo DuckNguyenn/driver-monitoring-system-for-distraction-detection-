@@ -1,0 +1,5 @@
+{
+  "name": "@driver-monitor/shared", "version": "1.0.0", "private": true,
+  "type": "module", "main": "src/index.ts", "types": "src/index.ts",
+  "scripts": {"typecheck": "tsc --noEmit", "test": "node --experimental-strip-types --test tests/*.test.ts"}
+}
