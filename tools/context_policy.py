@@ -8,9 +8,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKIP_DIRS = {"node_modules", "dist", ".expo", "__pycache__", ".git", ".cache"}
 SCAN_ROOTS = ("driver_monitor", "camera_classical", "frontend", "tools", "tests",
-              "scripts", "esp32_buzzer", "docs")
-GENERATED_TREES = {("frontend", "mobile", "android")}
-SOURCE_SUFFIXES = {".cjs", ".py", ".ts", ".tsx", ".js", ".mjs", ".css", ".ps1", ".sh", ".ino", ".cpp", ".h"}
+              "scripts", "esp32_buzzer", "esp32_buzzer_idf", "docs")
+GENERATED_TREES = {("frontend", "mobile", "android"), ("esp32_buzzer_idf", "build"),
+                   ("esp32_buzzer_idf", "managed_components")}
+SOURCE_SUFFIXES = {".c", ".cjs", ".py", ".ts", ".tsx", ".js", ".mjs", ".css", ".ps1", ".sh", ".ino", ".cpp", ".h"}
 PRIVATE_PARTS = {".git", ".cache", ".codex", ".agents", ".aws", "node_modules",
                  ".kaggle", ".ssh", ".scratch", "credentials", "secrets", "dist", ".expo",
                  "logs", "kaggle_output", "kaggle_upload", "data_collection", "data_reviews"}

@@ -10,6 +10,39 @@ def sample(t, closed_probability, yawn_probability=.1):
 
 
 class CameraEventTests(unittest.TestCase):
+    def test_short_speech_peaks_and_two_sustained_yawn_paths(self):
+        config = MonitorConfig(yawn_enter_probability=.65, yawn_enter_seconds=2.,
+                               yawn_strong_probability=.75, yawn_strong_seconds=1.4)
+        monitor = Monitor(config)
+        # Repeated short peaks, then a strong yawn, release, then a moderate yawn.
+        scores = ([.95] * 13 + [.25] * 3) * 3 + [.95] * 25 + [.25] * 8 + [.70] * 25
+        entries = []
+        count = 0
+        for i, p in enumerate(scores):
+            status = monitor.update(sample(i / 10, .05, p))
+            if status.yawn_count > count:
+                entries.append(i)
+            count = status.yawn_count
+        self.assertEqual(entries, [48 + 14, 48 + 25 + 8 + 20])
+
+    def test_missing_mouth_breaks_strong_yawn_confirmation(self):
+        monitor = Monitor(MonitorConfig(yawn_enter_probability=.65, yawn_enter_seconds=2.,
+                                        yawn_strong_probability=.75, yawn_strong_seconds=1.4))
+        for i in range(12):
+            monitor.update(sample(i / 10, .05, .95))
+        self.assertEqual(monitor.update(Observation(1.2)).yawn_state, "unknown")
+        for i in range(13, 27):
+            self.assertEqual(monitor.update(sample(i / 10, .05, .95)).yawn_count, 0)
+        self.assertEqual(monitor.update(sample(2.7, .05, .95)).yawn_count, 1)
+
+    def test_dip_restarts_only_strong_confirmation(self):
+        monitor = Monitor(MonitorConfig(yawn_enter_probability=.65, yawn_enter_seconds=2.,
+                                        yawn_strong_probability=.75, yawn_strong_seconds=1.4))
+        for i in range(20):
+            p = .70 if i == 8 else .90
+            self.assertEqual(monitor.update(sample(i / 10, .05, p)).yawn_count, 0)
+        self.assertEqual(monitor.update(sample(2., .05, .90)).yawn_count, 1)
+
     def test_brief_ambiguous_transition_does_not_erase_a_confirmed_blink(self):
         monitor = Monitor()
         # Open -> transition -> Closed -> transition -> Open at 15 FPS.

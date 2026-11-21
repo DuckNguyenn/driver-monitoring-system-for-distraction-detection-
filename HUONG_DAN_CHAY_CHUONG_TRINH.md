@@ -1,6 +1,6 @@
 # Tổng hợp các cách chạy chương trình DA2
 
-Cập nhật 28/10/2026. Lệnh Windows bên dưới dùng **PowerShell**, chạy tại workspace DA2. `run` xử lý camera/video độc lập; `serve` chạy cùng nhận diện và cung cấp web/API cho máy tính, Android, iPhone. Chọn một cách tại một thời điểm nếu cùng dùng camera hoặc ESP32.
+Cập nhật 07/11/2026. Lệnh Windows bên dưới dùng **PowerShell**, chạy tại workspace DA2. `run` xử lý camera/video độc lập; `serve` chạy cùng nhận diện và cung cấp web/API cho máy tính, Android, iPhone. Chọn một cách tại một thời điểm nếu cùng dùng camera hoặc ESP32.
 
 ## 1. Chuẩn bị và chọn đúng model
 
@@ -14,6 +14,7 @@ Các ví dụ chính giữ profile người dùng đã chọn: `models/yawn_kagg
 | Cấu hình | Model được chọn |
 | --- | --- |
 | `models/yawn_kaggle_near_medium/runtime.yaml` | Profile near/medium người dùng chọn; dùng trong hướng dẫn này |
+| `configs/camera_video_pose_candidate.yaml` | Cùng model near/medium, thử giảm chặn head_motion; xem mục 4a |
 | `configs/camera_pc.yaml` | Profile camera PC khác, ngáp `yawn_camera_refined` |
 | `configs/driver_monitor.yaml` trong checkout Windows | Manifest nền `models/manifest.json` |
 | Hai YAML trong ZIP Radxa ONNX | Cùng trỏ manifest portable near/medium đã đóng gói |
@@ -56,6 +57,35 @@ Ví dụ dùng video dataset đang có tại máy:
 
 Thay `--source` bằng đường dẫn video khác. `--realtime` điều tiết tốc độ trình chiếu gần thời gian nguồn; bỏ cờ này để xử lý nhanh nhất có thể. Logic vẫn dùng timestamp video. Với nguồn camera, cờ này không tạo chế độ quay video.
 
+### 4a. Profile giảm chặn và sáu clip đang dùng
+
+Profile thử nghiệm ngày 07/11 giữ nguyên model/crop/ngưỡng tính blink, chỉ đổi cách đo và lọc chuyển động. Trên clip 01: head_motion 1.067 → 159/1.320 frame; blink 0 → 3. Chưa chọn làm mặc định; chưa thử camera trực tiếp. Nói chuyện vẫn có thể bị nhầm thành ngáp. Xem [vision](docs/features/vision.md).
+
+```powershell
+.\.venv\Scripts\python.exe -m driver_monitor run --config configs/camera_video_pose_candidate.yaml --source ".cache/video-review-20261106/clips/01_yawn_clear.mp4" --backend onnx --display --realtime
+```
+
+Đổi tên clip trong đường dẫn để thử từng tình huống:
+
+| Clip | Nội dung quan sát |
+| --- | --- |
+| `01_yawn_clear.mp4` | Ngáp, blink rõ; clip đã dùng để chỉnh motion gate |
+| `02_yawn_hand.mp4` | Ngáp, tay xuất hiện gần mặt |
+| `03_yawn_later.mp4` | Đoạn ngáp khác cùng video |
+| `04_talking.mp4` | Nói chuyện, dùng đối chiếu nhầm ngáp |
+| `05_head_turn.mp4` | Nói chuyện và quay đầu |
+| `06_no_face.mp4` | Không có mặt để kiểm tra UNKNOWN |
+
+Chạy lần lượt cả sáu clip, không mở cửa sổ, mỗi clip có thư mục log riêng:
+
+```powershell
+Get-ChildItem -LiteralPath ".cache/video-review-20261106/clips" -Filter "*.mp4" | Sort-Object Name | ForEach-Object {
+    .\.venv\Scripts\python.exe -m driver_monitor run --config configs/camera_video_pose_candidate.yaml --source $_.FullName --backend onnx --headless --log-dir ("logs/pose_candidate/" + $_.BaseName)
+}
+```
+
+Muốn đối chiếu với profile cũ, thay config bằng `models/yawn_kaggle_near_medium/runtime.yaml` và dùng thư mục log khác. Muốn chủ động thử profile pose với camera hoặc web, thay `--config` trong lệnh mục 2 hoặc 6; vẫn chỉ chạy một tiến trình giữ camera.
+
 ## 5. Chạy bằng backend PyTorch
 
 ```powershell
@@ -80,12 +110,13 @@ Web đã build tại `frontend/web/dist` và được Python phục vụ cùng A
 
 ## 7. ESP32: ESP-IDF và kết nối với chương trình Python
 
-**Người dùng xác nhận nạp firmware bằng ESP-IDF.** Đã tìm thấy SDK `C:\Espressif\frameworks\esp-idf-v5.5.4` cùng `C:\esp\v6.0.1`; thư mục SDK không phải project firmware của DA2. Trong workspace hiện chỉ thấy sketch `.ino` tham khảo, chưa tìm được source ESP-IDF khớp giao thức còi DA2 trong các thư mục đã rà.
+Project firmware mới: [esp32_buzzer_idf](esp32_buzzer_idf/README.md), tạo theo yêu cầu người dùng; SDK kiểm tra là ESP-IDF 5.5.4. `.ino` chỉ giữ tham khảo. Chưa nạp firmware mới lên bo.
 
-Khi đã xác định đúng project firmware, mở ESP-IDF Terminal đã cấu hình cho project đó. Thay đường dẫn và COM5 bằng giá trị thực:
+Mở ESP-IDF Terminal với SDK 5.5.x. COM5 là ví dụ:
 ```powershell
-Set-Location "DUONG_DAN_PROJECT_FIRMWARE_ESP_IDF"
+Set-Location "C:\Users\P1 Gen 5\Downloads\DA2\esp32_buzzer_idf"
 idf.py --version
+idf.py set-target esp32
 idf.py build
 idf.py -p COM5 flash monitor
 ```
@@ -107,7 +138,7 @@ Chạy nhận diện và điều khiển ESP32:
 .\.venv\Scripts\python.exe -m driver_monitor run --config models/yawn_kaggle_near_medium/runtime.yaml --source 0 --backend onnx --display --esp32-port COM5
 ```
 
-Muốn kèm web/app, dùng lệnh ở mục 6 và thêm `--esp32-port COM5`. Firmware IDF cần tương thích host: serial 115200, lệnh `ALERT 1 <reasons>`/`ALERT 0`, phản hồi `OK ALERT 1`/`OK ALERT 0`. Watchdog, GPIO và mức điều khiển của firmware IDF thật cần đối chiếu source; GPIO25/watchdog 2 giây trong sketch tham khảo chưa chứng minh cấu hình firmware IDF đang nạp. Xem [ESP32](docs/features/esp32-alerts.md).
+Muốn kèm web/app, dùng lệnh ở mục 6 và thêm `--esp32-port COM5`. Project IDF dùng serial 115200, `ALERT 1 <reasons>`/`ALERT 0` và `OK ALERT 1`/`OK ALERT 0`; GPIO25 active HIGH, timeout 2 giây. Đã đối chiếu netlist tham khảo; vẫn phải kiểm tra bo/dây/còi thực tế. Xem [ESP32](docs/features/esp32-alerts.md).
 
 ## 8. Android, LDPlayer và iPhone
 
@@ -125,6 +156,11 @@ npm.cmd run start:android
 ```
 
 Quét QR để tải app bằng Expo Go tương thích SDK 57, rồi nhập URL/mã API trong app. Giữ terminal Expo và serve. QR Expo khác mã kết nối API. `localhost` trên điện thoại không trỏ về PC. Ứng dụng hiện cảnh báo foreground; push nền/khóa màn hình chưa có. Xem [Android](docs/features/android.md), [iPhone](docs/features/iphone.md).
+
+Build lại APK sau khi đổi code app (cần toolchain Android đã thiết lập):
+```powershell
+npm.cmd run build:android
+```
 
 ## 9. Web ở chế độ phát triển giao diện
 

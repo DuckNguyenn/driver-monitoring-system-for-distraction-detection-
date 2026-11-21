@@ -1,0 +1,11 @@
+{
+  "samples": 48,
+  "max_probability_delta": 2.384185791015625e-07,
+  "passed": true,
+  "onnx_ir_version": 7,
+  "onnx_opsets": {
+    "ai.onnx": 12
+  },
+  "onnx_version": "1.19.1",
+  "onnxruntime_version": "1.23.2"
+}

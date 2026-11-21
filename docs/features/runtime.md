@@ -16,7 +16,7 @@ chuỗi mắt nhắm hợp lệ. Cleanup phải đóng capture/model/serial và 
 
 ## Đọc thêm khi cần
 
-- [Tổng hợp các cách chạy](../../HUONG_DAN_CHAY_CHUONG_TRINH.md): PC/video, web/app, ESP-IDF/serial, Radxa và các đường chạy có điều kiện; cập nhật 28/10/2026.
+- [Tổng hợp các cách chạy](../../HUONG_DAN_CHAY_CHUONG_TRINH.md): PC/video, profile pose/sáu clip, web/app, ESP-IDF/serial và Radxa; cập nhật 07/11/2026.
 - [Hướng dẫn chạy đầy đủ](../../README_DRIVER_MONITOR.md).
 - [Vision](vision.md), [quyết định](monitoring.md), [cảnh báo ESP32](esp32-alerts.md).
 - [Profile/model](models.md): mặc định serve và profile người dùng chọn có thể khác nhau.

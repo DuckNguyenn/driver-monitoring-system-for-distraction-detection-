@@ -19,6 +19,12 @@ Nguồn thật của tham số là MonitorConfig và YAML đang chọn; con số
 
 - Yawn vào đợt khi P ≥0,70 đủ 1 giây; ra đợt khi P ≤0,35 đủ 0,5 giây.
 - Mỗi đợt tính một lần. Profile near/medium có EMA 0,2 giây; log giữ raw và filtered.
+- Profile thử nghiệm DV20 cho hội thoại dùng model đa góc, EMA 0,2 giây và yêu cầu
+  P đã lọc ≥0,65 liên tục 2 giây hoặc ≥0,75 liên tục 1,4 giây. Hai điều kiện dùng chung bộ đếm.
+  Model vẫn chỉ phân loại ngáp qua ảnh. Chưa đánh giá tình huống điện thoại che miệng.
+  Khi phát lại ở tốc độ lấy mẫu gốc, hai clip nói chuyện `04_talking` và `05_head_turn`
+  giảm từ 2 và 1 sự kiện xuống 0; `01_yawn_clear` vẫn ghi 1 sự kiện. Đây là clip hiệu chỉnh.
+  Gói chạy riêng trên Radxa nằm ở `dist/DA2-dv20-speech.zip`.
 - Một lần ngáp chỉ ghi lịch sử; nhiều ngáp hoặc blink tăng tạo WARNING.
 - ALERT kết hợp các bằng chứng theo Monitor; client không tự tái tính từ biểu đồ.
 - Gap >250 ms, timestamp đảo/frame cũ hoặc quan sát không hợp lệ ngắt chuỗi xác nhận.

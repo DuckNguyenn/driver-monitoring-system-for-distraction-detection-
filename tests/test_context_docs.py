@@ -149,6 +149,20 @@ class ContextDocsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "excluded"):
             safe_file(self.root, generated)
 
+    def test_idf_c_sources_are_checked_and_sdk_output_is_excluded(self):
+        self.policy["rules"][1]["patterns"].append("esp32_buzzer_idf/*")
+        self.save()
+        self.write("esp32_buzzer_idf/main/large.c", "source\n" * 401)
+        generated = ("esp32_buzzer_idf/build/generated.c",
+                     "esp32_buzzer_idf/managed_components/library/source.c")
+        for name in generated:
+            self.write(name, "generated\n" * 1000)
+            with self.assertRaisesRegex(ValueError, "excluded"):
+                safe_file(self.root, name)
+        errors = inspect_limits(self.root, load_policy(self.root))["errors"]
+        self.assertTrue(any("main/large.c" in error for error in errors))
+        self.assertFalse(any("generated.c" in error or "library/source.c" in error for error in errors))
+
     def test_generated_trees_are_outside_source_loc_scan(self):
         self.write("frontend/web/dist/generated.js", "x\n" * 1000)
         self.write("frontend/node_modules/vendor/index.js", "x\n" * 1000)

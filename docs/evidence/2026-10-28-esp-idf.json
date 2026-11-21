@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-28",
+  "project": "esp32_buzzer_idf",
+  "target": "esp32",
+  "esp_idf": "5.5.4",
+  "build": {
+    "passed": true,
+    "binary": "esp32_buzzer_idf/build/driver_monitor_buzzer.bin",
+    "bytes": 150944,
+    "sha256": "01931499a50e769429980bb662e24ad266a5347501c529edb237a23f013e054b",
+    "log": ".cache/esp32-idf-review/build-final.log"
+  },
+  "schematic_review": {
+    "source": "C:\\Users\\P1 Gen 5\\Documents\\Codex\\2026-10-25\\workspace-c-users-p1-gen-5\\work\\chapter4\\kicad_native\\ESP32_WROOM32_NATIVE.kicad_sch",
+    "sha256": "cd8b5157b4f646847db256438918e07f981474eafd356fcaf4a7bccf478ed2ac",
+    "fresh_netlist": true,
+    "netlist_sha256": "202666677b9346ae51ecc6c6e11900343b9cdce901dc8dc4bdd8e655e5cb2d4c",
+    "pins_and_transistor_polarity_match": true,
+    "board_constants": {
+      "DM_BUZZER_GPIO": 25,
+      "DM_BUZZER_ACTIVE_LEVEL": 1,
+      "DM_UART_TX_GPIO": 1,
+      "DM_UART_RX_GPIO": 3,
+      "DM_UART_BAUD": 115200
+    },
+    "reference_erc_severities": {
+      "warning": 39
+    },
+    "status": "Reference report schematic only; assembled hardware not verified"
+  },
+  "checks": {
+    "native_protocol_and_host_tests": {
+      "total": 7,
+      "passed": 7
+    },
+    "context_docs_tests": {
+      "total": 17,
+      "passed": 17
+    },
+    "docs_loc_context_guard": "passed",
+    "startup_bytes": 23855,
+    "esp32_feature_pack": {
+      "files": 12,
+      "bytes": 47875
+    }
+  },
+  "hardware": {
+    "flashed": false,
+    "serial_opened": false,
+    "physical_buzzer_tested": false
+  },
+  "files_sha256": {
+    "esp32_buzzer_idf/main/board_config.h": "bb53de6fa1332067f21643f808212bf0445f24fed8508ee2ac0a66e6d7de3412",
+    "esp32_buzzer_idf/main/buzzer_protocol.c": "552737c150bece1aad2366d446f0523a97b18cfad62654be6601e1ccf1c38d67",
+    "esp32_buzzer_idf/main/buzzer_protocol.h": "184aad3fd46dfc7ac57f85ae995efbd3f811f8f7af46978e388b9e8c46387841",
+    "esp32_buzzer_idf/main/CMakeLists.txt": "5c03fa67e57a72a21d2c2140c0253188780043d6fdfa60dd4dc82e477347db93",
+    "esp32_buzzer_idf/main/main.c": "42cd0e2193b306acdf0e5995ae4c13963938cd62b0041012c23f6ad9e114b6c2"
+  }
+}

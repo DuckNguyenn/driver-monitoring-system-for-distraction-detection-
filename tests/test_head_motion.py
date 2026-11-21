@@ -2,6 +2,7 @@
 import json
 import unittest
 from dataclasses import replace
+from itertools import product
 import cv2
 import numpy as np
 
@@ -31,10 +32,13 @@ class HeadMotionTests(unittest.TestCase):
         try:
             # Hold the rotated pose and the return long enough to confirm an
             # Open->Closed->Open event if movement information is lost.
-            for confirmation in (0., .1):
-                with self.subTest(open_confirmation=confirmation):
-                    vision = Vision(config)
-                    monitor = Monitor(replace(config.monitor, eye_event_open_seconds=confirmation))
+            profiles = (config, replace(config, eye_motion_mode="pose",
+                eye_motion_smoothing_seconds=.1, eye_motion_settle_seconds=.15,
+                eye_motion_max_shift_ratio=.3, eye_motion_max_roll_degrees=6.))
+            for profile, confirmation in product(profiles, (0., .1)):
+                with self.subTest(mode=profile.eye_motion_mode, open_confirmation=confirmation):
+                    vision = Vision(profile)
+                    monitor = Monitor(replace(profile.monitor, eye_event_open_seconds=confirmation))
                     motion_frames = 0
                     for index in range(13):
                         t = index / 10

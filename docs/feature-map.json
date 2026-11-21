@@ -28,12 +28,14 @@
       "sources": [
         "driver_monitor/vision.py",
         "driver_monitor/eye_motion.py",
-        "driver_monitor/overlay.py"
+        "driver_monitor/overlay.py",
+        "configs/camera_video_pose_candidate.yaml"
       ],
       "tests": [
         "tests/test_camera_quality.py",
         "tests/test_face_size_gate.py",
-        "tests/test_head_motion.py"
+        "tests/test_head_motion.py",
+        "tests/test_eye_motion_profiles.py"
       ],
       "related": [
         "runtime",
@@ -126,11 +128,15 @@
       "doc": "docs/features/esp32-alerts.md",
       "sources": [
         "driver_monitor/alerting.py",
-        "esp32_buzzer/esp32_buzzer.ino",
-        "tools/test_esp32.py"
+        "esp32_buzzer_idf/main/main.c",
+        "esp32_buzzer_idf/main/board_config.h",
+        "esp32_buzzer_idf/main/buzzer_protocol.c",
+        "esp32_buzzer_idf/main/buzzer_protocol.h"
       ],
       "tests": [
-        "tests/test_alerting.py"
+        "tests/test_alerting.py",
+        "tests/test_esp32_idf.py",
+        "tests/firmware_idf_test.c"
       ],
       "related": [
         "monitoring",

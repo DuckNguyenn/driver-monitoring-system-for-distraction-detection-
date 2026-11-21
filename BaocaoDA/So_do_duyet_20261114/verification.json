@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-14",
+  "pages": 9,
+  "diagram_count": 9,
+  "node_overlap_checks": "passed",
+  "text_width_checks": "passed",
+  "reference_profile": "models/yawn_kaggle_near_medium/runtime.yaml",
+  "pdf_sha256": "2462cd5149b821372d5066109943b1536132f7139399d5348bb601b63175f5d5",
+  "visual_review": "9 pages inspected; revised page 02 annotation and page 07 diamond labels",
+  "svg_xml": "9 valid",
+  "source_paths": "all exist"
+}

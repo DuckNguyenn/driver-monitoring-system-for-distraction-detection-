@@ -1,6 +1,6 @@
 # ESP32 WROOM — sketch tham khảo cho còi và watchdog
 
-Người dùng xác nhận ngày 28/10/2026 rằng firmware thực tế được nạp bằng **ESP-IDF**. Thư mục này hiện chỉ chứa `.ino` tham khảo; chưa xác định được project ESP-IDF của DA2 trong các thư mục đã rà. [Hướng dẫn chạy và nạp bằng ESP-IDF](../HUONG_DAN_CHAY_CHUONG_TRINH.md) ghi riêng quy trình thực tế và giới hạn xác minh.
+Firmware mới dùng **ESP-IDF** ở [esp32_buzzer_idf](../esp32_buzzer_idf/README.md), được tạo theo yêu cầu ngày 28/10/2026. Thư mục này chỉ giữ `.ino` tham khảo. [Hướng dẫn chạy](../HUONG_DAN_CHAY_CHUONG_TRINH.md) có lệnh build/nạp firmware IDF; bản mới chưa được nạp hoặc kiểm tra còi thật trong lượt tạo project.
 
 Firmware `esp32_buzzer.ino` nhận lệnh ASCII qua USB serial 115200 baud. GPIO25 điều khiển còi active ở mức HIGH; nếu bo/còi của bạn khác, sửa `BUZZER_PIN` hoặc mức active theo phần cứng thực.
 

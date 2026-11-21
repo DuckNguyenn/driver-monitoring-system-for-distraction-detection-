@@ -55,6 +55,7 @@ Repository chứa mã nguồn, model, manifest/checksum, notebook, sơ đồ và
 ## Tài liệu
 
 - [Tổng hợp tất cả cách chạy: PC, video, web/app, ESP-IDF và Radxa](HUONG_DAN_CHAY_CHUONG_TRINH.md)
+- [Project firmware còi ESP32 dùng ESP-IDF](esp32_buzzer_idf/README.md)
 - [Hướng dẫn camera, cấu hình và đánh giá](README_DRIVER_MONITOR.md)
 - [Triển khai Radxa ROCK 4D](DEPLOY_RADXA.md)
 - [ESP32 và sơ đồ nối buzzer](esp32_buzzer/README.md)

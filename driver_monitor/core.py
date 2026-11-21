@@ -28,9 +28,16 @@ class MonitorConfig:
     yawn_smoothing_seconds: float = 0.0
     # Zero preserves the event policy for existing configurations.
     eye_event_open_seconds: float = 0.0
+    yawn_strong_probability: float | None = None
+    yawn_strong_seconds: float | None = None
 
     def __post_init__(self):
         for name, value in vars(self).items():
+            if name in ("yawn_strong_probability", "yawn_strong_seconds"):
+                if value is None:
+                    continue
+                if isinstance(value, bool):
+                    raise ValueError(f"{name} must be a number")
             if not isinstance(value, (int, float)) or not isfinite(value) or value < 0 or (value == 0 and name not in ("yawn_smoothing_seconds", "eye_event_open_seconds")):
                 raise ValueError(f"{name} must be finite and positive")
         for name in ("eye_confidence", "yawn_enter_probability", "yawn_exit_probability"):
@@ -40,6 +47,13 @@ class MonitorConfig:
             raise ValueError("eye_confidence must distinguish Open from Closed")
         if self.yawn_exit_probability >= self.yawn_enter_probability:
             raise ValueError("yawn exit must be lower than enter")
+        if (self.yawn_strong_probability is None) != (self.yawn_strong_seconds is None):
+            raise ValueError("strong yawn confirmation requires both probability and seconds")
+        if self.yawn_strong_probability is not None:
+            if not self.yawn_enter_probability < self.yawn_strong_probability <= 1:
+                raise ValueError("strong yawn probability must exceed entry probability and be <= 1")
+            if self.yawn_strong_seconds >= self.yawn_enter_seconds:
+                raise ValueError("strong yawn duration must be shorter than entry duration")
         if self.min_blink_duration_seconds >= self.max_blink_duration_seconds:
             raise ValueError("blink duration interval is empty")
         if self.eye_transition_grace_seconds > self.max_frame_gap_seconds:
@@ -135,6 +149,7 @@ class Monitor:
     def _interrupt(self):
         self._closed_since = None
         self._yawn_enter_since = None
+        self._yawn_strong_since = None
         self._yawn_exit_since = None
         self._recovery_since = None
         self._filtered_yawn = self._yawn_last = None
@@ -143,6 +158,7 @@ class Monitor:
     def _update_yawn(self, t, raw):
         if raw is None:
             self._filtered_yawn = self._yawn_last = None
+            self._yawn_strong_since = None
             self._yawn_enter_since = self._yawn_exit_since = None
             return None, "unknown", 0.0
         c = self.config
@@ -155,13 +171,20 @@ class Monitor:
         p = self._filtered_yawn
         if not self._yawn_active:
             self._yawn_exit_since = None
+            if c.yawn_strong_probability is None or p < c.yawn_strong_probability:
+                self._yawn_strong_since = None
+            elif self._yawn_strong_since is None:
+                self._yawn_strong_since = t
             if p >= c.yawn_enter_probability:
                 if self._yawn_enter_since is None:
                     self._yawn_enter_since = t
-                if t - self._yawn_enter_since >= c.yawn_enter_seconds - 1e-9:
+                strong = (self._yawn_strong_since is not None
+                          and t - self._yawn_strong_since >= c.yawn_strong_seconds - 1e-9)
+                if strong or t - self._yawn_enter_since >= c.yawn_enter_seconds - 1e-9:
                     self._yawn_active = True
                     self._yawns.append(t)
                     self._yawn_enter_since = None
+                    self._yawn_strong_since = None
             else:
                 self._yawn_enter_since = None
         else:

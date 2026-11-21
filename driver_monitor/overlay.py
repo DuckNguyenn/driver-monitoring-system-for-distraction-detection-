@@ -33,6 +33,8 @@ def draw_overlay(frame, vision, status, observation, config, *, elapsed, fps, la
     if observation.eye_quality == "head_motion":
         eyes = f"stabilizing {vision.metrics.get('eye_motion_settle_remaining_seconds', 0.):.2f}s"
     yawn_state = f"confirm {status.yawn_candidate_seconds:.2f}/{config.monitor.yawn_enter_seconds:g}s" if status.yawn_state == "candidate" else status.yawn_state
+    if status.yawn_state == "candidate" and config.monitor.yawn_strong_seconds is not None:
+        yawn_state = f"candidate {status.yawn_candidate_seconds:.2f}s"
     line(f"Eyes:{eyes} | Yawn:{yawn_state}", 71)
     branch = vision.metrics.get("eye_model_branch")
     suffix = "" if branch is None else f" | eye:{branch}"

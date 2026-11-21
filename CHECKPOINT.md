@@ -1,14 +1,14 @@
-# Checkpoint bàn giao — 2026-10-28, Asia/Bangkok
+# Checkpoint bàn giao — 2026-11-22, Asia/Bangkok
 
 ## Mục tiêu hiện tại và cách bắt đầu
 
-- Workspace: `C:\Users\P1 Gen 5\Downloads\DA2`; PowerShell; Python `.\.venv\Scripts\python.exe`.
-- Nhánh: `feature/lan-dashboard-ios`; HEAD trước lần xuất bản 28/10: `a0fbdda`.
-- Đã tạo [hướng dẫn chạy](HUONG_DAN_CHAY_CHUONG_TRINH.md), tìm firmware ESP-IDF; không mở camera/serial hoặc flash.
-- Chương 3 đã QA 14 trang; Chương 4 mới đề xuất đề mục, chưa viết Word.
-- Đọc [AGENTS.md](AGENTS.md) → checkpoint này → [CONTEXT-MAP.md](CONTEXT-MAP.md) → [runtime](docs/features/runtime.md) cho lệnh chạy; [reporting](docs/features/reporting.md) cho báo cáo.
-- Chỉ nạp feature liên quan, chạy context pack; giữ context dưới 100k, ưu tiên dưới 60k.
-- Không reset/clean hoặc hoàn nguyên công việc cũ; kiểm tra Git trước khi sửa.
+- Radxa: `/root/DA2`, gói `dist/DA2.zip`. CSV 053127: 13+11 chu kỳ, 2 blink; thử `configs/dv20-blink-pose.yaml`.
+- 18/11 yawn: `.cache/yawn_radxa_20261118/KET_QUA.md` (Kaggle COMPLETE v1).
+- 22/11: chuẩn bị push `feature/lan-dashboard-ios`. 52 test đạt.
+- 14/11: 9 sơ đồ chờ duyệt ở `BaocaoDA/So_do_duyet_20261114/`; chưa thay Word. Mở `XEM_TRUOC.html`.
+- 13/11: ACK COM5 PASS theo log người dùng; còi/watchdog chưa xác nhận. [Chi tiết](docs/features/esp32-alerts.md).
+- 07/11: [profile pose thử nghiệm](configs/camera_video_pose_candidate.yaml) giảm chặn, clip 01: 0→3 blink. [Bằng chứng/việc tiếp theo](docs/evidence/2026-11-07-eye-motion-candidate.json); chưa test camera.
+- [Vision](docs/features/vision.md) · [Runtime](docs/features/runtime.md) · [Báo cáo](docs/features/reporting.md). Context <60k. Kiểm tra Git, giữ thay đổi cũ.
 
 ## Xuất bản GitHub ngày 28/10
 
@@ -20,9 +20,10 @@
 ## Chốt công cụ ESP32 và hướng dẫn chạy ngày 28/10
 
 - Người dùng xác nhận nạp bằng **ESP-IDF**, không dùng Arduino IDE; giữ quyết định này khi viết Chương 4 và hướng dẫn vận hành.
-- Đã rà DA2 (cả file ẩn/ignore), user projects, C:\Espressif và C:\esp: có SDK 5.5.4/v6.0.1, chưa thấy project IDF cho còi DA2. `.ino` chỉ là tham khảo; SDK và project khác không phải firmware DA2.
-- Các cách PC/video/headless/web/app/Radxa và nhánh có điều kiện nằm trong hướng dẫn. Lệnh chính giữ profile near/medium; launcher cũ có thể chọn model khác.
-- Đã kiểm checksum/model, web/APK/ZIP và parse 10 ví dụ CLI bằng stub không I/O. Firmware IDF/NPU chưa xác minh; đóng IDF Monitor trước khi host mở COM.
+- Theo yêu cầu mới, đã tạo [esp32_buzzer_idf](esp32_buzzer_idf/README.md), build ESP-IDF 5.5.4 target ESP32 thành công; `.ino` giữ tham khảo.
+- Đối chiếu netlist tham khảo `ESP32_WROOM32_NATIVE`: GPIO25 active HIGH → R1 820 Ω → BC337; UART0 TX1/RX3. Không xác nhận mạch đã lắp.
+- 7 test lõi C/host PASS: ACK, timeout 2 s, framing, lỗi UART, tràn dòng và bộ đếm. Chưa flash/đo còi; đóng monitor trước khi host mở COM.
+- [Bằng chứng IDF](docs/evidence/2026-10-28-esp-idf.json); binary ở `esp32_buzzer_idf/build/`, log ở `.cache/esp32-idf-review/`. Code/docs mới chưa commit.
 
 ## Quyết định viết báo cáo phải giữ
 
@@ -122,14 +123,14 @@ git status --short --untracked-files=no
 - Kiểm tra bàn giao 25/10: guard PASS; 16 test docs/context PASS ngoài sandbox. Lần đầu bị sandbox chặn thư mục tạm; chạy lại đạt. [Bằng chứng checkpoint](docs/evidence/2026-10-25-reporting-handoff.json).
 - Sau sửa Word: render bằng documents, xem các trang thay đổi và kiểm các trang còn lại; XML/ZIP check không thay thế visual QA.
 - Cần sửa công cụ context/docs: chạy thêm `.\.venv\Scripts\python.exe -X utf8 -m unittest tests.test_context_docs -v` theo workflow.
-- Khi có yêu cầu chạy, chọn lệnh trong hướng dẫn và kiểm camera/COM/IP hiện tại. Source firmware IDF còn cần xác định; báo cáo chờ feedback tiếp theo, không tự ghép chương hoặc khôi phục Tailscale.
+- Khi chạy, kiểm camera/COM/IP hiện tại; firmware IDF mới cần nạp và thử bo. Báo cáo chờ feedback, không tự ghép chương hoặc khôi phục Tailscale.
 
 ## Prompt dán vào chat mới
 
 ```text
 Workspace: C:\Users\P1 Gen 5\Downloads\DA2.
 Đọc AGENTS.md, CHECKPOINT.md, CONTEXT-MAP.md rồi đúng feature; giữ context dưới 100k.
-Lệnh chạy ở HUONG_DAN_CHAY_CHUONG_TRINH.md; ESP32 dùng ESP-IDF, chưa tìm thấy source firmware DA2.
+Lệnh chạy ở HUONG_DAN_CHAY_CHUONG_TRINH.md; firmware mới ở esp32_buzzer_idf/, đã build, chưa nạp bo.
 Báo cáo hiện hành cục bộ: BaocaoDA/Chuong2_test.docx và Chuong3_test.docx; giữ chỉnh sửa/hình người dùng, không ghép chương, không mobile, mục trống giữ trống.
 Tailscale vẫn hoãn. Kiểm tra Git trước khi sửa; không hoàn nguyên công việc cũ.
 ```

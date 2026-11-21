@@ -3,6 +3,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 import hashlib
 import json
+from math import isfinite
 
 from .core import MonitorConfig
 
@@ -27,6 +28,8 @@ class Config:
     eye_motion_settle_seconds: float = 0.35
     eye_motion_max_shift_ratio: float = 0.08
     eye_motion_max_roll_degrees: float = 3.0
+    eye_motion_mode: str = "geometry"
+    eye_motion_smoothing_seconds: float = 0.0
     min_face_size: int = 80
     min_eye_width: int = 12
     min_brightness: float = 25.0
@@ -74,9 +77,22 @@ class Config:
             raise ValueError("invalid vision thresholds")
         if self.eye_motion_max_shift_ratio > 1 or self.eye_motion_max_roll_degrees > 90:
             raise ValueError("invalid eye motion limits")
+        if self.eye_motion_mode not in ("geometry", "pose"):
+            raise ValueError("eye_motion_mode must be geometry or pose")
+        smoothing = self.eye_motion_smoothing_seconds
+        if (isinstance(smoothing, bool) or not isinstance(smoothing, (int, float))
+                or not isfinite(smoothing) or not 0 <= smoothing <= self.monitor.max_frame_gap_seconds):
+            raise ValueError("eye motion smoothing must be between zero and the maximum frame gap")
 
     def fingerprint(self):
         values = asdict(self)
+        if self.monitor.yawn_strong_probability is None:
+            values["monitor"].pop("yawn_strong_probability")
+            values["monitor"].pop("yawn_strong_seconds")
+        # Preserve fingerprints of profiles using the original geometry policy.
+        if self.eye_motion_mode == "geometry" and not self.eye_motion_smoothing_seconds:
+            values.pop("eye_motion_mode")
+            values.pop("eye_motion_smoothing_seconds")
         for key in ("auto_glasses", "eyewear_manifest", "glasses_eye_manifest"):
             values.pop(key)
         if self.auto_glasses:

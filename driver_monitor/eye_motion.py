@@ -1,7 +1,7 @@
 """Identify unstable eye observations from YuNet geometry, not eyelid scores."""
 from collections import deque
 from dataclasses import dataclass
-from math import atan2, degrees, hypot, isfinite
+from math import atan2, degrees, expm1, hypot, isfinite
 
 
 @dataclass(frozen=True)
@@ -35,6 +35,28 @@ class EyeMotion:
     def reset(self):
         self.history = deque()
         self.until = None
+        self.filtered = self.filter_time = None
+
+    def _motion_pose(self, face, timestamp):
+        """Filter geometry only; classifier crops and probabilities stay untouched.
+
+        Pose mode removes image translation and uniform scale before filtering.
+        Relative nose position and eye-line roll still respond to turning/tilting.
+        This is an opt-in 2-D cue, not a calibrated head-pose estimator.
+        """
+        points = list(map(float, face[4:10]))
+        if self.config.eye_motion_mode == "pose":
+            ax, ay, bx, by = points[:4]
+            scale = 100. / hypot(bx - ax, by - ay)
+            cx, cy = (ax + bx) / 2, (ay + by) / 2
+            points = [(value - (cx if i % 2 == 0 else cy)) * scale
+                      for i, value in enumerate(points)]
+        tau = self.config.eye_motion_smoothing_seconds
+        if tau and self.filtered is not None:
+            alpha = -expm1(-(timestamp - self.filter_time) / tau)
+            points = [old + alpha * (new - old) for old, new in zip(self.filtered, points)]
+        self.filtered, self.filter_time = points, timestamp
+        return EyePose.from_face([0.] * 4 + points)
 
     def update(self, face, timestamp=None):
         pose = EyePose.from_face(face)
@@ -49,6 +71,8 @@ class EyeMotion:
             raise ValueError("nonfinite eye motion timestamp")
         if self.history and (t <= self.history[-1][0] or t - self.history[-1][0] > self.config.monitor.max_frame_gap_seconds):
             self.reset()
+        if self.config.eye_motion_mode != "geometry" or self.config.eye_motion_smoothing_seconds:
+            pose = self._motion_pose(face, t)
         while self.history and t - self.history[0][0] > self.config.eye_motion_window_seconds + 1e-9:
             self.history.popleft()
         for _, previous in self.history:

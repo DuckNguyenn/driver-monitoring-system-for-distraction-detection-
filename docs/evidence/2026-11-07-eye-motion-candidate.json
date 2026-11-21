@@ -1,0 +1,269 @@
+{
+  "date": "2026-11-07",
+  "status": "Opt-in development candidate; not independent accuracy or hardware acceptance",
+  "original_profile": "models/yawn_kaggle_near_medium/runtime.yaml",
+  "candidate_profile": "configs/camera_video_pose_candidate.yaml",
+  "profile_changes": {
+    "eye_motion_settle_seconds": {
+      "before": 0.35,
+      "after": 0.15
+    },
+    "eye_motion_max_shift_ratio": {
+      "before": 0.08,
+      "after": 0.3
+    },
+    "eye_motion_max_roll_degrees": {
+      "before": 3.0,
+      "after": 6.0
+    },
+    "eye_motion_mode": {
+      "before": "geometry",
+      "after": "pose"
+    },
+    "eye_motion_smoothing_seconds": {
+      "before": 0.0,
+      "after": 0.1
+    }
+  },
+  "profile_fingerprints": {
+    "original": "c6ede5290fea6ebc1365fed162d2f386e451e7984b0280a3907b672ef17e1086",
+    "candidate": "e2e7632391ecae66987a89660c67df63243b7d475f142b7d9ff7f75627629826"
+  },
+  "manifest_sha256": "b790ad18ee347468a91626308b878ce0a4ab7d168add53351f17b3858fae2191",
+  "verified_model_artifacts": {
+    "detector": {
+      "file": "models/face_detection_yunet_2023mar.onnx",
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+    },
+    "eye": {
+      "file": "models/eye_refined_v4/best_eye.onnx",
+      "sha256": "165e8cf94e0283135d6f4cb1c799261c47c5b6aca4501cbc43b98a7d66e5e6ed"
+    },
+    "yawn": {
+      "file": "models/yawn_kaggle_near_medium/best_yawn.onnx",
+      "sha256": "9834d3a39a176622bfdbbe51b4d74aab7bbbe23a3a57ec9d1acddbf3e5ff6af6"
+    }
+  },
+  "method": [
+    "Collected all frames of six clips with the original models and configuration.",
+    "The first 1026 clip-01 probabilities reuse the user log; quality and timestamp parity was asserted.",
+    "Remaining probabilities were inferred offline. Replays include track changes and source timestamps.",
+    "Compared actual EyeMotion and Monitor implementations against the selected prototype on all six traces.",
+    "Original configuration fingerprints match the pre-change observations. Defaults remain unchanged.",
+    "Fresh full CLI run on clip 01 matches replay states, quality counts and blink timestamps exactly."
+  ],
+  "regression_trace": {
+    "file": "tests/data/motion_blink_trace.json",
+    "sha256": "bbcbd2f8ff69fad81bd5d09ce0d7536dba9c4de7e3a7a623c2507dff3ab50178",
+    "contains": "103 numeric landmark/probability rows; no images or video"
+  },
+  "visual_spot_check": {
+    "clips": [
+      "01_yawn_clear",
+      "04_talking",
+      "05_head_turn"
+    ],
+    "events_inspected": 8,
+    "method": "Original frame crops before, during and after probability peaks plus 100 ms context strips.",
+    "observation": "All eight sampled events show a brief eyelid narrowing/closure and reopening; not a frame-by-frame ground-truth annotation.",
+    "local_sheets": ".cache/motion-tuning-20261107/new_blinks_peak_1.jpg and new_blinks_peak_2.jpg"
+  },
+  "clips": [
+    {
+      "name": "01_yawn_clear",
+      "sha256": "8814f42e0bf92fbeacd7794fa86d786af1252382621d1495ec4ff28ede79263c",
+      "frames": 1320,
+      "head_motion_before_after": [
+        1067,
+        159
+      ],
+      "blink_times_before": [],
+      "blink_times_after": [
+        1.6,
+        19.25,
+        21.9
+      ],
+      "unknown_before_after": [
+        1307,
+        696
+      ],
+      "yawn_max_before_after": [
+        1,
+        1
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "02_yawn_hand",
+      "sha256": "f7fd93c0fbad8e795a9b34e785b5ba3ce71653d5d60f2c4609362024e305b9a6",
+      "frames": 1380,
+      "head_motion_before_after": [
+        1005,
+        30
+      ],
+      "blink_times_before": [
+        14.183333333333334
+      ],
+      "blink_times_after": [
+        3.9,
+        5.25,
+        10.083333333333334,
+        13.316666666666666,
+        14.183333333333334,
+        17.65,
+        19.683333333333334,
+        20.25
+      ],
+      "unknown_before_after": [
+        1049,
+        191
+      ],
+      "yawn_max_before_after": [
+        1,
+        1
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "03_yawn_later",
+      "sha256": "393a82cb7fba9cc319a7ab7d248ad8f7b34264b890e16997a73152276302da99",
+      "frames": 1080,
+      "head_motion_before_after": [
+        1012,
+        319
+      ],
+      "blink_times_before": [],
+      "blink_times_after": [
+        1.8499999999999999
+      ],
+      "unknown_before_after": [
+        1066,
+        617
+      ],
+      "yawn_max_before_after": [
+        1,
+        1
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "04_talking",
+      "sha256": "aa4e8218d666f99437ed930c9f1c0a2c511cb72032ff791d665a08bceecf6020",
+      "frames": 780,
+      "head_motion_before_after": [
+        754,
+        5
+      ],
+      "blink_times_before": [],
+      "blink_times_after": [
+        18.633333333333333,
+        21.5
+      ],
+      "unknown_before_after": [
+        754,
+        200
+      ],
+      "yawn_max_before_after": [
+        2,
+        2
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "05_head_turn",
+      "sha256": "e4902a05087bcd881d201b41d95d227b3ee2e15694b58c840156c588df4d41a9",
+      "frames": 630,
+      "head_motion_before_after": [
+        566,
+        68
+      ],
+      "blink_times_before": [],
+      "blink_times_after": [
+        1.5333333333333332,
+        2.5666666666666664,
+        16.733333333333334
+      ],
+      "unknown_before_after": [
+        622,
+        161
+      ],
+      "yawn_max_before_after": [
+        2,
+        2
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "06_no_face",
+      "sha256": "fcfccdd4f7d7c9a7182d3be9e12d17f8c255838acea991645db030d408929648",
+      "frames": 600,
+      "head_motion_before_after": [
+        0,
+        0
+      ],
+      "blink_times_before": [],
+      "blink_times_after": [],
+      "unknown_before_after": [
+        600,
+        600
+      ],
+      "yawn_max_before_after": [
+        0,
+        0
+      ],
+      "alert_frames_before_after": [
+        0,
+        0
+      ]
+    }
+  ],
+  "full_cli": {
+    "command": ".\\.venv\\Scripts\\python.exe -m driver_monitor run --config configs/camera_video_pose_candidate.yaml --source .cache/video-review-20261106/clips/01_yawn_clear.mp4 --backend onnx --headless --log-dir .cache/motion-tuning-20261107/runtime-candidate",
+    "log_stem": ".cache/motion-tuning-20261107/runtime-candidate/20261107T124818_372784Z",
+    "frames": 1320,
+    "fault": null,
+    "csv_sha256": "609f0052d4531d0a9f61a0b1368c0b9e741273e538edcc8d3542107be4f91deb",
+    "matches_replay": true
+  },
+  "tests": {
+    "command": "python -m unittest tests.test_eye_motion_profiles tests.test_head_motion tests.test_camera_quality tests.test_face_size_gate tests.test_camera_events tests.test_monitor tests.test_runtime tests.test_evidence tests.test_models_vision -q",
+    "total": 66,
+    "passed": 66,
+    "skipped": 0,
+    "includes": [
+      "Original and candidate 15-degree open-face rotation regression",
+      "Synthetic motion at 5/15/30/60 fps; translation/scale invariance; jitter blink",
+      "Numeric real-blink regression; gap/reset; missing/poor observations remain UNKNOWN",
+      "Configuration validation, unchanged source model/decision settings, runtime/evidence integration"
+    ]
+  },
+  "limitations": [
+    "Parameters selected using these development clips; no independent test split or complete event labels.",
+    "Both profiles count two yawns in each talking/head-turn clip; these are known false-yawn examples.",
+    "Fewer eye blocks expose existing yawn warnings: talking WARNING frames 0 to 75; head-turn 4 to 179.",
+    "No ALERT frames in these traces does not prove general false-alert safety.",
+    "Face translation and uniform scale changes no longer trigger the pose gate alone.",
+    "2-D geometry is not calibrated 3-D head pose. No live camera, Radxa, NPU or ESP32 acceptance."
+  ],
+  "next_steps": [
+    "Use the candidate command in docs/features/vision.md to review the local clips.",
+    "Label blink and non-blink events on separate clips before promoting the profile.",
+    "Investigate talking-versus-yawning errors separately without weakening eye evidence."
+  ],
+  "working_tree": "Implementation, configuration, tests, vision docs and checkpoint are uncommitted; earlier ESP-IDF work preserved."
+}

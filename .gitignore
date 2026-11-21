@@ -135,3 +135,9 @@ report_assets/model_architecture/contact_sheet.png
 frontend/mobile/android/
 *.jks
 *.keystore
+
+# ESP-IDF output and machine-generated configuration.
+esp32_buzzer_idf/build/
+esp32_buzzer_idf/sdkconfig
+esp32_buzzer_idf/sdkconfig.old
+esp32_buzzer_idf/managed_components/

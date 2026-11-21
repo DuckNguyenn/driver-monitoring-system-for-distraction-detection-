@@ -1,0 +1,17 @@
+{
+  "candidate_pc_parity": {
+    "samples": 12,
+    "max_probability_delta": 2.6600063154740006e-08,
+    "passed": true
+  },
+  "model_artifact_hashes": {
+    "detector": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+    "eye": "165e8cf94e0283135d6f4cb1c799261c47c5b6aca4501cbc43b98a7d66e5e6ed",
+    "yawn": "c2d77ba022c34724af45712e25ac3f934f36de7b220d7318ead9fcdf2392d53b"
+  },
+  "packaged_radxa_config_keys_compatible": true,
+  "portable_config_equivalent_on_current_code": true,
+  "active_baseline_unchanged": true,
+  "radxa_hardware_test_performed": false,
+  "independent_camera_test_performed": false
+}
