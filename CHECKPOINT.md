@@ -4,7 +4,7 @@
 
 - Radxa: `/root/DA2`, gói `dist/DA2.zip`. CSV 053127: 13+11 chu kỳ, 2 blink; thử `configs/dv20-blink-pose.yaml`.
 - 18/11 yawn: `.cache/yawn_radxa_20261118/KET_QUA.md` (Kaggle COMPLETE v1).
-- 22/11: chuẩn bị push `feature/lan-dashboard-ios`. 52 test đạt.
+- 22/11: `main` có `7669366`. 52 test đạt. [README](README.md) cập nhật tiến độ.
 - 14/11: 9 sơ đồ chờ duyệt ở `BaocaoDA/So_do_duyet_20261114/`; chưa thay Word. Mở `XEM_TRUOC.html`.
 - 13/11: ACK COM5 PASS theo log người dùng; còi/watchdog chưa xác nhận. [Chi tiết](docs/features/esp32-alerts.md).
 - 07/11: [profile pose thử nghiệm](configs/camera_video_pose_candidate.yaml) giảm chặn, clip 01: 0→3 blink. [Bằng chứng/việc tiếp theo](docs/evidence/2026-11-07-eye-motion-candidate.json); chưa test camera.

@@ -1,66 +1,77 @@
 # HỆ THỐNG GIÁM SÁT VÀ PHÁT HIỆN SỰ MẤT TẬP TRUNG CỦA TÀI XẾ
 
-> Tiếp tục theo feature: [bản đồ context](CONTEXT-MAP.md), [checkpoint mới nhất](CHECKPOINT.md), [docs](docs/README.md).
+DA2 dùng camera để theo dõi mắt nhắm kéo dài, chớp mắt và ngáp. PC hoặc Radxa ROCK 4D xử lý hình ảnh, xác nhận sự kiện theo thời gian và ghi nhật ký. Khi cần cảnh báo, máy xử lý gửi lệnh qua USB/serial cho ESP32 điều khiển còi. Người dùng có thể xem camera, trạng thái và lịch sử phiên trên web hoặc điện thoại trong cùng mạng LAN.
 
-Camera → YuNet → hai bộ phân loại YOLOv8n-cls (mắt/ngáp) → xác nhận theo thời gian → ESP32 → buzzer. Runtime dùng chung cho PC và Radxa ROCK 4D, hỗ trợ camera/video, ONNX/PyTorch/RKNN, chế độ không màn hình và nhật ký.
+## Tiến độ đến ngày 22/11/2026
 
-Model PC hiện tại được chọn bởi `configs/camera_pc.yaml`, dùng mắt `eye_refined_v4` và ngáp `yawn_camera_refined`. Hai file RKNN nền trong `models/` dành cho **RK3576**, dùng trọng số gốc; trọng số PC hiệu chỉnh chưa chuyển RKNN. Radxa đã được người dùng setup Debian 12/Python 3.11 và chạy ONNX smoke; DV20 USB đã được nhận. FPS pipeline, NPU và còi thực tế vẫn chưa nghiệm thu; xem checkpoint có ngày.
+| Hạng mục | Kết quả hiện có | Việc còn cần xác nhận |
+| --- | --- | --- |
+| Radxa ROCK 4D và camera DV20 | Bo RK3576 đã chạy thử suy luận ONNX trên Debian 12 ARM64. Khi phát lại nhật ký một phiên DV20, phần mềm đếm được 13 chu kỳ ở một mắt, 11 ở mắt kia và 2 lần chớp đồng thời. | Đo FPS và độ trễ toàn hệ thống trên bo, chạy dài hạn và kiểm thử trên NPU. |
+| Nhận diện ngáp | Bản thử ngày 18/11 được huấn luyện bổ sung bằng 95 ảnh cắt từ camera DV20. Khi phát lại clip đã dùng để huấn luyện, bộ đếm tăng từ 1 lên 6 đợt ngáp với cùng ngưỡng. [Kết quả và cách thử](models/yawn_radxa_20261118_candidate/HUONG_DAN_THU.md) | Đánh giá trên phiên camera độc lập, có cả ngáp, nói chuyện và cười. |
+| ESP32 và còi | Firmware đã build bằng ESP-IDF 5.5.4. Ngày 13/11, log do người dùng cung cấp ghi nhận ESP32 trả lời lệnh cảnh báo qua COM5. [Kết quả thử serial](docs/features/esp32-alerts.md) | Nghe còi trên mạch thật và kiểm tra còi tự tắt khi mất liên lạc với máy xử lý. |
+| Web, iPhone và Android | Dashboard và app Expo hiển thị khung hình, biểu đồ mắt/ngáp và lịch sử phiên, hỗ trợ xuất CSV. Người dùng đã xác nhận iPhone kết nối được. Bản Android đã thử trên giả lập LDPlayer. [Web](DASHBOARD.md) · [iPhone](docs/features/iphone.md) · [Android](docs/features/android.md) | Thử đầy đủ trên điện thoại thật với Radxa. App hiện hiển thị cảnh báo khi đang mở. |
 
-Profile người dùng chọn trong lần triển khai gần nhất là `models/yawn_kaggle_near_medium/runtime.yaml`; khác profile mặc định ở trên. Bộ Radxa ONNX giữ profile near/medium này.
+YuNet xác định khuôn mặt và các điểm mốc để cắt vùng mắt và mặt. Hai bộ phân loại YOLOv8n-cls ước lượng trạng thái mắt và khả năng ngáp. Một chu kỳ mở–nhắm–mở có thể xuất hiện ở riêng một mắt. Bộ đếm chớp mắt chỉ tăng khi hai chu kỳ ngắn chồng nhau theo thời gian. Khi mất mặt hoặc ảnh không đủ rõ, tín hiệu tương ứng mang giá trị `UNKNOWN`. [Quy tắc xác nhận sự kiện và cảnh báo](docs/features/monitoring.md)
 
-## Dashboard web và app iPhone
+## Chọn cấu hình
 
-Hai giao diện tiếng Việt chỉ giám sát trong cùng Wi-Fi: camera, trạng thái, biểu đồ, thiết bị và lịch sử/CSV. Runtime tiếp tục xử lý tại PC/Radxa, web/app nhận kết quả của Monitor qua API. [Hướng dẫn đầy đủ và kết quả kiểm thử](DASHBOARD.md).
+| Môi trường | Cấu hình | Khi nào dùng |
+| --- | --- | --- |
+| Windows, sau khi clone repo | [configs/camera_pc.yaml](configs/camera_pc.yaml) | Mặc định cho camera PC. Dùng model mắt `eye_refined_v4` và model ngáp `yawn_camera_refined`. |
+| Thử model ngáp ngày 18/11 | [runtime.yaml](models/yawn_radxa_20261118_candidate/runtime.yaml) | Repo có trọng số và manifest của bản thử. PyTorch và ONNX đã cho kết quả tương đương trên 12 mẫu ở PC. [Kết quả đối chiếu](models/yawn_radxa_20261118_candidate/pc_verification.json) |
+| Radxa, gói triển khai cục bộ `dist/DA2.zip` | `configs/driver_monitor.yaml` hoặc `configs/dv20-blink-pose.yaml` trong ZIP | Gói dùng ONNX trên CPU với model ngáp DV20 đa góc. Cấu hình thứ hai dùng để thử bộ lọc chuyển động đầu khi đếm chớp mắt. |
 
-```powershell
-& '.\.venv\Scripts\python.exe' -m pip install -r requirements-dashboard.lock.txt
-& '.\.venv\Scripts\python.exe' -m driver_monitor serve --source 0 --backend onnx --display
-```
+Các lệnh cũ dùng `models/yawn_kaggle_near_medium/runtime.yaml` cần bộ model near/medium lưu tại máy. Khi clone từ GitHub, dùng cấu hình PC ở hàng đầu để chạy ngay. Các model RKNN nền trong repo dành cho RK3576 và dùng bộ trọng số riêng.
 
-Mở `http://127.0.0.1:8765`, nhập mã hiện trong terminal. Máy khác/iPhone dùng IPv4 của PC. Web đã build được phục vụ cùng Python, không cần Node.js để vận hành. App thử bằng Expo Go: tại terminal khác chạy `npm.cmd ci`, rồi `npm.cmd run start:mobile`; quét QR bằng iPhone, nhập cùng IPv4 và mã. Web/app nhận khung hình Driver monitor, nén JPEG bất đồng bộ với mục tiêu 15 FPS; biểu đồ tách Mắt 1, Mắt 2 và Ngáp. Người dùng đã xác nhận app kết nối; nghiệm thu đầy đủ iPhone và Radxa còn chờ.
+## Chạy trên Windows
 
-## Chạy camera trên Windows
-
-Cần Python 3.12. Tại thư mục dự án, chạy PowerShell:
+Từ thư mục dự án, tạo môi trường Python 3.12 và kiểm tra model ONNX trong PowerShell.
 
 ```powershell
 py -3.12 -m venv .venv
-& '.\.venv\Scripts\python.exe' -m pip install -r requirements-host.txt
-& '.\.venv\Scripts\python.exe' -m driver_monitor preflight --config configs/camera_pc.yaml --backend onnx
-& '.\.venv\Scripts\python.exe' -m driver_monitor run --config configs/camera_pc.yaml --source 0 --backend onnx --display
+.\.venv\Scripts\python.exe -m pip install -r requirements-host.txt
+.\.venv\Scripts\python.exe -m driver_monitor preflight --config configs/camera_pc.yaml --backend onnx
 ```
 
-Đổi `--source 0` theo chỉ số camera do `tools/probe_camera.py` tìm được. Nhấn `Q`/`Esc` để thoát. Thêm `--esp32-port COM7` với cổng ESP32 thực tế nếu dùng buzzer.
-
-Chạy video của bạn:
+**Xem trực tiếp trên PC** bằng lệnh sau. Đổi `--source 0` theo chỉ số camera, hoặc thay bằng đường dẫn video và thêm `--realtime`. Nhấn `Q` hoặc `Esc` để thoát. Nếu dùng còi, thêm `--esp32-port` cùng cổng COM thực tế của ESP32.
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -m driver_monitor run --config configs/camera_pc.yaml --source 'duong-dan-video.mp4' --backend onnx --display --realtime
+.\.venv\Scripts\python.exe -m driver_monitor run --config configs/camera_pc.yaml --source 0 --backend onnx --display
 ```
 
-## Kiểm thử và dữ liệu cục bộ
+**Xem trên web hoặc điện thoại** bằng cách dừng phiên `run` trước để giải phóng camera, rồi khởi động máy chủ.
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -m unittest discover -s tests -v
-& '.\.venv\Scripts\python.exe' -m unittest discover -s camera_classical/tests -v
-& '.\.venv\Scripts\python.exe' tools/verify_release.py
+.\.venv\Scripts\python.exe -m pip install -r requirements-dashboard.lock.txt
+.\.venv\Scripts\python.exe -m driver_monitor serve --config configs/camera_pc.yaml --source 0 --backend onnx --host 0.0.0.0 --port 8765
 ```
 
-Repository chứa mã nguồn, model, manifest/checksum, notebook, sơ đồ và báo cáo. Dataset Kaggle/CEW/GENKI/SMILES, ảnh khuôn mặt hồi quy, video camera, log từng frame, môi trường Python và cache chỉ giữ tại máy. Các test cần ảnh cục bộ hiển thị `skipped` khi thiếu ảnh; test logic, capture, serial và adapter vẫn chạy. Xem [fixtures](tests/fixtures/README.md) và [quy trình dữ liệu](data_collection/README.md). `verify_release.py` ghi rõ số test bỏ qua và tình trạng thiếu bằng chứng video; dùng `--require-local-evidence` để yêu cầu đầy đủ dữ liệu kiểm thử cục bộ.
+Mở `http://127.0.0.1:8765` trên PC, hoặc `http://<IPv4-của-PC>:8765` trên thiết bị cùng LAN. Nhập mã kết nối in trong terminal. Python phục vụ sẵn bản web đã build. Để thử app bằng Expo Go, mở terminal thứ hai, chạy `npm.cmd ci` rồi `npm.cmd run start:mobile`, quét mã QR và nhập địa chỉ máy chủ cùng mã kết nối.
 
-Ảnh/log cục bộ phục vụ đối chiếu không được đưa lên GitHub. Kết quả video một người đã dùng hiệu chỉnh model là bằng chứng phát triển, chưa chứng minh độ chính xác trên người mới.
+## Chạy trên Radxa với gói DA2
 
-[Kiểm tra bản GitHub](reports/github_repository_checks.json): bản tại máy đạt 69 test; bản xuất từ Git index đạt 56 test và bỏ qua 13 ca cần ảnh cục bộ. Model ONNX hiện tại đã qua checksum và suy luận thử; firmware đã qua mô phỏng host. Kiểm tra này dùng môi trường Python PC hiện có, chưa thay thế kiểm tra cài đặt/NPU trên Radxa.
+Ví dụ sau dùng gói `DA2.zip` đã giải nén và cài môi trường tại `/root/DA2` trên bo. Kiểm tra đường dẫn camera và dừng phiên cũ trước khi chạy.
 
-## Tài liệu
+```bash
+cd /root/DA2
+.venv/bin/python -m driver_monitor serve --config configs/driver_monitor.yaml --source /dev/video0 --backend onnx --host 0.0.0.0 --port 8765 --preview-fps 5
+```
 
-- [Tổng hợp tất cả cách chạy: PC, video, web/app, ESP-IDF và Radxa](HUONG_DAN_CHAY_CHUONG_TRINH.md)
-- [Project firmware còi ESP32 dùng ESP-IDF](esp32_buzzer_idf/README.md)
-- [Hướng dẫn camera, cấu hình và đánh giá](README_DRIVER_MONITOR.md)
-- [Triển khai Radxa ROCK 4D](DEPLOY_RADXA.md)
-- [ESP32 và sơ đồ nối buzzer](esp32_buzzer/README.md)
-- [Cấu trúc thư mục](REPOSITORY_STRUCTURE.md)
-- [Fine-tune với ảnh mờ và kết quả thử nghiệm](reports/BLUR_REFINEMENT.md): hai model thử mới trong `models/blur_refined/`, dùng profile `configs/camera_blur_candidate.yaml`.
-- Báo cáo hoàn thiện, gồm kiến trúc và lý thuyết thuật toán: [Word](reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.docx), [PDF](reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.pdf), [nguồn Markdown](reports/BAO_CAO_GIAM_SAT_BUON_NGU_HOAN_THIEN.md)
+Mở `http://<IPv4-của-Radxa>:8765` từ máy cùng LAN. Để thử đếm chớp mắt theo tư thế đầu, đổi riêng `--config` thành `configs/dv20-blink-pose.yaml`. Tham số `--preview-fps 5` đặt tốc độ gửi ảnh xem trước lên giao diện. [Hướng dẫn cài đặt Radxa](DEPLOY_RADXA.md)
 
-YuNet giữ giấy phép MIT đi kèm. Ultralytics YOLO và các dataset có giấy phép/điều khoản riêng; thông tin nguồn nằm trong [models/README.md](models/README.md) và các công cụ thu dữ liệu.
+## Kiểm thử và tài liệu
+
+Ngày 22/11, 52 kiểm thử liên quan đến chuyển động mắt và đầu, sự kiện camera, firmware ESP-IDF trên máy tính và tài liệu đã đạt. Để chạy lại nhóm này trên Windows, dùng lệnh sau.
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest tests.test_eye_motion_profiles tests.test_camera_events tests.test_head_motion tests.test_esp32_idf tests.test_context_docs
+```
+
+Toàn bộ bộ kiểm thử Python của thư mục `tests` có thể chạy bằng `-m unittest discover -s tests -v`. Một số ca cần dữ liệu cục bộ và sẽ được bỏ qua nếu thiếu ảnh. Video cá nhân, dataset huấn luyện và log từng khung hình được lưu tại máy. [Dữ liệu kiểm thử](tests/fixtures/README.md) · [Quy trình thu dữ liệu](data_collection/README.md)
+
+- [Hướng dẫn vận hành PC, web/app, ESP32 và Radxa](HUONG_DAN_CHAY_CHUONG_TRINH.md)
+- [Nối dây, build và nạp firmware ESP-IDF cho ESP32](esp32_buzzer_idf/README.md)
+- [Chín sơ đồ thiết kế hệ thống, bản duyệt ngày 14/11 (PDF)](BaocaoDA/So_do_duyet_20261114/SO_DO_HE_THONG_BAN_DUYET.pdf)
+- [Báo cáo kỹ thuật (PDF)](reports/BAO_CAO_GIAM_SAT_BUON_NGU_CHINH_SUA.pdf) · [Bản Markdown](reports/BAO_CAO_GIAM_SAT_BUON_NGU_CHINH_SUA.md)
+- [Bản đồ mã nguồn và tài liệu theo chức năng](CONTEXT-MAP.md) · [Checkpoint dự án](CHECKPOINT.md)
+- [Nguồn model và giấy phép](models/README.md)
